@@ -27,10 +27,10 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
 
   return (
-    <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: "pb-0.5 max-w-6xl" }}>
-       <Card.Root class="pt-6 mb-0.5">
+    <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: " max-w-6xl" }}>
+       {/* <Card.Root class="pt-6 mb-0.5"> */}
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-      </Card.Root>
+      {/* </Card.Root> */}
       <VisibleWrapper id={`${id}-service-tabs`}>
         <ServiceTabsX  />
       </VisibleWrapper>

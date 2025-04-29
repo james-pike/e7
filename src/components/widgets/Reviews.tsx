@@ -42,7 +42,7 @@ export default component$((props: Props) => {
  
      
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-        <Card.Root class="bg-background">
+        {/* <Card.Root class="bg-background"> */}
           <Card.Header class="p-4">
         <div class="block sm:hidden">
           {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid/>}
@@ -51,7 +51,7 @@ export default component$((props: Props) => {
           {<ReviewGrid/>}
         </div>
         </Card.Header>
-        </Card.Root>
+        {/* </Card.Root> */}
 
              {!isLandingPage && (
                 <Card.Root class="bg-gradient-to-r z-10 from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">

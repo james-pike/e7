@@ -15,8 +15,8 @@ export const Wrapper = component$((props: SectionWrapperProps) => {
 
   const isHomePage = location.url.pathname === "/";
   const paddingY = isHomePage
-    ? "py-0.5 "
-    : "py-0.5";
+    ? "py-10 "
+    : "py-14";
 
   return (
     <section
@@ -29,7 +29,7 @@ export const Wrapper = component$((props: SectionWrapperProps) => {
     >
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl px-0.5 md:px-6",
+          "relative mx-auto max-w-5xl px-3 md:px-6",
           paddingY,
           classes?.container
         )}

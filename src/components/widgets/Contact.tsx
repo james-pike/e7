@@ -26,10 +26,10 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
 
   return (
-    <Wrapper id={id} isDark={isDark} classes={{ container: "max-w-4xl" }} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
-      <Card.Root class="mb-0.5">
+    <Wrapper id={id} isDark={isDark} classes={{ container: "max-w-3xl" }} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
+      {/* <Card.Root class="mb-0.5"> */}
       <div class="flex w-full">
-        <div class="w-2/3 bg-card pl-4 pt-6">
+        <div class="w-2/3 bg-background pl-4 pt-6">
           <div class="hidden sm:block">
             <Headline
               align="left"
@@ -56,7 +56,7 @@ export default component$((props: Props) => {
           />
         </div>
       </div>
-      </Card.Root>
+      {/* </Card.Root> */}
 
       <ContactForm isDark={isDark} />
 

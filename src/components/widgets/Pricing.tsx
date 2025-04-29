@@ -32,9 +32,9 @@ export default component$((props: Props) => {
 
   return (
     <Wrapper id={id} isDark={isDark} classes={classes} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
-      <Card.Root class="pt-6 mb-0.5 ">
+      {/* <Card.Root class="pt-6 mb-0.5 "> */}
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-      </Card.Root>
+      {/* </Card.Root> */}
       {/* <ServiceCards /> */}
       <VisibleWrapper id={`${id}-pricing`}>
           <PriceTabs isDark={isDark}/>

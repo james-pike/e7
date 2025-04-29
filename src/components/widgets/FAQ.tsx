@@ -150,14 +150,14 @@ export default component$((props: Props) => {
     <>
     <Wrapper id={id} isDark={isDark} classes={{classes}} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
   
-    <Card.Root class="pt-6 mb-0.5">
+    {/* <Card.Root class="pt-6 mb-0.5"> */}
       <Headline  title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-    </Card.Root>
+    {/* </Card.Root> */}
       <VisibleWrapper id={`${id}-faq`}>
         <div class="hidden sm:block">
-          <Card.Root>
+          {/* <Card.Root> */}
             <FAQTabs2 faqData={faqData} isDark={isDark} />
-          </Card.Root>
+          {/* </Card.Root> */}
         </div>
 
         <div class="block sm:hidden">
@@ -167,7 +167,7 @@ export default component$((props: Props) => {
 
       {/* Conditionally render the card only if not on the landing page */}
       {!isLandingPage && (
-        <Card.Root class="bg-gradient-to-r z-10 from-border via-primary to-border mx-auto mt-0.5 pt-8 max-w-5xl ">
+        <Card.Root class="bg-gradient-to-r z-10 from-border via-primary to-border mx-auto mt-4 pt-8 max-w-5xl ">
           <Card.Content>
             <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
             <Link href="/contact" class="w-full sm:w-auto">
