@@ -3,7 +3,6 @@ import { Headline } from "~/components/ui/Headline";
 import { VisibleWrapper } from "./VisibleWrapper";
 import ServiceTabsX from "./ServiceTabsX";
 import { Wrapper } from "./Wrapper";
-import { Card } from "../ui/Card";
  // Adjust the import path
 
 interface Item {
