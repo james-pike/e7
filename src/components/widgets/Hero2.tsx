@@ -1,15 +1,12 @@
 import { component$ } from "@builder.io/qwik";
-import Carousel from "../ui/Carousel";
-import { Button } from "../ui/Button";
-import { Link } from "@builder.io/qwik-city";
-import { Typewriter } from "./Typewriter";
+
 import { Card } from "../ui/Card";
 
 export default component$(() => {
   return (
-    <Card.Root2 class="">
+    <Card.Root class="">
   
-    </Card.Root2>
+    </Card.Root>
   );
 });
 
