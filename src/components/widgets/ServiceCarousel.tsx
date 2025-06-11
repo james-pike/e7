@@ -1,7 +1,10 @@
-import { component$, PropsOf, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, JSXChildren, JSXNode, PropsOf, Signal, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 import { Card } from '../ui/Card'; // Adjust the import path as needed
 import { DarkContext } from '~/DarkContext';
+import { Label } from '../ui/Label';
+import { Input } from '../ui/Input';
+import { Button } from '../ui/Button';
 
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
   return (
@@ -44,6 +47,60 @@ const services = [
     description: 'Implementing scalable cloud infrastructure',
        image: '/images/hero1.png'
   }
+];
+
+const serviceData = [
+  {
+    title: "Design",
+    subtitle: "Creative and Functional Design",
+
+    description: "Our innovative design services use Figma, Adobe XD, and Sketch to craft custom UI/UX, interactive prototypes, and branding assets tailored to your vision.",
+    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-3.png",
+    features: [
+      "Custom UI/UX Design",
+      "Interactive Prototyping",
+      "Branding Asset Creation"
+    ],
+    projectDetails: {
+      startingPrice: "$3,500",
+      timeline: "4-6 weeks"
+    },
+    ctaText: "Begin Design"
+  },
+  // {
+  //   title: "Development",
+  //   subtitle: "Robust Web and Software Solutions",
+
+  //   description: "We provide scalable development with React, Qwik, and Next.js, building secure APIs, integrating cloud solutions, and delivering custom software.",
+  //   image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png",
+  //   features: [
+  //     "Full-Stack Development",
+  //     "Secure API Integration",
+  //     "Cloud-Based Solutions"
+  //   ],
+  //   projectDetails: {
+  //     startingPrice: "$4,000",
+  //     timeline: "6-8 weeks"
+  //   },
+  //   ctaText: "Begin Development"
+  // },
+  // {
+  //   title: "Branding",
+  //   subtitle: "Memorable Brand Identities",
+
+  //   description: "We create cohesive branding with logos, color palettes, and style guides, ensuring consistency across platforms and a strong audience connection.",
+  //   image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png",
+  //   features: [
+  //     "Logo and Identity Design",
+  //     "Brand Style Guides",
+  //     "Platform Consistency"
+  //   ],
+  //   projectDetails: {
+  //     startingPrice: "$2,500",
+  //     timeline: "3-5 weeks"
+  //   },
+  //   ctaText: "Begin Branding"
+  // }
 ];
 
 interface Props {
@@ -98,10 +155,65 @@ export default component$((props: Props) => {
                 alt={service.title}
                 style={{ height: '200px' }} // Optional: adjust height as needed
               />
-              <Card.Header>
-                <Card.Title>{service.title}</Card.Title>
-                <Card.Description class="py-10">{service.description}</Card.Description>
-              </Card.Header>
+             {serviceData.map((service, index) => (
+                     <div class="pb-8 h-full">
+                       <Card.Header>
+                         <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
+                           {service.title} Services
+                         </Card.Title>
+                         <Card.Description class="text-gray-600 dark:text-gray-300">
+                           {service.description}
+                         </Card.Description>
+                       </Card.Header>
+                       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0">
+                         {/* Left Column: Image */}
+                         {/* <div class="w-full h-24 md:h-64">
+                           <img
+                             src={service.image}
+                             alt={`${service.title} illustration`}
+                             class="w-full h-full rounded-none shadow-md object-cover"
+                           />
+                         </div> */}
+                         {/* Right Column: Features, Project Details, CTA */}
+                         <div class="w-full space-y-6">
+                           <div class="space-y-2">
+                             <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                               Key Features
+                             </Label>
+                             <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                               {service.features.map((feature: string | number | boolean | Function | RegExp | JSXChildren[] | Promise<JSXChildren> | Signal<JSXChildren> | JSXNode<unknown> | null | undefined, idx: string | number | null | undefined) => (
+                                 <li key={idx} class="flex items-center gap-2">
+                                   <span class="text-green-500">✓</span> {feature}
+                                 </li>
+                               ))}
+                             </ul>
+                           </div>
+                           <div class="space-y-2">
+                             <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                               Project Details
+                             </Label>
+                             <div class="grid grid-cols-2 gap-2">
+                               <Input
+                                 value={service.projectDetails.startingPrice}
+                                 readOnly
+                                 class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                                 placeholder="Starting Price"
+                               />
+                               <Input
+                                 value={service.projectDetails.timeline}
+                                 readOnly
+                                 class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                                 placeholder="Timeline"
+                               />
+                             </div>
+                           </div>
+                           <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">
+                             {service.ctaText}
+                           </Button>
+                         </div>
+                       </div>
+                     </div>
+                 ))}
             </Card.Root>
           </Carousel.Slide>
         ))}
