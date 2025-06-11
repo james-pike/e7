@@ -141,7 +141,7 @@ export default component$((props: Props) => {
       touch: 2.4,
     }} >
  
-      <Carousel.Scroller class="carousel-scroller py-4">
+      <Carousel.Scroller class="carousel-scroller py-10">
         {services.map((service) => (
           <Carousel.Slide
             style={{ flexBasis: '300px' }}
@@ -152,7 +152,7 @@ export default component$((props: Props) => {
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
-                style={{ height: '150px' }} // Optional: adjust height as needed
+                style={{ height: '150px' ,}} // Optional: adjust height as needed
               />
              {serviceData.map((service) => (
                      <div class="pb-6 h-full">
@@ -218,7 +218,7 @@ export default component$((props: Props) => {
         ))}
       </Carousel.Scroller>
       <div class="flex justify-between items-end">
-          <Carousel.Pagination class="carousel-pagination flex gap-1 justify-start ">
+          <Carousel.Pagination class="carousel-pagination  pb-6 flex gap-1 justify-start ">
             {services.map((service) => (
               <Carousel.Bullet
                 key={service.title}
