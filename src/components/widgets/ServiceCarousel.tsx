@@ -61,7 +61,7 @@ export default component$((props: Props) => {
     const updateDraggable = () => {
       // Use Tailwind's default md breakpoint (768px) as the threshold
       if (window.innerWidth >= 768) {
-        isDraggable.value = false; // Disable dragging on desktop
+        isDraggable.value = true; // Disable dragging on desktop
       } else {
         isDraggable.value = true; // Enable dragging on mobile
       }
@@ -79,11 +79,11 @@ export default component$((props: Props) => {
 
   return (
     
-    <Carousel.Root class="carousel-root px-2" gap={30}  draggable={isDraggable.value} rewind sensitivity={{
+    <Carousel.Root class="carousel-root px-6" gap={20}  draggable={isDraggable.value} rewind sensitivity={{
       touch: 1.75,
     }} >
  
-      <Carousel.Scroller class="carousel-scroller py-4">
+      <Carousel.Scroller class="carousel-scroller py-6">
         {services.map((service) => (
           <Carousel.Slide
             style={{ flexBasis: '400px' }}
@@ -94,7 +94,7 @@ export default component$((props: Props) => {
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
-                style={{ height: '280px' }} // Optional: adjust height as needed
+                style={{ height: '400px' }} // Optional: adjust height as needed
               />
               <Card.Header>
                 <Card.Title>{service.title}</Card.Title>

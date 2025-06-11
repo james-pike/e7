@@ -1909,3 +1909,40 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     animation: fade-in-up ease-in-out;
   }
 }
+
+@layer qwik-ui {
+  [data-qui-carousel-viewport] {
+    overflow: hidden;
+  }
+
+  [data-qui-carousel-scroller] {
+    transform: var(--transform);
+    will-change: transform;
+    transition: 0.3s transform ease-out;
+
+    display: flex;
+    gap: var(--gap);
+    flex-direction: var(--orientation);
+
+    /* for initial slide position */
+    scroll-snap-type: both mandatory;
+    max-height: calc(var(--max-slide-height));
+  }
+
+  [data-qui-carousel-slide] {
+    /* default, feel free to override */
+    --total-gap-width: calc(var(--gap) * (var(--slides-per-view) - 1));
+    --available-slide-width: calc(100% - var(--total-gap-width));
+    --slide-width: calc(var(--available-slide-width) / var(--slides-per-view));
+
+    flex-basis: var(--slide-width);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-qui-carousel-player] {
+      display: none;
+    }
+  }
+}
