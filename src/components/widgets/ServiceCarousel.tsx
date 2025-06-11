@@ -2,8 +2,7 @@ import { component$, PropsOf, useContextProvider, useSignal, useVisibleTask$ } f
 import { Carousel, Progress } from '@qwik-ui/headless';
 import { Card } from '../ui/Card'; // Adjust the import path as needed
 import { DarkContext } from '~/DarkContext';
-import { Label } from '../ui/Label';
-import { Input } from '../ui/Input';
+
 import { Button } from '../ui/Button';
 
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
