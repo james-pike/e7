@@ -21,7 +21,7 @@ export default component$(() => {
                 Solutions */}
               
             </h1>
-            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 max-w-2xl mx-auto md:mx-0  ">
+            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground  mb-6 max-w-2xl mx-auto md:mx-0  ">
 Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
             
             <div class="grid grid-cols-2 items-center gap-4 px-0 md:px-0 sm:flex-row sm:justify-center md:justify-start ">
