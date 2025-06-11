@@ -100,7 +100,7 @@ export default component$((props: Props) => {
               />
               <Card.Header>
                 <Card.Title>{service.title}</Card.Title>
-                <Card.Description>{service.description}</Card.Description>
+                <Card.Description class="py-10">{service.description}</Card.Description>
               </Card.Header>
             </Card.Root>
           </Carousel.Slide>
@@ -111,7 +111,7 @@ export default component$((props: Props) => {
             {services.map((service) => (
               <Carousel.Bullet
                 key={service.title}
-                class="carousel-pagination-bullet w-[10px]  h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125"
+                class="carousel-pagination-bullet w-[10px] -mt-2 h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125"
               />
             ))}
           </Carousel.Pagination>

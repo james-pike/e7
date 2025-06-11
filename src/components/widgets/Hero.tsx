@@ -13,7 +13,7 @@ export default component$(() => {
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 py-8 md:px-8 md:py-0">
           <div class="md:text-left px-2">
-            <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 opacity-0 ">
+            <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4  ">
               Earthen Vessels
                {/* <br />  */}
               {/* <Typewriter /> */}
@@ -21,10 +21,10 @@ export default component$(() => {
                 Solutions */}
               
             </h1>
-            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 max-w-2xl mx-auto md:mx-0 opacity-0 ">
+            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 max-w-2xl mx-auto md:mx-0  ">
 Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
             
-            <div class="grid grid-cols-2 items-center gap-4 px-0 md:px-0 sm:flex-row sm:justify-center md:justify-start opacity-0 ">
+            <div class="grid grid-cols-2 items-center gap-4 px-0 md:px-0 sm:flex-row sm:justify-center md:justify-start ">
               <Link href="/contact" class="w-full sm:w FULL sm:w-auto">
                 <Button
                   size="md"
