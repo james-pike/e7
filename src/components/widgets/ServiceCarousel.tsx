@@ -1,4 +1,4 @@
-import { component$, JSXChildren, JSXNode, PropsOf, Signal, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, PropsOf, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 import { Card } from '../ui/Card'; // Adjust the import path as needed
 import { DarkContext } from '~/DarkContext';
