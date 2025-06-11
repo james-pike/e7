@@ -55,7 +55,7 @@ export default component$((props: Props) => {
 
  
 
-  const isDraggable = useSignal(true); // Signal to manage draggable state
+  const isDraggable = useSignal(false); // Signal to manage draggable state
 
   // Run this task on the client when the component becomes visible
   
