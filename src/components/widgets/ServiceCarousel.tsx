@@ -141,7 +141,7 @@ export default component$((props: Props) => {
       touch: 2.4,
     }} >
  
-      <Carousel.Scroller class="carousel-scroller py-10">
+      <Carousel.Scroller class="carousel-scroller py-8">
         {services.map((service) => (
           <Carousel.Slide
             style={{ flexBasis: '300px' }}
