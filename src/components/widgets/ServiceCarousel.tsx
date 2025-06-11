@@ -142,10 +142,10 @@ export default component$((props: Props) => {
       touch: 2.4,
     }} >
  
-      <Carousel.Scroller class="carousel-scroller py-6">
+      <Carousel.Scroller class="carousel-scroller py-4">
         {services.map((service) => (
           <Carousel.Slide
-            style={{ flexBasis: '400px' }}
+            style={{ flexBasis: '300px' }}
             key={service.title}
             class="carousel-slide w-full"
           >
@@ -153,10 +153,10 @@ export default component$((props: Props) => {
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
-                style={{ height: '200px' }} // Optional: adjust height as needed
+                style={{ height: '150px' }} // Optional: adjust height as needed
               />
              {serviceData.map((service) => (
-                     <div class="pb-8 h-full">
+                     <div class="pb-6 h-full">
                        <Card.Header>
                          <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
                            {service.title} Services
@@ -165,7 +165,7 @@ export default component$((props: Props) => {
                            {service.description}
                          </Card.Description>
                        </Card.Header>
-                       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0">
+                       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-0">
                          {/* Left Column: Image */}
                          {/* <div class="w-full h-24 md:h-64">
                            <img
@@ -175,7 +175,7 @@ export default component$((props: Props) => {
                            />
                          </div> */}
                          {/* Right Column: Features, Project Details, CTA */}
-                         <div class="w-full space-y-6">
+                         <div class="w-full space-y-4">
                            {/* <div class="space-y-2">
                              <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">
                                Key Features
@@ -188,7 +188,7 @@ export default component$((props: Props) => {
                                ))}
                              </ul>
                            </div> */}
-                           <div class="space-y-2">
+                           {/* <div class="space-y-2">
                              <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">
                                Project Details
                              </Label>
@@ -206,7 +206,7 @@ export default component$((props: Props) => {
                                  placeholder="Timeline"
                                />
                              </div>
-                           </div>
+                           </div> */}
                            <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">
                              {service.ctaText}
                            </Button>

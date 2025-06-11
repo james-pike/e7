@@ -10,7 +10,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
     <div
       {...restProps}
       class={cn(
-        'rounded-base border bg-card text-card-foreground shadow-lg',
+        'rounded-base border bg-[#F8F6F2] text-card-foreground shadow-lg',
      // Conditional background
         props.class
       )}
@@ -22,7 +22,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
 
 const Header = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('flex flex-col space-y-1.5 p-6 ', props.class)}>
+    <div {...props} class={cn('flex flex-col space-y-1.5 p-4 ', props.class)}>
       <Slot />
     </div>
   );
