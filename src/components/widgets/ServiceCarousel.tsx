@@ -176,7 +176,7 @@ export default component$((props: Props) => {
                          </div> */}
                          {/* Right Column: Features, Project Details, CTA */}
                          <div class="w-full space-y-6">
-                           <div class="space-y-2">
+                           {/* <div class="space-y-2">
                              <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">
                                Key Features
                              </Label>
@@ -187,7 +187,7 @@ export default component$((props: Props) => {
                                  </li>
                                ))}
                              </ul>
-                           </div>
+                           </div> */}
                            <div class="space-y-2">
                              <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">
                                Project Details
