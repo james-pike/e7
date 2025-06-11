@@ -8,13 +8,13 @@ export default component$(() => {
     <section class="relative overflow-hidden">
         <div class="absolute inset-y-0 right-3/4 z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-primary/10 shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 md:-mr-20 lg:-mr-36" aria-hidden="true"></div>
 
-      <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 min-h-[calc(66vh-80px)]">
+      <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 ">
         
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 py-8 md:px-8 md:py-0">
           <div class="md:text-left px-2">
             <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 opacity-0 animate-[fadeSlideLeft_0.8s_ease-out_0.2s_forwards]">
-              Custom
+              Earthen Vessels
                {/* <br />  */}
               {/* <Typewriter /> */}
                <br />
