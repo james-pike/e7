@@ -17,13 +17,12 @@ export default component$(() => {
               Earthen Vessels
                {/* <br />  */}
               {/* <Typewriter /> */}
-               <br />
-                Solutions
+               {/* <br />
+                Solutions */}
               
             </h1>
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 max-w-2xl mx-auto md:mx-0 opacity-0 animate-[fadeSlideUp_0.8s_ease-out_0.4s_forwards]">
-              Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
-            </p>
+Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
             
             <div class="grid grid-cols-2 items-center gap-4 px-0 md:px-0 sm:flex-row sm:justify-center md:justify-start opacity-0 animate-[fadeSlideLeft_0.8s_ease-out_0.6s_forwards]">
               <Link href="/contact" class="w-full sm:w FULL sm:w-auto">
@@ -31,12 +30,12 @@ export default component$(() => {
                   size="md"
                   class="w-full relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] before:animate-shimmer"
                 >
-                  Get A Quote
+                  Book A Class
                 </Button>
               </Link>
-              <Link href="/contact" class="w-full sm:w-auto">
+              {/* <Link href="/contact" class="w-full sm:w-auto">
                 <Button look="secondary" size="md" class="w-full bg-secondary">Book A Free Consultation</Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

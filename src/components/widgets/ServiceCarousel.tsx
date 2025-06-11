@@ -11,11 +11,13 @@ export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>
   );
 });
 
+
+
 const services = [
   {
     title: 'Web Development',
     description: 'Building responsive and modern web applications',
-    image: '/images/hero1.png'
+       image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png'
   },
   {
     title: 'Mobile Apps',
@@ -79,7 +81,7 @@ export default component$((props: Props) => {
 
   return (
     
-    <Carousel.Root class="carousel-root px-6" gap={20}  draggable={isDraggable.value} rewind sensitivity={{
+    <Carousel.Root class="carousel-root px-6" gap={20} slidesPerView={1}  draggable={isDraggable.value} rewind sensitivity={{
       touch: 2.4,
     }} >
  
@@ -88,13 +90,13 @@ export default component$((props: Props) => {
           <Carousel.Slide
             style={{ flexBasis: '400px' }}
             key={service.title}
-            class="carousel-slide"
+            class="carousel-slide w-full"
           >
             <Card.Root>
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
-                style={{ height: '400px' }} // Optional: adjust height as needed
+                style={{ height: '200px' }} // Optional: adjust height as needed
               />
               <Card.Header>
                 <Card.Title>{service.title}</Card.Title>
@@ -116,8 +118,8 @@ export default component$((props: Props) => {
 
 
           <div class="">
-        <Carousel.Previous>Prev</Carousel.Previous>
-        <Carousel.Next>Next</Carousel.Next>
+        {/* <Carousel.Previous>Prev</Carousel.Previous>
+        <Carousel.Next>Next</Carousel.Next> */}
       </div>
       
         </div>
