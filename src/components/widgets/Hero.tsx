@@ -6,24 +6,24 @@ import { Link } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <section class="relative overflow-hidden">
-        <div class="absolute inset-y-0 right-3/4 z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-primary/10 shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 md:-mr-20 lg:-mr-36" aria-hidden="true"></div>
+      <div class="absolute inset-y-0 right-3/4 z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-primary/10 shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 md:-mr-20 lg:-mr-36" aria-hidden="true"></div>
 
       <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 ">
-        
+
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 py-8 md:px-8 md:py-0">
           <div class="md:text-left px-2">
-            <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4  ">
+            <h1 class="text-5xl font-bold tracking-tighter text-balance text-center sm:text-6xl md:text-6xl lg:text-7xl mb-4  ">
               Earthen Vessels
-               {/* <br />  */}
+              {/* <br />  */}
               {/* <Typewriter /> */}
-               {/* <br />
+              {/* <br />
                 Solutions */}
-              
+
             </h1>
-            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground  mb-6 max-w-2xl mx-auto md:mx-0  ">
-Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
-            
+            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-center  mb-6 max-w-2xl mx-auto md:mx-0  ">
+              Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
+
             <div class="grid grid-cols-2 items-center gap-4 px-0 md:px-0 sm:flex-row sm:justify-center md:justify-start ">
               <Link href="/contact" class="w-full sm:w FULL sm:w-auto">
                 <Button
@@ -39,13 +39,13 @@ Here, we gather around clay, to listen deeply to one another, to ourselves, and 
             </div>
           </div>
         </div>
-        
+
         {/* Carousel */}
         {/* <div class="relative order-2 px-4 z-20 md:z-0 md:order-2 h-52 sm:h-80 md:h-full opacity-0 animate-[fadeSlideRight_1s_ease-out_0.8s_forwards]">
           <ServiceCarousel />
         </div> */}
       </div>
-      
+
     </section>
   );
 });
@@ -54,8 +54,8 @@ Here, we gather around clay, to listen deeply to one another, to ourselves, and 
 
 
 
-    {/* LogoClouds */}
-        {/* <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3 overflow-hidden">
+{/* LogoClouds */ }
+{/* <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3 overflow-hidden">
           <div class="animate-scroll flex">
             <div class="flex shrink-0 px-4">
               <LogoClouds />
