@@ -51,17 +51,13 @@ interface Props {
 export default component$((props: Props) => {
   const { isDark = false } = props; 
   useContextProvider(DarkContext, isDark);// Default to false if not provided
-  const isPlaying = useSignal<boolean>(false);
 
  
 
-  const isDraggable = useSignal(false); // Signal to manage draggable state
+  const isDraggable = useSignal(true); // Signal to manage draggable state
 
   // Run this task on the client when the component becomes visible
-  
   useVisibleTask$(() => {
-        isPlaying.value = true;
-
     const updateDraggable = () => {
       // Use Tailwind's default md breakpoint (768px) as the threshold
       if (window.innerWidth >= 768) {
@@ -83,7 +79,7 @@ export default component$((props: Props) => {
 
   return (
     
-    <Carousel.Root class="carousel-root px-6" gap={20} bind:autoplay={isPlaying} draggable={isDraggable.value} rewind sensitivity={{
+    <Carousel.Root class="carousel-root px-6" gap={20}  draggable={isDraggable.value} rewind sensitivity={{
       touch: 2.4,
     }} >
  
