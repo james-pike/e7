@@ -138,11 +138,11 @@ export default component$((props: Props) => {
 
   return (
     
-    <Carousel.Root class="carousel-root px-6" gap={20} slidesPerView={1}  draggable={isDraggable.value} rewind sensitivity={{
+    <Carousel.Root class="carousel-root px-4" gap={20} slidesPerView={1}  draggable={isDraggable.value} rewind sensitivity={{
       touch: 2.4,
     }} >
  
-      <Carousel.Scroller class="carousel-scroller py-6">
+      <Carousel.Scroller class="carousel-scroller py-4">
         {services.map((service) => (
           <Carousel.Slide
             style={{ flexBasis: '400px' }}
