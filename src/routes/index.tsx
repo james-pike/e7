@@ -12,7 +12,6 @@ import Contact from "~/components/widgets/Contact";
 
 import Reviews from "~/components/widgets/Reviews";
 import ServicesX from "~/components/widgets/ServicesX";
-import ClassCarousel from "~/components/ui/ClassCarousel";
 import ServiceCarousel from "~/components/widgets/ServiceCarousel";
 
 

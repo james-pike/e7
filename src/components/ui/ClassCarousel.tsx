@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import { Carousel } from '@qwik-ui/headless';
 
 export default component$(() => {
