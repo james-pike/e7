@@ -155,7 +155,7 @@ export default component$((props: Props) => {
                 alt={service.title}
                 style={{ height: '200px' }} // Optional: adjust height as needed
               />
-             {serviceData.map((service, index) => (
+             {serviceData.map((service) => (
                      <div class="pb-8 h-full">
                        <Card.Header>
                          <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
