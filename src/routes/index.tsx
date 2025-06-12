@@ -12,6 +12,7 @@ import Contact from "~/components/widgets/Contact";
 
 import Reviews from "~/components/widgets/Reviews";
 import ServicesX from "~/components/widgets/ServicesX";
+import ServiceCarousel from "~/components/widgets/ServiceCarousel";
 
 
 
@@ -22,7 +23,7 @@ export default component$(() => {
     <>
   
       <Hero />
-{/* <ServiceCarousel/> */}
+<ServiceCarousel/>
       <ServicesX
         id="services"
         highlight="Upcoming Events & Classes"
