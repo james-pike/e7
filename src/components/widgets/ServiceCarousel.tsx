@@ -144,7 +144,7 @@ export default component$((props: Props) => {
       <Carousel.Scroller class="carousel-scroller py-6">
         {services.map((service) => (
           <Carousel.Slide
-            style={{ flexBasis: '300px' }}
+            style={{ flexBasis: '400px' }}
             key={service.title}
             class="carousel-slide w-full"
           >

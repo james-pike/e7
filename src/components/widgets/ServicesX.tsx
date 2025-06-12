@@ -23,12 +23,12 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "",  highlight = "", classes = {}, isDark = false } = props;
+  const { id,   highlight = "", classes = {}, isDark = false } = props;
 
   return (
     <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: " max-w-6xl" }}>
        {/* <Card.Root class="pt-6 mb-0.5"> */}
-      <Headline title={title} highlight={highlight} classes={classes?.headline} />
+      <Headline  highlight={highlight} align="left" classes={classes?.headline} />
       {/* </Card.Root> */}
 <ServiceCarousel/> 
    </Wrapper>
