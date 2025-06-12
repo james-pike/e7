@@ -3,6 +3,7 @@ import { Headline } from "~/components/ui/Headline";
 import { VisibleWrapper } from "./VisibleWrapper";
 import ServiceTabsX from "./ServiceTabsX";
 import { Wrapper } from "./Wrapper";
+import ServiceCarousel from "./ServiceCarousel";
  // Adjust the import path
 
 interface Item {
@@ -28,11 +29,9 @@ export default component$((props: Props) => {
   return (
     <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: " max-w-6xl" }}>
        {/* <Card.Root class="pt-6 mb-0.5"> */}
-      <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      <Headline title={title} highlight={highlight} classes={classes?.headline} />
       {/* </Card.Root> */}
-      <VisibleWrapper id={`${id}-service-tabs`}>
-        <ServiceTabsX  />
-      </VisibleWrapper>
-    </Wrapper>
+<ServiceCarousel/> 
+   </Wrapper>
   );
 });
