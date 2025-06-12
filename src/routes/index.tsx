@@ -30,6 +30,14 @@ export default component$(() => {
         subtitle="From stunning design to seamless development and strategic branding — we build digital solutions that make an impact."
         items={[]} />
 
+            <Steps      
+      isDark 
+      id="steps"
+      highlight="Our Process"
+  title="How We Bring Your Website to Life"
+  subtitle="From first contact to final launch, our streamlined process ensures every website is strategic, beautifully designed, and built to perform."
+        items={[]} />
+
 <Features
 id="features-grid"
 highlight="Core Services"
@@ -92,13 +100,7 @@ items={[
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
         items={[]} />
-      <Steps      
-      isDark 
-      id="steps"
-      highlight="Our Process"
-  title="How We Bring Your Website to Life"
-  subtitle="From first contact to final launch, our streamlined process ensures every website is strategic, beautifully designed, and built to perform."
-        items={[]} />
+  
   
            <FAQ
 
