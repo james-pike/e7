@@ -23,7 +23,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+  const { id, title = "",  highlight = "", classes = {}, isDark = false } = props;
 
   return (
     <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: " max-w-6xl" }}>
