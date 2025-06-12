@@ -24,7 +24,7 @@ export default component$(() => {
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-center  mb-6 max-w-2xl mx-auto md:mx-0  ">
               Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
 
-            <div class="grid grid-cols-1 items-center gap-4 px-8 md:px-0 sm:flex-row sm:justify-center md:justify-start ">
+            <div class="grid grid-cols-2 items-center gap-4 px-8 md:px-0 sm:flex-row sm:justify-center md:justify-start ">
               <Link href="/contact" class="w-full sm:w FULL sm:w-auto">
                 <Button
                   size="md"
