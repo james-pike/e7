@@ -33,9 +33,9 @@ export default component$(() => {
                   Book A Class
                 </Button>
               </Link>
-              {/* <Link href="/contact" class="w-full sm:w-auto">
-                <Button size="md" class="w-full">Learn More</Button>
-              </Link> */}
+              <Link href="/contact" class="w-full sm:w-auto">
+                <Button size="md" class="w-full text-lg">Contact Us</Button>
+              </Link>
             </div>
           </div>
         </div>

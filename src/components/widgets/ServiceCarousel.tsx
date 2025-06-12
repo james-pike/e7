@@ -206,7 +206,7 @@ export default component$((props: Props) => {
                                />
                              </div>
                            </div> */}
-                           <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">
+                           <Button class="w-full bg-secondary hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">
                              {service.ctaText}
                            </Button>
                          </div>

@@ -15,7 +15,7 @@ export const Wrapper = component$((props: SectionWrapperProps) => {
 
   const isHomePage = location.url.pathname === "/";
   const paddingY = isHomePage
-    ? "py-10 "
+    ? "py-8 "
     : "py-14";
 
   return (

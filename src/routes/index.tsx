@@ -25,7 +25,7 @@ export default component$(() => {
 {/* <ServiceCarousel/> */}
       <ServicesX
         id="services"
-        highlight="Upcoming Events"
+        highlight="Upcoming Events & Classes"
         title="Classes & Workshops"
         subtitle="From stunning design to seamless development and strategic branding — we build digital solutions that make an impact."
         items={[]} />

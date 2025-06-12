@@ -28,9 +28,13 @@ export default component$((props: Props) => {
   return (
     <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: " max-w-6xl" }}>
        {/* <Card.Root class="pt-6 mb-0.5"> */}
-      <Headline  highlight={highlight} align="left" classes={classes?.headline} />
+       <div class="px-4">
+      <Headline    highlight={highlight} align="left" classes={classes?.headline} />
+      </div>
       {/* </Card.Root> */}
+      <div class="-mt-10">
 <ServiceCarousel/> 
+</div>
    </Wrapper>
   );
 });
