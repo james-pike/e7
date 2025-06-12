@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline";
-import { VisibleWrapper } from "./VisibleWrapper";
-import ServiceTabsX from "./ServiceTabsX";
+
 import { Wrapper } from "./Wrapper";
 import ServiceCarousel from "./ServiceCarousel";
  // Adjust the import path
