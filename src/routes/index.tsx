@@ -16,7 +16,7 @@ import ServiceCarousel from "~/components/widgets/ServiceCarousel";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 import { tursoClient } from '~/components/utils/turso';
 
-
+//
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
 
