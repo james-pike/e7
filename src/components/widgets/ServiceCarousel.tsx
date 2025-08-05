@@ -19,7 +19,7 @@ const services = [
   {
     title: 'Web Development',
     description: 'Building responsive and modern web applications',
-       image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png'
+       image: '/images/clay.jpg'
   },
   {
     title: 'Mobile Apps',
@@ -50,11 +50,11 @@ const services = [
 
 const serviceData = [
   {
-    title: "Design",
+    title: "Clay Labryinth",
     subtitle: "Creative and Functional Design",
 
     description: "Our innovative design services use Figma, Adobe XD, and Sketch to craft custom UI/UX, interactive prototypes, and branding assets tailored to your vision.",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-3.png",
+    image: "/images/clay",
     features: [
       "Custom UI/UX Design",
       "Interactive Prototyping",
@@ -64,10 +64,27 @@ const serviceData = [
       startingPrice: "$3,500",
       timeline: "4-6 weeks"
     },
-    ctaText: "Begin Design"
+    ctaText: "Book Class"
   },
+  //   {
+  //   title: "Open Like A Bowl",
+  //   subtitle: "Creative and Functional Design",
+
+  //   description: "Our innovative design services use Figma, Adobe XD, and Sketch to craft custom UI/UX, interactive prototypes, and branding assets tailored to your vision.",
+  //   image: "/images/summer",
+  //   features: [
+  //     "Custom UI/UX Design",
+  //     "Interactive Prototyping",
+  //     "Branding Asset Creation"
+  //   ],
+  //   projectDetails: {
+  //     startingPrice: "$3,500",
+  //     timeline: "4-6 weeks"
+  //   },
+  //   ctaText: "Book Open Like A Bowl"
+  // },
   // {
-  //   title: "Development",
+  //   title: "Developmsent",
   //   subtitle: "Robust Web and Software Solutions",
 
   //   description: "We provide scalable development with React, Qwik, and Next.js, building secure APIs, integrating cloud solutions, and delivering custom software.",
@@ -144,7 +161,7 @@ export default component$((props: Props) => {
       <Carousel.Scroller class="carousel-scroller py-6">
         {services.map((service) => (
           <Carousel.Slide
-            style={{ flexBasis: '400px' }}
+            style={{ flexBasis: '300px' }}
             key={service.title}
             class="carousel-slide w-full"
           >
@@ -152,13 +169,13 @@ export default component$((props: Props) => {
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
-                style={{ height: '150px' ,}} // Optional: adjust height as needed
+                style={{ height: '150px' ,}} // Optional: adjuqst height as needed
               />
              {serviceData.map((service) => (
                      <div class="pb-6 h-full">
                        <Card.Header>
                          <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
-                           {service.title} Services
+                           {service.title} 
                          </Card.Title>
                          <Card.Description class="text-gray-600 dark:text-gray-300">
                            {service.description}
@@ -206,7 +223,7 @@ export default component$((props: Props) => {
                                />
                              </div>
                            </div> */}
-                           <Button class="w-full bg-secondary hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">
+                           <Button class=" bg-secondary hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">
                              {service.ctaText}
                            </Button>
                          </div>
