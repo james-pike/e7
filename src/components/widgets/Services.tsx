@@ -3,7 +3,7 @@ import { Headline } from "~/components/ui/Headline";
 import { SectionWrapper } from "./SectionWrapper";
 import ServiceTabs from "./ServiceTabs";
 import { VisibleWrapper } from "./VisibleWrapper";
- // Adjust the import path
+ // Adjust the import paths
 
 interface Item {
   title?: string;
