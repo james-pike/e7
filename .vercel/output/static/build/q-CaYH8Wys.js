@@ -1,0 +1,1 @@
+import{a as o,j as n,k as s,l as i,m,S as r}from"./q-Dx8tRpk-.js";import{a as l}from"./q-B4mUf6N_.js";import"./q-CSnWScGr.js";const _=({...a})=>{const t=o(l);return n("span",{tabIndex:-1,get id(){return t.itemLabelId},...a,children:m(r,null,3,"a0_0")},{tabIndex:i,id:s(e=>e.itemLabelId,[t])},0,"a0_1")};export{_ as s_KiqB5MOl5Jw};

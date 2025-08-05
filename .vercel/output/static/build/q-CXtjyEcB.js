@@ -1,0 +1,1 @@
+import{j as n,m as o,S as r}from"./q-Dx8tRpk-.js";import{M as i}from"./q-D-Gh2Qym.js";import"./q-CSnWScGr.js";import"./q-DdTjmQXO.js";import"./q-odQqEU_I.js";const c=t=>n("h3",{...t,class:i("font-medium leading-none tracking-tight",t.class),children:o(r,null,3,"kn_4")},null,0,"kn_5");export{c as s_zRlUwCYq0p0};

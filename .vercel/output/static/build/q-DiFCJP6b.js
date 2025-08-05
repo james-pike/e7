@@ -1,0 +1,1 @@
+import{D as n,S as t,m as r}from"./q-Dx8tRpk-.js";import{M as a}from"./q-D-Gh2Qym.js";import"./q-CSnWScGr.js";import"./q-DdTjmQXO.js";import"./q-odQqEU_I.js";const d=o=>{n();const s=o.asChild?t:"a";return r(s,{...o,class:a("text-muted-foreground transition-colors hover:text-foreground",o.class),children:!o.asChild&&r(t,null,3,"5N_6")},0,"5N_7")};export{d as s_lnxkn0bAnDs};
