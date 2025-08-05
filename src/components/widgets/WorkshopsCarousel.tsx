@@ -24,9 +24,9 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
       <section class="relative overflow-hidden py-16 md:py-20">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div class="text-center">
-            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-              <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-                Upcoming Workshops
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-sage-700 dark:text-sage-300">
+              <span class=" bg-clip-text text-transparent">
+                Classes & Workshops
               </span>
             </h2>
             <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
@@ -55,11 +55,11 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-              Upcoming Workshops
+            <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text">
+              Classes & Workshops
             </span>
           </h2>
-          <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
+          <p class="text-xl text-sage=-700 dark:text-sage-300 max-w-3xl mx-auto">
             Join our expert artisans for hands-on pottery workshops. Learn traditional techniques, 
             unleash your creativity, and take home your own handcrafted pieces.
           </p>
