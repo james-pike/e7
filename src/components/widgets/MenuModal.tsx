@@ -94,18 +94,20 @@ export default component$(() => {
   const menuItems = [
     { title: "Home", href: "/", badge: null },
     {
+      title: "Our Team",
+      href: "/team/",
+      hasSubmenu: false,
+    
+    },
+     {
       title: "About",
       href: "/about/",
-      hasSubmenu: true,
-      subitems: [
-        { title: "About Us", href: "/about" },
-        { title: "Reviews", href: "/reviews" },
-        { title: "FAQ", href: "/faq" },
-      ],
+      hasSubmenu: false,
+    
     },
     {
-      title: "Services",
-      href: "/services/",
+      title: "Workshops",
+      href: "/prices/",
       hasSubmenu: true,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
@@ -114,9 +116,9 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-    { title: "Pricing", href: "/pricing/", badge: null },
-    { title: "Blog", href: "/blog/", badge: null },
-    { title: "Contact Us", href: "/contact/", badge: null },
+    { title: "Gallery", href: "/gallery/", badge: null },
+    { title: "FAQ", href: "/faq/", badge: null },
+    { title: "Contact", href: "/contact/", badge: null },
   ];
 
   return (
