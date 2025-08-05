@@ -246,14 +246,14 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
         </div>
 
         {/* View All Workshops Button */}
-        <div class="text-center mt-12">
+        {/* <div class="text-center mt-12">
           <a
             href="#workshops"
             class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-sage-700 bg-gradient-to-r from-white/80 via-sage-50/80 to-clay-50/80 backdrop-blur-sm border-2 border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50"
           >
             <span class="relative z-10">View All Workshops</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
