@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
-import { qwikSerialized } from "~/utils/qwikSerialized";
 
 interface TeamMember {
   name: string;
@@ -13,7 +12,7 @@ interface TeamMember {
 export default component$(() => {
   const teamMembers: TeamMember[] = [
     {
-      name: "John Smith",
+      name: "John Smiths",
       role: "Master Locksmith",
       description: "25+ years of experience in residential and commercial lock systems",
       image: "/images/team/john-smith.jpg",
