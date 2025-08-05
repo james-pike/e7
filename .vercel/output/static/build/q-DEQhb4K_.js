@@ -1,1 +1,0 @@
-import"./q-CSnWScGr.js";import{m as o,S as t}from"./q-Dx8tRpk-.js";import{M as e,H as m}from"./q-D-Gh2Qym.js";import"./q-DdTjmQXO.js";import"./q-odQqEU_I.js";const n=r=>o(m,{...r,class:e("border-b border-border","data-[open]:bg-background",r.class),children:o(t,null,3,"TW_1")},0,"TW_2");export{n as s_J0HMB5iFveU};

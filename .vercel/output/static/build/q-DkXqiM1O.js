@@ -1,1 +1,0 @@
-import{j as l,m as r,S as s}from"./q-Dx8tRpk-.js";import{M as t}from"./q-D-Gh2Qym.js";import"./q-CSnWScGr.js";import"./q-DdTjmQXO.js";import"./q-odQqEU_I.js";const p=i=>l("li",{...i,class:t("inline-flex items-center gap-1.5",i.class),children:r(s,null,3,"5N_4")},null,0,"5N_5");export{p as s_gpi02vDduKw};

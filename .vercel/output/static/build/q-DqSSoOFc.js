@@ -1,0 +1,1 @@
+import{P as s,b as r,c as e,X as n}from"./q-Cf7NMI1Y.js";import{M as o}from"./q-BgNh4VII.js";import"./q-CCVerxHA.js";const c=a=>s("span",{role:"link","aria-disabled":"true","aria-current":"page",...a,class:o("font-normal text-foreground",a.class),children:e(n,null,3,"5N_10")},{role:r,"aria-disabled":r,"aria-current":r},0,"5N_11");export{c as s_0mEqi4shros};

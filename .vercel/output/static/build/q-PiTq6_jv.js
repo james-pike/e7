@@ -1,1 +1,0 @@
-import"./q-CSnWScGr.js";import{m as r,S as o}from"./q-Dx8tRpk-.js";import{l}from"./q-D-Gh2Qym.js";import"./q-DdTjmQXO.js";import"./q-odQqEU_I.js";const a=({...t})=>r(l,{...t,children:r(o,null,3,"ql_15")},0,"ql_16");export{a as s_QqCDXXYuBUw};

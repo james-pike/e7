@@ -1,0 +1,1 @@
+import{E as n,P as s,b as e,c as i,X as l}from"./q-Cf7NMI1Y.js";import{c as r}from"./q-BrOW4Qnq.js";import"./q-CCVerxHA.js";const x=o=>{const t=`${n(r).localId}-inline`;return s("div",{id:t,role:"listbox",...o,children:i(l,null,3,"FA_0")},{role:e},0,"FA_1")};export{x as s_lDaH5RZh24k};
