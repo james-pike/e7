@@ -35,7 +35,7 @@ export const useWorkshopsLoader = routeLoader$(async (event) => {
     level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels'; 
   }>;
 });
-
+//
 export default component$(() => {
     const workshops = useWorkshopsLoader();
 
