@@ -24,7 +24,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
       <section class="relative overflow-hidden py-16 md:py-20">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div class="text-center">
-            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-sage-700 dark:text-sage-300">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-black dark:text-sage-300">
               <span class=" bg-clip-text text-transparent">
                 Classes & Workshops
               </span>
