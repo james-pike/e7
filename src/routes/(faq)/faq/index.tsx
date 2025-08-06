@@ -12,7 +12,7 @@ export const useFaqsLoader = routeLoader$(async (event) => {
     id: (row as any).id,
     question: (row as any).question,
     answer: (row as any).answer,
-    category: (row as any).category || 'General', // Default to 'General' if no category
+    category: (row as any).category || 'General', // Default to 'General' if no categorys
   })) as Array<{ id: number; question: string; answer: string; category: string }>;
 });
 
