@@ -65,7 +65,7 @@ export default component$(() => {
 
   return (
     <footer class="relative border-t border-clay-200 dark:border-clay-700 overflow-hidden">
-      {/* Background with pottedry texture */}
+      {/* Background with pottedry textures */}
       <div class="absolute inset-0 bg-pottery-texture opacity-10" aria-hidden="true"></div>
       
       {/* Gradient background */}
