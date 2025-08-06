@@ -18,19 +18,33 @@ interface WorkshopsCarouselProps {
 }
 
 export default component$<WorkshopsCarouselProps>(({ workshops }) => {
+  // Get today's date (without time for comparison)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Reset time to midnight for date-only comparison
+
+  // Filter workshops to only include future dates and sort by soonest date
+  const sortedWorkshops = [...workshops]
+    .filter((workshop) => {
+      const workshopDate = new Date(workshop.date);
+      return workshopDate >= today; // Only include workshops on or after today
+    })
+    .sort((a, b) => {
+      return new Date(a.date).getTime() - new Date(b.date).getTime();
+    });
+
   // Don't render if no workshops
-  if (!workshops || workshops.length === 0) {
+  if (!sortedWorkshops || sortedWorkshops.length === 0) {
     return (
       <section class="relative overflow-hidden py-16 md:py-20">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div class="text-center">
             <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-black dark:text-sage-300">
-              <span class=" bg-clip-text text-transparent">
+              <span class="bg-clip-text text-transparent">
                 Classes & Workshops
               </span>
             </h2>
             <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
-              No workshops available at the moment. Check back soon for new pottery classes!
+              No upcoming workshops available at the moment. Check back soon for new pottery classes!
             </p>
           </div>
         </div>
@@ -59,7 +73,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
               Classes & Workshops
             </span>
           </h2>
-          <p class="text-xl text-sage=-700 dark:text-sage-300 max-w-3xl mx-auto">
+          <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
             Join our expert artisans for hands-on pottery workshops. Learn traditional techniques, 
             unleash your creativity, and take home your own handcrafted pieces.
           </p>
@@ -70,7 +84,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
           {/* Desktop Carousel - Exactly 4 events */}
           <div class="hidden lg:block">
             <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4 max-w-[90vw] mx-auto">
-              {workshops.map((workshop) => (
+              {sortedWorkshops.map((workshop) => (
                 <div key={workshop.id} class="group flex-shrink-0 w-[calc(25%-12px)]">
                   <div
                     class={"flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"}
@@ -129,7 +143,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
           {/* Tablet Carousel - 2-3 events */}
           <div class="hidden md:block lg:hidden">
             <div class="flex gap-4 overflow-x-auto scrollbar-hide pb-4 max-w-[90vw] mx-auto">
-              {workshops.map((workshop) => (
+              {sortedWorkshops.map((workshop) => (
                 <div key={workshop.id} class="group flex-shrink-0 w-80">
                   <div
                     class={"flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"}
@@ -188,7 +202,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
           {/* Mobile Carousel */}
           <div class="md:hidden">
             <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4">
-              {workshops.map((workshop) => (
+              {sortedWorkshops.map((workshop) => (
                 <div key={workshop.id} class="group flex-shrink-0 w-72 snap-center">
                   <div
                     class={"flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"}
@@ -244,17 +258,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
             </div>
           </div>
         </div>
-
-        {/* View All Workshops Button */}
-        {/* <div class="text-center mt-12">
-          <a
-            href="#workshops"
-            class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-sage-700 bg-gradient-to-r from-white/80 via-sage-50/80 to-clay-50/80 backdrop-blur-sm border-2 border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50"
-          >
-            <span class="relative z-10">View All Workshops</span>
-          </a>
-        </div> */}
       </div>
     </section>
   );
-}); 
+});
