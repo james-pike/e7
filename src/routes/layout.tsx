@@ -1,7 +1,7 @@
 import { component$, Slot } from "@builder.io/qwik";
 import { ThemeBaseColors, ThemeBorderRadiuses, ThemeFonts, ThemeModes, ThemePrimaryColors, ThemeStyles } from "@qwik-ui/utils";
 
-import Footer from "~/components/widgets/Footer";
+import Footer2 from "~/components/widgets/Footer2";
 import Header from "~/components/widgets/Header";
 import { ThemeProvider } from "~/lib/provider";
 
@@ -22,7 +22,7 @@ export default component$(() => {
       <main class="bg-[#F5F1EB]">
         <Slot />
       </main>
-      <Footer />
+      <Footer2 />
       </ThemeProvider>
     </>
   );
