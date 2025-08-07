@@ -30,7 +30,7 @@ export default component$(() => {
       ],
     },
     {
-      title: "Support",
+      title: "Community",
       items: [
         { title: "Care Instructions", href: "#" },
         { title: "Shipping Info", href: "#" },

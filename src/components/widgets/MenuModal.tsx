@@ -26,7 +26,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} class="border-b last:border-none last:rounded-b-base">
+        <div key={index} class="border-b border-clay-200 last:border-none last:rounded-b-base">
           {item.hasSubmenu ? (
             <>
               <button
@@ -130,7 +130,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border  bg-clay-200 dark:bg-gray-900 p-1">
+          <div class="border  border-clay-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <LogoStatic />
@@ -141,11 +141,11 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          <nav class="mt-0 space-y-4 border border-t-0 bg-gray-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-clay-200 border-t-0 bg-gray-100 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
-          <div class="border border-t-0 pb-3 bg-gray-200 dark:bg-gray-900">
+          <div class="border-clay-200 border-t-0 pb-3 bg-gray-200 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
                 <Link href="/quote" class="w-full sm:w-auto">
