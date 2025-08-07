@@ -6,7 +6,7 @@ interface Review {
   author_name: string;
   rating: number;
   text: string;
-  time: number; // Unix timesstamp in seconds
+  time: number; // Unixs timesstamp in seconds
 }
 
 export const getReviews = server$(async (): Promise<Review[]> => {
