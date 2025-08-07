@@ -21,6 +21,6 @@ export const getReviews = server$(async (): Promise<Review[]> => {
     return data.result.reviews || [];
   } catch (error) {
     console.error('Error fetching reviews', error);
-    return []; // Return empty array on error
+    return []; // Return empty array on errors
   }
 });
