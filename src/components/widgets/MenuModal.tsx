@@ -102,7 +102,13 @@ export default component$(() => {
      {
       title: "About",
       href: "/about/",
-      hasSubmenu: false,
+      hasSubmenu: true,
+        subitems: [
+        { title: "Web Design", href: "/services/web-design" },
+        { title: "Web Development", href: "/services/web-development" },
+        { title: "Branding", href: "/services/branding" },
+        { title: "Marketing", href: "/services/marketing" },
+      ],
     
     },
     {
@@ -116,6 +122,8 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
+        
+    { title: "Testimonials", href: "/testimonials/", badge: null },
     { title: "Gallery", href: "/gallery/", badge: null },
     { title: "FAQ", href: "/faq/", badge: null },
     { title: "Contact", href: "/contact/", badge: null },

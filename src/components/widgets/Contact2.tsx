@@ -147,7 +147,7 @@ export default component$(() => {
             </div>
 
             {/* Quick Contact CTA */}
-            <div class="bg-gradient-to-r from-clay-50 via-earth-50 to-sage-50 !important dark:from-clay-900 dark:via-earth-900 dark:to-sage-900 !important rounded-2xl p-6 border-2 border-clay-100 dark:border-clay-700 shadow-lg">
+            {/* <div class="bg-gradient-to-r from-clay-50 via-earth-50 to-sage-50 !important dark:from-clay-900 dark:via-earth-900 dark:to-sage-900 !important rounded-2xl p-6 border-2 border-clay-100 dark:border-clay-700 shadow-lg">
               <h3 class="text-lg font-bold text-clay-900 dark:text-clay-100 font-serif mb-3">
                 Need Immediate Help?
               </h3>
@@ -163,7 +163,7 @@ export default component$(() => {
                 </svg>
                 Call Now
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side - Contact Info Cards */}
