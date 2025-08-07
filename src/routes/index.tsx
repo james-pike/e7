@@ -4,7 +4,6 @@ import { SITE } from "~/config.mjs";
 import Hero from "~/components/widgets/Hero";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 import { tursoClient } from '~/components/utils/turso';
-import Reviews from "~/components/widgets/Reviews";
 import ReviewsCarousel from "~/components/widgets/ReviewsCarousel";
 // import FAQAccordion from "~/components/widgets/FAQAccordion";
 
@@ -59,7 +58,6 @@ export const useWorkshopsLoader = routeLoader$(async (event) => {
 //
 export default component$(() => {
     const workshops = useWorkshopsLoader();
-    const reviews = useReviewsLoader();
   return (
     <>
   
@@ -68,7 +66,7 @@ export default component$(() => {
 
           <ReviewsCarousel />
 
-{/* <FAQAccordion /> */}
+{/* <FAQAccordions /> */}
 
       
     </>

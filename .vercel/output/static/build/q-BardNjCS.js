@@ -1,1 +1,0 @@
-import{c as m,X as o}from"./q-Cf7NMI1Y.js";import{i as r}from"./q-C3rmzXGH.js";import{M as i}from"./q-BgNh4VII.js";import"./q-CCVerxHA.js";import"./q-BDYvS0nC.js";import"./q-C2Hl3XkQ.js";import"./q-C8S-cgY3.js";import"./q-BrOW4Qnq.js";const q=({...t})=>m(r,{...t,class:i("px-2 py-1.5 text-sm font-semibold",t.class),children:m(o,null,3,"ql_1")},0,"ql_2");export{q as s_m6qCDW19C4Q};

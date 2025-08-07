@@ -2,11 +2,10 @@ import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/q
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
-import { Link, useLocation } from "@builder.io/qwik-city";
+import {  useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
-import { Button, buttonVariants } from "../ui/Button";
-import IconBrandTailwind from "../icons/IconBrandTailwind";
+import { buttonVariants } from "../ui/Button";
 
 // Custom Accordion Component
 const CustomAccordion = component$(({ items, show }: { items: any[], show: Signal<boolean> }) => {

@@ -1,1 +1,0 @@
-import{r as s,X as o,c as t}from"./q-Cf7NMI1Y.js";import{M as a}from"./q-BgNh4VII.js";import"./q-CCVerxHA.js";const c=r=>{s();const n=r.asChild?o:"a";return t(n,{...r,class:a("text-muted-foreground transition-colors hover:text-foreground",r.class),children:!r.asChild&&t(o,null,3,"5N_6")},0,"5N_7")};export{c as s_lnxkn0bAnDs};

@@ -1,1 +1,0 @@
-import{E as o,M as n,c as s,X as c}from"./q-Cf7NMI1Y.js";import{c as l}from"./q-C2Hl3XkQ.js";import"./q-CCVerxHA.js";const u=()=>{const t=`${o(l).localId}-title`;return n("div",{id:t},null,s(c,null,3,"b1_0"),1,"b1_1")};export{u as s_0Y5YuH7uUak};

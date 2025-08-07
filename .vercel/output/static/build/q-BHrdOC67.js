@@ -1,1 +1,0 @@
-import{P as s,c as n,X as r}from"./q-Cf7NMI1Y.js";import{M as c}from"./q-BgNh4VII.js";import"./q-CCVerxHA.js";const t=l=>s("div",{...l,class:c("flex flex-col space-y-1.5 p-4 ",l.class),children:n(r,null,3,"kn_2")},null,0,"kn_3");export{t as s_0zdhew5TQQ8};

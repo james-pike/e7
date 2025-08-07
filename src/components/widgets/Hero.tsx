@@ -1,7 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Button } from "../ui/Button";
-import { Link } from "@builder.io/qwik-city";
-import ServiceCarousel from "./ServiceCarousel";
+
 
 
 export default component$(() => {

@@ -1,1 +1,0 @@
-import{P as o,c as n,X as t}from"./q-Cf7NMI1Y.js";import{M as a}from"./q-BgNh4VII.js";import"./q-CCVerxHA.js";const c=r=>{const{...s}=r;return o("div",{...s,class:a("rounded-base border bg-[#F8F6F2] text-card-foreground shadow-lg",r.class),children:n(t,null,3,"kn_0")},null,0,"kn_1")};export{c as s_d6a5ijXqsVQ};

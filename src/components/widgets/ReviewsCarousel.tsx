@@ -14,28 +14,13 @@ export default component$(() => {
 
   // Precompute number of slides and slides array (Qwik-friendly)
   const numSlides = Math.max(0, Math.ceil((Number.isFinite(safeReviews.length) ? safeReviews.length : 0) / Math.max(1, REVIEWS_PER_SLIDE)));
-  const slides = Array.from({ length: numSlides }, (_, i) => i);
+  // const slides = Array.from({ length: numSlides }, (_, i) => i);
 
   const nextSlide = $(() => {
     currentIndex.value = (currentIndex.value + 1) % numSlides;
   });
 
-  const prevSlide = $(() => {
-    currentIndex.value = currentIndex.value === 0 ? numSlides - 1 : currentIndex.value - 1;
-  });
 
-  const goToSlide = $((index: number) => {
-    currentIndex.value = index;
-  });
-
-  // Auto-play functionality
-  const startAutoPlay = $(() => {
-    isAutoPlaying.value = true;
-  });
-
-  const stopAutoPlay = $(() => {
-    isAutoPlaying.value = false;
-  });
 
   // Auto-advance slides - only run on client
   useTask$(({ track, cleanup }) => {
