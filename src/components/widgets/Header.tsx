@@ -24,7 +24,7 @@ export default component$(() => {
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${
         isLandingPage
           ? store.isScrolling
-            ? " border-y md:border-y-2 bg-card border-border"
+            ? " border-y md:border-y-2 bg-card border-clay-200"
             : "texture"
           : "bg-card border-y md:border-b-2" // Always bg-background when not on landing page
       }`}

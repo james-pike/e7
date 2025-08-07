@@ -10,14 +10,14 @@ import IconInstagram from "../icons/IconInstagram";
 export default component$(() => {
   const links = [
     {
-      title: "Collections",
+      title: "About",
       items: [
-        { title: "Dinnerware", href: "#" },
-        { title: "Planters", href: "#" },
-        { title: "Vases", href: "#" },
-        { title: "Bakeware", href: "#" },
-        { title: "Decorative", href: "#" },
-        { title: "Custom Orders", href: "#" },
+        { title: "About", href: "#" },
+        { title: "Team", href: "#" },
+        { title: "Testimonials", href: "#" },
+        { title: "FAQs", href: "#" },
+        
+     
       ],
     },
     {
@@ -27,7 +27,6 @@ export default component$(() => {
         { title: "Artisans", href: "#" },
         { title: "Techniques", href: "#" },
         { title: "Materials", href: "#" },
-        { title: "Sustainability", href: "#" },
       ],
     },
     {
@@ -35,8 +34,6 @@ export default component$(() => {
       items: [
         { title: "Care Instructions", href: "#" },
         { title: "Shipping Info", href: "#" },
-        { title: "Returns", href: "#" },
-        { title: "Contact Us", href: "#" },
         { title: "FAQ", href: "#" },
       ],
     },
@@ -45,9 +42,7 @@ export default component$(() => {
       items: [
         { title: "Instagram", href: "#" },
         { title: "Pinterest", href: "#" },
-        { title: "Newsletter", href: "#" },
         { title: "Workshops", href: "#" },
-        { title: "Wholesale", href: "#" },
       ],
     },
   ];
@@ -77,7 +72,7 @@ export default component$(() => {
             <div class="mb-4">
               <Link class="inline-block font-bold text-xl font-serif" href={"/"}>
                 <span class="bg-gradient-to-r from-clay-600 to-sage-600 bg-clip-text text-transparent">
-                  Terra Pottery
+                  earthen vessels
                 </span>
               </Link>
             </div>
@@ -86,7 +81,7 @@ export default component$(() => {
             </div>
             
             {/* Newsletter signup */}
-            <div class="mt-6">
+            {/* <div class="mt-6">
               <h4 class="text-sm font-semibold text-clay-800 dark:text-clay-200 mb-3">Join our newsletter</h4>
               <div class="flex">
                 <input 
@@ -98,7 +93,22 @@ export default component$(() => {
                   Subscribe
                 </button>
               </div>
-            </div>
+            </div> */}
+
+              <ul class="flex mb-0 mt-2 md:order-1 -ml-2 md:mb-0">
+            {social.map(({ label, href, icon: Icon }, index) => (
+              <li key={index}>
+                <Link
+                  class="text-sage-600 dark:text-sage-400 hover:bg-clay-100 dark:hover:bg-clay-700 focus:outline-none focus:ring-4 focus:ring-clay-200 dark:focus:ring-clay-700 rounded-lg text-sm p-2.5 inline-flex items-center transition-all duration-200"
+                  aria-label={label}
+                  title={label}
+                  href={href}
+                >
+                  {typeof Icon !== "undefined" && <Icon />}
+                </Link>
+              </li>
+            ))}
+          </ul>
           </div>
           {links.map(({ title, items }, index) => (
             <div key={index} class="col-span-6 md:col-span-3 lg:col-span-2">
@@ -121,20 +131,7 @@ export default component$(() => {
           ))}
         </div>
         <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-clay-200/50 dark:border-clay-700/50">
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
-            {social.map(({ label, href, icon: Icon }, index) => (
-              <li key={index}>
-                <Link
-                  class="text-sage-600 dark:text-sage-400 hover:bg-clay-100 dark:hover:bg-clay-700 focus:outline-none focus:ring-4 focus:ring-clay-200 dark:focus:ring-clay-700 rounded-lg text-sm p-2.5 inline-flex items-center transition-all duration-200"
-                  aria-label={label}
-                  title={label}
-                  href={href}
-                >
-                  {typeof Icon !== "undefined" && <Icon />}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        
 
           <div class="text-sm text-sage-700 dark:text-sage-300">
             <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-gradient-to-br from-clay-500 to-sage-500"></span>
