@@ -21,19 +21,24 @@ export default component$(() => {
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-center  mb-6 max-w-2xl mx-auto md:mx-0  ">
               Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
 
-            <div class="grid grid-cols-2 items-center gap-4 px-8 md:px-0 sm:flex-row sm:justify-center md:justify-start ">
-              <Link href="/contact" class="w-full sm:w FULL sm:w-auto">
-                <Button
-                  size="md"
-                  class="w-full bg-secondary text-lg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] before:animate-shimmer"
+             <div class="flex flex-col items-center justify-center w-full gap-4 sm:flex-row sm:gap-4 max-w-xs sm:max-w-md lg:max-w-7xl mx-auto">
+                <a
+                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-clay-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-clay-400"
+                  href="#collection"
                 >
-                  Book A Class
-                </Button>
-              </Link>
-              <Link href="/contact" class="w-full sm:w-auto">
-                <Button size="md" class="w-full text-lg">Contact Us</Button>
-              </Link>
-            </div>
+                  <span class="relative z-10 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    Book a Workshop
+                  </span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-clay-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <button class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-sage-700 bg-white/80 backdrop-blur-sm border border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50 focus:outline-none focus:ring-2 focus:ring-sage-300">
+                  <span class="relative z-10 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m0 0H3"></path></svg>
+                    Learn About Our Story
+                  </span>
+                </button>
+              </div>
           </div>
         </div>
 
