@@ -95,7 +95,7 @@ export default component$(() => {
               </div>
             </div> */}
 
-              <ul class="flex mb-0 mt-2 md:order-1 -ml-2 md:mb-0">
+              <ul class="flex mb-0 mt-4 md:order-1 -ml-2 md:mb-0">
             {social.map(({ label, href, icon: Icon }, index) => (
               <li key={index}>
                 <Link

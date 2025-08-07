@@ -130,7 +130,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border  bg-gray-200 dark:bg-gray-900 p-1">
+          <div class="border  bg-clay-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <LogoStatic />
