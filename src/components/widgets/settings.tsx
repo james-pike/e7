@@ -71,8 +71,8 @@ export default component$<PropsOf<typeof Button>>(() => {
           'flex sm:mr-2 sm:h-10',
         )}
       >
-        <LuSlidersHorizontal class={cn('h-4 w-4 sm:mr-2')} />
-        <span class={cn('', 'sm:block')}>Make it yours</span>
+        <LuSlidersHorizontal class={cn('h-4 w-4 sm:mr-0')} />
+        <span class={cn('', 'sm:block')}></span>
       </Modal.Trigger>
       <Modal.Panel position="right">
         <header class="flex w-full">

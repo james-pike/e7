@@ -183,9 +183,9 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <Settings />
-            <Link href="/quote" class="w-full sm:w-auto">
+            {/* <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full bg-primary">Get A Quote</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

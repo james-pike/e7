@@ -79,7 +79,6 @@ export default component$(() => {
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
 
       {/* Gradient background */}
-      <div class="absolute inset-0 bg-gradient-to-br from-clay-50/50 via-white to-sage-50/50" aria-hidden="true"></div>
 
       {/* Floating decorative elements */}
       <div class="absolute top-20 right-10 w-24 h-24 bg-clay-300/20 rounded-full blur-xl animate-float"></div>
