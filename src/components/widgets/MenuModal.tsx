@@ -104,10 +104,13 @@ export default component$(() => {
       href: "/about/",
       hasSubmenu: true,
         subitems: [
-        { title: "Web Design", href: "/services/web-design" },
-        { title: "Web Development", href: "/services/web-development" },
-        { title: "Branding", href: "/services/branding" },
-        { title: "Marketing", href: "/services/marketing" },
+        { title: "About", href: "/about" },
+        { title: "Testimonials", href: "/testimonials" },
+        { title: "Community", href: "/community" },
+        { title: "Partners", href: "/partners" },
+                { title: "FAQ", href: "faq" },
+
+
       ],
     
     },
@@ -122,10 +125,9 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-        
+            { title: "Gallery", href: "/gallery/", badge: null },
+
     { title: "Testimonials", href: "/testimonials/", badge: null },
-    { title: "Gallery", href: "/gallery/", badge: null },
-    { title: "FAQ", href: "/faq/", badge: null },
     { title: "Contact", href: "/contact/", badge: null },
   ];
 
@@ -138,7 +140,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border  border-clay-200 dark:bg-gray-900 p-1">
+          <div class="border bg-sage-200 border-clay-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <LogoStatic />
@@ -149,21 +151,28 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          <nav class="mt-0 space-y-4 border border-clay-200 border-t-0 bg-gray-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-clay-200 border-t-0 bg-sage-100 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
           <div class="border-clay-200 border-t-0 pb-3 bg-gray-200 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
-              <div class="flex w-full sm:w-auto">
+              {/* <div class="flex w-full sm:w-auto">
                 <Link href="/quote" class="w-full sm:w-auto">
                   <Button size="md" class="w-full px-0"> <IconBrandTailwind/> Get Quote -{'>'} </Button>
                 </Link>
-              </div>
+              </div> */}
               <div class="flex w-full sm:w-auto">
-                <Link href="/quote" class="w-full sm:w-auto">
-                  <Button look={"secondary"} size="md" class="w-full px-0"><IconBrandTailwind/> Book A Consultation -{'>'}</Button>
-                </Link>
+                  <a
+                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-clay-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-clay-400"
+                  href="#collection"
+                >
+                  <span class="relative z-10 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    Book a Workshop
+                  </span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-clay-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
               </div>
             </div>
           </div>
