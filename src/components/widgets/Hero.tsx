@@ -40,7 +40,7 @@ export default component$(() => {
           </div>
         </div>
 
-        {/* Carousel */}
+      {/* Carousel */}
         {/* <div class="relative order-2 px-4 z-20 md:z-0 md:order-2 h-52 sm:h-80 md:h-full opacity-0 animate-[fadeSlideRight_1s_ease-out_0.8s_forwards]">
           <ServiceCarousel />
         </div> */}
@@ -54,17 +54,3 @@ export default component$(() => {
 
 
 
-{/* LogoClouds */ }
-{/* <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3 overflow-hidden">
-          <div class="animate-scroll flex">
-            <div class="flex shrink-0 px-4">
-              <LogoClouds />
-            </div>
-            <div class="flex shrink-0 px-4">
-              <LogoClouds />
-            </div>
-            <div class="flex shrink-0 px-4">
-              <LogoClouds />
-            </div>
-          </div>
-        </div> */}

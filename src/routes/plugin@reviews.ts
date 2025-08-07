@@ -1,5 +1,5 @@
 import { routeLoader$ } from '@builder.io/qwik-city';
-import { tursoClient } from './components/utils/turso';
+import { tursoClient } from '../components/utils/turso';
 
 export const useReviewsLoader = routeLoader$(async (event) => {
   const client = tursoClient(event);
