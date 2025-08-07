@@ -64,8 +64,9 @@ export default component$(() => {
     <>
   
       <Hero />
+                          <WorkshopsCarousel workshops={workshops.value} />
+
           <ReviewsCarousel />
-                    <WorkshopsCarousel workshops={workshops.value} />
 
 {/* <FAQAccordion /> */}
 

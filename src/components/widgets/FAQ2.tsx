@@ -107,7 +107,6 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
       {/* Background with pottery texture */}
-      <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
 
       {/* Gradient background */}
       <div class="absolute inset-0 bg-gradient-to-br from-clay-50/50 via-white to-sage-50/50" aria-hidden="true"></div>

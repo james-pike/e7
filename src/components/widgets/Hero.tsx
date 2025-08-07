@@ -38,9 +38,9 @@ export default component$(() => {
         </div>
 
       {/* Carousel */}
-        <div class="relative order-2 px-4 z-20 md:z-0 md:order-2 h-52 sm:h-80 md:h-full opacity-0 animate-[fadeSlideRight_1s_ease-out_0.8s_forwards]">
+        {/* <div class="relative order-2 px-4 z-20 md:z-0 md:order-2 h-52 sm:h-80 md:h-full opacity-0 animate-[fadeSlideRight_1s_ease-out_0.8s_forwards]">
           <div class="bg-green-500 h-20"></div>
-        </div>
+        </div> */}
       </div>
 
     </section>
