@@ -22,7 +22,7 @@ export default component$<WorkshopsCarouselProps>(({ workshops }) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0); // Reset time to midnight for date-only comparison
 
-  // Filter workshops to only include future dates and sort by soonest date
+  // Filter workshops to only include future dates sand sort by soonest date
   const sortedWorkshops = [...workshops]
     .filter((workshop) => {
       const workshopDate = new Date(workshop.date);
