@@ -60,18 +60,9 @@ export default component$(() => {
         <link rel="preload" href="/images/contact.jpg" as="image" />
  
       </head>
-       <body class="relative tracking-tight border-x border-clay-200 mx-auto max-w-7xl bg-background dark:bg-muted antialiased">
+       <body class="relative tracking-tight border-x border-earth-200 mx-auto max-w-7xl bg-background dark:bg-muted antialiased">
         {/* Background with pottery texture */}
-        <div class="absolute inset-0 bg-pottery-texture opacity-30 !important" aria-hidden="true"></div>
-
-        {/* Gradient overlays */}
-        <div class="absolute inset-0 bg-gradient-to-br from-clay-50/80 via-sage-50/60 to-earth-50/70 !important dark:from-clay-900/80 dark:via-sage-900/60 dark:to-earth-900/70 !important" aria-hidden="true"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-clay-100/20 via-transparent to-sage-100/30 !important dark:from-clay-900/20 dark:via-transparent dark:to-sage-900/30 !important" aria-hidden="true"></div>
-
-        {/* Floating decorative elements */}
-        <div class="absolute top-20 left-10 w-32 h-32 bg-clay-200/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-        <div class="absolute bottom-20 right-10 w-24 h-24 bg-sage-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-earth-300/30 rounded-full blur-lg animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
+        <div class="absolute inset-0 opacity-30 !important" aria-hidden="true"></div>
 
         <ObserverProvider>
           <RouterOutlet />

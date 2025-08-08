@@ -134,12 +134,12 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-sm p-2 bg-background border ">
+          <Modal.Trigger class="rounded-sm p-2 bg-sage-100 border ">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border bg-sage-200 border-clay-200 dark:bg-gray-900 p-1">
+          <div class="border bg-sage-100 border-earth-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <LogoStatic />
@@ -150,11 +150,11 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          <nav class="mt-0 space-y-4 border border-clay-200 border-t-0 bg-sage-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-sage-200 border-t-0 bg-sage-100 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
-          <div class="border-clay-200 border-t-0 pb-3 bg-gray-200 dark:bg-gray-900">
+          <div class="border-sage-200 border-t-0 pb-3 bg-gray-200 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               {/* <div class="flex w-full sm:w-auto">
                 <Link href="/quote" class="w-full sm:w-auto">

@@ -107,7 +107,7 @@ export default component$(() => {
                 <div class="flex gap-6">
                   {safeReviews.map((review: { id: string | number | null | undefined; rating: number; review: string | number | boolean | Function | RegExp | JSXChildren[] | Promise<JSXChildren> | Signal<JSXChildren> | JSXNode<unknown> | null | undefined; name: string | number | boolean | Function | RegExp | JSXChildren[] | Promise<JSXChildren> | Signal<JSXChildren> | JSXNode<unknown> | null | undefined; role: string | number | boolean | Function | RegExp | JSXChildren[] | Promise<JSXChildren> | Signal<JSXChildren> | JSXNode<unknown> | null | undefined; date: string; }) => (
                     <div key={review.id} class="flex-shrink-0 w-80 snap-center">
-                      <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 flex flex-col h-full">
+                      <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-earth-200/50 flex flex-col h-full">
                         {/* Stars */}
                         <div class="flex justify-center mb-4">
                           <div class="flex space-x-1">
