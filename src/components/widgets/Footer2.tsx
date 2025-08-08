@@ -71,7 +71,7 @@ export default component$(() => {
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-4">
               <Link class="inline-block font-bold text-xl font-serif" href={"/"}>
-                <span class="bg-gradient-to-r from-clay-600 to-sage-600 bg-clip-text text-transparent">
+                <span class="bg-gradient-to-r from-sage-600 to-clay-600 bg-clip-text text-transparent">
                   earthen vessels
                 </span>
               </Link>
