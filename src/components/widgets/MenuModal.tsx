@@ -99,7 +99,7 @@ export default component$(() => {
     
     },
      {
-      title: "About",
+      title: "About Us",
       href: "/about/",
       hasSubmenu: true,
         subitems: [
