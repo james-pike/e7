@@ -4,7 +4,6 @@ import IconChevronDown from "../icons/IconChevronDown";
 
 import Settings from "./settings";
 import MenuModal from "./MenuModal";
-import Logo3 from "../common/Logo3";
 
 export default component$(() => {
   const store = useStore({

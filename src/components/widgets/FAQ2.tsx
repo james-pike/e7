@@ -279,14 +279,14 @@ export default component$(() => {
                 <span class="relative z-10">Contact Us</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-              <a
+              {/* <a
                 href="mailto:hello@terrapottery.com"
                 class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
                 aria-label="Send an email to Earthen Vessels"
               >
                 <span class="relative z-10">Send Email</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
