@@ -25,7 +25,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} class="border-b border-clay-200 last:border-none last:rounded-b-base">
+        <div key={index} class="border-b border-sage-200 last:border-none last:rounded-b-base">
           {item.hasSubmenu ? (
             <>
               <button
@@ -124,9 +124,10 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-            { title: "Gallery", href: "/gallery/", badge: null },
+            
 
     { title: "Testimonials", href: "/testimonials/", badge: null },
+    { title: "Gallery", href: "/gallery/", badge: null },
     { title: "Contact", href: "/contact/", badge: null },
   ];
 
@@ -134,12 +135,12 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-sm p-2 bg-sage-100 border ">
+          <Modal.Trigger class="rounded-sm p-2 bg-sage-100 border-sage-200 ">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border bg-sage-100 border-earth-200 dark:bg-gray-900 p-1">
+          <div class="border bg-sage-100 border-sage-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <LogoStatic />

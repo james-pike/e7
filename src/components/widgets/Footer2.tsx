@@ -59,12 +59,12 @@ export default component$(() => {
   ];
 
   return (
-    <footer class="relative border-t border-earth-200 dark:border-clay-700 overflow-hidden">
+    <footer class="relative border-t border-sage-200 dark:border-clay-700 overflow-hidden">
       {/* Background with pottedry textures */}
       <div class="absolute inset-0 bg-pottery-texture opacity-10" aria-hidden="true"></div>
       
       {/* Gradient background */}
-      <div class="absolute inset-0 bg-gradient-to-br from-clay-50/50 via-sage-50/30 to-earth-50/50" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-sage-100/50 via-earth-50/30 to-clay-50/50" aria-hidden="true"></div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">

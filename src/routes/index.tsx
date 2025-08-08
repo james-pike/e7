@@ -5,6 +5,7 @@ import Hero from "~/components/widgets/Hero";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 import { tursoClient } from '~/components/utils/turso';
 import ReviewsCarousel from "~/components/widgets/ReviewsCarousel";
+import FAQ2 from "~/components/widgets/FAQ2";
 // import FAQAccordion from "~/components/widgets/FAQAccordion";
 
 export const useReviewsLoader = routeLoader$(async (event) => {
@@ -65,6 +66,7 @@ export default component$(() => {
                           <WorkshopsCarousel workshops={workshops.value} />
 
           <ReviewsCarousel />
+          <FAQ2/>
 
 {/* <FAQAccordions /> */}
 

@@ -61,7 +61,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
       <div class="absolute inset-0 bg-gradient-to-br from-sage-50/50 via-white to-clay-50/50 dark:from-clay-900/50 dark:via-sage-900/50 dark:to-earth-900/50" aria-hidden="true"></div>
       
       {/* Floating decorative elements */}
-      <div class="absolute top-20 left-10 w-24 h-24 bg-clay-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+      <div class="absolute top-20 left-10 w-24 h-24 bg-sage-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
       <div class="absolute bottom-20 right-10 w-20 h-20 bg-sage-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
       <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-earth-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
       
