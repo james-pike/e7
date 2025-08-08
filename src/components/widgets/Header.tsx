@@ -25,7 +25,7 @@ export default component$(() => {
           ? store.isScrolling
             ? " border-y md:border-y bg-sage-100 border-sage-200"
             : "texture"
-          : "bg-card border-y md:border-b border-sage-200" // Always bg-background when not on landing page
+          : "bg-sage-100 border-y md:border-b border-sage-200" // Always bg-background when not on landing page
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
