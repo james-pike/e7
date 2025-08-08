@@ -1,5 +1,5 @@
 // src/components/widgets/Team.tsx
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 
@@ -10,7 +10,7 @@ interface TeamMember {
   image: string;
 }
 
-// Hardcoded Team Members
+// Hardcoded Team Members (example data)
 const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Ginger",
@@ -33,7 +33,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Michelle",
     role: "Facilitator",
-    description: "Manages 24/7 emergency lockout services with rapid response",
+    description: "Michelle’s journey with ceramics began in 2002, and since then, she has immersed herself in the craft—taking countless courses, working as a studio potter, and teaching at Hintonburg Pottery. Now, she brings her passion for clay to Earthen Vessels as a facilitator. With over 30 years in education as a teacher, guidance counselor, and school principal, Michelle has dedicated her career to supporting growth and well-being. She holds a Master’s Degree in Counselling from the University of Ottawa and a Certificate in Positive Psychology from Wilfrid Laurier University. Her experience leading wellness initiatives in schools, combined with her love of pottery, has led her to Earthen Vessels, where she shares the joy of clay as a source of grounding, meditation, renewal, and fun.",
     image: "/images/michelle.webp",
   },
   {
@@ -61,32 +61,24 @@ const TEAM_MEMBERS: TeamMember[] = [
     image: "/images/ginger.webp",
   },
 ];
-
-// Centralized gradient mapping for roles (aligned with FAQ categories)
 const ROLE_GRADIENTS: Record<string, string> = {
   Facilitator: 'bg-gradient-to-r from-sage-100 to-sage-200 text-sage-700 border-sage-300 shadow-sage-200/50',
   Default: 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 border-gray-300 shadow-gray-200/50',
 };
 
-const getRoleColor = (role: string) => {
-  return ROLE_GRADIENTS[role] || ROLE_GRADIENTS.Default;
-};
+const getRoleColor = (role: string) => ROLE_GRADIENTS[role] || ROLE_GRADIENTS.Default;
 
 export default component$(() => {
+  const expandedMember = useSignal<string | null>(null);
+
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
-      {/* Background with pottery texture */}
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-
-      {/* Gradient background */}
-
-      {/* Floating decorative elements */}
       <div class="absolute top-20 right-10 w-24 h-24 bg-clay-300/20 rounded-full blur-xl animate-float"></div>
       <div class="absolute bottom-20 left-10 w-20 h-20 bg-sage-300/20 rounded-full blur-xl animate-float" style="animation-delay: -3s;"></div>
       <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-earth-300/20 rounded-full blur-xl animate-float" style="animation-delay: -1s;"></div>
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Section Header */}
         <div class="text-center mb-12">
           <h1 class="text-4xl md:text-5xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
@@ -98,15 +90,23 @@ export default component$(() => {
           </p>
         </div>
 
-        {/* Team Members Grid */}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}
-              class="group bg-gradient-to-br from-sage-50 via-clay-50 to-earth-50 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200"
+              class="group bg-gradient-to-br from-sage-50 via-clay-50 to-earth-50 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200 cursor-pointer"
+              role="button"
+              tabIndex={0}
+              aria-expanded={expandedMember.value === member.name}
+              onClick$={() => {
+                if (expandedMember.value === member.name) {
+                  expandedMember.value = null;
+                } else {
+                  expandedMember.value = member.name;
+                }
+              }}
             >
               <div class="flex flex-col items-center p-6">
-                {/* Team Member Image */}
                 <img
                   src={member.image}
                   alt={member.name}
@@ -114,8 +114,6 @@ export default component$(() => {
                   width={160}
                   height={160}
                 />
-
-                {/* Name and Role */}
                 <h3 class="text-xl sm:text-2xl font-semibold text-clay-900 dark:text-clay-100 font-serif mb-1">
                   {member.name}
                 </h3>
@@ -126,18 +124,33 @@ export default component$(() => {
                 >
                   {member.role}
                 </span>
-
-                {/* Description */}
-                <p class="text-sage-700 dark:text-sage-300 text-sm sm:text-base leading-relaxed text-center mt-4">
+                <p
+                  class={[
+                    "text-sage-700 dark:text-sage-300 text-sm sm:text-base leading-relaxed text-center mt-4",
+                    expandedMember.value !== member.name && "line-clamp-2",
+                  ]}
+                >
                   {member.description}
                 </p>
+                <div class="flex justify-center mt-2">
+                  <svg
+                    class={[
+                      "w-4 h-4 text-sage-600 transition-transform duration-300",
+                      expandedMember.value === member.name && "transform rotate-180",
+                    ]}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
               </div>
-           
             </div>
           ))}
         </div>
 
-        {/* Contact CTA */}
         <div class="text-center mt-12">
           <div class="bg-gradient-to-r from-sage-50 via-clay-50 to-earth-50 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700 shadow-xl">
             <h3 class="text-2xl md:text-3xl font-bold text-clay-900 dark:text-clay-100 font-serif mb-4">

@@ -77,8 +77,7 @@ export default component$(() => {
               </Link>
             </div>
             <div class="text-sm text-sage-700 dark:text-sage-300 leading-relaxed">
-              Handcrafted pottery that brings the warmth of terracotta and the serenity of sage into your home. Each piece tells a story of earth, fire, and human creativity.
-            </div>
+Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </div>
             
             {/* Newsletter signup */}
             {/* <div class="mt-6">
@@ -135,9 +134,11 @@ export default component$(() => {
 
           <div class="text-sm text-sage-700 dark:text-sage-300">
             <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-gradient-to-br from-clay-500 to-sage-500"></span>
-            Handcrafted with{" "}
-            <span class="text-clay-600 dark:text-clay-400">♥</span>{" "}
-            by Terra Pottery · All rights reserved.
+            © 2025 {" "}
+            
+            earthen vessels 
+            <span class="text-clay-600 dark:text-clay-400"> ♥</span>{" "}
+             All rights reserved.
           </div>
         </div>
       </div>

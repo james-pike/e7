@@ -11,11 +11,11 @@ export default component$(() => {
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-0">
           <div class="md:text-left px-2">
-            <h1 class="text-5xl font-bold tracking-tighter text-balance text-center sm:text-6xl md:text-6xl lg:text-7xl mb-4  ">
+            {/* <h1 class="text-5xl font-bold tracking-tighter text-balance text-center sm:text-6xl md:text-6xl lg:text-7xl mb-4  ">
               earthen vessels
              
 
-            </h1>
+            </h1> */}
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-center  mb-6 max-w-2xl mx-auto md:mx-0  ">
               Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.            </p>
 

@@ -84,13 +84,12 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
               Testimonials
             </span>
           </h2>
           <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
-            Here's what pottery lovers, chefs, and artisans 
-            have to say about their Terra Pottery experience.
+            Here's what our pottery lovers have to say about their earthen vessels experience.
           </p>
         </div>
 
@@ -141,32 +140,7 @@ export default component$(() => {
         </div>
 
         {/* CTA Section */}
-        <div class="text-center mt-12">
-          <div class="bg-gradient-to-r from-clay-50 to-sage-50 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700">
-            <h3 class="text-2xl md:text-3xl font-bold text-clay-900 dark:text-clay-100 font-serif mb-4">
-              Join Our Happy Customers
-            </h3>
-            <p class="text-sage-700 dark:text-sage-300 mb-6 max-w-2xl mx-auto">
-              Experience the quality and craftsmanship that our customers love. 
-              Start your pottery journey today!
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-clay-600 via-earth-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
-              >
-                <span class="relative z-10">Shop Now</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-clay-700 via-earth-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-              <a
-                href="#workshops"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-sage-700 bg-gradient-to-r from-white/80 via-sage-50/80 to-clay-50/80 backdrop-blur-sm border-2 border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50"
-              >
-                <span class="relative z-10">Book Workshop</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );
