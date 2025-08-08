@@ -60,7 +60,7 @@ export default component$(() => {
         <link rel="preload" href="/images/contact.jpg" as="image" />
  
       </head>
-       <body class="relative tracking-tight border-x border-earth-200 mx-auto max-w-7xl bg-background dark:bg-muted antialiased">
+       <body class="relative tracking-tight border-x border-sage-200 mx-auto max-w-7xl bg-background dark:bg-muted antialiased">
         {/* Background with pottery texture */}
         <div class="absolute inset-0 opacity-30 !important" aria-hidden="true"></div>
 
