@@ -32,8 +32,8 @@ export default component$(() => {
     {
       title: "Community",
       items: [
-        { title: "Care Instructions", href: "#" },
-        { title: "Shipping Info", href: "#" },
+        { title: "Partners", href: "#" },
+        { title: "Gallery", href: "#" },
         { title: "FAQ", href: "#" },
       ],
     },
