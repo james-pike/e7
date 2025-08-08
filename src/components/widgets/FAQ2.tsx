@@ -109,7 +109,7 @@ export default component$(() => {
         aria-hidden="true"
       ></div>
 
-      <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
@@ -134,7 +134,7 @@ export default component$(() => {
             <div class="flex-1 flex flex-col gap-4">
               {leftColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
-                  <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm border-2 border-clay-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200">
+                  <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm border-2 border-earth-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200">
                     {/* Question Header */}
                     <button
                       onClick$={() => toggleItem(item.id)}
@@ -197,7 +197,7 @@ export default component$(() => {
             <div class="flex-1 flex flex-col gap-4 mt-4 md:mt-0">
               {rightColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
-                  <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm border-2 border-clay-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200">
+                  <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200">
                     {/* Question Header */}
                     <button
                       onClick$={() => toggleItem(item.id)}
@@ -294,3 +294,11 @@ export default component$(() => {
     </section>
   );
 });
+
+
+
+// ## Workshops 
+
+// - [About Us](/about)
+// - [FAQ](/faq)
+// - [Reviews](/reviews)

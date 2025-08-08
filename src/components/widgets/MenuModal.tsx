@@ -116,7 +116,7 @@ export default component$(() => {
     {
       title: "Workshops",
       href: "/prices/",
-      hasSubmenu: true,
+      hasSubmenu: false,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
         { title: "Web Development", href: "/services/web-development" },
@@ -151,11 +151,11 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          <nav class="mt-0 space-y-4 border border-sage-200 border-t-0 bg-sage-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-sage-200 border-t-0 bg-sage-50 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
-          <div class="border-sage-200 border-t-0 pb-3 bg-gray-200 dark:bg-gray-900">
+          <div class="border-sage-200 border-t-0 pb-3 bg-sage-100 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               {/* <div class="flex w-full sm:w-auto">
                 <Link href="/quote" class="w-full sm:w-auto">

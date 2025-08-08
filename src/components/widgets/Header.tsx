@@ -20,7 +20,7 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 flex-none bg-gradient-to-br from-sage-50/50 via-earth-50/30 to-clay-50/50 mx-auto transition-[opacity] ease-in-out ${
         isLandingPage
           ? store.isScrolling
             ? " border-y md:border-y bg-sage-100 border-sage-200"

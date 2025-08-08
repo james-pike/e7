@@ -5,12 +5,10 @@
 ## [Our Team](/team)
 
 ## [About](/about)
+## [Workshops](/workshops)
 
-## Workshops 
 
-- [About Us](/about)
-- [FAQ](/faq)
-- [Reviews](/reviews)
+
 
 
 

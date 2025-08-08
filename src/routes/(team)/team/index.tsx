@@ -103,7 +103,7 @@ export default component$(() => {
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}
-              class="group bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 backdrop-blur-sm border-2 border-clay-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200"
+              class="group bg-gradient-to-br from-sage-50 via-clay-50 to-earth-50 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200"
             >
               <div class="flex flex-col items-center p-6">
                 {/* Team Member Image */}
@@ -139,7 +139,7 @@ export default component$(() => {
 
         {/* Contact CTA */}
         <div class="text-center mt-12">
-          <div class="bg-gradient-to-r from-clay-50 via-earth-50 to-sage-50 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700 shadow-xl">
+          <div class="bg-gradient-to-r from-sage-50 via-clay-50 to-earth-50 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700 shadow-xl">
             <h3 class="text-2xl md:text-3xl font-bold text-clay-900 dark:text-clay-100 font-serif mb-4">
               Want to Work With Us?
             </h3>

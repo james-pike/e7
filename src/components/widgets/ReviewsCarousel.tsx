@@ -85,11 +85,11 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-              What Our Customers Say
+              Testimonials
             </span>
           </h2>
           <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what pottery lovers, chefs, and artisans 
+            Here's what pottery lovers, chefs, and artisans 
             have to say about their Terra Pottery experience.
           </p>
         </div>
