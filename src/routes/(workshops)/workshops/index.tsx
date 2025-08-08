@@ -1,7 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import {  routeLoader$, type DocumentHead } from "@builder.io/qwik-city";
-import { tursoClient } from "~/components/utils/turso";
-import FAQ2 from "~/components/widgets/FAQ2";
+import {  type DocumentHead } from "@builder.io/qwik-city";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 
 import { SITE } from "~/config.mjs";
