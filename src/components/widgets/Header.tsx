@@ -58,7 +58,7 @@ export default component$(() => {
           aria-label="Main navigation"
         >
           {menu && menu.items ? (
-            <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium">
+            <ul class="flex flex-col md:flex-row text-sage-600 md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium">
               {menu.items.map(({ text, href, items }, key) => {
                 const isActive = location.url.pathname === href;
                 return (

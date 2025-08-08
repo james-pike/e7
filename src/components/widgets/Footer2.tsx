@@ -133,8 +133,9 @@ Here, we gather around clay, to listen deeply to one another, to ourselves, and 
         
 
           <div class="text-sm text-sage-700 dark:text-sage-300">
-            <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-gradient-to-br from-clay-500 to-sage-500"></span>
-            © 2025 {" "}
+<div style="width: 100px; height: 40px;" class="mb-4">
+  <img src="/images/logo2.svg" alt="Logo"/>
+</div>              © 2025 {" "}
             
             earthen vessels 
             <span class="text-clay-600 dark:text-clay-400"> ♥</span>{" "}

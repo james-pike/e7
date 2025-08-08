@@ -106,7 +106,7 @@ export default component$(() => {
           {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}
-              class="group bg-gradient-to-br from-sage-50 via-clay-50 to-earth-50 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200 cursor-pointer"
+              class="group bg-gradient-to-br from-sage-50 via-clay-50 to-sage-50 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200 cursor-pointer"
               role="button"
               tabIndex={0}
               aria-expanded={expandedMember.value === member.name}

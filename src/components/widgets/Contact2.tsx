@@ -168,7 +168,7 @@ export default component$(() => {
 
           {/* Right Side - Contact Info Cards */}
           <div class="relative">
-            <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 !important dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 !important backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700">
+            <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 !important dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 !important backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700">
               <div class="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
