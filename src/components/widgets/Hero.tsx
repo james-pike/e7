@@ -7,7 +7,7 @@ export default component$(() => {
     <section class="relative overflow-hidden">
 
       <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 ">
-<img  src="/images/vessel.svg" class="px-4 pt-4 mt-2 h-28 mx-auto "/>
+<img  src="/images/logo.svg" class="px-4 pt-4 mt-2 h-56 mx-auto "/>
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-0">
           <div class="md:text-left px-2">
