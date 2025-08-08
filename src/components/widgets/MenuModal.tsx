@@ -115,7 +115,7 @@ export default component$(() => {
     },
     {
       title: "Workshops",
-      href: "/prices/",
+      href: "/workshops/",
       hasSubmenu: false,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
