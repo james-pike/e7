@@ -6,12 +6,7 @@
 
 ## [About](/about)
 ## [Workshops](/workshops)
-
-
-
-
-
-
+## [Testimonials](/testimonials)
 ## [Gallery](/gallery)
 ## [FAQ](/faq)
 
