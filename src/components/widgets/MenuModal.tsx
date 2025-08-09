@@ -2,7 +2,6 @@
 import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
-import { LogoStatic } from "../common/Logo3";
 import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
