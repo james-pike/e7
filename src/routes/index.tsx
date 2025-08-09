@@ -4,7 +4,6 @@ import { SITE } from "~/config.mjs";
 import Hero from "~/components/widgets/Hero";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 import { tursoClient } from '~/components/utils/turso';
-import Reviews from "~/components/widgets/Reviews";
 import ReviewsCarousel from "~/components/widgets/ReviewsCarousel";
 // import FAQAccordion from "~/components/widgets/FAQAccordion";
 
@@ -71,7 +70,7 @@ export default component$(() => {
   return (
     <>
       <Hero />
-      <WorkshopsCarousel workshops={workshops.value} />
+      <WorkshopsCarousel workshops={workshops.value} isHomePage={true} />
       <ReviewsCarousel />
       {/* <FAQAccordion /> */}
     </>

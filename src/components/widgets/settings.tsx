@@ -29,7 +29,7 @@ export default component$<PropsOf<typeof Button>>(() => {
         mode: ThemeModes.LIGHT,
         style: ThemeStyles.SIMPLE,
         baseColor: ThemeBaseColors.SLATE,
-        primaryColor: ThemePrimaryColors.CYAN600,
+        primaryColor: ThemePrimaryColors.TEAL500,
         borderRadius: ThemeBorderRadiuses['BORDER-RADIUS-0'],
       };
     }
@@ -40,7 +40,7 @@ export default component$<PropsOf<typeof Button>>(() => {
         mode: ThemeModes.DARK,
         style: ThemeStyles.SIMPLE,
         baseColor: ThemeBaseColors.SLATE,
-        primaryColor: ThemePrimaryColors.CYAN600,
+        primaryColor: ThemePrimaryColors.TEAL500,
         borderRadius: ThemeBorderRadiuses['BORDER-RADIUS-0'],
       };
     }

@@ -1,0 +1,1 @@
+import{j as r}from"./q-Bwb8hWTW.js";import{M as t}from"./q-v2FieEFL.js";import"./q-CSnWScGr.js";const n=({...o})=>r("img",{...o,class:t("w-full rounded-t object-cover",o.class)},null,0,"kn_12");export{n as s_q4nSr5woRP0};
