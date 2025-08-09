@@ -113,7 +113,7 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-clay-600 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>

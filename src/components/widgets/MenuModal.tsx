@@ -1,8 +1,9 @@
+// src/components/Navbar.tsx (or relevant file)
 import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
-import {  useLocation } from "@builder.io/qwik-city";
+import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
@@ -35,7 +36,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                 )}
                 onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
               >
-                <span > {item.title}</span>
+                <span>{item.title}</span>
                 <LuChevronDown
                   class={cn(
                     "h-5 w-5 text-gray-500 transition-transform duration-200",
@@ -49,7 +50,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                   openIndex.value === index && "max-h-96"
                 )}
               >
-                <ul class="flex flex-col gap-0">
+                <ul class="flex flex-col gap-0 pl-6">
                   {item.subitems!.map((subitem: any) => (
                     <li key={subitem.title}>
                       <a
@@ -76,7 +77,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
               )}
               onClick$={closeModal}
             >
-              <span > {item.title}</span>
+              <span>{item.title}</span>
               {item.badge}
             </a>
           )}
@@ -86,7 +87,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   );
 });
 
-// Rest of the code remains unchanged
+// Rest of the code
 export default component$(() => {
   const show = useSignal(false);
 
@@ -96,27 +97,22 @@ export default component$(() => {
       title: "Our Team",
       href: "/team/",
       hasSubmenu: false,
-    
     },
-     {
+    {
       title: "About Us",
       href: "/about/",
       hasSubmenu: true,
-        subitems: [
+      subitems: [
         { title: "About", href: "/about" },
-        { title: "Testimonials", href: "/testimonials" },
         { title: "Community", href: "/community" },
         { title: "Partners", href: "/partners" },
-                { title: "FAQ", href: "faq" },
-
-
+        { title: "FAQ", href: "/faq" },
       ],
-    
     },
     {
       title: "Workshops",
       href: "/workshops/",
-      hasSubmenu: false,
+      hasSubmenu: true,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
         { title: "Web Development", href: "/services/web-development" },
@@ -124,8 +120,6 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-            
-
     { title: "Testimonials", href: "/testimonials/", badge: null },
     { title: "Gallery", href: "/gallery/", badge: null },
     { title: "Contact", href: "/contact/", badge: null },
@@ -143,11 +137,13 @@ export default component$(() => {
           <div class="border bg-sage-100 border-sage-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
-                <LogoStatic />
+                <div style="width: 100px; height: 40px;">
+                  <img src="/images/logo2.svg" alt="Logo" />
+                </div>
               </a>
             </Modal.Title>
             <Modal.Description class="text-lg font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
-              Transform your online presence
+              Listening, Connecting & Creating
             </Modal.Description>
           </div>
 
@@ -157,21 +153,20 @@ export default component$(() => {
 
           <div class="border-sage-200 border-t-0 pb-3 bg-sage-100 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
-              {/* <div class="flex w-full sm:w-auto">
-                <Link href="/quote" class="w-full sm:w-auto">
-                  <Button size="md" class="w-full px-0"> <IconBrandTailwind/> Get Quote -{'>'} </Button>
-                </Link>
-              </div> */}
               <div class="flex w-full sm:w-auto">
-                  <a
-                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-clay-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-clay-400"
-                  href="#collection"
+                <a
+                  href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
+                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-sage-300"
+                  role="button"
+                  aria-label="Book a workshop"
                 >
                   <span class="relative z-10 flex items-center gap-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
                     Book a Workshop
                   </span>
-                  <div class="absolute inset-0 bg-gradient-to-r from-clay-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
             </div>

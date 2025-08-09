@@ -5,7 +5,7 @@ export default component$(() => {
   return (
     <div class="bg-white dark:bg-gray-900">
       <main class="isolate">
-        {/* Hero Section: Our Space */}
+        {/* Hero Section: About Us - Our Space */}
         <section class="relative overflow-hidden py-16 md:py-20">
           {/* Background with pottery texture */}
           <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
@@ -28,14 +28,14 @@ export default component$(() => {
           ></div>
 
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-start">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
               <div>
                 <h1 class="max-w-2xl text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
                   <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-clay-600 bg-clip-text text-transparent">
                     About Us - Our Space
                   </span>
                 </h1>
-                <div class="mt-6 max-w-xl lg:mt-0">
+                <div class="mt-6 max-w-xl">
                   <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
                     <p class="text-lg font-medium text-pretty text-sage-700 dark:text-sage-300 sm:text-xl/8">
                       Earthen Vessels Studio is a grounding space where working with clay becomes a pathway to a deeper connection - with ourselves, the Earth, and each other - through reflections, mindful creativity, we play and we listen to the voice within.
@@ -46,11 +46,13 @@ export default component$(() => {
                   </div>
                 </div>
               </div>
-              <img
-                src="/images/a1.webp"
-                alt="Earthen Vessels Studio"
-                class="mt-10 aspect-16/9 w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none"
-              />
+              <div class="mt-10 sm:mt-16 lg:mt-6">
+                <img
+                  src="/images/a1.webp"
+                  alt="Earthen Vessels Studio"
+                  class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -59,24 +61,28 @@ export default component$(() => {
         <section class="relative overflow-hidden py-16 md:py-20">
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
-              <img
-                src="/images/a2.webp"
-                alt="Workshops"
-                class="mt-10 aspect-16/9 w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none lg:order-1"
-              />
+              <div class="mt-10 sm:mt-16 lg:mt-6 lg:order-1">
+                <img
+                  src="/images/a2.webp"
+                  alt="Workshops"
+                  class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
+                />
+              </div>
               <div class="lg:order-2">
                 <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-pretty">
                   <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
                     Our Offerings
                   </span>
                 </h2>
-                <div class="mt-6 bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
-                  <p class="text-base/7 text-sage-700 dark:text-sage-300">
-                    Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The Earth' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and Clay. Upcoming 4 and 6 week courses will be posted soon.
-                  </p>
-                  <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
-                    We also create customized workshops for private groups. Stay tuned for more.
-                  </p>
+                <div class="mt-6 max-w-xl">
+                  <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
+                    <p class="text-base/7 text-sage-700 dark:text-sage-300">
+                      Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The Earth' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and Clay. Upcoming 4 and 6 week courses will be posted soon.
+                    </p>
+                    <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
+                      We also create customized workshops for private groups. Stay tuned for more.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,23 +99,27 @@ export default component$(() => {
                     What To Expect
                   </span>
                 </h2>
-                <div class="mt-6 bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
-                  <p class="text-base/7 text-sage-700 dark:text-sage-300">
-                    Our clay and personal transformation workshops and courses begin with guided meditations and reflections, leading a small group into a deeper awareness of self, followed by a hands-on, mindful experience with clay.
-                  </p>
-                  <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
-                    In the camaraderie of the Earthen Vessels clay studio, clay experience is not necessary. Our facilitators gently guide the unfolding process so that each participant can meet the clay without concerns about "being able to do it right."
-                  </p>
-                  <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
-                    Whether you are experienced or just starting out, working with clay can be a valuable and enriching experience for both your body, mind and heart. At Earthen Vessels, our classes are mindfully designed to encourage focusing on the process of working with the clay in a way that the clay also teaches us something about ourselves.
-                  </p>
+                <div class="mt-6 max-w-xl">
+                  <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
+                    <p class="text-base/7 text-sage-700 dark:text-sage-300">
+                      Our clay and personal transformation workshops and courses begin with guided meditations and reflections, leading a small group into a deeper awareness of self, followed by a hands-on, mindful experience with clay.
+                    </p>
+                    <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
+                      In the camaraderie of the Earthen Vessels clay studio, clay experience is not necessary. Our facilitators gently guide the unfolding process so that each participant can meet the clay without concerns about "being able to do it right."
+                    </p>
+                    <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
+                      Whether you are experienced or just starting out, working with clay can be a valuable and enriching experience for both your body, mind and heart. At Earthen Vessels, our classes are mindfully designed to encourage focusing on the process of working with the clay in a way that the clay also teaches us something about ourselves.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <img
-                src="/images/a3.jpg"
-                alt="Clay Experience"
-                class="mt-10 aspect-16/9 w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none lg:order-2"
-              />
+              <div class="mt-10 sm:mt-16 lg:mt-6 lg:order-2">
+                <img
+                  src="/images/a3.jpg"
+                  alt="Clay Experience"
+                  class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -122,7 +132,7 @@ export default component$(() => {
                 Discover The Calming Benefits of Clay In Your Hands
               </span>
             </h2>
-            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
                 <p class="text-lg/8 font-semibold tracking-tight text-clay-900 dark:text-clay-100">Reduce Stress and Anxiety</p>
                 <p class="mt-2 text-base/7 text-sage-700 dark:text-sage-300">

@@ -27,23 +27,25 @@ export default component$(() => {
         />
 
         {/* Left Column (Desktop) / Text Content (Mobile) */}
-        <div class="relative z-10 order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-0 md:order-1">
+        <div class="relative z-10 order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-12 md:order-1">
           <div class="text-center md:text-left px-2">
-            {/* Desktop Logo */}
-            <img
-              src="/images/logo.svg"
-              alt="Earthen Vessels Logo"
-              class="hidden md:block h-56 mx-0 mb-6"
-            />
+            {/* Headline (Desktop only) */}
+            <h1 class="hidden md:block text-4xl md:text-6xl font-bold font-serif tracking-tight mb-4">
+              <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+                earthen vessels
+              </span>
+            </h1>
             {/* Subtitle */}
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto md:mx-0">
               Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.
             </p>
             {/* Buttons */}
-            <div class="flex flex-col items-center justify-center w-full gap-4 sm:flex-row sm:gap-4 max-w-xs sm:max-w-md lg:max-w-lg mx-auto md:mx-0">
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-center md:justify-start w-full gap-4 sm:gap-4 max-w-xs sm:max-w-md lg:max-w-lg mx-auto md:mx-0">
               <a
-                class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-clay-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-clay-400"
-                href="#collection"
+                href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
+                class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-sage-200"
+                role="button"
+                aria-label="Book a workshop"
               >
                 <span class="relative z-10 flex items-center gap-2">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,17 +53,22 @@ export default component$(() => {
                   </svg>
                   Book a Workshop
                 </span>
-                <div class="absolute inset-0 bg-gradient-to-r from-clay-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-              <button class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-sage-700 bg-white/80 backdrop-blur-sm border border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50 focus:outline-none focus:ring-2 focus:ring-sage-300">
+              <a
+                href="/about"
+                class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-sage-700 bg-white/80 backdrop-blur-sm border border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50 focus:outline-none focus:ring-2 focus:ring-sage-300"
+                role="button"
+                aria-label="Learn about our story"
+              >
                 <span class="relative z-10 flex items-center gap-2">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"></path>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m0 0H3"></path>
                   </svg>
-                  Learn About Our Story
+                  Our Story
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -71,16 +78,16 @@ export default component$(() => {
           <img
             src="/images/hero.webp"
             alt="Earthen Vessels Pottery"
-            class="w-full h-64 object-cover rounded-lg shadow-xl border-2 border-sage-100"
+            class="w-full max-h-64 object-contain rounded-lg shadow-xl border-2 border-sage-100"
           />
         </div>
 
         {/* Desktop Right Column: Image */}
-        <div class="hidden md:block relative order-3 md:order-2">
+        <div class="hidden md:block relative order-3 md:order-2 py-12 pr-8">
           <img
             src="/images/hero.webp"
             alt="Earthen Vessels Pottery"
-            class="w-full h-96 object-cover rounded-lg shadow-xl border-2 border-sage-100"
+            class="w-full max-h-96 object-contain rounded-lg shadow-xl border-2 border-sage-100"
           />
         </div>
       </div>

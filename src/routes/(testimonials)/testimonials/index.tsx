@@ -23,15 +23,10 @@ export default component$(() => {
                 href="#contact"
                 class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-clay-600 via-earth-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
-                <span class="relative z-10">Shop Now</span>
+                <span class="relative z-10">Book A Workshop</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-clay-700 via-earth-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-              <a
-                href="#workshops"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-sage-700 bg-gradient-to-r from-white/80 via-sage-50/80 to-clay-50/80 backdrop-blur-sm border-2 border-sage-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-sage-50"
-              >
-                <span class="relative z-10">Book Workshop</span>
-              </a>
+           
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+// src/components/WorkshopsGrid.tsx
 import { component$ } from "@builder.io/qwik";
 
 interface Workshop {
@@ -136,10 +137,15 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                   </span>
                 </div>
                 {/* CTA Button */}
-                <button class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-clay-600 via-earth-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4">
+                <a
+                  href="https://bookeo.com/earthenvessels?type=41562UHUKUC196793426E6"
+                  class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
+                  role="button"
+                  aria-label="Book a workshop"
+                >
                   <span class="relative z-10">Book Workshop</span>
-                  <div class="absolute inset-0 bg-gradient-to-r from-clay-700 via-earth-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
+                  <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
               </div>
             </div>
           ))}
