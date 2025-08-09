@@ -129,8 +129,8 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-sm p-2 bg-sage-100 border-sage-200 ">
-            <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
+          <Modal.Trigger class="rounded-sm p-2 bg-sage-100 border-2 border-sage-200 ">
+            <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block text-sage-600" />
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">

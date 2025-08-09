@@ -11,7 +11,6 @@ interface Workshop {
   image: string;
   instructor: string;
   spots: number;
-  level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels';
 }
 
 interface WorkshopsGridProps {

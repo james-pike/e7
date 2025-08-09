@@ -7,7 +7,7 @@ export const useWorkshopsLoader = routeLoader$(async (event) => {
   return result.rows.map((row: any) => ({
     id: (row as any).id,
     title: (row as any).name,
-    description: (row as any).description || `Join our ${(row as any).level.toLowerCase()} pottery class with ${(row as any).instructor}. Learn the fundamentals of pottery in a hands-on workshop.`,
+    description: (row as any).description || `Join our pottery class with ${(row as any).instructor}. Learn the fundamentals of pottery in a hands-on workshop.`,
     date: (row as any).date,
     duration: (row as any).duration || '3 hours',
     price: (row as any).price || '$85',

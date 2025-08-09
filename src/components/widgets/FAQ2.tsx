@@ -1,69 +1,10 @@
 import { component$, useSignal, $ } from "@builder.io/qwik";
-
-const HARDCODED_FAQS = [
-  {
-    id: 1,
-    question: "What materials are used in your pottery?",
-    answer:
-      "Our pottery is crafted from high-quality stoneware and porcelain, sourced sustainably. Each piece is hand-glazed with non-toxic, food-safe glazes.",
-  },
-  {
-    id: 2,
-    question: "How do I care for my pottery pieces?",
-    answer:
-      "Hand-wash your pottery with mild soap and warm water. Avoid extreme temperature changes to prevent cracking. Most pieces are dishwasher-safe, but we recommend hand-washing for longevity.",
-  },
-  {
-    id: 3,
-    question: "Do you ship internationally?",
-    answer:
-      "Yes, we ship to most countries! Shipping costs and times vary based on location. Please check our shipping page for details or contact us for a quote.",
-  },
-  {
-    id: 4,
-    question: "Can I request a custom pottery design?",
-    answer:
-      "Absolutely! We offer custom orders for special occasions or unique designs. Contact us to discuss your vision and timeline.",
-  },
-  {
-    id: 5,
-    question: "What types of workshops do you offer?",
-    answer:
-      "We offer beginner and advanced pottery workshops, including wheel-throwing, hand-building, and glazing techniques. Check our workshop schedule for upcoming sessions.",
-  },
-  {
-    id: 6,
-    question: "Are your pottery pieces microwave-safe?",
-    answer:
-      "Most of our pottery is microwave-safe, but we recommend checking the product description for specific care instructions.",
-  },
-  {
-    id: 7,
-    question: "How long does shipping take within the US?",
-    answer:
-      "Standard shipping within the US typically takes 3-7 business days, depending on your location. Expedited options are available at checkout.",
-  },
-  {
-    id: 8,
-    question: "Can I visit your studio?",
-    answer:
-      "Yes, our studio is open to visitors by appointment. Contact us to schedule a visit or join one of our open studio events.",
-  },
-  {
-    id: 9,
-    question: "Do you offer gift wrapping for pottery purchases?",
-    answer:
-      "We provide eco-friendly gift wrapping options for a small fee. Select the gift wrap option at checkout to add this service.",
-  },
-  {
-    id: 10,
-    question: "What is the cost of your pottery workshops?",
-    answer:
-      "Workshop prices vary based on duration and materials. Beginner classes start at $50, while advanced sessions may cost up to $150. Visit our website for details.",
-  },
-];
+import { useFaqsLoader } from "~/routes/plugin@faqs";
 
 export default component$(() => {
+  // Fetch FAQs using the loader
+  const faqs = useFaqsLoader();
+
   // Initialize with first FAQ item open (id: 1)
   const openItems = useSignal<number | null>(1);
 
@@ -75,9 +16,12 @@ export default component$(() => {
     }
   });
 
+  // Defensive: always treat faqs.value as an array
+  const safeFaqs = Array.isArray(faqs.value) ? faqs.value : [];
+
   // Split FAQ items into two columns for independent expansion
-  const leftColumn = HARDCODED_FAQS.filter((_, i) => i % 2 === 0);
-  const rightColumn = HARDCODED_FAQS.filter((_, i) => i % 2 === 1);
+  const leftColumn = safeFaqs.filter((_, i) => i % 2 === 0);
+  const rightColumn = safeFaqs.filter((_, i) => i % 2 === 1);
 
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
@@ -124,7 +68,7 @@ export default component$(() => {
         </div>
 
         {/* FAQ Accordion - Two-column layout */}
-        {HARDCODED_FAQS.length === 0 ? (
+        {safeFaqs.length === 0 ? (
           <div class="text-center py-12">
             <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-clay-600"></div>
             <p class="mt-4 text-sage-600">Loading FAQs...</p>
@@ -279,14 +223,6 @@ export default component$(() => {
                 <span class="relative z-10">Contact Us</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-              {/* <a
-                href="mailto:hello@terrapottery.com"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
-                aria-label="Send an email to Earthen Vessels"
-              >
-                <span class="relative z-10">Send Email</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a> */}
             </div>
           </div>
         </div>
@@ -294,11 +230,3 @@ export default component$(() => {
     </section>
   );
 });
-
-
-
-// ## Workshops 
-
-// - [About Us](/about)
-// - [FAQ](/faq)
-// - [Reviews](/reviews)

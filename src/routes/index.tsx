@@ -4,9 +4,22 @@ import { SITE } from "~/config.mjs";
 import Hero from "~/components/widgets/Hero";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 import { tursoClient } from '~/components/utils/turso';
+import Reviews from "~/components/widgets/Reviews";
 import ReviewsCarousel from "~/components/widgets/ReviewsCarousel";
-import FAQ2 from "~/components/widgets/FAQ2";
 // import FAQAccordion from "~/components/widgets/FAQAccordion";
+
+// Define the Workshop interface to match the updated database schema
+interface Workshop {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  duration: string;
+  price: string;
+  image: string;
+  instructor: string;
+  spots: number;
+}
 
 export const useReviewsLoader = routeLoader$(async (event) => {
   const client = tursoClient(event);
@@ -27,50 +40,40 @@ export const useReviewsLoader = routeLoader$(async (event) => {
     date: String(row.date),
     role: row.role ? String(row.role) : '',
   }));
-}); 
+});
 
 export const useWorkshopsLoader = routeLoader$(async (event) => {
   const client = tursoClient(event);
   const result = await client.execute('SELECT * FROM classes ORDER BY date ASC');
   return result.rows.map((row: any) => ({
-    id: (row as any).id,
-    title: (row as any).name,
-    description: (row as any).description || `Join our ${(row as any).level.toLowerCase()} pottery class with ${(row as any).instructor}. Learn the fundamentals of pottery in a hands-on workshop.`,
-    date: (row as any).date,
-    duration: (row as any).duration || '3 hours',
-    price: (row as any).price || '$85',
-    image: (row as any).image || 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    instructor: (row as any).instructor,
-    spots: (row as any).spots,
-    level: (row as any).level as 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels',
-  })) as Array<{ 
-    id: number; 
-    title: string; 
-    description: string; 
-    date: string; 
-    duration: string; 
-    price: string; 
-    image: string; 
-    instructor: string; 
-    spots: number; 
-    level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels'; 
-  }>;
+    id: typeof row.id === 'bigint'
+      ? Number(row.id)
+      : row.id instanceof ArrayBuffer
+        ? Number(new DataView(row.id).getBigInt64(0, true))
+        : Number(row.id),
+    title: String(row.name),
+    description: row.description || `Join our pottery class with ${row.instructor || 'our instructor'}. Learn the fundamentals of pottery in a hands-on workshop.`,
+    date: String(row.date),
+    duration: row.duration ? String(row.duration) : '3 hours',
+    price: row.price ? String(row.price) : '$85',
+    image: row.image ? String(row.image) : 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    instructor: row.instructor ? String(row.instructor) : 'our instructor',
+    spots: typeof row.spots === 'bigint'
+      ? Number(row.spots)
+      : row.spots instanceof ArrayBuffer
+        ? Number(new DataView(row.spots).getBigInt64(0, true))
+        : Number(row.spots),
+  })) as Workshop[];
 });
-//
+
 export default component$(() => {
-    const workshops = useWorkshopsLoader();
+  const workshops = useWorkshopsLoader();
   return (
     <>
-  
       <Hero />
-                          <WorkshopsCarousel workshops={workshops.value} />
-
-          <ReviewsCarousel />
-          <FAQ2/>
-
-{/* <FAQAccordions /> */}
-
-      
+      <WorkshopsCarousel workshops={workshops.value} />
+      <ReviewsCarousel />
+      {/* <FAQAccordion /> */}
     </>
   );
 });

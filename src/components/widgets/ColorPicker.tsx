@@ -14,7 +14,7 @@ export const ColorPicker = component$(() => {
         mode: 'light',
         style: 'simple',
         baseColor: 'base-slate',
-        primaryColor: 'primary-cyan-600',
+        primaryColor: 'primary-green-600',
         borderRadius: 'border-radius-0',
       };
     }
