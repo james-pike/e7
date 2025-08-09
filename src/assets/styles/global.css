@@ -1946,3 +1946,41 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
   }
 }
+
+/* src/root.css */
+.carousel-container {
+  overflow: hidden;
+}
+.carousel-container .flex {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-container .min-w-full {
+  flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+  .carousel-container .md\:min-w-\[50\%\] {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-container .lg\:min-w-\[33\.333\%\] {
+    flex: 0 0 33.333%;
+  }
+}
+
+/* src/root.css */
+.scrollbar-invisible::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-invisible {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}

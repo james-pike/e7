@@ -5,6 +5,7 @@ import Hero from "~/components/widgets/Hero";
 import WorkshopsCarousel from "~/components/widgets/WorkshopsCarousel";
 import { tursoClient } from '~/components/utils/turso';
 import ReviewsCarousel from "~/components/widgets/ReviewsCarousel";
+import FAQ2 from "~/components/widgets/FAQ2";
 // import FAQAccordion from "~/components/widgets/FAQAccordion";
 
 // Define the Workshop interface to match the updated database schema
@@ -72,7 +73,7 @@ export default component$(() => {
       <Hero />
       <WorkshopsCarousel workshops={workshops.value} isHomePage={true} />
       <ReviewsCarousel />
-      {/* <FAQAccordion /> */}
+      <FAQ2 />
     </>
   );
 });
