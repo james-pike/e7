@@ -138,7 +138,7 @@ Here, we gather around clay, to listen deeply to one another, to ourselves, and 
 </div>              © 2025 {" "}
             
             earthen vessels 
-            <span class="text-clay-600 dark:text-clay-400"> ♥</span>{" "}
+            <span class="text-clay-600 dark:text-clay-400"> ·</span>{" "}
              All rights reserved.
           </div>
         </div>
