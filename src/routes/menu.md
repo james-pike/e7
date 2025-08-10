@@ -9,6 +9,7 @@
 ## [Testimonials](/testimonials)
 ## [Gallery](/gallery)
 ## [FAQ](/faq)
+## [Newsletter](/newsletter)
 
 ## [Contact](/contact)
 

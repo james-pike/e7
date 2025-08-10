@@ -2,7 +2,7 @@ import { type PropsOf, Slot, component$ } from '@builder.io/qwik';
 import { Select as HeadlessSelect } from '@qwik-ui/headless';
 import { cn } from '@qwik-ui/utils';
 import { LuCheck, LuChevronDown } from '@qwikest/icons/lucide';
-import { useIsDark } from '~/utils/darkUtils'; // Adjust path
+import { useIsDark } from '~/utils/posts'; // Adjust path
 
 const Root = (props: PropsOf<typeof HeadlessSelect.Root>) => (
   <HeadlessSelect.Root

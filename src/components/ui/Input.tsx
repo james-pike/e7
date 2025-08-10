@@ -1,6 +1,6 @@
 import { $, component$, type PropsOf } from '@builder.io/qwik';
 import { cn } from '@qwik-ui/utils';
-import { useIsDark } from '~/utils/darkUtils'; // Adjust path to where useIsDark is defined
+import { useIsDark } from '~/utils/posts'; // Adjust path to where useIsDark is defined
 
 type InputProps = PropsOf<'input'> & {
   error?: string;
