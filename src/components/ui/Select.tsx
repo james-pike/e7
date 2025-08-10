@@ -2,7 +2,6 @@ import { type PropsOf, Slot, component$ } from '@builder.io/qwik';
 import { Select as HeadlessSelect } from '@qwik-ui/headless';
 import { cn } from '@qwik-ui/utils';
 import { LuCheck, LuChevronDown } from '@qwikest/icons/lucide';
-import { useIsDark } from '~/utils/posts'; // Adjust path
 
 const Root = (props: PropsOf<typeof HeadlessSelect.Root>) => (
   <HeadlessSelect.Root
@@ -28,7 +27,6 @@ interface SelectTriggerProps extends PropsOf<typeof HeadlessSelect.Trigger> {
 }
 
 const Trigger = component$<SelectTriggerProps>((props) => {
-  const isDark = useIsDark(props.isDark);
   const { ...restProps } = props;
 
   return (
@@ -36,7 +34,7 @@ const Trigger = component$<SelectTriggerProps>((props) => {
       {...restProps}
       class={cn(
         'flex h-10 w-full items-center justify-between whitespace-nowrap rounded-base border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
-        isDark ? 'bg-muted' : 'bg-popover',
+         'bg-muted',
         props.class
       )}
     >
@@ -54,7 +52,6 @@ interface SelectPopoverProps extends PropsOf<typeof HeadlessSelect.Popover> {
 }
 
 const Popover = component$<SelectPopoverProps>((props) => {
-  const isDark = useIsDark(props.isDark);
   const { ...restProps } = props;
 
   return (
@@ -62,7 +59,7 @@ const Popover = component$<SelectPopoverProps>((props) => {
       {...restProps}
       class={cn(
         'w-full max-w-[15rem] data-[open]:animate-in rounded-base data-[closing]:animate-out data-[closing]:fade-out-0 data-[open]:fade-in-0 data-[closing]:zoom-out-95 data-[open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
-        isDark ? 'bg-muted' : 'bg-popover',
+    'bg-muted',
         'text-popover-foreground shadow-md',
         props.class
       )}
@@ -77,7 +74,6 @@ interface SelectListboxProps extends PropsOf<typeof HeadlessSelect.Listbox> {
 }
 
 const Listbox = component$<SelectListboxProps>((props) => {
-  const isDark = useIsDark(props.isDark);
   const { ...restProps } = props;
 
   return (
@@ -85,8 +81,7 @@ const Listbox = component$<SelectListboxProps>((props) => {
       {...restProps}
       class={cn(
         'relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md border p-1 text-popover-foreground shadow-md',
-        isDark ? 'bg-muted' : 'bg-popover',
-        props.class
+'bg-muted',        props.class
       )}
     >
       <Slot />
@@ -103,7 +98,6 @@ interface SelectItemProps extends PropsOf<typeof HeadlessSelect.Item> {
 }
 
 const Item = component$<SelectItemProps>((props) => {
-  const isDark = useIsDark(props.isDark);
   const { ...restProps } = props;
 
   return (
@@ -114,12 +108,11 @@ const Item = component$<SelectItemProps>((props) => {
         'data-[highlighted]:border-base',
         'first:rounded-t', // Apply rounded top to the first item
         'last:rounded-b',  // Apply rounded bottom to the last item
-        isDark 
-          ? 'focus:bg-muted data-[highlighted]:bg-background' 
-          : 'focus:bg-accent data-[highlighted]:bg-accent',
-        isDark 
-          ? 'focus:text-foreground data-[highlighted]:text-primary' 
-          : 'focus:text-accent-foreground data-[highlighted]:text-primary',
+      
+    
+           'focus:bg-accent data-[highlighted]:bg-accent',
+      
+           'focus:text-accent-foreground data-[highlighted]:text-primary',
         props.class
       )}
     >
