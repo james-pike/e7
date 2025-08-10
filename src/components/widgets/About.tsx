@@ -65,7 +65,7 @@ export default component$(() => {
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
               <div class="mt-10 sm:mt-16 lg:mt-6 lg:order-1">
-                <img
+                <Image
                   src="/images/a2.webp"
                   alt="Workshops"
                   class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
@@ -117,7 +117,7 @@ export default component$(() => {
                 </div>
               </div>
               <div class="mt-10 sm:mt-16 lg:mt-6 lg:order-2">
-                <img
+                <Image
                   src="/images/a3.jpg"
                   alt="Clay Experience"
                   class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
