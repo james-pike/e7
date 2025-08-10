@@ -1,4 +1,4 @@
-import { component$, useSignal, useTask$, $ } from "@builder.io/qwik";
+import { component$, useSignal, useTask$, useStyles$, $ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 
 interface Workshop {
@@ -21,44 +21,55 @@ interface WorkshopsGridProps {
 export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }) => {
   const location = useLocation();
   const isHome = isHomePage || location.url.pathname === "/";
-  const currentSlide = useSignal(0);
-  const touchStartX = useSignal(0);
-  const touchEndX = useSignal(0);
+  const currentIndex = useSignal(0);
+  const isAutoPlaying = useSignal(true);
+  const carouselRef = useSignal<HTMLElement | undefined>();
 
-  // Auto-scroll carousel on homepage
+  // Add styles for snap scrolling and hiding scrollbar
+  useStyles$(`
+    .scrollbar-invisible::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-invisible {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  `);
+
+  const WORKSHOPS_PER_SLIDE = 3;
+  const safeWorkshops = Array.isArray(workshops) ? workshops : [];
+  const numSlides = Math.max(0, Math.ceil((Number.isFinite(safeWorkshops.length) ? safeWorkshops.length : 0) / Math.max(1, WORKSHOPS_PER_SLIDE)));
+
+  // Navigation functions
+  const nextSlide = $(() => {
+    if (carouselRef.value) {
+      const cardWidth = 320; // w-80 = 320px
+      const newScrollLeft = carouselRef.value.scrollLeft + cardWidth;
+      carouselRef.value.scrollTo({ left: newScrollLeft, behavior: "smooth" });
+      currentIndex.value = Math.min(currentIndex.value + 1, numSlides - 1);
+    }
+  });
+
+  const prevSlide = $(() => {
+    if (carouselRef.value) {
+      const cardWidth = 320; // w-80 = 320px
+      const newScrollLeft = carouselRef.value.scrollLeft - cardWidth;
+      carouselRef.value.scrollTo({ left: newScrollLeft, behavior: "smooth" });
+      currentIndex.value = Math.max(currentIndex.value - 1, 0);
+    }
+  });
+
+  // Auto-scroll for homepage
   useTask$(({ track, cleanup }) => {
     if (!isHome) return;
-    track(() => currentSlide.value);
-    const interval = setInterval(() => {
-      currentSlide.value = (currentSlide.value + 1) % (workshops.length || 1);
-    }, 5000);
-    cleanup(() => clearInterval(interval));
-  });
-
-  // Handle swipe start
-  const handleTouchStart$ = $((e: TouchEvent) => {
-    touchStartX.value = e.touches[0].clientX;
-  });
-
-  // Handle swipe move
-  const handleTouchMove$ = $((e: TouchEvent) => {
-    touchEndX.value = e.touches[0].clientX;
-  });
-
-  // Handle swipe end
-  const handleTouchEnd$ = $(() => {
-    const swipeDistance = touchStartX.value - touchEndX.value;
-    const minSwipeDistance = 50; // Minimum distance to consider it a swipe
-
-    if (Math.abs(swipeDistance) > minSwipeDistance) {
-      if (swipeDistance > 0) {
-        // Swipe left: go to next slide
-        currentSlide.value = (currentSlide.value + 1) % (workshops.length || 1);
-      } else {
-        // Swipe right: go to previous slide
-        currentSlide.value =
-          (currentSlide.value - 1 + (workshops.length || 1)) % (workshops.length || 1);
-      }
+    track(() => isAutoPlaying.value);
+    if (typeof window !== "undefined") {
+      const interval = setInterval(() => {
+        if (isAutoPlaying.value && safeWorkshops.length > 0) {
+          nextSlide();
+        }
+      }, 5000);
+      cleanup(() => clearInterval(interval));
     }
   });
 
@@ -67,7 +78,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
   today.setHours(0, 0, 0, 0);
 
   // Filter and sort workshops
-  const sortedWorkshops = [...workshops]
+  const sortedWorkshops = [...safeWorkshops]
     .filter((workshop) => {
       const workshopDate = new Date(workshop.date);
       return workshopDate >= today;
@@ -121,150 +132,137 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
 
         {isHome ? (
           // Carousel for Homepage
-          <div
-            class="relative overflow-hidden"
-            onTouchStart$={handleTouchStart$}
-            onTouchMove$={handleTouchMove$}
-            onTouchEnd$={handleTouchEnd$}
-          >
+          <>
             <div
-              class="flex transition-transform duration-500"
-              style={{
-                transform: `translateX(-${currentSlide.value * 100}%)`,
-              }}
+              class="overflow-x-auto snap-x snap-mandatory -mx-4 px-4 scrollbar-invisible"
+              ref={carouselRef}
             >
-              {sortedWorkshops.map((workshop) => (
-                <div
-                  key={workshop.id}
-                  class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-2"
-                >
-                  <div
-                    class="group flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"
-                    style={
-                      workshop.image
-                        ? {
-                            backgroundImage: `url('${workshop.image}')`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                          }
-                        : {}
-                    }
-                  >
-                    <div class="absolute inset-0 bg-black/20" />
-                    <div class="relative z-10 flex flex-col h-full p-6">
-                      <h3 class="text-lg font-bold text-white drop-shadow-lg mb-2 line-clamp-2">
-                        {workshop.title}
-                      </h3>
-                      <p
-                        class="mb-4 px-2 py-2 rounded bg-black/40 text-white backdrop-blur-sm shadow text-sm line-clamp-3"
-                        style={{ wordBreak: "break-word" }}
-                      >
-                        {workshop.description}
-                      </p>
-                      <div class="space-y-1 mb-4">
-                        {workshop.duration && (
-                          <div class="flex items-center text-xs text-white/90">
-                            <svg
-                              class="w-4 h-4 mr-1 text-white/80"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                              ></path>
-                            </svg>
-                            <span>{workshop.duration}</span>
-                          </div>
-                        )}
-                        {workshop.instructor && (
-                          <div class="flex items-center text-xs text-white/90">
-                            <svg
-                              class="w-4 h-4 mr-1 text-white/80"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                              ></path>
-                            </svg>
-                            <span>{workshop.instructor}</span>
-                          </div>
-                        )}
-                        {workshop.price && (
-                          <div class="flex items-center text-xs text-white/90">
-                            <svg
-                              class="w-4 h-4 mr-1 text-white/80"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-                              ></path>
-                            </svg>
-                            <span>{workshop.price}</span>
-                          </div>
-                        )}
-                        {workshop.spots && (
-                          <div class="flex items-center text-xs text-white/90">
-                            <svg
-                              class="w-4 h-4 mr-1 text-white/80"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                              ></path>
-                            </svg>
-                            <span>{workshop.spots} spots</span>
-                          </div>
-                        )}
+              <div class="flex gap-6">
+                {sortedWorkshops.map((workshop) => (
+                  <div key={workshop.id} class="flex-shrink-0 w-80 snap-center">
+                    <div
+                      class="group flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"
+                      style={
+                        workshop.image
+                          ? {
+                              backgroundImage: `url('${workshop.image}')`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                            }
+                          : {}
+                      }
+                    >
+                      <div class="absolute inset-0 bg-black/20" />
+                      <div class="relative z-10 flex flex-col h-full p-6">
+                        <h3 class="text-lg font-bold text-white drop-shadow-lg mb-2 line-clamp-2">
+                          {workshop.title}
+                        </h3>
+                        <p
+                          class="mb-4 px-2 py-2 rounded bg-black/40 text-white backdrop-blur-sm shadow text-sm line-clamp-3"
+                          style={{ wordBreak: "break-word" }}
+                        >
+                          {workshop.description}
+                        </p>
+                        <div class="space-y-1 mb-4">
+                          {workshop.duration && (
+                            <div class="flex items-center text-xs text-white/90">
+                              <svg
+                                class="w-4 h-4 mr-1 text-white/80"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                ></path>
+                              </svg>
+                              <span>{workshop.duration}</span>
+                            </div>
+                          )}
+                          {workshop.instructor && (
+                            <div class="flex items-center text-xs text-white/90">
+                              <svg
+                                class="w-4 h-4 mr-1 text-white/80"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                ></path>
+                              </svg>
+                              <span>{workshop.instructor}</span>
+                            </div>
+                          )}
+                          {workshop.price && (
+                            <div class="flex items-center text-xs text-white/90">
+                              <svg
+                                class="w-4 h-4 mr-1 text-white/80"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                                ></path>
+                              </svg>
+                              <span>{workshop.price}</span>
+                            </div>
+                          )}
+                          {workshop.spots && (
+                            <div class="flex items-center text-xs text-white/90">
+                              <svg
+                                class="w-4 h-4 mr-1 text-white/80"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                ></path>
+                              </svg>
+                              <span>{workshop.spots} spots</span>
+                            </div>
+                          )}
+                        </div>
+                        <div class="mt-auto">
+                          <span class="text-sm text-gray-100 drop-shadow">
+                            {workshop.date
+                              ? new Date(workshop.date).toLocaleDateString()
+                              : ""}
+                          </span>
+                        </div>
+                        <a
+                          href="https://bookeo.com/earthenvessels?type=41562UHUKUC196793426E6"
+                          class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
+                          role="button"
+                          aria-label="Book a workshop"
+                        >
+                          <span class="relative z-10">Book Workshop</span>
+                          <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
                       </div>
-                      <div class="mt-auto">
-                        <span class="text-sm text-gray-100 drop-shadow">
-                          {workshop.date
-                            ? new Date(workshop.date).toLocaleDateString()
-                            : ""}
-                        </span>
-                      </div>
-                      <a
-                        href="https://bookeo.com/earthenvessels?type=41562UHUKUC196793426E6"
-                        class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
-                        role="button"
-                        aria-label="Book a workshop"
-                      >
-                        <span class="relative z-10">Book Workshop</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </a>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            {/* Carousel Navigation */}
             {sortedWorkshops.length > 1 && (
               <div class="flex justify-center mt-4 space-x-2">
                 <button
-                  onClick$={() => {
-                    currentSlide.value =
-                      (currentSlide.value - 1 + sortedWorkshops.length) %
-                      sortedWorkshops.length;
-                  }}
+                  onClick$={prevSlide}
                   class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
                   aria-label="Previous slide"
                 >
@@ -283,10 +281,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
                   </svg>
                 </button>
                 <button
-                  onClick$={() => {
-                    currentSlide.value =
-                      (currentSlide.value + 1) % sortedWorkshops.length;
-                  }}
+                  onClick$={nextSlide}
                   class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
                   aria-label="Next slide"
                 >
@@ -306,7 +301,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
                 </button>
               </div>
             )}
-          </div>
+          </>
         ) : (
           // Grid for Non-Homepage
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
