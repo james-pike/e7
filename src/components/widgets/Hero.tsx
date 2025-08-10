@@ -1,5 +1,7 @@
 // src/components/widgets/Hero.tsx
 import { component$ } from "@builder.io/qwik";
+import { Image } from "@unpic/qwik";
+
 
 export default component$(() => {
   return (
@@ -75,7 +77,7 @@ export default component$(() => {
 
         {/* Mobile Image (Below Buttons) */}
         <div class="md:hidden px-4 pb-10 order-2">
-          <img
+          <Image
             src="/images/hero.webp"
             alt="Earthen Vessels Pottery"
             class="w-full max-h-64 object-contain rounded-lg shadow-xl border-2 border-sage-100"

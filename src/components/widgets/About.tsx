@@ -1,5 +1,7 @@
 // src/components/Home.tsx
 import { component$ } from "@builder.io/qwik";
+import { Image } from "@unpic/qwik";
+
 
 export default component$(() => {
   return (
@@ -47,10 +49,11 @@ export default component$(() => {
                 </div>
               </div>
               <div class="mt-10 sm:mt-16 lg:mt-6">
-                <img
+                <Image
                   src="/images/a1.webp"
                   alt="Earthen Vessels Studio"
                   class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
+                
                 />
               </div>
             </div>
