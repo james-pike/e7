@@ -1,4 +1,4 @@
-import { component$, useSignal, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useTask$, $ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 
 interface Workshop {
@@ -15,13 +15,15 @@ interface Workshop {
 
 interface WorkshopsGridProps {
   workshops: Workshop[];
-  isHomePage?: boolean; // Prop to determine if rendering on homepage
+  isHomePage?: boolean;
 }
 
 export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }) => {
   const location = useLocation();
-  const isHome = isHomePage || location.url.pathname === "/"; // Fallback to check if on homepage
+  const isHome = isHomePage || location.url.pathname === "/";
   const currentSlide = useSignal(0);
+  const touchStartX = useSignal(0);
+  const touchEndX = useSignal(0);
 
   // Auto-scroll carousel on homepage
   useTask$(({ track, cleanup }) => {
@@ -29,8 +31,35 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
     track(() => currentSlide.value);
     const interval = setInterval(() => {
       currentSlide.value = (currentSlide.value + 1) % (workshops.length || 1);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
     cleanup(() => clearInterval(interval));
+  });
+
+  // Handle swipe start
+  const handleTouchStart$ = $((e: TouchEvent) => {
+    touchStartX.value = e.touches[0].clientX;
+  });
+
+  // Handle swipe move
+  const handleTouchMove$ = $((e: TouchEvent) => {
+    touchEndX.value = e.touches[0].clientX;
+  });
+
+  // Handle swipe end
+  const handleTouchEnd$ = $(() => {
+    const swipeDistance = touchStartX.value - touchEndX.value;
+    const minSwipeDistance = 50; // Minimum distance to consider it a swipe
+
+    if (Math.abs(swipeDistance) > minSwipeDistance) {
+      if (swipeDistance > 0) {
+        // Swipe left: go to next slide
+        currentSlide.value = (currentSlide.value + 1) % (workshops.length || 1);
+      } else {
+        // Swipe right: go to previous slide
+        currentSlide.value =
+          (currentSlide.value - 1 + (workshops.length || 1)) % (workshops.length || 1);
+      }
+    }
   });
 
   // Get today's date (without time for comparison)
@@ -92,7 +121,12 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
 
         {isHome ? (
           // Carousel for Homepage
-          <div class="relative overflow-hidden">
+          <div
+            class="relative overflow-hidden"
+            onTouchStart$={handleTouchStart$}
+            onTouchMove$={handleTouchMove$}
+            onTouchEnd$={handleTouchEnd$}
+          >
             <div
               class="flex transition-transform duration-500"
               style={{
