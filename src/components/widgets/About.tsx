@@ -49,12 +49,15 @@ export default component$(() => {
                 </div>
               </div>
               <div class="mt-10 sm:mt-16 lg:mt-6">
-                <Image
-                  src="/images/a1.webp"
-                  alt="Earthen Vessels Studio"
-                  class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
-                
-                />
+               <Image
+    src="/images/a1.webp"
+    alt="Earthen Vessels Studio"
+    layout="constrained"
+    width={800} // Replace with the actual intrinsic width of the image
+    height={600} // Replace with the actual intrinsic height of the image
+    class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
+    breakpoints={[320, 480, 640, 1024]}
+/>
               </div>
             </div>
           </div>
@@ -65,12 +68,15 @@ export default component$(() => {
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
               <div class="mt-10 sm:mt-16 lg:mt-6 lg:order-1">
-                <Image
-                  src=  "https://images.unsplash.com/photo-1583195648430-18b2681307e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
-
-                  alt="Workshops"
-                  class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
-                />
+               <Image
+    src="/images/a1.webp"
+    alt="Earthen Vessels Studio"
+    layout="constrained"
+    width={800} // Replace with the actual intrinsic width of the image
+    height={600} // Replace with the actual intrinsic height of the image
+    class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
+    breakpoints={[320, 480, 640, 1024]}
+/>
               </div>
               <div class="lg:order-2">
                 <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-pretty">
