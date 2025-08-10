@@ -3,11 +3,10 @@ import { cn } from '@qwik-ui/utils';
 
 type InputProps = PropsOf<'input'> & {
   error?: string;
-  isDark?: boolean; // Add isDark to props
 };
 
 export const Input = component$<InputProps>(
-  ({ name, error, id, ['bind:value']: valueSig, value, onInput$, isDark: propsIsDark, ...props }) => {
+  ({ name, error, id, ['bind:value']: valueSig, value, onInput$, ...props }) => {
     const inputId = id || name;
 
     return (

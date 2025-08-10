@@ -1,0 +1,1 @@
+const t={text:"Menu",items:[{text:"Home",href:"/"},{text:"Our Team",href:"/team/"},{text:"About",href:"/about/"},{text:"Workshops",href:"/workshops/"},{text:"Testimonials",href:"/testimonials/"},{text:"Gallery",href:"/gallery/"},{text:"FAQ",href:"/faq/"},{text:"Newsletter",href:"/newsletter/"},{text:"Contact",href:"/contact/"}]};export{t as default};
