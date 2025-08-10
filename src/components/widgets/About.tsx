@@ -66,7 +66,8 @@ export default component$(() => {
             <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
               <div class="mt-10 sm:mt-16 lg:mt-6 lg:order-1">
                 <Image
-                  src="/images/a2.webp"
+                  src=  "https://images.unsplash.com/photo-1583195648430-18b2681307e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
+
                   alt="Workshops"
                   class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
                 />
