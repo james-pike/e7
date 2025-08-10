@@ -119,6 +119,8 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
+        { title: "Newsletter", href: "/newsletter/", badge: null },
+
     { title: "Testimonials", href: "/testimonials/", badge: null },
     { title: "Gallery", href: "/gallery/", badge: null },
     { title: "Contact", href: "/contact/", badge: null },
