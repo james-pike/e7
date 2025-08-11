@@ -14,9 +14,16 @@ export default component$(() => {
     if (isServer) {
       try {
         const posts = await fetchPosts();
-        store.posts = posts.filter((post): post is Post => post !== null).map((post: Post) => ({ ...post }));
+        console.log("Raw posts:", posts); // Debug log
+        store.posts = posts
+          .filter((post): post is Post => !!post && typeof post === 'object' && 'slug' in post)
+          .map((post: Post) => ({ ...post }));
+        if (store.posts.length === 0) {
+          console.warn("No valid posts found after filtering");
+        }
       } catch (error) {
         console.error("Error fetching posts:", error);
+        store.posts = [];
       }
     }
   });
