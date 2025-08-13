@@ -1,5 +1,5 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { useContent, useLocation } from "@builder.io/qwik-city";
+import { Link, useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 
 import Settings from "./settings";
@@ -182,9 +182,20 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <Settings />
-            {/* <Link href="/quote" class="w-full sm:w-auto">
-              <Button size="md" class="w-full bg-primary">Get A Quote</Button>
-            </Link> */}
+            <a
+                href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=oW%2F6hZJecTudb%2Fv%2Frme6nFm8gbDa3UvfJkr1evB2Xsc%3D&src=03v&type=41562UHUKUC196793426E6"
+                class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-sage-200"
+                role="button"
+                aria-label="Book a workshop"
+              >
+                <span class="relative z-10 flex items-center gap-2">
+                  {/* <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg> */}
+                  Book Now
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </a>
           </div>
         </div>
       </div>

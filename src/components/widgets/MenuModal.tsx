@@ -173,7 +173,7 @@ export default component$(() => {
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
-                    Book a Workshop
+                    Book Now
                   </span>
                   <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>

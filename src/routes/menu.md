@@ -21,6 +21,5 @@
 - [Community Connections](/community)
 
 
-## [Book Now](/contact)
 
   
