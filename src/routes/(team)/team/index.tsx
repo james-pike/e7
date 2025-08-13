@@ -26,13 +26,7 @@ const TEAM_MEMBERS: TeamMember[] = [
       "Mary's journey with clay began in the embrace of family, surrounded by mountains, forests, and lakes. Over the years, this practice deepened into a passion—not just for creativity, but for sharing it with others. She is driven by a desire to connect hearts and nurture community well-being. At Earthen Vessels, she has found both a creative home and a space to pour her love for community. As she shapes clay, she draws inspiration from the wonder of the natural world and the earth’s generous gifts. Mary's enthusiasm and strong skills bring added energy to Earthen Vessels where participants feel inspired, supported and empowered in their creative exploration.",
     image: "/images/mary.webp",
   },
-  {
-    name: "Kandis",
-    role: "Facilitator",
-    description:
-      "Kandis is a Naturopathic Doctor and Embodiment Coach with over 15 years of experience guiding patients on their health journeys. Her approach goes beyond treating symptoms or prescribing supplements—she helps individuals uncover the deeper connections between their health and their life patterns, empowering them to create lasting transformations. As a recent addition to the Earthen Vessels facilitator team, Kandis is excited to bring her expertise in embodiment awareness into the clay workshops. By integrating her knowledge as a naturopathic doctor with her skills in embodiment coaching, she offers a unique and holistic approach to the creative process. Her ability to connect the wisdom of the body with hands-on exploration makes her a strong and insightful facilitator.",
-    image: "/images/kandis.webp",
-  },
+
   {
     name: "Michelle",
     role: "Facilitator",
@@ -60,6 +54,13 @@ const TEAM_MEMBERS: TeamMember[] = [
     description:
       "Jojo offers clay and creative making as invitations to slow down, listen inward and discover the self - while also fostering meaningful connections with others. Jojo has been expressing emotion through art since childhood, when creativity became her first language. They are a mixed media artist with a Fine Arts Diploma with many years of experience in facilitation. Jojo brings their clay experience and gently weaves mindfulness, peer support and creative exploration into Earthen Vessels. Whether guiding playful children's programs or reflective adult sessions, Jojo invites connection with our inner voice through making - offering art as a path toward self discovery and community.",
     image: "/images/jojo.webp",
+  },
+    {
+    name: "Kandis",
+    role: "Facilitator",
+    description:
+      "Kandis is a Naturopathic Doctor and Embodiment Coach with over 15 years of experience guiding patients on their health journeys. Her approach goes beyond treating symptoms or prescribing supplements—she helps individuals uncover the deeper connections between their health and their life patterns, empowering them to create lasting transformations. As a recent addition to the Earthen Vessels facilitator team, Kandis is excited to bring her expertise in embodiment awareness into the clay workshops. By integrating her knowledge as a naturopathic doctor with her skills in embodiment coaching, she offers a unique and holistic approach to the creative process. Her ability to connect the wisdom of the body with hands-on exploration makes her a strong and insightful facilitator.",
+    image: "/images/kandis.webp",
   },
 
 ];
@@ -93,7 +94,7 @@ export default component$(() => {
          
           <h1 class="text-4xl md:text-5xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-              Meet Our Team
+              Hello! Kwey! Bonjour!
             </span>
           </h1>
           <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">

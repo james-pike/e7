@@ -2,10 +2,10 @@
 
 ## [Home](/)
 
-## [Our Team](/team)
+## [This Is Us](/team)
 
 ## [About](/about)
-## [Workshops](/workshops)
+## [Classes](/workshops)
 ## [Testimonials](/testimonials)
 ## [Gallery](/gallery)
 ## [FAQ](/faq)
