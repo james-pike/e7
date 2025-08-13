@@ -125,12 +125,12 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-              Testimonials
+              What Participants are saying
             </span>
           </h2>
-          <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
+          {/* <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
             Here's what our pottery lovers have to say about their earthen vessels experience.
-          </p>
+          </p> */}
         </div>
 
         <div class="relative max-w-6xl mx-auto">

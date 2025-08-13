@@ -24,7 +24,7 @@ export default component$(() => {
         {/* Mobile Logo */}
         <img
           src="/images/logo.svg"
-          alt="Earthen Vessels Logo"
+          alt="earthen vessels Logo"
           class="px-4 pt-4 mt-2 h-56 mx-auto pl-14 md:hidden"
         />
 
@@ -79,7 +79,7 @@ export default component$(() => {
         <div class="md:hidden px-4 pb-10 order-2">
           <Image
             src="/images/hero.webp"
-            alt="Earthen Vessels Pottery"
+            alt="earthen vessels Pottery"
             class="w-full max-h-64 object-contain rounded-lg shadow-xl border-2 border-sage-100"
           />
         </div>
@@ -88,7 +88,7 @@ export default component$(() => {
         <div class="hidden md:block relative order-3 md:order-2 py-12 pr-8">
           <img
             src="/images/hero.webp"
-            alt="Earthen Vessels Pottery"
+            alt="earthen vessels Pottery"
             class="w-full max-h-96 object-contain rounded-lg shadow-xl border-2 border-sage-100"
           />
         </div>

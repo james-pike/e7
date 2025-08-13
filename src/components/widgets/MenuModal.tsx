@@ -93,25 +93,25 @@ export default component$(() => {
   const menuItems = [
     { title: "Home", href: "/", badge: null },
     {
-      title: "Our Team",
+      title: "This Is Us",
       href: "/team/",
       hasSubmenu: false,
     },
     {
-      title: "About Us",
+      title: "About",
       href: "/about/",
       hasSubmenu: true,
       subitems: [
-        { title: "About", href: "/about" },
-        { title: "Community", href: "/community" },
-        { title: "Partners", href: "/partners" },
-        { title: "FAQ", href: "/faq" },
+        { title: "Our Space", href: "/about" },
+        { title: "What To Expect", href: "/about" },
+        { title: "Benefits Of Clay", href: "/about" },
+        { title: "Newsletter", href: "/newsletter" },
       ],
     },
     {
-      title: "Workshops",
-      href: "/workshops/",
-      hasSubmenu: true,
+      title: "Classes",
+      href: "/classes/",
+      hasSubmenu: false,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
         { title: "Web Development", href: "/services/web-development" },
@@ -123,7 +123,17 @@ export default component$(() => {
 
     { title: "Testimonials", href: "/testimonials/", badge: null },
     { title: "Gallery", href: "/gallery/", badge: null },
-    { title: "Contact", href: "/contact/", badge: null },
+       {
+      title: "More Info",
+      href: "/about/",
+      hasSubmenu: true,
+      subitems: [
+        { title: "Testimonials", href: "/about" },
+        { title: "FAQs", href: "/about" },
+        { title: "Benefits Of Clay", href: "/about" },
+        { title: "Community Connections", href: "/community" },
+      ],
+    },
   ];
 
   return (

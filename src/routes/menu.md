@@ -4,13 +4,23 @@
 
 ## [This Is Us](/team)
 
-## [About](/about)
-## [Classes](/workshops)
-## [Testimonials](/testimonials)
-## [Gallery](/gallery)
-## [FAQ](/faq)
-## [Newsletter](/newsletter)
+## About
 
-## [Contact](/contact)
+- [Our Space](#)
+- [What To Expect](#)
+- [Benefits of Clay](#)
+- [Newsletter](/newsletter)
+
+## [Classes](/workshops)
+## [Gallery](/gallery)
+
+## More Info
+
+- [Testimonials](/testimonials)
+- [FAQs](/faq)
+- [Community Connections](/community)
+
+
+## [Book Now](/contact)
 
   

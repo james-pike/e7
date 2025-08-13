@@ -40,7 +40,7 @@ export default component$(() => {
                 <div class="mt-6 max-w-xl">
                   <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 dark:from-gray-800 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-clay-200/50 dark:border-clay-700/50">
                     <p class="text-lg font-medium text-pretty text-sage-700 dark:text-sage-300 sm:text-xl/8">
-                      Earthen Vessels Studio is a grounding space where working with clay becomes a pathway to a deeper connection - with ourselves, the Earth, and each other - through reflections, mindful creativity, we play and we listen to the voice within.
+                      earthen vessels Studio is a grounding space where working with clay becomes a pathway to a deeper connection - with ourselves, the Earth, and each other - through reflections, mindful creativity, we play and we listen to the voice within.
                     </p>
                     <p class="mt-4 text-lg font-medium text-pretty text-sage-700 dark:text-sage-300 sm:text-xl/8">
                       In this nurturing space creativity and exploration thrive, welcoming all even those without clay experience. With our facilitators' gentle guidance each participant can meet the clay and put away fears or anxieties about "not being able to do it right" - It's very freeing!
@@ -51,7 +51,7 @@ export default component$(() => {
               <div class="mt-10 sm:mt-16 lg:mt-6">
                 <Image
                   src="/images/a1.webp"
-                  alt="Earthen Vessels Studio"
+                  alt="earthen vessels Studio"
                   class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover"
                 
                 />
@@ -108,10 +108,10 @@ export default component$(() => {
                       Our clay and personal transformation workshops and courses begin with guided meditations and reflections, leading a small group into a deeper awareness of self, followed by a hands-on, mindful experience with clay.
                     </p>
                     <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
-                      In the camaraderie of the Earthen Vessels clay studio, clay experience is not necessary. Our facilitators gently guide the unfolding process so that each participant can meet the clay without concerns about "being able to do it right."
+                      In the camaraderie of the earthen vessels clay studio, clay experience is not necessary. Our facilitators gently guide the unfolding process so that each participant can meet the clay without concerns about "being able to do it right."
                     </p>
                     <p class="mt-4 text-base/7 text-sage-700 dark:text-sage-300">
-                      Whether you are experienced or just starting out, working with clay can be a valuable and enriching experience for both your body, mind and heart. At Earthen Vessels, our classes are mindfully designed to encourage focusing on the process of working with the clay in a way that the clay also teaches us something about ourselves.
+                      Whether you are experienced or just starting out, working with clay can be a valuable and enriching experience for both your body, mind and heart. At earthen vessels, our classes are mindfully designed to encourage focusing on the process of working with the clay in a way that the clay also teaches us something about ourselves.
                     </p>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default component$(() => {
           <div class="relative isolate overflow-hidden bg-gradient-to-r from-clay-50 to-sage-50 dark:from-clay-900 dark:to-sage-900 px-6 py-24 text-center sm:rounded-3xl sm:px-16 border-2 border-clay-100 dark:border-clay-700">
             <h2 class="mx-auto max-w-2xl text-3xl md:text-4xl font-bold font-serif tracking-tight">
               <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-                Discover The Calming Benefits of Clay In Your Hands
+                The Calming Benefits of Clay
               </span>
             </h2>
             <div class="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

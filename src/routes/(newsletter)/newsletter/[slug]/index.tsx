@@ -1,33 +1,51 @@
-import { component$, useResource$, Resource } from '@builder.io/qwik';
-import { routeLoader$, useLocation, type DocumentHead, type StaticGenerateHandler } from '@builder.io/qwik-city';
-import { useBlogPostsLoader } from '~/routes/plugin@blogposts';
+// src/routes/(newsletter)/newsletter/[slug]/index.tsx
+import { component$, Resource } from '@builder.io/qwik';
+import { routeLoader$, type DocumentHead, type StaticGenerateHandler } from '@builder.io/qwik-city';
+import { tursoClient } from '~/components/utils/turso';
 import md from 'markdown-it';
 
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  date: string;
-  author: string;
-  image: string;
-  category: 'News' | 'Tutorial' | 'Opinion' | 'Other';
-  slug: string;
+// Utility to generate slugs from titles
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric with hyphens
+    .replace(/(^-|-$)/g, ''); // Remove leading/trailing hyphens
 }
 
-export const useGetPostBySlug = routeLoader$(async ({ params, status }) => {
-  const blogPosts = await useBlogPostsLoader().value; // Fetch posts from Turso
-  const post = blogPosts.find((p: BlogPost) => p.slug === params.slug);
-  if (!post) {
+
+
+export const useGetPostBySlug = routeLoader$(async (event) => {
+  const { params, status } = event;
+  const client = tursoClient(event);
+  const result = await client.execute({
+    sql: 'SELECT * FROM newsletter WHERE title = ?',
+    args: [params.slug.replace(/-/g, ' ')], // Convert slug back to title
+  });
+  console.log('Post by slug:', JSON.stringify(result.rows, null, 2)); // Log for debugging
+  event.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate'); // Prevent caching
+
+  if (result.rows.length === 0) {
     status(404);
     return null;
   }
-  return post;
+
+  const post = result.rows[0];
+  return {
+    id: Number(post.id),
+    title: String(post.title),
+    excerpt: String(post.excerpt || (typeof post.content === 'string' && post.content ? post.content.slice(0, 100) + '...' : 'Read more about this blog post.')),
+    content: String(post.content),
+    date: String(post.date),
+    author: String(post.author || 'Anonymous'),
+    image: String(post.image || 'https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'),
+    category: String(post.category) as 'News' | 'Tutorial' | 'Opinion' | 'Other',
+    slug: generateSlug(String(post.title)),
+  };
 });
 
 export default component$(() => {
   const signal = useGetPostBySlug();
-  const location = useLocation();
+  console.log('Post in component:', JSON.stringify(signal.value, null, 2)); // Log for debugging
 
   return (
     <section class="mx-auto py-8 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-3xl">
@@ -102,10 +120,12 @@ export default component$(() => {
   );
 });
 
-export const onStaticGenerate: StaticGenerateHandler = async () => {
-  const posts = await useBlogPostsLoader().value;
+export const onStaticGenerate: StaticGenerateHandler = async ({ env }) => {
+  const client = tursoClient({ env });
+  const result = await client.execute('SELECT title FROM newsletter');
+  console.log('Slugs for SSG:', JSON.stringify(result.rows, null, 2)); // Log for debugging
   return {
-    params: posts.map((post: BlogPost) => ({ slug: post.slug })),
+    params: result.rows.map(row => ({ slug: generateSlug(String(row.title)) })),
   };
 };
 
