@@ -95,7 +95,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
           <div class="text-center">
             <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-clay-900 dark:text-sage-100">
               <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-                Classes & Workshops
+                Our Offerings
               </span>
             </h2>
             <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
@@ -121,12 +121,10 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
-              Classes & Workshops
-            </span>
+Our Offerings            </span>
           </h2>
           <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
-            Join our expert facilitators for hands-on pottery workshops. Learn traditional techniques,
-            unleash your creativity, and take home your own handcrafted pieces.
+            Come Join Us
           </p>
         </div>
 

@@ -172,7 +172,7 @@ export default component$(() => {
         </div>
 
         {/* Contact CTA */}
-        <div class="text-center mt-12">
+        {/* <div class="text-center mt-12">
           <div class="bg-gradient-to-r from-sage-50 via-clay-50 to-earth-50 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700 shadow-xl">
             <h3 class="text-2xl md:text-3xl font-bold text-clay-900 dark:text-clay-100 font-serif mb-4">
               Want to Work With Us?
@@ -196,7 +196,7 @@ export default component$(() => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

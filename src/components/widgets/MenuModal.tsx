@@ -119,17 +119,15 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-        { title: "Newsletter", href: "/newsletter/", badge: null },
 
-    { title: "Testimonials", href: "/testimonials/", badge: null },
     { title: "Gallery", href: "/gallery/", badge: null },
        {
       title: "More Info",
-      href: "/about/",
+      href: "",
       hasSubmenu: true,
       subitems: [
-        { title: "Testimonials", href: "/about" },
-        { title: "FAQs", href: "/about" },
+        { title: "Testimonials", href: "/testimonials" },
+        { title: "FAQs", href: "/faq" },
         { title: "Benefits Of Clay", href: "/about" },
         { title: "Community Connections", href: "/community" },
       ],

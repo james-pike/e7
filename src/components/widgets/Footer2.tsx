@@ -48,14 +48,9 @@ export default component$(() => {
   ];
 
   const social = [
-    { label: "Instagram", icon: IconInstagram, href: "#" },
-    { label: "Pinterest", icon: IconFacebook, href: "#" },
-    { label: "Facebook", icon: IconFacebook, href: "#" },
-    {
-      label: "Contact",
-      icon: IconGithub,
-      href: "#",
-    },
+    { label: "Instagram", icon: IconInstagram, href: "https://www.instagram.com/earthenvesselsgathering/" },
+    { label: "Facebook", icon: IconFacebook, href: "https://www.facebook.com/p/Earthen-vessels-61562702795370/" },
+
   ];
 
   return (

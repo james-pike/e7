@@ -11,7 +11,7 @@
 - [Benefits of Clay](#)
 - [Newsletter](/newsletter)
 
-## [Classes](/workshops)
+## [Classes](/classes)
 ## [Gallery](/gallery)
 
 ## More Info
