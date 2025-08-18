@@ -33,22 +33,22 @@ export default component$(() => {
 
       {/* Gradient background */}
       <div
-        class="absolute inset-0 bg-gradient-to-br from-clay-50/50 via-white to-sage-50/50 dark:from-clay-900/50 dark:via-gray-900 dark:to-sage-900/50"
+        class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white to-primary-50/50 dark:from-secondary-900/50 dark:via-gray-900 dark:to-primary-900/50"
         aria-hidden="true"
       ></div>
 
       {/* Floating decorative elements */}
       <div
-        class="absolute top-20 right-10 w-24 h-24 bg-clay-300/20 rounded-full blur-xl animate-float"
+        class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float"
         aria-hidden="true"
       ></div>
       <div
-        class="absolute bottom-20 left-10 w-20 h-20 bg-sage-300/20 rounded-full blur-xl animate-float"
+        class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float"
         style="animation-delay: -3s;"
         aria-hidden="true"
       ></div>
       <div
-        class="absolute top-1/2 left-1/3 w-16 h-16 bg-earth-300/20 rounded-full blur-xl animate-float"
+        class="absolute top-1/2 left-1/3 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float"
         style="animation-delay: -1s;"
         aria-hidden="true"
       ></div>
@@ -57,11 +57,11 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-clay-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>
-          <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
             Find answers to common questions about our pottery, workshops, and
             studio.
           </p>
@@ -70,23 +70,23 @@ export default component$(() => {
         {/* FAQ Accordion - Two-column layout */}
         {safeFaqs.length === 0 ? (
           <div class="text-center py-12">
-            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-clay-600"></div>
-            <p class="mt-4 text-sage-600">Loading FAQs...</p>
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-secondary-600"></div>
+            <p class="mt-4 text-primary-600">Loading FAQs...</p>
           </div>
         ) : (
           <div class="flex flex-col md:flex-row md:gap-8">
             <div class="flex-1 flex flex-col gap-4">
               {leftColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
-                  <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm border-2 border-earth-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200">
+                  <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-tertiary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
                     {/* Question Header */}
                     <button
                       onClick$={() => toggleItem(item.id)}
-                      class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gradient-to-r hover:from-clay-50/50 hover:to-sage-50/50 dark:hover:bg-clay-800/50 transition-all duration-200"
+                      class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gradient-to-r hover:from-secondary-50/50 hover:to-primary-50/50 dark:hover:bg-secondary-800/50 transition-all duration-200"
                       aria-expanded={openItems.value === item.id}
                       aria-controls={`faq-answer-${item.id}`}
                     >
-                      <h3 class="text-lg font-semibold text-clay-900 dark:text-clay-100 font-serif pr-4">
+                      <h3 class="text-lg font-semibold text-secondary-900 dark:text-secondary-100 font-serif pr-4">
                         {item.question}
                       </h3>
                       {/* Expand/Collapse Icon */}
@@ -94,8 +94,8 @@ export default component$(() => {
                         <div
                           class={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                             openItems.value === item.id
-                              ? "bg-gradient-to-r from-sage-500 to-sage-600 text-white shadow-lg"
-                              : "bg-gradient-to-r from-clay-100 to-sage-100 text-clay-600"
+                              ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg"
+                              : "bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-600"
                           }`}
                         >
                           <svg
@@ -127,8 +127,8 @@ export default component$(() => {
                       aria-hidden={openItems.value !== item.id}
                     >
                       <div class="px-6 pb-5">
-                        <div class="border-t-2 border-gradient-to-r from-clay-100 to-sage-100 pt-4">
-                          <p class="text-sage-700 dark:text-sage-300 leading-relaxed">
+                        <div class="border-t-2 border-gradient-to-r from-secondary-100 to-primary-100 pt-4">
+                          <p class="text-primary-700 dark:text-primary-300 leading-relaxed">
                             {item.answer}
                           </p>
                         </div>
@@ -141,15 +141,15 @@ export default component$(() => {
             <div class="flex-1 flex flex-col gap-4 mt-4 md:mt-0">
               {rightColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
-                  <div class="bg-gradient-to-br from-white/90 via-sage-50/30 to-clay-50/30 dark:from-gray-800/90 dark:via-sage-900/30 dark:to-clay-900/30 backdrop-blur-sm border-2 border-sage-100 dark:border-clay-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-clay-200">
+                  <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-primary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
                     {/* Question Header */}
                     <button
                       onClick$={() => toggleItem(item.id)}
-                      class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gradient-to-r hover:from-clay-50/50 hover:to-sage-50/50 dark:hover:bg-clay-800/50 transition-all duration-200"
+                      class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gradient-to-r hover:from-secondary-50/50 hover:to-primary-50/50 dark:hover:bg-secondary-800/50 transition-all duration-200"
                       aria-expanded={openItems.value === item.id}
                       aria-controls={`faq-answer-${item.id}`}
                     >
-                      <h3 class="text-lg font-semibold text-clay-900 dark:text-clay-100 font-serif pr-4">
+                      <h3 class="text-lg font-semibold text-secondary-900 dark:text-secondary-100 font-serif pr-4">
                         {item.question}
                       </h3>
                       {/* Expand/Collapse Icon */}
@@ -157,8 +157,8 @@ export default component$(() => {
                         <div
                           class={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                             openItems.value === item.id
-                              ? "bg-gradient-to-r from-sage-500 to-sage-600 text-white shadow-lg"
-                              : "bg-gradient-to-r from-clay-100 to-sage-100 text-clay-600"
+                              ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg"
+                              : "bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-600"
                           }`}
                         >
                           <svg
@@ -190,8 +190,8 @@ export default component$(() => {
                       aria-hidden={openItems.value !== item.id}
                     >
                       <div class="px-6 pb-5">
-                        <div class="border-t-2 border-gradient-to-r from-clay-100 to-sage-100 pt-4">
-                          <p class="text-sage-700 dark:text-sage-300 leading-relaxed">
+                        <div class="border-t-2 border-gradient-to-r from-secondary-100 to-primary-100 pt-4">
+                          <p class="text-primary-700 dark:text-primary-300 leading-relaxed">
                             {item.answer}
                           </p>
                         </div>
@@ -206,22 +206,22 @@ export default component$(() => {
 
         {/* Contact CTA */}
         <div class="text-center mt-12">
-          <div class="bg-gradient-to-r from-clay-50 via-earth-50 to-sage-50 dark:from-clay-900 dark:via-earth-900 dark:to-sage-900 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700 shadow-xl">
-            <h3 class="text-2xl md:text-3xl font-bold text-clay-900 dark:text-clay-100 font-serif mb-4">
+          <div class="bg-gradient-to-r from-secondary-50 via-tertiary-50 to-primary-50 dark:from-secondary-900 dark:via-tertiary-900 dark:to-primary-900 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700 shadow-xl">
+            <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Still Have Questions?
             </h3>
-            <p class="text-sage-700 dark:text-sage-300 mb-6 max-w-2xl mx-auto">
+            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
               Our pottery experts are here to help! Reach out to us for
               personalized assistance with your pottery needs.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
+                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
                 aria-label="Contact us for more information"
               >
                 <span class="relative z-10">Contact Us</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
           </div>

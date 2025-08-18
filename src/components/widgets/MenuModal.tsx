@@ -25,7 +25,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} class="border-b border-sage-200 last:border-none last:rounded-b-base">
+        <div key={index} class="border-b border-primary-200 last:border-none last:rounded-b-base">
           {item.hasSubmenu ? (
             <>
               <button
@@ -104,7 +104,7 @@ export default component$(() => {
       subitems: [
         { title: "Our Space", href: "/about" },
         { title: "What To Expect", href: "/about" },
-        { title: "Benefits Of Clay", href: "/about" },
+        { title: "Benefits Of secondary", href: "/about" },
         { title: "Newsletter", href: "/newsletter" },
       ],
     },
@@ -128,7 +128,7 @@ export default component$(() => {
       subitems: [
         { title: "Testimonials", href: "/testimonials" },
         { title: "FAQs", href: "/faq" },
-        { title: "Benefits Of Clay", href: "/about" },
+        { title: "Benefits Of secondary", href: "/about" },
         { title: "Community Connections", href: "/community" },
       ],
     },
@@ -138,12 +138,12 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-sm p-2 bg-sage-100 border-2 border-sage-200 ">
-            <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block text-sage-600" />
+          <Modal.Trigger class="rounded-sm p-2 bg-primary-100 border-2 border-primary-200 ">
+            <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block text-primary-600" />
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border bg-sage-100 border-sage-200 dark:bg-gray-900 p-1">
+          <div class="border bg-primary-100 border-primary-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">
@@ -156,16 +156,16 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          <nav class="mt-0 space-y-4 border border-sage-200 border-t-0 bg-sage-50 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-primary-200 border-t-0 bg-primary-50 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
-          <div class="border-sage-200 border-t-0 pb-3 bg-sage-100 dark:bg-gray-900">
+          <div class="border-primary-200 border-t-0 pb-3 bg-primary-100 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
                 <a
                   href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
-                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-sage-300"
+                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
                 >
@@ -175,7 +175,7 @@ export default component$(() => {
                     </svg>
                     Book Now
                   </span>
-                  <div class="absolute inset-0 bg-gradient-to-r from-sage-700 via-sage-800 to-sage-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="absolute inset-0 bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
             </div>

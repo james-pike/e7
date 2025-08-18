@@ -113,7 +113,7 @@ export default component$<Props>((props) => {
           <p>No reviews available.</p>
         )
       }
-      onRejected={(error) => <p>Error loading reviews: {error.message}</p>}
+      onRejected={(error) => <p>Error loading reviews: {error.mesprimary}</p>}
     />
   );
 });

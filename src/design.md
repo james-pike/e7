@@ -6,46 +6,46 @@ This document outlines the complete design system for the Terra Pottery Studio w
 ## Color Palette
 
 ### Primary Colors
-- **Clay (Primary)**: Warm terracotta tones
-  - `clay-50`: #fef7f0
-  - `clay-100`: #fdfdecd8recd8r
-  - `clay-200`: #fbd5b0
-  - `clay-300`: #f8b87d
-  - `clay-400`: #f59347
-  - `clay-500`: #f2751f
-  - `clay-600`: #e35d14
-  - `clay-700`: #bc4513
-  - `clay-800`: #963817
-  - `clay-900`: #7a3018
-  - `clay-950`: #42160a
+- **secondary (Primary)**: Warm terracotta tones
+  - `secondary-50`: #fef7f0
+  - `secondary-100`: #fdfdecd8recd8r
+  - `secondary-200`: #fbd5b0
+  - `secondary-300`: #f8b87d
+  - `secondary-400`: #f59347
+  - `secondary-500`: #f2751f
+  - `secondary-600`: #e35d14
+  - `secondary-700`: #bc4513
+  - `secondary-800`: #963817
+  - `secondary-900`: #7a3018
+  - `secondary-950`: #42160a
 
 ### Secondary Colors
-- **Sage (Secondary)**: Muted green tones
-  - `sage-50`: #f6f7f6
-  - `sage-100`: #e3e7e3
-  - `sage-200`: #c7d0c7
-  - `sage-300`: #a3b1a3
-  - `sage-400`: #7a8c7a
-  - `sage-500`: #5f715f
-  - `sage-600`: #4a5a4a
-  - `sage-700`: #3d483d
-  - `sage-800`: #333b33
-  - `sage-900`: #2c322c
-  - `sage-950`: #161a16
+- **primary (Secondary)**: Muted green tones
+  - `primary-50`: #f6f7f6
+  - `primary-100`: #e3e7e3
+  - `primary-200`: #c7d0c7
+  - `primary-300`: #a3b1a3
+  - `primary-400`: #7a8c7a
+  - `primary-500`: #5f715f
+  - `primary-600`: #4a5a4a
+  - `primary-700`: #3d483d
+  - `primary-800`: #333b33
+  - `primary-900`: #2c322c
+  - `primary-950`: #161a16
 
 ### Accent Colors
-- **Earth (Accent)**: Rich brown tones
-  - `earth-50`: #faf6f1
-  - `earth-100`: #f2e8d9
-  - `earth-200`: #e4d0b3
-  - `earth-300`: #d1b285
-  - `earth-400`: #bb8f5a
-  - `earth-500`: #a67c45
-  - `earth-600`: #8f6639
-  - `earth-700`: #745131
-  - `earth-800`: #5f4330
-  - `earth-900`: #4f392a
-  - `earth-950`: #2a1e15
+- **tertiary (Accent)**: Rich brown tones
+  - `tertiary-50`: #faf6f1
+  - `tertiary-100`: #f2e8d9
+  - `tertiary-200`: #e4d0b3
+  - `tertiary-300`: #d1b285
+  - `tertiary-400`: #bb8f5a
+  - `tertiary-500`: #a67c45
+  - `tertiary-600`: #8f6639
+  - `tertiary-700`: #745131
+  - `tertiary-800`: #5f4330
+  - `tertiary-900`: #4f392a
+  - `tertiary-950`: #2a1e15
 
 ### CSS Custom Properties
 ```css
@@ -88,13 +88,13 @@ background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox=
 
 ### Gradient Definitions
 ```css
-/* Clay Gradient */
+/* secondary Gradient */
 background: linear-gradient(135deg, #f2751f 0%, #bc4513 100%);
 
-/* Sage Gradient */
+/* primary Gradient */
 background: linear-gradient(135deg, #5f715f 0%, #3d483d 100%);
 
-/* Earth Gradient */
+/* tertiary Gradient */
 background: linear-gradient(135deg, #a67c45 0%, #745131 100%);
 
 /* Multi-color Gradients */
@@ -107,13 +107,13 @@ background: linear-gradient(135deg, #f2751f 0%, #a67c45 50%, #5f715f 100%);
 
 #### Background Layers
 1. **Pottery Texture**: `bg-pottery-texture opacity-30`
-2. **Primary Gradient**: `bg-gradient-to-br from-clay-50/80 via-sage-50/60 to-earth-50/70`
-3. **Secondary Gradient**: `bg-gradient-to-t from-clay-100/20 via-transparent to-sage-100/30`
+2. **Primary Gradient**: `bg-gradient-to-br from-secondary-50/80 via-primary-50/60 to-tertiary-50/70`
+3. **Secondary Gradient**: `bg-gradient-to-t from-secondary-100/20 via-transparent to-primary-100/30`
 
 #### Floating Elements
 - **Position**: Absolute positioned circles with blur effects
 - **Animation**: `animate-float` with 6s duration, ease-in-out, infinite
-- **Colors**: Clay, Sage, and Earth tones with 20-30% opacity
+- **Colors**: secondary, primary, and tertiary tones with 20-30% opacity
 - **Sizes**: 16px to 32px diameter
 
 #### Hero Content
@@ -135,17 +135,17 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 
 #### Image Section
 - **Aspect Ratio**: 16:9 or 4:3
-- **Overlay**: `bg-gradient-to-t from-clay-900/40 via-transparent to-transparent`
+- **Overlay**: `bg-gradient-to-t from-secondary-900/40 via-transparent to-transparent`
 - **Badges**: Level indicators and spot availability
 
 #### Content Section
 - **Typography**: Serif headings, sans-serif body text
 - **Spacing**: Consistent 1.5rem gaps
-- **Icons**: 16px SVG icons with clay-600 color
+- **Icons**: 16px SVG icons with secondary-600 color
 
 #### Interactive States
 - **Hover**: Scale 105%, enhanced shadow
-- **Focus**: Ring outline with clay-500 color
+- **Focus**: Ring outline with secondary-500 color
 - **Transition**: 300ms duration, ease-in-out
 
 ### 3. Review Cards
@@ -166,9 +166,9 @@ padding: 1.5rem;
 - **Inactive Color**: `text-gray-300`
 
 #### Typography
-- **Quote**: Serif font, 18px, clay-900 color
-- **Author**: Bold, clay-900 color
-- **Date**: Small text, sage-500 color
+- **Quote**: Serif font, 18px, secondary-900 color
+- **Author**: Bold, secondary-900 color
+- **Date**: Small text, primary-500 color
 
 ### 4. FAQ Accordion
 
@@ -185,16 +185,16 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 #### Category Badges
 ```css
 /* Category Colors */
-Care: bg-gradient-to-r from-sage-100 to-sage-200 text-sage-700 border-sage-300
-General: bg-gradient-to-r from-clay-100 to-clay-200 text-clay-700 border-clay-300
-Shipping: bg-gradient-to-r from-earth-100 to-earth-200 text-earth-700 border-earth-300
-Custom: bg-gradient-to-r from-clay-100 to-earth-100 text-clay-700 border-clay-300
-Workshops: bg-gradient-to-r from-sage-100 to-clay-100 text-sage-700 border-sage-300
+Care: bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 border-primary-300
+General: bg-gradient-to-r from-secondary-100 to-secondary-200 text-secondary-700 border-secondary-300
+Shipping: bg-gradient-to-r from-tertiary-100 to-tertiary-200 text-tertiary-700 border-tertiary-300
+Custom: bg-gradient-to-r from-secondary-100 to-tertiary-100 text-secondary-700 border-secondary-300
+Workshops: bg-gradient-to-r from-primary-100 to-secondary-100 text-primary-700 border-primary-300
 ```
 
 #### Toggle Button
 - **Icon**: Chevron down/up with rotation animation
-- **Background**: Gradient circle with clay/sage colors
+- **Background**: Gradient circle with secondary/primary colors
 - **Transition**: 300ms duration
 
 ### 5. Contact Form
@@ -219,7 +219,7 @@ padding: 0.75rem 1rem;
 transition: all 200ms ease-in-out;
 
 /* Focus State */
-focus:outline-none focus:ring-2 focus:ring-clay-500 focus:border-clay-400
+focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:border-secondary-400
 ```
 
 #### Submit Button
@@ -249,7 +249,7 @@ background: transparent;
 ```
 
 #### Logo
-- **Font**: Serif, bold, clay-900 color
+- **Font**: Serif, bold, secondary-900 color
 - **Size**: 20px (text-xl)
 
 #### Navigation Links
@@ -260,7 +260,7 @@ text-decoration: none;
 transition: color 200ms ease-in-out;
 
 /* Hover State */
-hover:text-clay-600
+hover:text-secondary-600
 ```
 
 ### 7. Call-to-Action Sections
@@ -277,8 +277,8 @@ box-shadow: 0 20px 25px rgba(0,0,0,0.1);
 ```
 
 #### Button Groups
-- **Primary Button**: Clay gradient with white text
-- **Secondary Button**: White background with clay border and text
+- **Primary Button**: secondary gradient with white text
+- **Secondary Button**: White background with secondary border and text
 - **Hover Effects**: Scale 105%, enhanced shadow
 
 ## Animation Specifications
@@ -345,7 +345,7 @@ box-shadow: 0 20px 25px rgba(0,0,0,0.1);
 ### Focus States
 ```css
 /* Focus Ring */
-focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-offset-2
+focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2
 ```
 
 ### Screen Reader Support
@@ -356,7 +356,7 @@ focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-offset-2
 ## Dark Mode Support
 
 ### Color Adaptations
-- **Background**: Dark clay tones
+- **Background**: Dark secondary tones
 - **Text**: Light colors for contrast
 - **Borders**: Darker border colors
 - **Gradients**: Adjusted opacity for dark backgrounds
@@ -364,9 +364,9 @@ focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-offset-2
 ### Dark Mode Classes
 ```css
 /* Dark Mode Overrides */
-dark:bg-clay-900
-dark:text-clay-100
-dark:border-clay-700
+dark:bg-secondary-900
+dark:text-secondary-100
+dark:border-secondary-700
 ```
 
 ## Implementation Notes

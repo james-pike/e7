@@ -10,6 +10,7 @@ export default component$(() => {
     const workshops = useWorkshopsLoader();
   return (
     <>
+    
      <WorkshopsCarousel workshops={workshops.value}/>
  
 

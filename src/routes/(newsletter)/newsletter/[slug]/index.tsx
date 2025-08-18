@@ -51,16 +51,16 @@ export default component$(() => {
     <section class="mx-auto py-8 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-3xl">
       {/* Breadcrumbs */}
       <nav class="mb-8">
-        <ul class="flex items-center space-x-2 text-sm text-sage-600 dark:text-sage-400">
+        <ul class="flex items-center space-x-2 text-sm text-primary-600 dark:text-primary-400">
           <li>
-            <a href="/" class="hover:text-sage-800 dark:hover:text-sage-200">Home</a>
+            <a href="/" class="hover:text-primary-800 dark:hover:text-primary-200">Home</a>
           </li>
           <li>&gt;</li>
           <li>
-            <a href="/blog" class="hover:text-sage-800 dark:hover:text-sage-200">Blog</a>
+            <a href="/blog" class="hover:text-primary-800 dark:hover:text-primary-200">Blog</a>
           </li>
           <li>&gt;</li>
-          <li class="text-sage-900 dark:text-sage-100">
+          <li class="text-primary-900 dark:text-primary-100">
             {signal.value ? signal.value.title : 'Loading...'}
           </li>
         </ul>
@@ -87,7 +87,7 @@ export default component$(() => {
                 <h1 class="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
                   {post.title}
                 </h1>
-                <p class="mx-auto max-w-3xl px-4 sm:px-6 text-sage-600 dark:text-sage-400 text-sm">
+                <p class="mx-auto max-w-3xl px-4 sm:px-6 text-primary-600 dark:text-primary-400 text-sm">
                   By {post.author} • {post.category}
                 </p>
                 {post.image ? (

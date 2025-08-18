@@ -19,7 +19,7 @@ const services = [
   {
     title: 'Web Development',
     description: 'Building responsive and modern web applications',
-       image: '/images/clay.jpg'
+       image: '/images/secondary.jpg'
   },
   {
     title: 'Mobile Apps',
@@ -50,11 +50,11 @@ const services = [
 
 const serviceData = [
   {
-    title: "Clay Labryinth",
+    title: "secondary Labryinth",
     subtitle: "Creative and Functional Design",
 
     description: "Our innovative design services use Figma, Adobe XD, and Sketch to craft custom UI/UX, interactive prototypes, and branding assets tailored to your vision.",
-    image: "/images/clay",
+    image: "/images/secondary",
     features: [
       "Custom UI/UX Design",
       "Interactive Prototyping",

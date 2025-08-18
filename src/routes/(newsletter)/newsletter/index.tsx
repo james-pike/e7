@@ -106,26 +106,26 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-br from-clay-50/50 via-white to-sage-50/50" aria-hidden="true"></div>
-      <div class="absolute top-20 right-10 w-24 h-24 bg-clay-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-      <div class="absolute bottom-20 left-10 w-20 h-20 bg-sage-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-earth-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white to-primary-50/50" aria-hidden="true"></div>
+      <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+      <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
+      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Blog Posts
             </span>
           </h2>
-          <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
             Explore our latest articles and insights from the pottery community.
           </p>
         </div>
 
         <div class="relative max-w-6xl mx-auto">
           {safePosts.length === 0 ? (
-            <div class="text-center py-12 text-sage-600 text-lg">
+            <div class="text-center py-12 text-primary-600 text-lg">
               No blog posts available yet.
             </div>
           ) : isHomePage ? (
@@ -138,27 +138,27 @@ export default component$(() => {
                   {safePosts.map((post: BlogPost) => (
                     <div key={post.id} class="flex-shrink-0 w-80 snap-center">
                       <a href={`/blog/${post.slug}`} class="block">
-                        <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-earth-200/50 flex flex-col h-full">
+                        <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-tertiary-200/50 flex flex-col h-full">
                           <img
                             src={post.image}
                             alt={post.title}
                             class="w-full h-40 object-cover rounded-lg mb-4"
                           />
-                          <h3 class="text-lg font-bold text-clay-900 dark:text-clay-100 font-serif mb-2">
+                          <h3 class="text-lg font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-2">
                             {post.title}
                           </h3>
-                          <p class="text-sage-600 dark:text-sage-400 text-sm mb-4">
+                          <p class="text-primary-600 dark:text-primary-400 text-sm mb-4">
                             {post.excerpt}
                           </p>
                           <div class="flex items-center space-x-3 mb-4">
                             <div class="text-left">
-                              <h4 class="text-base font-bold text-clay-900 dark:text-clay-100 font-serif">
+                              <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                                 {post.author}
                               </h4>
-                              <p class="text-sage-600 dark:text-sage-400 text-xs">{post.category}</p>
+                              <p class="text-primary-600 dark:text-primary-400 text-xs">{post.category}</p>
                             </div>
                           </div>
-                          <p class="text-sage-500 dark:text-sage-400 text-xs mt-3">
+                          <p class="text-primary-500 dark:text-primary-400 text-xs mt-3">
                             {formatRelativeDate(post.date)}
                           </p>
                         </div>
@@ -171,7 +171,7 @@ export default component$(() => {
                 <div class="flex justify-center mt-4 space-x-2">
                   <button
                     onClick$={prevSlide}
-                    class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
+                    class="p-2 rounded-full bg-primary-600 text-white hover:bg-primary-700"
                     aria-label="Previous slide"
                   >
                     <svg
@@ -190,7 +190,7 @@ export default component$(() => {
                   </button>
                   <button
                     onClick$={nextSlide}
-                    class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
+                    class="p-2 rounded-full bg-primary-600 text-white hover:bg-primary-700"
                     aria-label="Next slide"
                   >
                     <svg
@@ -215,27 +215,27 @@ export default component$(() => {
               {safePosts.map((post: BlogPost) => (
                 <div key={post.id} class="blog-card">
                   <a href={`/blog/${post.slug}`} class="block">
-                    <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-earth-200/50 flex flex-col h-full">
+                    <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-tertiary-200/50 flex flex-col h-full">
                       <img
                         src={post.image}
                         alt={post.title}
                         class="w-full h-40 object-cover rounded-lg mb-4"
                       />
-                      <h3 class="text-lg font-bold text-clay-900 dark:text-clay-100 font-serif mb-2">
+                      <h3 class="text-lg font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-2">
                         {post.title}
                       </h3>
-                      <p class="text-sage-600 dark:text-sage-400 text-sm mb-4">
+                      <p class="text-primary-600 dark:text-primary-400 text-sm mb-4">
                         {post.excerpt}
                       </p>
                       <div class="flex items-center space-x-3 mb-4">
                         <div class="text-left">
-                          <h4 class="text-base font-bold text-clay-900 dark:text-clay-100 font-serif">
+                          <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                             {post.author}
                           </h4>
-                          <p class="text-sage-600 dark:text-sage-400 text-xs">{post.category}</p>
+                          <p class="text-primary-600 dark:text-primary-400 text-xs">{post.category}</p>
                         </div>
                       </div>
-                      <p class="text-sage-500 dark:text-sage-400 text-xs mt-3">
+                      <p class="text-primary-500 dark:text-primary-400 text-xs mt-3">
                         {formatRelativeDate(post.date)}
                       </p>
                     </div>

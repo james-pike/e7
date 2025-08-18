@@ -11,7 +11,7 @@ const Close = HeadlessModal.Close;
 
 export const panelVariants = cva(
   [
-    'fixed w-full bg-gradient-to-br from-sage-100/50 via-earth-50/30 to-clay-50/50 dark:bg-gray-800 p-4 text-foreground border-2  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
+    'fixed w-full bg-gradient-to-br from-primary-100/50 via-tertiary-50/30 to-secondary-50/50 dark:bg-gray-800 p-4 text-foreground border-2  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
     'data-[closing]:duration-300 data-[open]:duration-300 data-[open]:animate-in data-[closing]:animate-out',
     'backdrop:data-[closing]:duration-300 backdrop:data-[open]:duration-300 backdrop:data-[open]:animate-in backdrop:data-[closing]:animate-out backdrop:data-[closing]:fade-out backdrop:data-[open]:fade-in',
   ],

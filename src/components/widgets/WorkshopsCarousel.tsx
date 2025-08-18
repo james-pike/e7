@@ -93,12 +93,13 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
       <section class="relative overflow-hidden py-16 md:py-20">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div class="text-center">
-            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-clay-900 dark:text-sage-100">
-              <span class="bg-gradient-to-r from-clay-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-secondary-900 dark:text-primary-100">
+              <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 Our Offerings
               </span>
             </h2>
-            <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
+            
+            <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
               No upcoming workshops available at the moment. Check back soon for new pottery classes!
             </p>
           </div>
@@ -111,22 +112,35 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
     <section class="relative overflow-hidden py-16 md:py-20">
       {/* Background with pottery texture */}
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-br from-sage-50/50 via-white to-clay-50/50 dark:from-clay-900/50 dark:via-sage-900/50 dark:to-earth-900/50" aria-hidden="true"></div>
-      <div class="absolute top-20 left-10 w-24 h-24 bg-sage-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-      <div class="absolute bottom-20 right-10 w-20 h-20 bg-sage-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-earth-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-white to-secondary-50/50 dark:from-secondary-900/50 dark:via-primary-900/50 dark:to-tertiary-900/50" aria-hidden="true"></div>
+      <div class="absolute top-20 left-10 w-24 h-24 bg-primary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+      <div class="absolute bottom-20 right-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div class="text-center mb-12">
+        <div class="text-center mb-8">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
 Our Offerings            </span>
           </h2>
-          <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
-            Come Join Us
-          </p>
+          {/* <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
+                      Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
+                                            We also create customized workshops for private groups. Stay tuned for more.
+
+          </p> */}
         </div>
+
+            <div class="mt-6 max-w-4xl text-center mx-auto pb-10">
+                  <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50">
+                    <p class="text-base/7 text-primary-700 dark:text-primary-300">
+                      Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
+                    </p>
+                    <p class="mt-4 text-base/7 text-primary-700 dark:text-primary-300">
+                      We also create customized workshops for private groups. Stay tuned for more.
+                    </p>
+                  </div>
+                </div>
 
         {isHome ? (
           // Carousel for Homepage
@@ -244,12 +258,12 @@ Our Offerings            </span>
                         </div>
                         <a
                           href="https://bookeo.com/earthenvessels?type=41562UHUKUC196793426E6"
-                          class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
+                          class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
                           role="button"
                           aria-label="Book a workshop"
                         >
                           <span class="relative z-10">Book Workshop</span>
-                          <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
                       </div>
                     </div>
@@ -261,7 +275,7 @@ Our Offerings            </span>
               <div class="flex justify-center mt-4 space-x-2">
                 <button
                   onClick$={prevSlide}
-                  class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
+                  class="p-2 rounded-full bg-primary-600 text-white hover:bg-primary-700"
                   aria-label="Previous slide"
                 >
                   <svg
@@ -280,7 +294,7 @@ Our Offerings            </span>
                 </button>
                 <button
                   onClick$={nextSlide}
-                  class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
+                  class="p-2 rounded-full bg-primary-600 text-white hover:bg-primary-700"
                   aria-label="Next slide"
                 >
                   <svg
@@ -411,12 +425,12 @@ Our Offerings            </span>
                   </div>
                   <a
                     href="https://bookeo.com/earthenvessels?type=41562UHUKUC196793426E6"
-                    class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sage-500 via-sage-600 to-sage-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
+                    class="w-full group relative inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden mt-4"
                     role="button"
                     aria-label="Book a workshop"
                   >
                     <span class="relative z-10">Book Workshop</span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-sage-600 via-sage-700 to-sage-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </a>
                 </div>
               </div>

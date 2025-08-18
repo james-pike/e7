@@ -13,7 +13,7 @@ export const Input = component$<InputProps>(
       <>
         <input
           {...props}
-          aria-errormessage={`${inputId}-error`}
+          aria-errormesprimary={`${inputId}-error`}
           aria-invalid={!!error}
           value={valueSig ? valueSig.value : value}
           onInput$={valueSig ? $((__, el) => (valueSig.value = el.value)) : onInput$}

@@ -795,7 +795,7 @@
 				"node_modules/@qwik-ui/headless/components/combobox/combobox-control.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/combobox/combobox-description.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/combobox/combobox-empty.qwik.mjs",
-				"node_modules/@qwik-ui/headless/components/combobox/combobox-error-message.qwik.mjs",
+				"node_modules/@qwik-ui/headless/components/combobox/combobox-error-mesprimary.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/combobox/combobox-group-label.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/combobox/combobox-group.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/combobox/combobox-hidden-select.qwik.mjs",
@@ -847,7 +847,7 @@
 				"node_modules/@qwik-ui/headless/components/select/index.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/select/select-description.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/select/select-display-value.qwik.mjs",
-				"node_modules/@qwik-ui/headless/components/select/select-error-message.qwik.mjs",
+				"node_modules/@qwik-ui/headless/components/select/select-error-mesprimary.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/select/select-group-label.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/select/select-group.qwik.mjs",
 				"node_modules/@qwik-ui/headless/components/select/select-inline.qwik.mjs",
@@ -2440,7 +2440,7 @@
 				"q-DY-apSyG.js"
 			],
 			"origins": [
-				"node_modules/@qwik-ui/headless/components/combobox/combobox-error-message.qwik.mjs_HComboboxErrorMessage_component_aGhrVvVvs38.js"
+				"node_modules/@qwik-ui/headless/components/combobox/combobox-error-mesprimary.qwik.mjs_HComboboxErrorMesprimary_component_aGhrVvVvs38.js"
 			],
 			"symbols": [
 				"s_aGhrVvVvs38"
@@ -3901,7 +3901,7 @@
 				"q-DY-apSyG.js"
 			],
 			"origins": [
-				"node_modules/@qwik-ui/headless/components/select/select-error-message.qwik.mjs_HSelectErrorMessage_component_lpKC0h7DvHc.js"
+				"node_modules/@qwik-ui/headless/components/select/select-error-mesprimary.qwik.mjs_HSelectErrorMesprimary_component_lpKC0h7DvHc.js"
 			],
 			"symbols": [
 				"s_lpKC0h7DvHc"
@@ -7545,13 +7545,13 @@
 			]
 		},
 		"s_aGhrVvVvs38": {
-			"displayName": "combobox-error-message.qwik.mjs_HComboboxErrorMessage_component",
+			"displayName": "combobox-error-mesprimary.qwik.mjs_HComboboxErrorMesprimary_component",
 			"hash": "aGhrVvVvs38",
 			"ctxKind": "function",
 			"ctxName": "component$",
 			"captures": false,
-			"canonicalFilename": "combobox-error-message.qwik.mjs_HComboboxErrorMessage_component_aGhrVvVvs38",
-			"origin": "../node_modules/@qwik-ui/headless/components/combobox/combobox-error-message.qwik.mjs",
+			"canonicalFilename": "combobox-error-mesprimary.qwik.mjs_HComboboxErrorMesprimary_component_aGhrVvVvs38",
+			"origin": "../node_modules/@qwik-ui/headless/components/combobox/combobox-error-mesprimary.qwik.mjs",
 			"loc": [
 				224,
 				493
@@ -7766,13 +7766,13 @@
 			]
 		},
 		"s_lpKC0h7DvHc": {
-			"displayName": "select-error-message.qwik.mjs_HSelectErrorMessage_component",
+			"displayName": "select-error-mesprimary.qwik.mjs_HSelectErrorMesprimary_component",
 			"hash": "lpKC0h7DvHc",
 			"ctxKind": "function",
 			"ctxName": "component$",
 			"captures": false,
-			"canonicalFilename": "select-error-message.qwik.mjs_HSelectErrorMessage_component_lpKC0h7DvHc",
-			"origin": "../node_modules/@qwik-ui/headless/components/select/select-error-message.qwik.mjs",
+			"canonicalFilename": "select-error-mesprimary.qwik.mjs_HSelectErrorMesprimary_component_lpKC0h7DvHc",
+			"origin": "../node_modules/@qwik-ui/headless/components/select/select-error-mesprimary.qwik.mjs",
 			"loc": [
 				214,
 				481

@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "Webdev.ca",
+  name: "earthen vessels",
 
   title:
-    "Webdev.ca - Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites. ",
+    "earthen vessels - Listening, Connecting, Creating" ,
   description:
-  "Webdev.ca - Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites. ",
+    "earthen vessels - Listening, Connecting, Creating" ,
 
   origin: "https://qwind.pages.dev",
   basePathname: "/",

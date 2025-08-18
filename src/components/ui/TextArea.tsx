@@ -15,7 +15,7 @@ export const Textarea = component$<TextareaProps>(
       <>
         <textarea
           {...props}
-          aria-errormessage={`${textareaId}-error`}
+          aria-errormesprimary={`${textareaId}-error`}
           aria-invalid={!!error}
           value={valueSig ? valueSig.value : value}
           onInput$={valueSig ? $((__, el) => (valueSig.value = el.value)) : onInput$}

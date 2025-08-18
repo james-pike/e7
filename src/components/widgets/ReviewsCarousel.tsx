@@ -116,26 +116,26 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-br from-clay-50/50 via-white to-sage-50/50" aria-hidden="true"></div>
-      <div class="absolute top-20 right-10 w-24 h-24 bg-clay-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-      <div class="absolute bottom-20 left-10 w-20 h-20 bg-sage-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-earth-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white to-primary-50/50" aria-hidden="true"></div>
+      <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+      <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
+      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-sage-600 via-earth-600 to-sage-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               What Participants are saying
             </span>
           </h2>
-          {/* <p class="text-xl text-sage-700 dark:text-sage-300 max-w-3xl mx-auto">
+          {/* <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
             Here's what our pottery lovers have to say about their earthen vessels experience.
           </p> */}
         </div>
 
         <div class="relative max-w-6xl mx-auto">
           {safeReviews.length === 0 ? (
-            <div class="text-center py-12 text-sage-600 text-lg">
+            <div class="text-center py-12 text-primary-600 text-lg">
               No reviews available yet.
             </div>
           ) : isHomePage ? (
@@ -147,24 +147,24 @@ export default component$(() => {
                 <div class="flex gap-6">
                   {safeReviews.map((review: Review) => (
                     <div key={review.id} class="flex-shrink-0 w-80 snap-center">
-                      <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-earth-200/50 flex flex-col h-full">
+                      <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-tertiary-200/50 flex flex-col h-full">
                         <div class="flex justify-center mb-4">
                           <div class="flex space-x-1">{renderStars(review.rating)}</div>
                         </div>
-                        <blockquote class="text-lg font-serif text-clay-900 dark:text-clay-100 mb-6 leading-relaxed">
+                        <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed">
                           "{review.review}"
                         </blockquote>
                         <div class="flex items-center space-x-3 mb-4">
                           <div class="text-left">
-                            <h4 class="text-base font-bold text-clay-900 dark:text-clay-100 font-serif">
+                            <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                               {review.name}
                             </h4>
                             {review.role && (
-                              <p class="text-sage-600 dark:text-sage-400 text-xs">{review.role}</p>
+                              <p class="text-primary-600 dark:text-primary-400 text-xs">{review.role}</p>
                             )}
                           </div>
                         </div>
-                        <p class="text-sage-500 dark:text-sage-400 text-xs mt-3">
+                        <p class="text-primary-500 dark:text-primary-400 text-xs mt-3">
                           {formatRelativeDate(review.date)}
                         </p>
                       </div>
@@ -176,7 +176,7 @@ export default component$(() => {
                 <div class="flex justify-center mt-4 space-x-2">
                   <button
                     onClick$={prevSlide}
-                    class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
+                    class="p-2 rounded-full bg-primary-600 text-white hover:bg-primary-700"
                     aria-label="Previous slide"
                   >
                     <svg
@@ -195,7 +195,7 @@ export default component$(() => {
                   </button>
                   <button
                     onClick$={nextSlide}
-                    class="p-2 rounded-full bg-sage-600 text-white hover:bg-sage-700"
+                    class="p-2 rounded-full bg-primary-600 text-white hover:bg-primary-700"
                     aria-label="Next slide"
                   >
                     <svg
@@ -219,24 +219,24 @@ export default component$(() => {
             <div class="multi-column-grid">
               {safeReviews.map((review: Review) => (
                 <div key={review.id} class="review-card">
-                  <div class="bg-gradient-to-br from-white via-sage-50/30 to-clay-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-earth-200/50 flex flex-col h-full">
+                  <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-tertiary-200/50 flex flex-col h-full">
                     <div class="flex justify-center mb-4">
                       <div class="flex space-x-1">{renderStars(review.rating)}</div>
                     </div>
-                    <blockquote class="text-lg font-serif text-clay-900 dark:text-clay-100 mb-6 leading-relaxed">
+                    <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed">
                       "{review.review}"
                     </blockquote>
                     <div class="flex items-center space-x-3 mb-4">
                       <div class="text-left">
-                        <h4 class="text-base font-bold text-clay-900 dark:text-clay-100 font-serif">
+                        <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                           {review.name}
                         </h4>
                         {review.role && (
-                          <p class="text-sage-600 dark:text-sage-400 text-xs">{review.role}</p>
+                          <p class="text-primary-600 dark:text-primary-400 text-xs">{review.role}</p>
                         )}
                       </div>
                     </div>
-                    <p class="text-sage-500 dark:text-sage-400 text-xs mt-3">
+                    <p class="text-primary-500 dark:text-primary-400 text-xs mt-3">
                       {formatRelativeDate(review.date)}
                     </p>
                   </div>
@@ -246,21 +246,21 @@ export default component$(() => {
           )}
         </div>
         <div class="text-center mt-12 mb-0 px-4">
-          <div class="bg-gradient-to-r max-w-2xl mx-auto from-clay-50 to-sage-50 rounded-3xl p-8 md:p-12 border-2 border-clay-100 dark:border-clay-700">
-            <h3 class="text-2xl md:text-3xl font-bold text-clay-900 dark:text-clay-100 font-serif mb-4">
+          <div class="bg-gradient-to-r max-w-2xl mx-auto from-secondary-50 to-primary-50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
+            <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Join Us!
             </h3>
-            {/* <p class="text-sage-700 dark:text-sage-300 mb-6 max-w-2xl mx-auto">
+            {/* <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
               Experience the quality and craftsmanship that our customers love. 
               Start your pottery journey today!
             </p> */}
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-clay-600 via-earth-600 to-clay-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
+                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-600 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span class="relative z-10">Book Now</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-clay-700 via-earth-700 to-clay-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-secondary-700 via-tertiary-700 to-secondary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
            
             </div>

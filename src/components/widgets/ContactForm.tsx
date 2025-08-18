@@ -184,15 +184,15 @@ export default component$((props: Props) => {
               </div>
               <div class="sm:col-span-2">
                 <label
-                  for="message"
+                  for="mesprimary"
                   class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
                 >
-                  Message
+                  Mesprimary
                 </label>
                 <div class="mt-1.5">
                   <Textarea
-                    id="message"
-                    name="message"
+                    id="mesprimary"
+                    name="mesprimary"
                     rows={3}
                     placeholder="Leave a comment..."
                   />
@@ -200,7 +200,7 @@ export default component$((props: Props) => {
               </div>
             </div>
             <div class="mt-3.5 flex">
-              <Button>Send Message</Button>
+              <Button>Send Mesprimary</Button>
             </div>
           </div>
         </form>

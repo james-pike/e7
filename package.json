@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.20",
+    "@libsql/client": "latest",
     "@qwik-ui/styled": "^0.3.0",
     "@qwik-ui/utils": "^0.3.1",
     "@unpic/qwik": "^0.0.46",
@@ -40,13 +41,14 @@
     "gray-matter": "^4.0.3",
     "heroicons": "^2.2.0",
     "heroicons-qwik": "^0.1.0",
+    "lightgallery": "^2.9.0-beta.1",
+    "lucide-qwik": "^1.0.0",
     "markdown-it": "^14.1.0",
     "node-fetch": "3.3.2",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-intersect": "^2.2.0",
     "three": "^0.175.0",
-    "vanta": "^0.5.24",
-    "@libsql/client": "latest"
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.8.0",
