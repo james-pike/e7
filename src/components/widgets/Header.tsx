@@ -6,7 +6,7 @@ import MenuModal from "./MenuModal";export default component$(() => {
   const location = useLocation();  return (
     <header
       id="header"
-      class="sticky top-0 z-40 flex-none  border-y md:border-b border-primary-200 mx-auto transition-[opacity] ease-in-out"
+      class="sticky top-0 z-40 flex-none  border-t  border-primary-200 mx-auto transition-[opacity] ease-in-out"
     >
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
@@ -72,12 +72,12 @@ import MenuModal from "./MenuModal";export default component$(() => {
 dropdown-menu
 md:backdrop-blur-md
 dark:md:bg-muted
-rounded
+rounded-lg
 md:absolute
 pl-4 md:pl-0
 md:hidden
 font-medium
-md:bg-white/90
+md:bg-white/50
 md:min-w-[200px]
 drop-shadow-xl
 py-2  `}
@@ -153,7 +153,7 @@ py-2  `}
           <span class="relative z-10 xdxd flex items-center gap-2">
             Book Now
           </span>
-          <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-400 via-primary-300 to-primary-300  group-hover:opacity-100 transition-opacity duration-300"></div>
         </a>
       </div>
     </div>

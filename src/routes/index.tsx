@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { type DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 import Hero from "~/components/widgets/Hero";
+import FAQAccordion from "~/components/widgets/FAQAccordion";
 // import FAQAccordion from "~/components/widgets/FAQAccordion";
 
 // Define the Workshop interface to match the updated database schema
@@ -67,6 +68,7 @@ export default component$(() => {
     <>
       <Hero />
       {/* <WorkshopsCarousel workshops={workshops.value} isHomePage={true} /> */}
+      
     </>
   );
 });

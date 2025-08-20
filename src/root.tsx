@@ -36,7 +36,9 @@ export default component$(() => {
           <div class="absolute inset-0 bg-gradient-to-br from-primary-100/95 via-primary-200/80 to-tertiary-200/85" aria-hidden="true"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-tertiary-300/40 via-primary-200/50 to-primary-100/60" aria-hidden="true"></div>
           {/* Floating blurry balls with increased clay emphasis */}
-          <div class="absolute top-20 left-10 w-32 h-32 bg-secondary-300/30 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+          <div class="absolute top-20 left-10 w-32 h-32 bg-tertiary-300/30 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+                    <div class="absolute top-80 left-80 w-40 h-40 bg-tertiary-300/30 rounded-full blur-xl animate-float" aria-hidden="true"></div>
+
           <div class="absolute bottom-20 right-10 w-24 h-24 bg-secondary-200/25 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
           <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-200/30 rounded-full blur-lg animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
           <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-secondary-400/25 rounded-full blur-lg animate-float" style="animation-delay: -1s;" aria-hidden="true"></div>

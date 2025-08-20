@@ -10,7 +10,6 @@ interface TeamMember {
   image: string;
 }
 
-// Updated Team Members with New Descriptions
 const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Ginger",
@@ -26,7 +25,6 @@ const TEAM_MEMBERS: TeamMember[] = [
       "Mary's journey with secondary began in the embrace of family, surrounded by mountains, forests, and lakes. Over the years, this practice deepened into a passion—not just for creativity, but for sharing it with others. She is driven by a desire to connect hearts and nurture community well-being. At earthen Vessels, she has found both a creative home and a space to pour her love for community. As she shapes secondary, she draws inspiration from the wonder of the natural world and the tertiary’s generous gifts. Mary's enthusiasm and strong skills bring added energy to earthen Vessels where participants feel inspired, supported and empowered in their creative exploration.",
     image: "/images/mary.webp",
   },
-
   {
     name: "Michelle",
     role: "Facilitator",
@@ -55,17 +53,15 @@ const TEAM_MEMBERS: TeamMember[] = [
       "Jojo offers secondary and creative making as invitations to slow down, listen inward and discover the self - while also fostering meaningful connections with others. Jojo has been expressing emotion through art since childhood, when creativity became her first language. They are a mixed media artist with a Fine Arts Diploma with many years of experience in facilitation. Jojo brings their secondary experience and gently weaves mindfulness, peer support and creative exploration into earthen Vessels. Whether guiding playful children's programs or reflective adult sessions, Jojo invites connection with our inner voice through making - offering art as a path toward self discovery and community.",
     image: "/images/jojo.webp",
   },
-    {
+  {
     name: "Kandis",
     role: "Facilitator",
     description:
       "Kandis is a Naturopathic Doctor and Embodiment Coach with over 15 years of experience guiding patients on their health journeys. Her approach goes beyond treating symptoms or prescribing supplements—she helps individuals uncover the deeper connections between their health and their life patterns, empowering them to create lasting transformations. As a recent addition to the earthen Vessels facilitator team, Kandis is excited to bring her expertise in embodiment awareness into the secondary workshops. By integrating her knowledge as a naturopathic doctor with her skills in embodiment coaching, she offers a unique and holistic approach to the creative process. Her ability to connect the wisdom of the body with hands-on exploration makes her a strong and insightful facilitator.",
     image: "/images/kandis.webp",
   },
-
 ];
 
-// Centralized gradient mapping for roles (aligned with FAQ categories)
 const ROLE_GRADIENTS: Record<string, string> = {
   Facilitator: 'bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 border-primary-300 shadow-primary-200/50',
   Default: 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 border-gray-300 shadow-gray-200/50',
@@ -80,19 +76,14 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
-      {/* Background with pottery texture */}
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-
-      {/* Floating decorative elements */}
       <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float"></div>
       <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -3s;"></div>
       <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -1s;"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Section Header with Logo */}
         <div class="text-center mb-12">
-         
-          <h1 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+          <h1 class="!text-5xl md:text-6xl xdxd   font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Hello! Kwey! Bonjour!
             </span>
@@ -102,25 +93,26 @@ export default component$(() => {
           </p>
         </div>
 
-        {/* Team Members Grid */}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
+        {/* 🧱 MASONRY COLUMN LAYOUT */}
+        <div class="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
           {TEAM_MEMBERS.map((member) => (
-            <div
-              key={member.name}
-              class="group bg-gradient-to-br from-primary-50 via-secondary-50 to-primary-50 backdrop-blur-sm border-2 border-primary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200 cursor-pointer"
-              role="button"
-              tabIndex={0}
-              aria-expanded={expandedMember.value === member.name}
-              onClick$={() => {
-                if (expandedMember.value === member.name) {
-                  expandedMember.value = null;
-                } else {
-                  expandedMember.value = member.name;
-                }
-              }}
-            >
-              <div class="flex flex-col items-center p-4 pt-6">
-                {/* Team Member Image */}
+         <div
+  key={member.name}
+  class={[
+    "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl shadow-lg transition-all duration-300 overflow-hidden cursor-pointer",
+    "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
+    expandedMember.value === member.name
+      ? "bg-white/50 border-secondary-200"
+      : "bg-white/35 border-primary-100 dark:border-secondary-700",
+  ]}
+  role="button"
+  tabIndex={0}
+  aria-expanded={expandedMember.value === member.name}
+  onClick$={() => {
+    expandedMember.value = expandedMember.value === member.name ? null : member.name;
+  }}
+>
+              <div class="flex flex-col items-center p-3 pt-6">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -129,19 +121,15 @@ export default component$(() => {
                   height={160}
                 />
 
-                {/* Name and Role */}
                 <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-1">
                   {member.name}
                 </h3>
                 <span
-                  class={`px-3 py-1 rounded-full text-xs font-semibold border-2 shadow-lg ${getRoleColor(
-                    member.role
-                  )}`}
+                  class={`px-3 py-1 rounded-full text-xs font-semibold border-2 shadow-lg ${getRoleColor(member.role)}`}
                 >
                   {member.role}
                 </span>
 
-                {/* Description */}
                 <p
                   class={[
                     "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4",
@@ -151,7 +139,6 @@ export default component$(() => {
                   {member.description}
                 </p>
 
-                {/* Chevron Indicator */}
                 <div class="flex justify-center mt-2">
                   <svg
                     class={[
@@ -170,33 +157,6 @@ export default component$(() => {
             </div>
           ))}
         </div>
-
-        {/* Contact CTA */}
-        {/* <div class="text-center mt-12">
-          <div class="bg-gradient-to-r from-primary-50 via-secondary-50 to-tertiary-50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700 shadow-xl">
-            <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
-              Want to Work With Us?
-            </h3>
-            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
-              Our team is passionate about pottery and community. Contact us to learn about opportunities or workshops!
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-600 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
-              >
-                <span class="relative z-10">Contact Us</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-secondary-700 via-tertiary-700 to-secondary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-              <a
-                href="mailto:hello@earthen-vessels.com"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-primary-700 bg-gradient-to-r from-white/80 via-primary-50/80 to-secondary-50/80 backdrop-blur-sm border-2 border-primary-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-primary-50"
-              >
-                <span class="relative z-10">Send Email</span>
-              </a>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

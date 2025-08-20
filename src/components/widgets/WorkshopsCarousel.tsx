@@ -111,8 +111,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
       {/* Background with pottery texture */}
-      <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-white to-secondary-50/50 dark:from-secondary-900/50 dark:via-primary-900/50 dark:to-tertiary-900/50" aria-hidden="true"></div>
+      <div class="absolute inset-0  dark:to-tertiary-900/50" aria-hidden="true"></div>
       <div class="absolute top-20 left-10 w-24 h-24 bg-primary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
       <div class="absolute bottom-20 right-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
       <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
@@ -120,7 +119,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-8">
-          <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl xdxd  font-bold font-serif mb-6">
             <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
 Our Offerings            </span>
           </h2>

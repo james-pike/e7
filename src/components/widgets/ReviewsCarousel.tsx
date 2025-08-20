@@ -115,15 +115,14 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
-      <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white to-primary-50/50" aria-hidden="true"></div>
+      <div class="absolute inset-0 " aria-hidden="true"></div>
       <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
       <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
       <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl xdxd  font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               What Participants are saying
             </span>

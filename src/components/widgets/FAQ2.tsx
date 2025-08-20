@@ -26,14 +26,11 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
       {/* Background with pottery texture */}
-      <div
-        class="absolute inset-0 bg-pottery-texture opacity-20"
-        aria-hidden="true"
-      ></div>
+   
 
       {/* Gradient background */}
       <div
-        class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white to-primary-50/50 dark:from-secondary-900/50 dark:via-gray-900 dark:to-primary-900/50"
+        class="absolute inset-0 "
         aria-hidden="true"
       ></div>
 
@@ -56,7 +53,7 @@ export default component$(() => {
       <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl xdxd  font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
@@ -78,7 +75,7 @@ export default component$(() => {
             <div class="flex-1 flex flex-col gap-4">
               {leftColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
-                  <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-tertiary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
+                  <div class="bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-tertiary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
                     {/* Question Header */}
                     <button
                       onClick$={() => toggleItem(item.id)}
@@ -141,7 +138,7 @@ export default component$(() => {
             <div class="flex-1 flex flex-col gap-4 mt-4 md:mt-0">
               {rightColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
-                  <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-primary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
+                  <div class="bg-gradient-to-br from-white/50 shadow-xl via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-primary-100 dark:border-secondary-700 rounded-2xl hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
                     {/* Question Header */}
                     <button
                       onClick$={() => toggleItem(item.id)}
