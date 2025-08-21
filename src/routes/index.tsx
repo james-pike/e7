@@ -66,6 +66,7 @@ export default component$(() => {
   return (
     <>
       <Hero />
+      
       {/* <WorkshopsCarousel workshops={workshops.value} isHomePage={true} /> */}
       
     </>
