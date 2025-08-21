@@ -1,8 +1,8 @@
-import { component$, useSignal, useVisibleTask$, $ } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$, $, type QwikMouseEvent } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 
-// Interface for gallery images (removed category)
+// Interface for gallery images
 interface GalleryImage {
   id: string;
   title: string;
@@ -10,7 +10,7 @@ interface GalleryImage {
   alt: string;
 }
 
-// Hardcoded gallery images (removed category)
+// Hardcoded gallery images
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "1",
@@ -68,25 +68,29 @@ export default component$(() => {
   const autoPlay = useSignal(true);
   const isFullscreen = useSignal(false);
 
-  // Auto-play logic
-  useVisibleTask$(({ cleanup }) => {
+  // Auto-play logic with reactive pause/play support
+  useVisibleTask$(({ cleanup, track }) => {
+    // Track changes to autoPlay.value
+    track(() => autoPlay.value);
+
+    let interval: NodeJS.Timeout | null = null;
+
+    // Start or stop interval based on autoPlay.value
     if (autoPlay.value) {
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         currentIndex.value = (currentIndex.value + 1) % GALLERY_IMAGES.length;
       }, 5000); // Change image every 5 seconds
-      cleanup(() => clearInterval(interval));
     }
 
-    // Pause auto-play on hover
-    const gallery = document.querySelector(".gallery-player");
-    if (gallery) {
-      gallery.addEventListener("mouseenter", () => (autoPlay.value = false));
-      gallery.addEventListener("mouseleave", () => (autoPlay.value = true));
-      cleanup(() => {
-        gallery.removeEventListener("mouseenter", () => (autoPlay.value = false));
-        gallery.removeEventListener("mouseleave", () => (autoPlay.value = true));
-      });
-    }
+    // Cleanup interval on component unmount or when autoPlay changes
+    cleanup(() => {
+      if (interval) clearInterval(interval);
+    });
+  });
+
+  // Toggle auto-play
+  const toggleAutoPlay = $(() => {
+    autoPlay.value = !autoPlay.value;
   });
 
   // Navigation functions as QRLs
@@ -99,7 +103,7 @@ export default component$(() => {
   });
 
   // Select image from carousel
-  const selectImage = $( (index: number) => {
+  const selectImage = $((index: number) => {
     currentIndex.value = index;
   });
 
@@ -129,7 +133,7 @@ export default component$(() => {
 
       {/* Gradient background */}
       <div
-        class="absolute inset-0 "
+        class="absolute inset-0"
         aria-hidden="true"
       ></div>
 
@@ -152,8 +156,8 @@ export default component$(() => {
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h1 class="!text-6xl md:text-7xl xdxd  font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+          <h1 class="!text-6xl md:text-7xl font-bold font-serif mb-6">
+            <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               earthen vessels gallery
             </span>
           </h1>
@@ -164,7 +168,7 @@ export default component$(() => {
 
         {/* Image Player */}
         <div class="gallery-player relative w-full max-w-4xl mx-auto">
-          <div class="relative w-full h-96 rounded-2xl overflow-hidden shadow-xl">
+          <div class="image-container relative w-full h-96 rounded-2xl overflow-hidden shadow-xl">
             <img
               src={GALLERY_IMAGES[currentIndex.value].src}
               alt={GALLERY_IMAGES[currentIndex.value].alt}
@@ -175,15 +179,22 @@ export default component$(() => {
               {GALLERY_IMAGES[currentIndex.value].title}
             </h3>
           </div>
-          <div class="flex justify-between mt-4">
+          <div class="flex gap-2 mt-4">
             <button
-              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-md hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
               onClick$={goToPrev}
             >
               Previous
             </button>
             <button
-              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-md hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+              onClick$={toggleAutoPlay}
+              aria-label={autoPlay.value ? "Pause carousel" : "Play carousel"}
+            >
+              {autoPlay.value ? "Pause" : "Play"}
+            </button>
+            <button
+              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
               onClick$={goToNext}
             >
               Next
@@ -272,8 +283,8 @@ export default component$(() => {
 
         {/* Come Join Us CTA */}
         <div class="text-center mt-12">
-          <div class="bg-gradient-to-r from-secondary-50 via-tertiary-50 to-primary-50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700 shadow-xl">
-            <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
+          <div class="bg-gradient-to-r max-w-4xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700 shadow-xl">
+            <h3 class="text-2xl xdxd md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Come Join Us
             </h3>
             <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">

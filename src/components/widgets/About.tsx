@@ -1,8 +1,25 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useTask$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 import { LuHeart, LuBrain, LuLeaf, LuPalette, LuUsers, LuActivity } from "@qwikest/icons/lucide";
+import { useLocation } from "@builder.io/qwik-city";
 
 export default component$(() => {
+
+    const loc = useLocation();
+
+  useTask$(({ track }) => {
+    track(() => loc.url.pathname + loc.url.hash);
+    
+    const hash = loc.url.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // give the page time to render
+      }
+    }
+  });
   // Array of benefits with icons, titles, and descriptions
   const benefits = [
     {
@@ -58,7 +75,7 @@ export default component$(() => {
             aria-hidden="true"
           ></div>
 
-          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="space" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
               <div class="lg:order-1">
                 <h1 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
@@ -138,7 +155,7 @@ export default component$(() => {
         </section>
 
         {/* What To Expect Section */}
-        <section class="relative overflow-hidden py-20">
+        <section id="what-to-expect" class="relative overflow-hidden py-20">
           <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
           <div
             class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white/50 to-primary-50/50 dark:from-secondary-900/50 dark:via-gray-900/50 dark:to-primary-900/50"
@@ -207,7 +224,7 @@ export default component$(() => {
             aria-hidden="true"
           ></div>
 
-          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="clay" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center">
               <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Calming Benefits of Clay

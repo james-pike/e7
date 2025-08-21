@@ -6,9 +6,9 @@
 
 ## About
 
-- [Our Space](/about)
-- [What To Expect](#)
-- [Benefits of Clay](#)
+- [Our Space](/about/#space)
+- [What To Expect](/about/#what-to-expect)
+- [Benefits of Clay](/about/#clay/)
 - [Newsletter](/newsletter)
 
 ## [Classes](/classes)

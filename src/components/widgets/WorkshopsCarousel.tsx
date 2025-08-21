@@ -98,7 +98,6 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
                 Our Offerings
               </span>
             </h2>
-            
             <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
               No upcoming workshops available at the moment. Check back soon for new pottery classes!
             </p>
@@ -111,7 +110,8 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
       {/* Background with pottery texture */}
-      <div class="absolute inset-0  dark:to-tertiary-900/50" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
+      <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="absolute top-20 left-10 w-24 h-24 bg-primary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
       <div class="absolute bottom-20 right-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
       <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
@@ -119,27 +119,23 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-8">
-          <h2 class="!text-5xl md:text-6xl xdxd  font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-Our Offerings            </span>
+              Our Offerings
+            </span>
           </h2>
-          {/* <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-                      Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
-                                            We also create customized workshops for private groups. Stay tuned for more.
-
-          </p> */}
         </div>
 
-            <div class="mt-6 max-w-4xl text-center mx-auto pb-10">
-                  <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50">
-                    <p class="text-base/7 text-primary-700 dark:text-primary-300">
-                      Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
-                    </p>
-                    <p class="mt-4 text-base/7 text-primary-700 dark:text-primary-300">
-                      We also create customized workshops for private groups. Stay tuned for more.
-                    </p>
-                  </div>
-                </div>
+        <div class="mt-6 max-w-4xl text-center mx-auto pb-10">
+          <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50">
+            <p class="text-base/7 text-primary-700 dark:text-primary-300">
+              Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
+            </p>
+            <p class="mt-4 text-base/7 text-primary-700 dark:text-primary-300">
+              We also create customized workshops for private groups. Stay tuned for more.
+            </p>
+          </div>
+        </div>
 
         {isHome ? (
           // Carousel for Homepage
@@ -152,7 +148,7 @@ Our Offerings            </span>
                 {sortedWorkshops.map((workshop) => (
                   <div key={workshop.id} class="flex-shrink-0 w-80 snap-center">
                     <div
-                      class="group flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"
+                      class="group flex flex-col h-full bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-secondary-200 border-2 border-tertiary-100 dark:border-secondary-700 overflow-hidden"
                       style={
                         workshop.image
                           ? {
@@ -163,22 +159,21 @@ Our Offerings            </span>
                           : {}
                       }
                     >
-                      <div class="absolute inset-0 bg-black/20" />
                       <div class="relative z-10 flex flex-col h-full p-6">
-                        <h3 class="text-lg font-bold text-white drop-shadow-lg mb-2 line-clamp-2">
+                        <h3 class="text-lg font-bold text-secondary-900 dark:text-secondary-100 drop-shadow-lg mb-2 line-clamp-2">
                           {workshop.title}
                         </h3>
                         <p
-                          class="mb-4 px-2 py-2 rounded bg-black/40 text-white backdrop-blur-sm shadow text-sm line-clamp-3"
+                          class="mb-4 px-2 py-2 rounded bg-white/20 dark:bg-secondary-900/20 backdrop-blur-sm shadow text-sm text-primary-700 dark:text-primary-300 line-clamp-3"
                           style={{ wordBreak: "break-word" }}
                         >
                           {workshop.description}
                         </p>
                         <div class="space-y-1 mb-4">
                           {workshop.duration && (
-                            <div class="flex items-center text-xs text-white/90">
+                            <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                               <svg
-                                class="w-4 h-4 mr-1 text-white/80"
+                                class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -194,9 +189,9 @@ Our Offerings            </span>
                             </div>
                           )}
                           {workshop.instructor && (
-                            <div class="flex items-center text-xs text-white/90">
+                            <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                               <svg
-                                class="w-4 h-4 mr-1 text-white/80"
+                                class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -212,9 +207,9 @@ Our Offerings            </span>
                             </div>
                           )}
                           {workshop.price && (
-                            <div class="flex items-center text-xs text-white/90">
+                            <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                               <svg
-                                class="w-4 h-4 mr-1 text-white/80"
+                                class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -230,9 +225,9 @@ Our Offerings            </span>
                             </div>
                           )}
                           {workshop.spots && (
-                            <div class="flex items-center text-xs text-white/90">
+                            <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                               <svg
-                                class="w-4 h-4 mr-1 text-white/80"
+                                class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -249,7 +244,7 @@ Our Offerings            </span>
                           )}
                         </div>
                         <div class="mt-auto">
-                          <span class="text-sm text-gray-100 drop-shadow">
+                          <span class="text-sm text-primary-700 dark:text-primary-300 drop-shadow">
                             {workshop.date
                               ? new Date(workshop.date).toLocaleDateString()
                               : ""}
@@ -319,7 +314,7 @@ Our Offerings            </span>
             {sortedWorkshops.map((workshop) => (
               <div
                 key={workshop.id}
-                class="group flex flex-col h-full rounded-lg shadow transition-transform hover:scale-105 relative overflow-hidden"
+                class="group flex flex-col h-full bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-secondary-200 border-2 border-tertiary-100 dark:border-secondary-700 overflow-hidden"
                 style={
                   workshop.image
                     ? {
@@ -330,22 +325,21 @@ Our Offerings            </span>
                     : {}
                 }
               >
-                <div class="absolute inset-0 bg-black/20" />
                 <div class="relative z-10 flex flex-col h-full p-6">
-                  <h3 class="text-lg font-bold text-white drop-shadow-lg mb-2 line-clamp-2">
+                  <h3 class="text-lg font-bold text-secondary-900 dark:text-secondary-100 drop-shadow-lg mb-2 line-clamp-2">
                     {workshop.title}
                   </h3>
                   <p
-                    class="mb-4 px-2 py-2 rounded bg-black/40 text-white backdrop-blur-sm shadow text-sm line-clamp-3"
+                    class="mb-4 px-2 py-2 rounded bg-white/20 dark:bg-secondary-900/20 backdrop-blur-sm shadow text-sm text-primary-700 dark:text-primary-300 line-clamp-3"
                     style={{ wordBreak: "break-word" }}
                   >
                     {workshop.description}
                   </p>
                   <div class="space-y-1 mb-4">
                     {workshop.duration && (
-                      <div class="flex items-center text-xs text-white/90">
+                      <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                         <svg
-                          class="w-4 h-4 mr-1 text-white/80"
+                          class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -361,9 +355,9 @@ Our Offerings            </span>
                       </div>
                     )}
                     {workshop.instructor && (
-                      <div class="flex items-center text-xs text-white/90">
+                      <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                         <svg
-                          class="w-4 h-4 mr-1 text-white/80"
+                          class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -379,9 +373,9 @@ Our Offerings            </span>
                       </div>
                     )}
                     {workshop.price && (
-                      <div class="flex items-center text-xs text-white/90">
+                      <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                         <svg
-                          class="w-4 h-4 mr-1 text-white/80"
+                          class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -397,9 +391,9 @@ Our Offerings            </span>
                       </div>
                     )}
                     {workshop.spots && (
-                      <div class="flex items-center text-xs text-white/90">
+                      <div class="flex items-center text-xs text-primary-700 dark:text-primary-300">
                         <svg
-                          class="w-4 h-4 mr-1 text-white/80"
+                          class="w-4 h-4 mr-1 text-primary-600 dark:text-primary-400"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -416,7 +410,7 @@ Our Offerings            </span>
                     )}
                   </div>
                   <div class="mt-auto">
-                    <span class="text-sm text-gray-100 drop-shadow">
+                    <span class="text-sm text-primary-700 dark:text-primary-300 drop-shadow">
                       {workshop.date
                         ? new Date(workshop.date).toLocaleDateString()
                         : ""}
