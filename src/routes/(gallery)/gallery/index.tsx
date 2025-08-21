@@ -120,7 +120,7 @@ export default component$(() => {
   });
 
   return (
-    <section class="relative overflow-hidden py-16 md:py-20">
+    <section class="relative overflow-hidden py-12 md:py-20">
       {/* Background with pottery texture */}
       <div
         class="absolute inset-0 bg-pottery-texture opacity-20"
