@@ -102,8 +102,8 @@ export default component$(() => {
     "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl shadow-lg transition-all duration-300 overflow-hidden cursor-pointer",
     "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
     expandedMember.value === member.name
-      ? "bg-white/50 border-secondary-200"
-      : "bg-white/35 border-primary-100 dark:border-secondary-700",
+      ? "bg-white/40 border-secondary-200"
+      : "bg-white/25 border-primary-100 dark:border-secondary-700",
   ]}
   role="button"
   tabIndex={0}
