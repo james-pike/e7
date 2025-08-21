@@ -184,7 +184,3 @@ export default component$(() => {
   );
 });
 
- const social = [
-    { label: "Instagram", icon: IconInstagram, href: "https://www.instagram.com/earthenvesselsgathering/" },
-    { label: "Facebook", icon: IconFacebook, href: "https://www.facebook.com/p/earthen-vessels-61562702795370/" },
-  ];
