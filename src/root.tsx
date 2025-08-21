@@ -33,7 +33,7 @@ export default component$(() => {
       </head>
       <body class="bg-white antialiased">
         <Header /> {/* Render header directly in body */}
-        <div class="relative border-x mx-auto max-w-7xl overflow-x-hidden"> {/* Added overflow-x-hidden */}
+        <div class="relative md:border-x mx-auto max-w-7xl overflow-x-hidden"> {/* Added overflow-x-hidden */}
           {/* Watercolor background with lighter green gradients and clay texture */}
           <div class="absolute inset-0 bg-watercolor-texture opacity-50 bg-secondary-100/50" aria-hidden="true"></div>
           <div class="absolute inset-0 bg-gradient-to-br from-primary-100/95 via-primary-200/80 to-tertiary-200/85" aria-hidden="true"></div>
