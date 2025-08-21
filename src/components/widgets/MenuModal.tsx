@@ -150,7 +150,7 @@ export default component$(() => {
             <CustomAccordion items={menuItems} show={show} />
           </nav>
           <div class="border-half border-primary-200 border-t-0 pb-4 bg-white/30 dark:bg-gray-900">
-            <div class="sm:max-w-md  px-6 pt-4 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
+            <div class="sm:max-w-md  px-5 pt-4 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
                 <a
                   href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
@@ -164,7 +164,7 @@ export default component$(() => {
                     </svg>
                     Book Now
                   </span>
-                  <div class="absolute inset-0 bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-500 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
             </div>

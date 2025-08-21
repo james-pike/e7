@@ -45,7 +45,7 @@ const Panel = component$<PanelProps>(({ position, ...props }) => {
   return (
     <HeadlessModal.Panel
       {...props}
-      class={cn('custom-modal !rounded-md', panelVariants({ position }), props.class)}
+      class={cn('custom-modal ', panelVariants({ position }), props.class)}
     >
       <Slot />
     </HeadlessModal.Panel>
