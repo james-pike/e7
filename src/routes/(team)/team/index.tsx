@@ -75,7 +75,7 @@ export default component$(() => {
   const expandedMember = useSignal<string | null>(null);
 
   return (
-    <section class="relative overflow-hidden py-12 md:py-20">
+    <section class="relative overflow-hidden py-12 md:py-16">
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
       <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float"></div>
       <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -3s;"></div>
@@ -103,7 +103,7 @@ export default component$(() => {
                 "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
                 expandedMember.value === member.name
                   ? "bg-white/40 border-secondary-200"
-                  : "bg-white/25 border-primary-100 dark:border-secondary-700",
+                  : "bg-white/35 border-primary-200 dark:border-secondary-700",
               ]}
               style={{
                 minHeight: "300px", // Ensures consistent height for collapsed state
@@ -121,7 +121,7 @@ export default component$(() => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-secondary-200 mb-4 group-hover:scale-105 transition-transform duration-300"
+                  class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-[3px] border-secondary-200 mb-4 group-hover:scale-105 transition-transform duration-300"
                   width={160}
                   height={160}
                 />

@@ -31,7 +31,7 @@ export default component$(() => {
         <RouterHead />
         <ServiceWorkerRegister />
       </head>
-      <body class="bg-white antialiased">
+      <body class="bg-white antialiased -mt-20">
         <Header /> {/* Render header directly in body */}
         <div class="relative md:border-x mx-auto max-w-7xl overflow-x-hidden"> {/* Added overflow-x-hidden */}
           {/* Watercolor background with lighter green gradients and clay texture */}

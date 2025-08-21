@@ -108,7 +108,7 @@ export default component$(() => {
             </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
-              <h4 class="text-sm font-semibold text-secondary-800 dark:text-secondary-200 mb-3 flex items-center gap-2">
+              <h4 class="text-sm xdxd font-semibold text-secondary-800 dark:text-secondary-200 mb-3 flex items-center gap-2">
                 <LuMail class="w-4 h-4" /> Join our newsletter
               </h4>
               <form onSubmit$={handleSubmit} class="flex">
@@ -116,7 +116,7 @@ export default component$(() => {
                   type="email"
                   placeholder="Enter your email"
                   aria-label="Enter email for newsletter"
-                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-600 rounded-l-full bg-white/80 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-600 rounded-l-full bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   bind:value={email}
                 />
                 <button

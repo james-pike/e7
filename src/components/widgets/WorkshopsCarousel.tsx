@@ -90,7 +90,7 @@ export default component$<WorkshopsGridProps>(({ workshops, isHomePage = false }
   // Empty state
   if (!sortedWorkshops || sortedWorkshops.length === 0) {
     return (
-      <section class="relative overflow-hidden py-16 md:py-20">
+      <section class="relative overflow-hidden py-16 md:py-16">
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
           <div class="text-center">
             <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-secondary-900 dark:text-primary-100">

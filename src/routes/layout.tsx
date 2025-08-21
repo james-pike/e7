@@ -6,7 +6,7 @@ export default component$(() => {
   return (
     <>
 
-      <main class="">
+      <main class="mt-20">
         <Slot />
       </main>
       <Footer2 />

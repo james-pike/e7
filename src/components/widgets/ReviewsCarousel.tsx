@@ -245,7 +245,7 @@ export default component$(() => {
           )}
         </div>
         <div class="text-center mt-12 mb-0 px-4">
-          <div class="bg-gradient-to-r max-w-2xl mx-auto from-secondary-50 to-primary-50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
+          <div class="max-w-3xl mx-auto bg-gradient-to-r from-secondary-50/50 via-tertiary-50/50 to-primary-50/50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
             <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Join Us!
             </h3>
@@ -259,7 +259,7 @@ export default component$(() => {
                 class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-600 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span class="relative z-10">Book Now</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-secondary-700 via-tertiary-700 to-secondary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-500 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
            
             </div>

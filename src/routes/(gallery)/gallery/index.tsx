@@ -129,7 +129,7 @@ export default component$(() => {
   });
 
   return (
-    <section class="relative overflow-hidden py-12 md:py-20">
+    <section class="relative overflow-hidden py-12 md:py-16">
       {/* Background with pottery texture */}
       <div
         class="absolute inset-0 bg-pottery-texture opacity-20"
@@ -290,7 +290,7 @@ export default component$(() => {
 
         {/* Come Join Us CTA */}
        <div class="text-center mt-12">
-        <div class="bg-gradient-to-r max-w-4xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700 shadow-2xl">
+        <div class="bg-gradient-to-r max-w-4xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
           <h3 class="!text-3xl xdxd md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
             Come Join Us
           </h3>
@@ -319,7 +319,7 @@ export default component$(() => {
             class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-600 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
           >
             <span class="relative z-10">Book a Class</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-secondary-700 via-tertiary-700 to-secondary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-500 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
        
         </div>
