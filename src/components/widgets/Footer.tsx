@@ -89,7 +89,7 @@ export default component$(() => {
       <div class="absolute inset-0 bg-gradient-to-br from-primary-100/10 via-tertiary-50/15 to-secondary-50/50" aria-hidden="true"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-        <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+        <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:pt-12 md:pb-6">
           {/* First Column: Logo, Description, Newsletter */}
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-4">
