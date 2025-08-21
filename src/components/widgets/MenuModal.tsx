@@ -134,7 +134,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position="left" class="dark:bg-gray-950 border-half border-primary-200">
-          <div class="border-half border-primary-200 bg-primary-100 dark:bg-gray-900 p-1">
+          <div class="border-half border-primary-200 bg-white/50 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">
@@ -142,19 +142,19 @@ export default component$(() => {
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="text-lg font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
+            <Modal.Description class="!text-xl xdxd font-medium text-secondary-800 px-2 py-1  dark:text-gray-200">
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
-          <nav class="mt-0 space-y-4 border-half border-primary-200 border-t-0 bg-primary-50 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border-half border-primary-200 border-t-0 bg-white/40 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
-          <div class="border-half border-primary-200 border-t-0 pb-3 bg-primary-100 dark:bg-gray-900">
-            <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
+          <div class="border-half border-primary-200 border-t-0 pb-4 bg-white/30 dark:bg-gray-900">
+            <div class="sm:max-w-md  px-6 pt-4 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
                 <a
                   href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
-                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold font-serif text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
                 >

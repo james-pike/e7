@@ -11,7 +11,7 @@ const Close = HeadlessModal.Close;
 
 export const panelVariants = cva(
   [
-    'fixed w-full p-4 text-foreground border-2 transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
+    'fixed w-full p-4 text-foreground border-2  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
     // Background styles from root component
     'bg-watercolor-texture bg-secondary-100/50',
     'bg-gradient-to-br from-primary-100/95 via-primary-200/80 to-tertiary-200/85',
@@ -45,7 +45,7 @@ const Panel = component$<PanelProps>(({ position, ...props }) => {
   return (
     <HeadlessModal.Panel
       {...props}
-      class={cn('custom-modal', panelVariants({ position }), props.class)}
+      class={cn('custom-modal !rounded-md', panelVariants({ position }), props.class)}
     >
       <Slot />
     </HeadlessModal.Panel>
