@@ -81,14 +81,14 @@ export default component$(() => {
   });
 
   return (
-    <footer class="relative border-t border-half border-primary-200 dark:border-secondary-700 overflow-hidden">
+    <footer class="relative border-t pl-1 border-half border-primary-200 dark:border-secondary-700 overflow-hidden">
       {/* Background with pottery textures */}
       <div class="absolute inset-0 bg-pottery-texture opacity-10" aria-hidden="true"></div>
       {/* Gradient background */}
       <div class="absolute inset-0 bg-gradient-to-br from-primary-100/10 via-tertiary-50/15 to-secondary-50/50" aria-hidden="true"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-        <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:pt-12 md:pb-6">
+        <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:pt-12 md:pb-4">
           {/* First Column: Logo, Description, Newsletter */}
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-4">
@@ -98,6 +98,9 @@ export default component$(() => {
                 </span>
               </Link>
             </div>
+             <h2 class="!text-md  md:!text-md xdxd font-bold text-primary-600 mb-4 -mt-4">
+              Listening, Connecting, Creating
+            </h2>
             <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed">
               Handcrafted pottery that brings the warmth of terracotta and the serenity of clay into your home. Each piece tells a story of earth, fire, and human creativity.
             </div>
@@ -131,14 +134,14 @@ export default component$(() => {
               key={index}
               class={`
                 col-span-6 md:col-span-3 
-                ${index === 3 ? "lg:col-span-3 -ml-4 md:ml-0" : index === 2 ? "lg:col-span-1 md:-ml-6" : index === 1 ? "lg:col-span-2 md:-ml-4" : "lg:col-span-2"}
+                ${index === 3 ? "lg:col-span-3 -ml-4 md:ml-0" : index === 2 ? "lg:col-span-1 md:-ml-6" : index === 1 ? "lg:col-span-2 -ml-4 md:ml-0" : "lg:col-span-2"}
               `}
             >
-              <div class={`text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4 ${index === 3 ? "-ml-4 md:ml-0" : ""}`}>
+              <div class={`text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4 ${index === 3 || index === 1 ? "-ml-4 md:ml-0" : ""}`}>
                 {title}
               </div>
               {Array.isArray(items) && items.length > 0 && (
-                <ul class="text-sm space-y-2">
+                <ul class={`text-sm space-y-2 ${index === 3 || index === 1 ? "-ml-4 md:ml-0" : ""}`}>
                   {items.map(({ title, href, icon: Icon }, index2) => (
                     <li key={index2} class="flex items-center gap-2">
                       {Icon && <Icon class="w-4 h-4" />}
@@ -161,8 +164,8 @@ export default component$(() => {
             </div>
           ))}
         </div>
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-6 pt-0 md:py-8 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
-          <ul class="flex mb-4 md:mb-0 md:ml-4 -ml-2 order-1 md:order-2">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-4 pt-0 -mt-4 md:-mt-0 md:py-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
+          <ul class="flex mb-2 md:mb-0 md:ml-4 -ml-2 order-1 md:order-2">
             {social.map(({ label, href, icon: Icon }, index) => (
               <li key={index}>
                 <Link
