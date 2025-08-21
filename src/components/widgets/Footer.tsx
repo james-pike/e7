@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { LuMail, LuClock, LuMapPin } from "@qwikest/icons/lucide";
 import IconFacebook from "../icons/IconFacebook";
@@ -32,12 +32,40 @@ export default component$(() => {
         { title: "Newsletter", href: "#" },
       ],
     },
+    {
+      title: "Contact Us",
+      items: [
+        {
+          title: "hello@earthenvessels.ca",
+          href: "mailto:hello@earthenvessels.ca",
+          icon: LuMail,
+        },
+        {
+          title: "Hours: By appointment only",
+          href: null,
+          icon: LuClock,
+        },
+        {
+          title: "36 Rosemount Ave, K1Y 1P4, Ottawa, ON",
+          href: "https://www.google.com/maps/search/?api=1&query=36+Rosemount+Ave,+K1Y+1P4,+Ottawa,+ON",
+          icon: LuMapPin,
+        },
+      ],
+    },
   ];
 
   const social = [
     { label: "Instagram", icon: IconInstagram, href: "https://www.instagram.com/earthenvesselsgathering/" },
     { label: "Facebook", icon: IconFacebook, href: "https://www.facebook.com/p/earthen-vessels-61562702795370/" },
   ];
+
+  const email = useSignal("");
+  const handleSubmit = $(async () => {
+    console.log("Subscribing:", email.value);
+    // Placeholder for API call (e.g., Mailchimp)
+    // await fetch("/api/newsletter", { method: "POST", body: JSON.stringify({ email: email.value }) });
+    email.value = ""; // Reset input after submission
+  });
 
   return (
     <footer class="relative border-t border-primary-200 dark:border-secondary-700 overflow-hidden">
@@ -62,77 +90,67 @@ export default component$(() => {
             </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
-              <h4 class="text-sm font-semibold text-secondary-800 dark:text-secondary-200 mb-3">Join our newsletter</h4>
-              <div class="flex">
+              <h4 class="text-sm font-semibold text-secondary-800 dark:text-secondary-200 mb-3 flex items-center gap-2">
+                <LuMail class="w-4 h-4" /> Join our newsletter
+              </h4>
+              <form onSubmit$={handleSubmit} class="flex">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   aria-label="Enter email for newsletter"
-                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-600 rounded-l-full bg-white/80 dark:bg-secondary-800/80 text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-600 rounded-l-full bg-white/80 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  bind:value={email}
                 />
                 <button
+                  type="submit"
                   class="px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-medium rounded-r-full hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
                   role="button"
                   aria-label="Subscribe to newsletter"
                 >
                   Subscribe
                 </button>
-              </div>
+              </form>
             </div>
           </div>
           {/* Sitemap Columns */}
           {links.map(({ title, items }, index) => (
-            <div key={index} class="col-span-6 md:col-span-3 lg:col-span-2">
+            <div
+              key={index}
+              class={`col-span-6 md:col-span-3 ${index === 3 ? "lg:col-span-3 bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl p-4" : index === 2 ? "lg:col-span-1" : "lg:col-span-2"} ${index === 1 || index === 2 ? "-ml-2" : ""}`}
+            >
               <div class="text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4">{title}</div>
               {Array.isArray(items) && items.length > 0 && (
                 <ul class="text-sm space-y-2">
-                  {items.map(({ title, href }, index2) => (
-                    <li key={index2}>
-                      <Link
-                        class="text-primary-700 hover:text-secondary-600 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
-                        href={href}
-                      >
-                        {title}
-                      </Link>
+                  {items.map(({ title, href, icon: Icon }, index2) => (
+                    <li key={index2} class="flex items-center gap-2">
+                      {Icon && <Icon class="w-4 h-4" />}
+                      {href ? (
+                        <Link
+                          class="text-primary-700 hover:text-secondary-600 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
+                          href={href}
+                          target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
+                          rel={href.startsWith("http") || href.startsWith("mailto") ? "noopener noreferrer" : undefined}
+                        >
+                          {title}
+                        </Link>
+                      ) : (
+                        <span class="text-primary-700 dark:text-primary-300">{title}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
               )}
             </div>
           ))}
-          {/* Contact Info Column */}
-          <div class="col-span-12 lg:col-span-2">
-            <h4 class="text-sm font-semibold text-secondary-800 dark:text-secondary-200 mb-3">Contact Us</h4>
-            <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed flex items-center gap-2">
-              <LuMail class="w-4 h-4" />
-              <Link
-                href="mailto:hello@earthenvessels.ca"
-                class="hover:text-secondary-600 dark:hover:text-secondary-300 transition-colors duration-200"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                hello@earthenvessels.ca
-              </Link>
-            </div>
-            <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed flex items-center gap-2">
-              <LuClock class="w-4 h-4" />
-              Hours: By appointment only
-            </div>
-            <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed flex items-center gap-2">
-              <LuMapPin class="w-4 h-4" />
-              <Link
-                href="https://www.google.com/maps/search/?api=1&query=36+Rosemount+Ave,+K1Y+1P4,+Ottawa,+ON"
-                class="hover:text-secondary-600 dark:hover:text-secondary-300 transition-colors duration-200"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                36 Rosemount Ave, K1Y 1P4, Ottawa, ON
-              </Link>
-            </div>
-          </div>
         </div>
         <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-secondary-200/50 dark:border-secondary-700/50">
-          <ul class="flex mb-4 md:mb-0 md:ml-4 -ml-2">
+          <div class="text-sm text-primary-700 dark:text-primary-300 mb-4 md:mb-0">
+            <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-gradient-to-br from-primary-500 to-secondary-500"></span>
+            Handcrafted with{" "}
+            <span class="text-secondary-600 dark:text-secondary-400">♥</span>{" "}
+            by earthen vessels · All rights reserved.
+          </div>
+          <ul class="flex md:ml-4 -ml-2">
             {social.map(({ label, href, icon: Icon }, index) => (
               <li key={index}>
                 <Link
@@ -146,14 +164,13 @@ export default component$(() => {
               </li>
             ))}
           </ul>
-          <div class="text-sm text-primary-700 dark:text-primary-300">
-            <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-gradient-to-br from-primary-500 to-secondary-500"></span>
-            Handcrafted with{" "}
-            <span class="text-secondary-600 dark:text-secondary-400">♥</span>{" "}
-            by earthen vessels · All rights reserved.
-          </div>
         </div>
       </div>
     </footer>
   );
 });
+
+ const social = [
+    { label: "Instagram", icon: IconInstagram, href: "https://www.instagram.com/earthenvesselsgathering/" },
+    { label: "Facebook", icon: IconFacebook, href: "https://www.facebook.com/p/earthen-vessels-61562702795370/" },
+  ];
