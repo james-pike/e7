@@ -97,7 +97,7 @@ export default component$(() => {
                             pl-4 md:pl-0
                             md:hidden
                             font-medium
-                            md:bg-white/50
+                            md:bg-white/70
                             md:min-w-[200px]
                             drop-shadow-xl
                             py-2

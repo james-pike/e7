@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx (or relevant file)
 import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
@@ -7,12 +6,10 @@ import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
 
-// Custom Accordion Component
 const CustomAccordion = component$(({ items, show }: { items: any[], show: Signal<boolean> }) => {
   const openIndex = useSignal<number | null>(null);
   const location = useLocation();
 
-  // Reset openIndex when modal closes
   useVisibleTask$(({ track }) => {
     track(() => show.value);
     if (!show.value) {
@@ -25,7 +22,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} class="border-b border-primary-200 last:border-none last:rounded-b-base">
+        <div key={index} class="border-b border-half border-primary-200 last:border-none last:rounded-b-base">
           {item.hasSubmenu ? (
             <>
               <button
@@ -86,17 +83,12 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   );
 });
 
-// Rest of the code
 export default component$(() => {
   const show = useSignal(false);
 
   const menuItems = [
     { title: "Home", href: "/", badge: null },
-    {
-      title: "This Is Us",
-      href: "/team/",
-      hasSubmenu: false,
-    },
+    { title: "This Is Us", href: "/team/", hasSubmenu: false },
     {
       title: "About",
       href: "/about/",
@@ -119,16 +111,15 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-
     { title: "Gallery", href: "/gallery/", badge: null },
-       {
+    {
       title: "More Info",
       href: "",
       hasSubmenu: true,
       subitems: [
         { title: "Testimonials", href: "/testimonials" },
         { title: "FAQs", href: "/faq" },
-        { title: "Benefits Of secondary", href: "/about" },
+        { title: "Benefits Of Clay", href: "/about" },
         { title: "Community Connections", href: "/community" },
       ],
     },
@@ -138,12 +129,12 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-sm p-2 bg-primary-100 border-half border-primary-200 ">
+          <Modal.Trigger class="rounded-sm p-2 bg-primary-100 border-half border-primary-200">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block text-primary-600" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
-          <div class="border bg-primary-100 border-primary-200 dark:bg-gray-900 p-1">
+        <Modal.Panel position="left" class="dark:bg-gray-950 border-half border-primary-200">
+          <div class="border-half border-primary-200 bg-primary-100 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">
@@ -155,12 +146,10 @@ export default component$(() => {
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
-
-          <nav class="mt-0 space-y-4 border border-primary-200 border-t-0 bg-primary-50 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border-half border-primary-200 border-t-0 bg-primary-50 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
-
-          <div class="border-primary-200 border-t-0 pb-3 bg-primary-100 dark:bg-gray-900">
+          <div class="border-half border-primary-200 border-t-0 pb-3 bg-primary-100 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
                 <a
@@ -180,7 +169,6 @@ export default component$(() => {
               </div>
             </div>
           </div>
-
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
