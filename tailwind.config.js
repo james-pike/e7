@@ -81,16 +81,7 @@ module.exports = {
         4: 'calc(var(--border-width) + 4px)',
         8: 'calc(var(--border-width) + 8px)',
       },
-      boxShadow: {
-        base: 'var(--shadow-base)',
-        sm: 'var(--shadow-sm)',
-        DEFAULT: 'var(--shadow)',
-        md: 'var(--shadow-md)',
-        lg: 'var(--shadow-lg)',
-        xl: 'var(--shadow-xl)',
-        '2xl': 'var(--shadow-2xl)',
-        inner: 'var(--shadow-inner)',
-      },
+  
       strokeWidth: {
         0: '0',
         base: 'var(--stroke-width)',
@@ -116,17 +107,7 @@ module.exports = {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
         },
-        pulseGlow: {
-          '0%': {
-            boxShadow: '0 0 0px hsl(var(--color-primary) / 0)',
-          },
-          '50%': {
-            boxShadow: '0 0 20px hsl(var(--color-primary) / 0.6)',
-          },
-          '100%': {
-            boxShadow: '0 0 0px hsl(var(--color-primary) / 0)',
-          },
-        },
+     
         fadeUp: {
           '0%': {
             opacity: '0',

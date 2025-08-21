@@ -6,7 +6,6 @@ import IconInstagram from "../icons/IconInstagram";
 import type { JSXNode } from "@builder.io/qwik";
 import type { SVGProps } from "@builder.io/qwik";
 
-// Define interfaces for TypeScript
 interface Item {
   title: string;
   href: string | null;
@@ -78,11 +77,11 @@ export default component$(() => {
     console.log("Subscribing:", email.value);
     // Placeholder for API call (e.g., Mailchimp)
     // await fetch("/api/newsletter", { method: "POST", body: JSON.stringify({ email: email.value }) });
-    email.value = ""; // Reset input after submission
+    email.value = "";
   });
 
   return (
-    <footer class="relative border-t border-primary-200 dark:border-secondary-700 overflow-hidden">
+    <footer class="relative border-t border-half border-primary-200 dark:border-secondary-700 overflow-hidden">
       {/* Background with pottery textures */}
       <div class="absolute inset-0 bg-pottery-texture opacity-10" aria-hidden="true"></div>
       {/* Gradient background */}
@@ -130,9 +129,14 @@ export default component$(() => {
           {links.map(({ title, items }, index) => (
             <div
               key={index}
-              class={`col-span-6 md:col-span-3 ${index === 3 ? "lg:col-span-3" : index === 2 ? "lg:col-span-1" : "lg:col-span-2"} ${index === 1 || index === 2 ? "md:-ml-2" : ""}`}
+              class={`
+                col-span-6 md:col-span-3 
+                ${index === 3 ? "lg:col-span-3 -ml-4 md:ml-0" : index === 2 ? "lg:col-span-1 md:-ml-6" : index === 1 ? "lg:col-span-2 md:-ml-4" : "lg:col-span-2"}
+              `}
             >
-              <div class="text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4">{title}</div>
+              <div class={`text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4 ${index === 3 ? "-ml-4 md:ml-0" : ""}`}>
+                {title}
+              </div>
               {Array.isArray(items) && items.length > 0 && (
                 <ul class="text-sm space-y-2">
                   {items.map(({ title, href, icon: Icon }, index2) => (
@@ -157,14 +161,8 @@ export default component$(() => {
             </div>
           ))}
         </div>
-        <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-secondary-200/50 dark:border-secondary-700/50">
-          <div class="text-sm text-primary-700 dark:text-primary-300 mb-4 md:mb-0">
-            <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-gradient-to-br from-primary-500 to-secondary-500"></span>
-            Handcrafted with{" "}
-            <span class="text-secondary-600 dark:text-secondary-400">♥</span>{" "}
-            by earthen vessels · All rights reserved.
-          </div>
-          <ul class="flex md:ml-4 -ml-2">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-6 pt-0 md:py-8 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
+          <ul class="flex mb-4 md:mb-0 md:ml-4 -ml-2 order-1 md:order-2">
             {social.map(({ label, href, icon: Icon }, index) => (
               <li key={index}>
                 <Link
@@ -178,9 +176,20 @@ export default component$(() => {
               </li>
             ))}
           </ul>
+          <div class="inline-flex items-center text-sm text-primary-700 dark:text-primary-300 order-2 md:order-1">
+            <img
+              src="/images/logo2.svg"
+              alt="Earthen Vessels Logo"
+              class="w-12 h-12 md:w-16 md:h-16 mr-2 rounded-sm"
+              width={64}
+              height={64}
+            />
+            <span>
+              © 2025 earthen vessels · All rights reserved.
+            </span>
+          </div>
         </div>
       </div>
     </footer>
   );
 });
-
