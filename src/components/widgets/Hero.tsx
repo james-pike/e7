@@ -49,11 +49,11 @@ export default component$(() => {
         </div>
 
         {/* Mobile Image (Below Buttons) */}
-        <div class="md:hidden px-4 pb-10 order-2">
+        <div class="md:hidden px-6 pb-10 order-2">
           <Image
             src="/images/hero.webp"
             alt="earthen vessels Pottery"
-            class="w-full max-h-64 object-contain rounded-lg shadow-xl border-2 border-primary-300"
+            class="w-full max-h-64 object-contain rounded-lg shadow-xl border border-primary-300"
           />
         </div>
 
