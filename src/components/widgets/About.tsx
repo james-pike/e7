@@ -1,84 +1,85 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
-import { LuHeart, LuBrain, LuLeaf, LuPalette, LuUsers, LuActivity } from "@qwikest/icons/lucide";
+import {
+  LuHeart,
+  LuBrain,
+  LuLeaf,
+  LuPalette,
+  LuUsers,
+  LuActivity,
+} from "@qwikest/icons/lucide";
 import { useLocation } from "@builder.io/qwik-city";
 
 export default component$(() => {
-
-    const loc = useLocation();
+  const loc = useLocation();
 
   useTask$(({ track }) => {
     track(() => loc.url.pathname + loc.url.hash);
-    
+
     const hash = loc.url.hash;
     if (hash) {
       const el = document.querySelector(hash);
       if (el) {
         setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }, 100); // give the page time to render
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
       }
     }
   });
-  // Array of benefits with icons, titles, and descriptions
+
   const benefits = [
     {
       icon: LuHeart,
       title: "Reduce Stress and Anxiety",
-      description: "Engaging with clay requires focus and mindfulness, naturally shifting attention from stressors to a place of relaxation.",
+      description:
+        "Engaging with clay requires focus and mindfulness, naturally shifting attention from stressors to a place of relaxation.",
     },
     {
       icon: LuBrain,
       title: "Promote Mindfulness and Presence",
-      description: "The slow, deliberate nature of clay encourages presence and self-awareness, creating lasting moments of awe.",
+      description:
+        "The slow, deliberate nature of clay encourages presence and self-awareness, creating lasting moments of awe.",
     },
     {
       icon: LuLeaf,
       title: "Foster Patience and Resilience",
-      description: "Moving beyond perfection, clay teaches patience and resilience, embracing the joy of wholeness.",
+      description:
+        "Moving beyond perfection, clay teaches patience and resilience, embracing the joy of wholeness.",
     },
     {
       icon: LuPalette,
       title: "Promote Self-Expression",
-      description: "Clay offers a medium to express emotions and experiences, helping find words for self-expression.",
+      description:
+        "Clay offers a medium to express emotions and experiences, helping find words for self-expression.",
     },
     {
       icon: LuUsers,
       title: "Reduce Isolation & Loneliness",
-      description: "Coming together around the creative table builds social connections and fosters community.",
+      description:
+        "Coming together around the creative table builds social connections and fosters community.",
     },
     {
       icon: LuActivity,
       title: "Find Your Flow State",
-      description: "The flow of working with clay enhances mental well-being, improving mood and satisfaction.",
+      description:
+        "The flow of working with clay enhances mental well-being, improving mood and satisfaction.",
     },
   ];
 
   return (
-    <div class="">
+    <div>
       <main class="isolate">
-        {/* Hero Section: About Us - Our Space */}
+        {/* Hero Section */}
         <section class="relative overflow-hidden py-20">
-          <div
-            class="absolute inset-0 "
-            aria-hidden="true"
-          ></div>
+          {/* Decorative elements */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div
-            class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -2s;"
-            aria-hidden="true"
-          ></div>
-          <div
-            class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -4s;"
-            aria-hidden="true"
-          ></div>
+          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
+          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div id="space" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12 items-start">
               <div class="lg:order-1">
-                <h1 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
+                <h1 class="xdxd text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
                   <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
                     Our Space
                   </span>
@@ -94,7 +95,7 @@ export default component$(() => {
                   </div>
                 </div>
               </div>
-              <div class="mt-10 lg:mt-0">
+              <div class="lg:order-2 self-start">
                 <Image
                   src="/images/a1.webp"
                   alt="earthen vessels Studio"
@@ -107,26 +108,14 @@ export default component$(() => {
 
         {/* Offerings Section */}
         <section class="relative overflow-hidden py-20">
-          <div
-            class="absolute inset-0 "
-            aria-hidden="true"
-          ></div>
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div
-            class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -2s;"
-            aria-hidden="true"
-          ></div>
-          <div
-            class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -4s;"
-            aria-hidden="true"
-          ></div>
+          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
+          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12 items-start">
               <div class="lg:order-2">
-                <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
+                <h2 class="xdxd text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
                   <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                     Our Offerings
                   </span>
@@ -142,7 +131,7 @@ export default component$(() => {
                   </div>
                 </div>
               </div>
-              <div class="mt-10 lg:mt-0 lg:order-1">
+              <div class="lg:order-1 self-start">
                 <Image
                   src="/images/a2.webp"
                   alt="Workshops"
@@ -155,26 +144,14 @@ export default component$(() => {
 
         {/* What To Expect Section */}
         <section id="what-to-expect" class="relative overflow-hidden py-20">
-          <div
-            class="absolute inset-0 "
-            aria-hidden="true"
-          ></div>
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div
-            class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -2s;"
-            aria-hidden="true"
-          ></div>
-          <div
-            class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -4s;"
-            aria-hidden="true"
-          ></div>
+          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
+          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-12 items-start">
               <div class="lg:order-1">
-                <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
+                <h2 class="xdxd text-4xl md:text-5xl font-bold font-serif tracking-tight text-balance">
                   <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                     What To Expect
                   </span>
@@ -193,7 +170,7 @@ export default component$(() => {
                   </div>
                 </div>
               </div>
-              <div class="mt-10 lg:mt-0 lg:order-2">
+              <div class="lg:order-2 self-start">
                 <Image
                   src="/images/a3.jpg"
                   alt="Clay Experience"
@@ -206,24 +183,13 @@ export default component$(() => {
 
         {/* Benefits Section */}
         <section class="relative overflow-hidden py-20">
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-secondary-50/50 to-primary-50/50 dark:from-secondary-900/50 dark:to-primary-900/50"
-            aria-hidden="true"
-          ></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-secondary-50/50 to-primary-50/50 dark:from-secondary-900/50 dark:to-primary-900/50" aria-hidden="true"></div>
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div
-            class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -2s;"
-            aria-hidden="true"
-          ></div>
-          <div
-            class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float"
-            style="animation-delay: -4s;"
-            aria-hidden="true"
-          ></div>
+          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
+          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div id="clay" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center">
+            <h2 class="xdxd text-4xl md:text-5xl font-bold font-serif tracking-tight text-center">
               <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Calming Benefits of Clay
               </span>
@@ -234,7 +200,7 @@ export default component$(() => {
                   key={index}
                   class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50"
                 >
-                  <benefit.icon class="w-6 h-6 text-secondary-600 dark:text-secondary-300 mb-2 " />
+                  <benefit.icon class="w-6 h-6 text-secondary-600 dark:text-secondary-300 mb-2" />
                   <p class="text-lg font-semibold tracking-tight text-secondary-900 dark:text-secondary-100">
                     {benefit.title}
                   </p>

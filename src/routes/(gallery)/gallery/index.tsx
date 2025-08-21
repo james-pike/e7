@@ -33,31 +33,31 @@ const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "4",
     title: "Sculpted Planter",
-    src: "/images/pottery/planter-1.webp",
+    src: "/images/g1.jpeg",
     alt: "Sculpted pottery planter",
   },
   {
     id: "5",
     title: "Rustic Pitcher",
-    src: "/images/pottery/pitcher-1.webp",
+    src: "/images/g2.jpeg",
     alt: "Rustic secondary pitcher",
   },
   {
     id: "6",
     title: "Decorative Plate",
-    src: "/images/pottery/plate-1.webp",
+    src: "/images/g3.jpeg",
     alt: "Hand-painted ceramic plate",
   },
   {
     id: "7",
     title: "Minimalist Cup",
-    src: "/images/pottery/cup-1.webp",
+    src: "/images/g4.jpeg",
     alt: "Minimalist pottery cup",
   },
   {
     id: "8",
     title: "Artisan Teapot",
-    src: "/images/pottery/teapot-1.webp",
+    src: "/images/g5.jpeg",
     alt: "Artisan ceramic teapot",
   },
 ];
