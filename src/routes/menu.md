@@ -6,7 +6,7 @@
 
 ## About
 
-- [Our Space](#)
+- [Our Space](/about)
 - [What To Expect](#)
 - [Benefits of Clay](#)
 - [Newsletter](/newsletter)
@@ -17,7 +17,7 @@
 ## More Info
 
 - [Testimonials](/testimonials)
-- [FAQs](/faq)
+- [Frequently Asked Questions](/faq)
 - [Community Connections](/community)
 
 

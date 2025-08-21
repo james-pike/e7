@@ -152,7 +152,7 @@ export default component$(() => {
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h1 class="!text-5xl md:text-6xl xdxd  font-bold font-serif mb-6">
+          <h1 class="!text-6xl md:text-7xl xdxd  font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               earthen vessels gallery
             </span>
