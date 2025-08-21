@@ -11,7 +11,11 @@ const Close = HeadlessModal.Close;
 
 export const panelVariants = cva(
   [
-    'fixed w-full  p-4 text-foreground border-2  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
+    'fixed w-full p-4 text-foreground border-2 transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
+    // Background styles from root component
+    'bg-watercolor-texture bg-secondary-100/50',
+    'bg-gradient-to-br from-primary-100/95 via-primary-200/80 to-tertiary-200/85',
+    'bg-gradient-to-t from-tertiary-300/40 via-primary-200/50 to-primary-100/60',
     'data-[closing]:duration-300 data-[open]:duration-300 data-[open]:animate-in data-[closing]:animate-out',
     'backdrop:data-[closing]:duration-300 backdrop:data-[open]:duration-300 backdrop:data-[open]:animate-in backdrop:data-[closing]:animate-out backdrop:data-[closing]:fade-out backdrop:data-[open]:fade-in',
   ],
@@ -23,7 +27,7 @@ export const panelVariants = cva(
         top: 'inset-x-0 top-0 mt-0 rounded-b-base border-b data-[closing]:slide-out-to-top data-[open]:slide-in-from-top',
         bottom:
           'inset-x-0 bottom-0 mb-0 rounded-t-base border-t data-[closing]:slide-out-to-bottom data-[open]:slide-in-from-bottom',
-        left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base border-r  data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
+        left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base border-r data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
         right:
           'inset-y-0 right-0 mr-0 h-full max-w-sm rounded-l-base border-l data-[closing]:slide-out-to-right data-[open]:slide-in-from-right',
       },
@@ -41,7 +45,7 @@ const Panel = component$<PanelProps>(({ position, ...props }) => {
   return (
     <HeadlessModal.Panel
       {...props}
-      class={cn('custom-modal', panelVariants({ position }), props.class)} // Added custom-modal class
+      class={cn('custom-modal', panelVariants({ position }), props.class)}
     >
       <Slot />
     </HeadlessModal.Panel>
