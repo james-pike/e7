@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$, $, type QwikMouseEvent } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$, $, } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 

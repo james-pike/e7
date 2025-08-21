@@ -1,5 +1,4 @@
 import { component$, useSignal, $ } from "@builder.io/qwik";
-import { LuGlobe } from "@qwikest/icons/lucide";
 import { useFaqsLoader } from "~/routes/plugin@faqs";
 
 export default component$(() => {
@@ -25,17 +24,6 @@ export default component$(() => {
   const leftColumn = safeFaqs.filter((_, i) => i % 2 === 0);
   const rightColumn = safeFaqs.filter((_, i) => i % 2 === 1);
 
-  // Map FAQ indices to Lucide icons (based on pottery vessels)
-  const iconMap: { [key: number]: string } = {
-    1: "Flower",
-    2: "Circle",
-    3: "Coffee",
-    4: "Sprout",
-    5: "Droplet",
-    6: "Disc",
-    7: "CupSoda",
-    8: "Teapot",
-  };
 
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
@@ -91,7 +79,7 @@ export default component$(() => {
           <div class="flex flex-col md:flex-row md:gap-8">
             {/* Left Column */}
             <div class="flex-1 flex flex-col gap-4">
-              {leftColumn.map((item, index) => (
+              {leftColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
                   <div class="bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-tertiary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
                     {/* Question Header */}
@@ -158,7 +146,7 @@ export default component$(() => {
             </div>
             {/* Right Column */}
             <div class="flex-1 flex flex-col gap-4 mt-4 md:mt-0">
-              {rightColumn.map((item, index) => (
+              {rightColumn.map((item) => (
                 <div key={item.id} class="group mb-0 break-inside-avoid">
                   <div class="bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm border-2 border-primary-100 dark:border-secondary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200">
                     {/* Question Header */}
