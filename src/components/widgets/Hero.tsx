@@ -38,7 +38,7 @@ export default component$(() => {
               </span>
             </h1>
             {/* Slogan */}
-            <h2 class="!text-3xl sm:text-xl md:text-3xl xdxd font-bold text-primary-600 mb-6 pt-2">
+            <h2 class="!text-2xl sm:text-xl md:!text-3xl xdxd font-bold text-primary-600 mb-6 pt-2">
               Listening, Connecting, Creating
             </h2>
             {/* Subtitle */}
