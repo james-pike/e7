@@ -25,6 +25,7 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
+<link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Syne:wght@600&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
         <RouterHead />

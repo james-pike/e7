@@ -2,6 +2,13 @@
 @tailwind base;
 @tailwind utilities;
 
+ /* Set Della Respira as default font for body */
+  body {
+    font-family: "Della Respira", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 /* Watercolor texture with enhanced noise */
 .bg-watercolor-texture {
   background-image: 
@@ -73,6 +80,13 @@
 
           
 }
+
+.della {
+  font-family: "Della Respira", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 
