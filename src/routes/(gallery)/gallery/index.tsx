@@ -1,5 +1,6 @@
 import { component$, useSignal, useVisibleTask$, $, } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { LuChevronLeft, LuChevronRight, LuPause, LuPlay } from "@qwikest/icons/lucide";
 import { SITE } from "~/config.mjs";
 
 // Interface for gallery images
@@ -179,27 +180,29 @@ export default component$(() => {
               {GALLERY_IMAGES[currentIndex.value].title}
             </h3>
           </div>
-          <div class="flex gap-2 mt-4">
-            <button
-              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
-              onClick$={goToPrev}
-            >
-              Previous
-            </button>
-            <button
-              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
-              onClick$={toggleAutoPlay}
-              aria-label={autoPlay.value ? "Pause carousel" : "Play carousel"}
-            >
-              {autoPlay.value ? "Pause" : "Play"}
-            </button>
-            <button
-              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
-              onClick$={goToNext}
-            >
-              Next
-            </button>
-          </div>
+          <div class="flex gap-2 mt-4 justify-end"> {/* Changed to justify-end for far-right alignment */}
+      <button
+        class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+        onClick$={goToPrev}
+        aria-label="Previous slide"
+      >
+        <LuChevronLeft class="w-5 h-5" />
+      </button>
+      <button
+        class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+        onClick$={toggleAutoPlay}
+        aria-label={autoPlay.value ? "Pause carousel" : "Play carousel"}
+      >
+        {autoPlay.value ? <LuPause class="w-5 h-5" /> : <LuPlay class="w-5 h-5" />}
+      </button>
+      <button
+        class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+        onClick$={goToNext}
+        aria-label="Next slide"
+      >
+        <LuChevronRight class="w-5 h-5" />
+      </button>
+    </div>
         </div>
 
         {/* Lightbox/Modal */}
