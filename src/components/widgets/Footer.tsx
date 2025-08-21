@@ -3,9 +3,23 @@ import { Link } from "@builder.io/qwik-city";
 import { LuMail, LuClock, LuMapPin } from "@qwikest/icons/lucide";
 import IconFacebook from "../icons/IconFacebook";
 import IconInstagram from "../icons/IconInstagram";
+import type { JSXNode } from "@builder.io/qwik";
+import type { SVGProps } from "@builder.io/qwik";
+
+// Define interfaces for TypeScript
+interface Item {
+  title: string;
+  href: string | null;
+  icon?: (props: SVGProps<SVGSVGElement>) => JSXNode<unknown>;
+}
+
+interface LinkSection {
+  title: string;
+  items: Item[];
+}
 
 export default component$(() => {
-  const links = [
+  const links: LinkSection[] = [
     {
       title: "About",
       items: [
@@ -116,7 +130,7 @@ export default component$(() => {
           {links.map(({ title, items }, index) => (
             <div
               key={index}
-              class={`col-span-6 md:col-span-3 ${index === 3 ? "lg:col-span-3 bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl p-4" : index === 2 ? "lg:col-span-1" : "lg:col-span-2"} ${index === 1 || index === 2 ? "-ml-2" : ""}`}
+              class={`col-span-6 md:col-span-3 ${index === 3 ? "lg:col-span-3" : index === 2 ? "lg:col-span-1" : "lg:col-span-2"} ${index === 1 || index === 2 ? "md:-ml-2" : ""}`}
             >
               <div class="text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4">{title}</div>
               {Array.isArray(items) && items.length > 0 && (

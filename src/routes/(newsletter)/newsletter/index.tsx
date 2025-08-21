@@ -105,8 +105,6 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden py-16 md:py-20">
-      <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white to-primary-50/50" aria-hidden="true"></div>
       <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
       <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
       <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>

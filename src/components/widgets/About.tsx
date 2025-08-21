@@ -107,9 +107,8 @@ export default component$(() => {
 
         {/* Offerings Section */}
         <section class="relative overflow-hidden py-20">
-          <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
           <div
-            class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white/50 to-primary-50/50 dark:from-secondary-900/50 dark:via-gray-900/50 dark:to-primary-900/50"
+            class="absolute inset-0 "
             aria-hidden="true"
           ></div>
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
@@ -156,9 +155,8 @@ export default component$(() => {
 
         {/* What To Expect Section */}
         <section id="what-to-expect" class="relative overflow-hidden py-20">
-          <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
           <div
-            class="absolute inset-0 bg-gradient-to-br from-secondary-50/50 via-white/50 to-primary-50/50 dark:from-secondary-900/50 dark:via-gray-900/50 dark:to-primary-900/50"
+            class="absolute inset-0 "
             aria-hidden="true"
           ></div>
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
