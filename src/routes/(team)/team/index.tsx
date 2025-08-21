@@ -83,7 +83,7 @@ export default component$(() => {
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <h1 class="!text-5xl md:text-6xl xdxd   font-bold font-serif mb-6">
+          <h1 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Hello! Kwey! Bonjour!
             </span>
@@ -96,22 +96,27 @@ export default component$(() => {
         {/* 🧱 MASONRY COLUMN LAYOUT */}
         <div class="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
           {TEAM_MEMBERS.map((member) => (
-         <div
-  key={member.name}
-  class={[
-    "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl shadow-lg transition-all duration-300 overflow-hidden cursor-pointer",
-    "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
-    expandedMember.value === member.name
-      ? "bg-white/40 border-secondary-200"
-      : "bg-white/25 border-primary-100 dark:border-secondary-700",
-  ]}
-  role="button"
-  tabIndex={0}
-  aria-expanded={expandedMember.value === member.name}
-  onClick$={() => {
-    expandedMember.value = expandedMember.value === member.name ? null : member.name;
-  }}
->
+            <div
+              key={member.name}
+              class={[
+                "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
+                "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
+                expandedMember.value === member.name
+                  ? "bg-white/40 border-secondary-200"
+                  : "bg-white/25 border-primary-100 dark:border-secondary-700",
+              ]}
+              style={{
+                minHeight: "300px", // Ensures consistent height for collapsed state
+                transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color",
+                transform: expandedMember.value === member.name ? "scale(1.02)" : "scale(1)",
+              }}
+              role="button"
+              tabIndex={0}
+              aria-expanded={expandedMember.value === member.name}
+              onClick$={() => {
+                expandedMember.value = expandedMember.value === member.name ? null : member.name;
+              }}
+            >
               <div class="flex flex-col items-center p-3 pt-6">
                 <img
                   src={member.image}
@@ -120,25 +125,27 @@ export default component$(() => {
                   width={160}
                   height={160}
                 />
-
                 <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-1">
                   {member.name}
                 </h3>
                 <span
-                  class={`px-3 py-1 rounded-full text-xs font-semibold border-2 shadow-lg ${getRoleColor(member.role)}`}
+                  class={`px-3 py-1 rounded-full text-xs font-semibold border-2 ${getRoleColor(member.role)}`}
                 >
                   {member.role}
                 </span>
-
                 <p
                   class={[
-                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4",
+                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4 transition-all duration-300 ease-in-out",
                     expandedMember.value !== member.name && "line-clamp-3",
                   ]}
+                  style={{
+                    maxHeight: expandedMember.value === member.name ? "1000px" : "4.5em", // Adjust max-height for smooth expansion
+                    overflow: "hidden",
+                    transitionProperty: "max-height",
+                  }}
                 >
                   {member.description}
                 </p>
-
                 <div class="flex justify-center mt-2">
                   <svg
                     class={[
