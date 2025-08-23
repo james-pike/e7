@@ -142,7 +142,7 @@ export default component$(() => {
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-xl xdxd font-medium text-secondary-800 px-2 py-1  dark:text-gray-200">
+            <Modal.Description class="!text-xl font-medium text-secondary-800 px-2 py-1  dark:text-gray-200">
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
