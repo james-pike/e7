@@ -68,9 +68,9 @@ export default component$(() => {
 
   return (
     <div>
-      <main class="isolate max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main class="isolate max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <section class="relative overflow-hidden py-12 md:py-16">
+        <section class="relative overflow-hidden py-6 pt-3 md:py-12">
           {/* Floating decorations */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
           <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
@@ -111,7 +111,7 @@ export default component$(() => {
         </section>
 
         {/* Offerings Section */}
-        <section class="relative overflow-hidden py-12 md:py-16">
+        <section class="relative overflow-hidden py-6 pt-8 md:py-12">
           {/* Decorations */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
           <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
@@ -119,7 +119,7 @@ export default component$(() => {
 
           <div class="relative">
           
-            <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-1 lg:order-1 self-start">
                 <Image
                   src="/images/a2.webp"
@@ -148,22 +148,24 @@ export default component$(() => {
         </section>
 
         {/* What To Expect Section */}
-        <section id="what-to-expect" class="relative overflow-hidden py-12 md:py-16">
+        <section id="what-to-expect" class="relative overflow-hidden py-6 pt-8 md:py-12">
           {/* Decorations */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
           <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
           <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div class="relative">
-            <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
+          
+            <div class="grid lg:grid-cols-2 gap-6 items-start">
+              <div class="order-2 lg:order-1 self-start">
+                <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
+  <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
               <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 What To Expect
               </span>
             </h2>
-            <div class="grid lg:grid-cols-2 gap-8 items-start">
-              <div class="order-2 lg:order-1 self-start">
-                <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
-                  <p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
+
+<p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
                     Our clay and personal transformation workshops begin with guided meditations and reflections, leading a small group into a deeper self-awareness, followed by a hands-on, mindful clay experience.
                   </p>
                   <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
@@ -193,12 +195,12 @@ export default component$(() => {
           <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div id="clay" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
+            <h2 class="!text-4xl md:text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
               <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-                The Calming Benefits of Clay
+                The Benefits of Clay
               </span>
             </h2>
-            <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon; // Capitalized variable for component rendering
                 return (
