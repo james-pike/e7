@@ -23,7 +23,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} class="border-b border- border-x-2 border-tertiary-300 last:border-none last:rounded-b-base">
+        <div key={index} class="border-b border-tertiary-300 last:border-none last:rounded-b-base">
           {item.hasSubmenu ? (
             <>
               <button
@@ -134,8 +134,8 @@ export default component$(() => {
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block text-primary-600" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position="left" class="dark:bg-gray-950 border border-tertiary-300">
-          <div class="border rounded-t-2xl border-tertiary-300 bg-white/50 dark:bg-gray-900 p-1">
+        <Modal.Panel position="left" class="dark:bg-gray-950 border-tertiary-300">
+          <div class=" rounded-t-2xl border-tertiary-300 bg-white/50 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-3">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">
