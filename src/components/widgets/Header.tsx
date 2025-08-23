@@ -1,4 +1,4 @@
-import { component$, useStore } from "@builder.io/qwik";
+import {  component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
@@ -30,15 +30,10 @@ export default component$(() => {
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a class="flex flex-col items-center" href="/">
-            <div class="w-[100px] h-[40px] md:w-[150px] md:h-[60px] pt-1">
-              <img src="/images/logo2.svg" alt="Logo" class="w-full h-full object-contain" />
+          <a class="flex items-center" href="/">
+            <div style="width: 100px; height: 40px;">
+              <img src="/images/logo2.svg" alt="Logo" />
             </div>
-            <span
-              class="hidden md:block text-secondary-800 font-semibold md:text-[8px] mt-0.5"
-            >
-              Listening, Connecting, Creating
-            </span>
           </a>
           <div class="flex items-center md:hidden gap-1">
             <MenuModal />
@@ -58,7 +53,7 @@ export default component$(() => {
                       <>
                         <button
                           class={`
-                            hover:text-secondary-800
+                            hover:text-secondary-600
                             px-4 py-3
                             flex items-center
                             transition-all duration-200
@@ -69,7 +64,7 @@ export default component$(() => {
                             after:bottom-[6px]
                             after:left-1/2
                             after:h-[2px]
-                            after:bg-secondary-800
+                            after:bg-secondary-600
                             after:transition-all
                             after:duration-200
                             ${
@@ -117,7 +112,7 @@ export default component$(() => {
                                 <a
                                   class={`
                                     hover:bg-muted
-                                    hover:text-secondary-800
+                                    hover:text-secondary-600
                                     py-2 px-5
                                     block
                                     whitespace-no-wrap
@@ -128,7 +123,7 @@ export default component$(() => {
                                     after:bottom-[4px]
                                     after:left-1/2
                                     after:h-[2px]
-                                    after:bg-secondary-800
+                                    after:bg-secondary-600
                                     after:transition-all
                                     after:duration-200
                                     ${
@@ -153,7 +148,7 @@ export default component$(() => {
                       <a
                         class={`
                           hover:bg-muted
-                          hover:text-secondary-800
+                          hover:text-secondary-600
                           px-4 py-3
                           flex items-center
                           relative
@@ -163,13 +158,13 @@ export default component$(() => {
                           after:bottom-[6px]
                           after:left-1/2
                           after:h-[2px]
-                          after:bg-secondary-800
+                          after:bg-secondary-600
                           after:transition-all
                           after:duration-200
                           rounded-base
                           ${
                             isActive
-                              ? "text-secondary-800 after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                              ? "text-secondary-600 after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
                               : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
                           }
                         `}
@@ -187,8 +182,8 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <a
-              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
-              class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-800-200"
+              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=oW%2F6hZJecTudb%2Fv%2Frme6nFm8gbDa3UvfJkr1evB2Xsc%3D&src=03v&type=41562UHUKUC196793426E6"
+              class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-600-200"
               role="button"
               aria-label="Book a workshop"
             >
