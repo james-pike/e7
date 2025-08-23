@@ -1,1 +1,0 @@
-import{_ as t}from"./q-CSnWScGr.js";import{c as r,q as _,m as o,d as l,S as n,F as a}from"./q-DY-apSyG.js";const c=r(_(()=>t(()=>import("./q-CTAuHTSj.js").then(s=>s.F),[]),"s_0dwFtB4M0as")),i=()=>o(a,{children:[l("main",null,{class:"mt-20"},o(n,null,3,"cL_0"),1,null),o(c,null,3,"cL_1")]},1,"cL_2");export{i as s_Gd6c6uAzGKo};
