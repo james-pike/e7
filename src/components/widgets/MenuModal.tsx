@@ -55,7 +55,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                 <ul class="flex flex-col gap-0 pl-5">
                   {item.subitems!.map((subitem: any) => (
                     <li key={subitem.title} class="flex items-center">
-                      <span class="text-primary-400 text-xs mr-3">✦</span>
+                      <span class="text-primary-300 text-xs mr-3">✦</span>
                       <a
                         href={subitem.href}
                         class={cn(
