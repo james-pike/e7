@@ -53,7 +53,7 @@ export default component$(() => {
                       <>
                         <button
                           class={`
-                            hover:text-secondary-600
+                            hover:text-secondary-800
                             px-4 py-3
                             flex items-center
                             transition-all duration-200
@@ -112,7 +112,7 @@ export default component$(() => {
                                 <a
                                   class={`
                                     hover:bg-muted
-                                    hover:text-secondary-600
+                                    hover:text-secondary-800
                                     py-2 px-5
                                     block
                                     whitespace-no-wrap
@@ -148,7 +148,7 @@ export default component$(() => {
                       <a
                         class={`
                           hover:bg-muted
-                          hover:text-secondary-600
+                          hover:text-secondary-800
                           px-4 py-3
                           flex items-center
                           relative
@@ -164,7 +164,7 @@ export default component$(() => {
                           rounded-base
                           ${
                             isActive
-                              ? "text-secondary-600 after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                              ? "text-secondary-800 after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
                               : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
                           }
                         `}

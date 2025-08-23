@@ -93,7 +93,7 @@ export default component$(() => {
   const show = useSignal(false);
 
   const menuItems = [
-    { title: "Home", href: "/", badge: null },
+    // { title: "Home", href: "/", badge: null },
     { title: "This Is Us", href: "/team/", hasSubmenu: false },
     {
       title: "About",
@@ -104,6 +104,8 @@ export default component$(() => {
         { title: "What To Expect", href: "/about" },
         { title: "Benefits Of Clay", href: "/about" },
         { title: "Newsletter", href: "/newsletter" },
+        { title: "FAQ", href: "/faq" },
+
       ],
     },
     {
@@ -118,17 +120,21 @@ export default component$(() => {
       ],
     },
     { title: "Gallery", href: "/gallery/", badge: null },
-    {
-      title: "More Info",
-      href: "",
-      hasSubmenu: true,
-      subitems: [
-        { title: "Testimonials", href: "/testimonials" },
-        { title: "FAQs", href: "/faq" },
-        { title: "Benefits Of Clay", href: "/about" },
-        { title: "Community Connections", href: "/community" },
-      ],
-    },
+        { title: "Community", href: "/community/", badge: null },
+                { title: "Testimonials", href: "/testimonials/", badge: null },
+
+
+    // {
+    //   title: "More Info",
+    //   href: "",
+    //   hasSubmenu: true,
+    //   subitems: [
+    //     { title: "Testimonials", href: "/testimonials" },
+    //     { title: "FAQs", href: "/faq" },
+    //     { title: "Benefits Of Clay", href: "/about" },
+    //     { title: "Community Connections", href: "/community" },
+    //   ],
+    // },
   ];
 
   return (
