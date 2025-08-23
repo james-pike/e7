@@ -40,7 +40,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
        
 
-           <div class="mt-0 max-w-4xl text-center mx-auto pb-10">
+           <div class="mt-2 max-w-4xl text-center mx-auto pb-10">
           <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50">
             <div class="text-center mb-12">
           <h1 class="!text-5xl md:text-6xl font-bold xdxd mb-6">
