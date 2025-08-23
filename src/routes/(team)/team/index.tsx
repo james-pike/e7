@@ -100,30 +100,30 @@ export default component$(() => {
             const isBelowExpanded = expandedMember.value && index > TEAM_MEMBERS.findIndex((m) => m.name === expandedMember.value);
 
             return (
-              <div
-                key={member.name}
-                class={[
-                  "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
-                  "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
-                  isExpanded
-                    ? "col-span-2 bg-white/40 border-secondary-200 z-10"
-                    : isAboveExpanded || (!expandedMember.value && index % 2 === 0)
-                    ? "bg-white/35 border-primary-200 dark:border-secondary-700"
-                    : "bg-white/35 border-primary-200 dark:border-secondary-700",
-                  isBelowExpanded && expandedMember.value && "opacity-50", // Dim cards below to indicate focus
-                ]}
-                style={{
-                  minHeight: "300px",
-                  transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color, grid-column",
-                  transform: isExpanded ? "scale(1.02)" : "scale(1)",
-                }}
-                role="button"
-                tabIndex={0}
-                aria-expanded={isExpanded}
-                onClick$={() => {
-                  expandedMember.value = expandedMember.value === member.name ? null : member.name;
-                }}
-              >
+             <div
+  key={member.name}
+  class={[
+    "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
+    "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
+    isExpanded
+      ? "col-span-2 col-start-1 bg-white/40 border-secondary-200 z-10"
+      : "bg-white/35 border-primary-200 dark:border-secondary-700",
+    isBelowExpanded && expandedMember.value && "opacity-50",
+  ]}
+  style={{
+    minHeight: "300px",
+    transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color, grid-column",
+    transform: isExpanded ? "scale(1.02)" : "scale(1)",
+  }}
+  role="button"
+  tabIndex={0}
+  aria-expanded={isExpanded}
+  onClick$={() => {
+    expandedMember.value =
+      expandedMember.value === member.name ? null : member.name;
+  }}
+>
+
                 <div class="flex flex-col items-center p-2 pt-4">
                   <img
                     src={member.image}
