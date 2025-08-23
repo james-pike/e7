@@ -1,4 +1,4 @@
-import {  component$, useStore } from "@builder.io/qwik";
+import { component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
@@ -30,10 +30,15 @@ export default component$(() => {
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a class="flex items-center" href="/">
-            <div style="width: 100px; height: 40px;">
-              <img src="/images/logo2.svg" alt="Logo" />
+          <a class="flex items-center flex-col" href="/">
+            <div class="w-[100px] h-[40px] md:w-[150px] md:h-[60px]">
+              <img src="/images/logo2.svg" alt="Logo" class="w-full h-full object-contain" />
             </div>
+            <span
+              class="text-primary-600 font-semibold text-[6px] sm:hidden md:block md:text-[10px] mt-1"
+            >
+              Listening, Connecting, Creating
+            </span>
           </a>
           <div class="flex items-center md:hidden gap-1">
             <MenuModal />
@@ -182,7 +187,7 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <a
-              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=oW%2F6hZJecTudb%2Fv%2Frme6nFm8gbDa3UvfJkr1evB2Xsc%3D&src=03v&type=41562UHUKUC196793426E6"
+              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
               class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-800-200"
               role="button"
               aria-label="Book a workshop"

@@ -100,7 +100,7 @@ export default component$(() => {
                 </span>
               </Link>
             </div>
-             <h2 class="!text-md  md:!text-md xdxd font-bold text-primary-600 mb-4 -mt-4">
+             <h2 class="!text-xs  md:!text-md font-bold text-primary-600 mb-4 -mt-2">
               Listening, Connecting, Creating
             </h2>
             <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed">

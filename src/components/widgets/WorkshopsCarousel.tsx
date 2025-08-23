@@ -38,12 +38,24 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
+       
+
+           <div class="mt-6 max-w-4xl text-center mx-auto pb-10">
+          <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50">
+            <div class="text-center mb-12">
           <h1 class="!text-5xl md:text-6xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Our Workshops
             </span>
           </h1>
+        </div>
+            <p class="text-base/7 text-primary-700 dark:text-primary-300">
+              Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The Tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
+            </p>
+            <p class="mt-4 text-base/7 text-primary-700 dark:text-primary-300">
+              We also create customized workshops for private groups. Stay tuned for more.
+            </p>
+          </div>
         </div>
 
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
@@ -85,7 +97,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                 </h3>
 
                 {/* 🛠 Icons line above description */}
-                <div class="flex flex-wrap gap-2 text-xs text-primary-700 dark:text-primary-300 mt-2 justify-center">
+                <div class="flex flex-wrap gap-3 text-xs text-primary-700 dark:text-primary-300 mt-2 justify-center">
                   {workshop.duration && (
                     <span class="flex items-center gap-1">
                       <LuClock class="w-4 h-4 text-primary-600 dark:text-primary-400" />
@@ -100,7 +112,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                   )}
                   {workshop.price && (
                     <span class="flex items-center gap-1">
-                      <LuDollarSign class="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                      {/* <LuDollarSign class="w-4 h-4 text-primary-600 dark:text-primary-400" /> */}
                       {workshop.price}
                     </span>
                   )}
