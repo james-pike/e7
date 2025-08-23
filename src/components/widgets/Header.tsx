@@ -188,7 +188,7 @@ export default component$(() => {
               aria-label="Book a workshop"
             >
               <span class="relative z-10 xdxd flex items-center gap-2">
-                Book Now
+                Book Class
               </span>
               <div class="absolute inset-0 bg-gradient-to-r from-primary-400 via-primary-300 to-primary-300 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>

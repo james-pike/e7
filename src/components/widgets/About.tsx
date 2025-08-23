@@ -68,7 +68,7 @@ export default component$(() => {
 
   return (
     <div>
-      <main class="isolate max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main class="isolate max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <section class="relative overflow-hidden py-12 md:py-16">
           {/* Floating decorations */}
@@ -77,14 +77,20 @@ export default component$(() => {
           <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div id="space" class="relative">
-            <h1 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
-                Our Space
-              </span>
-            </h1>
-            <div class="grid lg:grid-cols-2 gap-8 items-start">
+          
+            <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-2 lg:order-1 self-start">
+
+
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
+
+
+                  <h1 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
+                    <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
+                      Our Space
+                    </span>
+                  </h1>
+
                   <p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
                     earthen vessels Studio is a grounding space where working with clay becomes a pathway to a deeper connection—with ourselves, the earth, and each other—through reflections, mindful creativity, play, and listening to the voice within.
                   </p>
@@ -112,11 +118,7 @@ export default component$(() => {
           <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div class="relative">
-            <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-                Our Offerings
-              </span>
-            </h2>
+          
             <div class="grid lg:grid-cols-2 gap-8 items-start">
               <div class="order-1 lg:order-1 self-start">
                 <Image
@@ -127,6 +129,12 @@ export default component$(() => {
               </div>
               <div class="order-2 lg:order-2 self-start">
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
+                  
+                    <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
+              <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                Our Offerings
+              </span>
+            </h2>
                   <p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
                     Explore our workshops and courses designed to foster creativity and connection through clay. From beginner sessions to advanced techniques, we offer a range of experiences tailored to all levels.
                   </p>

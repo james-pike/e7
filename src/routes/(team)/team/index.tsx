@@ -1,4 +1,3 @@
-// src/components/widgets/Team.tsx
 import { component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
@@ -63,8 +62,8 @@ const TEAM_MEMBERS: TeamMember[] = [
 ];
 
 const ROLE_GRADIENTS: Record<string, string> = {
-  Facilitator: 'bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 border-primary-300 shadow-primary-200/50',
-  Default: 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 border-gray-300 shadow-gray-200/50',
+  Facilitator: "bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 border-primary-300 shadow-primary-200/50",
+  Default: "bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 border-gray-300 shadow-gray-200/50",
 };
 
 const getRoleColor = (role: string) => {
@@ -83,7 +82,7 @@ export default component$(() => {
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
-          <h1 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
+          <h1 class="!text-5xl md:text-6xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Hello! Kwey! Bonjour!
             </span>
@@ -93,76 +92,86 @@ export default component$(() => {
           </p>
         </div>
 
-        {/* 🧱 MASONRY COLUMN LAYOUT */}
-        <div class="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">
-          {TEAM_MEMBERS.map((member) => (
-            <div
-              key={member.name}
-              class={[
-                "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
-                "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
-                expandedMember.value === member.name
-                  ? "bg-white/40 border-secondary-200"
-                  : "bg-white/35 border-primary-200 dark:border-secondary-700",
-              ]}
-              style={{
-                minHeight: "300px", // Ensures consistent height for collapsed state
-                transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color",
-                transform: expandedMember.value === member.name ? "scale(1.02)" : "scale(1)",
-              }}
-              role="button"
-              tabIndex={0}
-              aria-expanded={expandedMember.value === member.name}
-              onClick$={() => {
-                expandedMember.value = expandedMember.value === member.name ? null : member.name;
-              }}
-            >
-              <div class="flex flex-col items-center p-3 pt-6">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-[3px] border-secondary-200 mb-4 group-hover:scale-105 transition-transform duration-300"
-                  width={160}
-                  height={160}
-                />
-                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-1">
-                  {member.name}
-                </h3>
-                <span
-                  class={`px-3 py-1 rounded-full text-xs font-semibold border-2 ${getRoleColor(member.role)}`}
-                >
-                  {member.role}
-                </span>
-                <p
-                  class={[
-                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4 transition-all duration-300 ease-in-out",
-                    expandedMember.value !== member.name && "line-clamp-3",
-                  ]}
-                  style={{
-                    maxHeight: expandedMember.value === member.name ? "1000px" : "4.5em", // Adjust max-height for smooth expansion
-                    overflow: "hidden",
-                    transitionProperty: "max-height",
-                  }}
-                >
-                  {member.description}
-                </p>
-                <div class="flex justify-center mt-2">
-                  <svg
-                    class={[
-                      "w-4 h-4 text-primary-600 transition-transform duration-300",
-                      expandedMember.value === member.name && "transform rotate-180",
-                    ]}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+        {/* 🧱 GRID LAYOUT WITH EXPANSION LOGIC */}
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {TEAM_MEMBERS.map((member, index) => {
+            const isExpanded = expandedMember.value === member.name;
+            const isAboveExpanded = expandedMember.value && index < TEAM_MEMBERS.findIndex((m) => m.name === expandedMember.value);
+            const isBelowExpanded = expandedMember.value && index > TEAM_MEMBERS.findIndex((m) => m.name === expandedMember.value);
+
+            return (
+              <div
+                key={member.name}
+                class={[
+                  "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
+                  "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
+                  isExpanded
+                    ? "col-span-2 bg-white/40 border-secondary-200 z-10"
+                    : isAboveExpanded || (!expandedMember.value && index % 2 === 0)
+                    ? "bg-white/35 border-primary-200 dark:border-secondary-700"
+                    : "bg-white/35 border-primary-200 dark:border-secondary-700",
+                  isBelowExpanded && expandedMember.value && "opacity-50", // Dim cards below to indicate focus
+                ]}
+                style={{
+                  minHeight: "300px",
+                  transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color, grid-column",
+                  transform: isExpanded ? "scale(1.02)" : "scale(1)",
+                }}
+                role="button"
+                tabIndex={0}
+                aria-expanded={isExpanded}
+                onClick$={() => {
+                  expandedMember.value = expandedMember.value === member.name ? null : member.name;
+                }}
+              >
+                <div class="flex flex-col items-center p-3 pt-6">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-[3px] border-secondary-200 mb-4 group-hover:scale-105 transition-transform duration-300"
+                    width={160}
+                    height={160}
+                  />
+                  <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-1">
+                    {member.name}
+                  </h3>
+                  <span
+                    class={`px-3 py-1 rounded-full text-xs font-semibold border-2 ${getRoleColor(member.role)}`}
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
+                    {member.role}
+                  </span>
+                  <p
+                    class={[
+                      "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4 transition-all duration-300 ease-in-out",
+                      !isExpanded && "line-clamp-3",
+                    ]}
+                    style={{
+                      maxHeight: isExpanded ? "1000px" : "4.5em",
+                      overflow: "hidden",
+                      transitionProperty: "max-height",
+                    }}
+                  >
+                    {member.description}
+                  </p>
+                  <div class="flex justify-center mt-2">
+                    <svg
+                      class={[
+                        "w-4 h-4 text-primary-600 transition-transform duration-300",
+                        isExpanded && "transform rotate-180",
+                      ]}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
