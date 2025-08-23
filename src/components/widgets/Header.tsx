@@ -28,14 +28,14 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0" aria-hidden="true"></div>
-      <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+      <div class="relative text-default py-2 md:p-1 pr-2 -pl-0 md:pr-6 md:pl-2 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a class="flex items-center flex-col" href="/">
-            <div class="w-[100px] h-[40px] md:w-[150px] md:h-[60px]">
+          <a class="flex flex-col items-center" href="/">
+            <div class="w-[100px] h-[40px] md:w-[150px] md:h-[60px] mt-1">
               <img src="/images/logo2.svg" alt="Logo" class="w-full h-full object-contain" />
             </div>
             <span
-              class="text-primary-600 font-semibold text-[6px] sm:hidden md:block md:text-[10px] mt-1"
+              class="text-secondary-800 font-semibold text-[5px] sm:hidden md:block md:text-[8px] -mt-2"
             >
               Listening, Connecting, Creating
             </span>

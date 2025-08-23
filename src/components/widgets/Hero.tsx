@@ -38,9 +38,9 @@ export default component$(() => {
               </span>
             </h1>
             {/* Slogan */}
-            {/* <h2 class="!text-3xl  md:!text-2xl font-bold text-secondary-800 md:text-primary-600 mb-8">
+            <h2 class="!text-3xl  md:!text-2xl font-bold text-secondary-800 md:text-primary-600 mb-8">
               Listening, Connecting, Creating
-            </h2> */}
+            </h2>
             {/* Subtitle */}
             <p class="text-xl  della md:text-2xl font-light text-primary-800 mb-6 max-w-2xl mx-auto md:mx-0">
               Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.
