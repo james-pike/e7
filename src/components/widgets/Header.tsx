@@ -16,7 +16,7 @@ export default component$(() => {
       id="header"
       class={`sticky top-0 z-40 bg-transparent flex-none mx-auto w-full border-primary-200 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white/95 dark:bg-slate-900"
+          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-primary/95 dark:bg-slate-900"
           : ""
       }`}
       window:onScroll$={() => {

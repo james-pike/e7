@@ -117,15 +117,15 @@ export default component$(() => {
     <section class="relative overflow-hidden py-12 md:py-16">
      
 
-      <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
+      <div class="relative max-w-7xl mx-auto px-1 sm:px-6">
         <div class="text-center mb-12">
-          <h2 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl px-4 xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               What Participants are saying
             </span>
           </h2>
-          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            Here's what our pottery lovers have to say about their earthen vessels experience.
+          <p class="text-xl text-primary-700 px-4 dark:text-primary-300 max-w-3xl mx-auto">
+            Here's what our pottery lovers say about their earthen vessels experience.
           </p>
         </div>
 
