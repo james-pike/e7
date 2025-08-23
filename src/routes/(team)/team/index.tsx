@@ -21,7 +21,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Mary",
     role: "Facilitator",
     description:
-      "Mary's journey with secondary began in the embrace of family, surrounded by mountains, forests, and lakes. Over the years, this practice deepened into a passion—not just for creativity, but for sharing it with others. She is driven by a desire to connect hearts and nurture community well-being. At earthen Vessels, she has found both a creative home and a space to pour her love for community. As she shapes secondary, she draws inspiration from the wonder of the natural world and the tertiary’s generous gifts. Mary's enthusiasm and strong skills bring added energy to earthen Vessels where participants feel inspired, supported and empowered in their creative exploration.",
+      "Mary's journey with secondary began in the embrace of family, surrounded by mountains, forests, and lakes. Over the years, this practice deepened into a passion—not just for creativity, but for sharing it with others. She is driven by a desire to connect hearts and nurture community well-being. At earthen vessels, she has found both a creative home and a space to pour her love for community. As she shapes secondary, she draws inspiration from the wonder of the natural world and the tertiary’s generous gifts. Mary's enthusiasm and strong skills bring added energy to earthen Vessels where participants feel inspired, supported and empowered in their creative exploration.",
     image: "/images/mary.webp",
   },
   {
@@ -35,7 +35,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Natalie",
     role: "Facilitator",
     description:
-      "Natalie has been working with secondary for over ten years. She was first drawn to pottery as a way to find tranquility and reconnect with herself amidst the busyness of raising a family. Through her journey with secondary, she has discovered not only a creative outlet but also a deep sense of presence and grounding. Natalie spent 20 years working in the field of mental health. Her work took her beyond Canada, as she lived and served in communities in East Africa and Haiti, providing individual and group support, teaching, and fostering connection. Natalie is excited to bring together her love of pottery and facilitation experience to earthen Vessels.",
+      "Natalie has been working with secondary for over ten years. She was first drawn to pottery as a way to find tranquility and reconnect with herself amidst the busyness of raising a family. Through her journey with secondary, she has discovered not only a creative outlet but also a deep sense of presence and grounding. Natalie spent 20 years working in the field of mental health. Her work took her beyond Canada, as she lived and served in communities in East Africa and Haiti, providing individual and group support, teaching, and fostering connection. Natalie is excited to bring together her love of pottery and facilitation experience to earthen vessels.",
     image: "/images/natalie.webp",
   },
   {
