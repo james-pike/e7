@@ -20,13 +20,13 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   const closeModal = $(() => (show.value = false));
 
   return (
-    <div class="border-t border-half border-primary-200">
+    <div class="border-t border-primary-200">
       {items.map((item, index) => (
         <div
           key={index}
           class={cn(
-            "border-b border-half border-primary-200",
-            index === items.length - 1 && "border-b-0"
+            index > 0 && "border-t border-primary-200", // Add top border only for items after the first
+            index === items.length - 1 && "border-b-0" // Remove bottom border for the last item
           )}
         >
           {item.hasSubmenu ? (
@@ -148,7 +148,7 @@ export default component$(() => {
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-lg font-bold xdxd text-secondary-800 px-3 py-1 dark:text-gray-200">
+            <Modal.Description class="!text-lg font-bold text-secondary-800 px-3 py-1 dark:text-gray-200">
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
