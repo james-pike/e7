@@ -141,14 +141,14 @@ export default component$(() => {
         </div>
         <Modal.Panel position="left" class="dark:bg-gray-950 border-r border-primary-200">
           <div class="rounded-t-2xl border-primary-200 bg-white/50 dark:bg-gray-900 p-2">
-            <Modal.Title class="pt-2 pl-3">
+            <Modal.Title class="pt-2 pl-2.5">
               <a href="/" class="focus:outline-none">
                 <div style="width: 120px; height: 48px;">
                   <img src="/images/logo2.svg" alt="Logo" />
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-lg font-bold text-secondary-800 px-3 py-1 dark:text-gray-200">
+            <Modal.Description class="!text-lg xdxd font-bold text-secondary-800 px-2.5 py-1 dark:text-gray-200">
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
