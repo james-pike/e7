@@ -53,7 +53,7 @@ export default component$(() => {
                       <>
                         <button
                           class={`
-                            hover:text-secondary-600
+                            hover:text-secondary-800
                             px-4 py-3
                             flex items-center
                             transition-all duration-200
@@ -64,7 +64,7 @@ export default component$(() => {
                             after:bottom-[6px]
                             after:left-1/2
                             after:h-[2px]
-                            after:bg-secondary-600
+                            after:bg-secondary-800
                             after:transition-all
                             after:duration-200
                             ${
@@ -112,7 +112,7 @@ export default component$(() => {
                                 <a
                                   class={`
                                     hover:bg-muted
-                                    hover:text-secondary-600
+                                    hover:text-secondary-800
                                     py-2 px-5
                                     block
                                     whitespace-no-wrap
@@ -123,7 +123,7 @@ export default component$(() => {
                                     after:bottom-[4px]
                                     after:left-1/2
                                     after:h-[2px]
-                                    after:bg-secondary-600
+                                    after:bg-secondary-800
                                     after:transition-all
                                     after:duration-200
                                     ${
@@ -148,7 +148,7 @@ export default component$(() => {
                       <a
                         class={`
                           hover:bg-muted
-                          hover:text-secondary-600
+                          hover:text-secondary-800
                           px-4 py-3
                           flex items-center
                           relative
@@ -158,13 +158,13 @@ export default component$(() => {
                           after:bottom-[6px]
                           after:left-1/2
                           after:h-[2px]
-                          after:bg-secondary-600
+                          after:bg-secondary-800
                           after:transition-all
                           after:duration-200
                           rounded-base
                           ${
                             isActive
-                              ? "text-secondary-600 after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                              ? "text-secondary-800 after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
                               : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
                           }
                         `}
@@ -183,7 +183,7 @@ export default component$(() => {
           <div class="items-center flex justify-between w-full md:w-auto">
             <a
               href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=oW%2F6hZJecTudb%2Fv%2Frme6nFm8gbDa3UvfJkr1evB2Xsc%3D&src=03v&type=41562UHUKUC196793426E6"
-              class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-600-200"
+              class="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-3 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-800-200"
               role="button"
               aria-label="Book a workshop"
             >

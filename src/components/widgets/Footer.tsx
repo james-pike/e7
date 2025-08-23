@@ -95,7 +95,7 @@ export default component$(() => {
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-4">
               <Link class="inline-block font-bold text-2xl -mt-2 font-serif" href={"/"}>
-                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-600 xdxd bg-clip-text text-transparent">
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 xdxd bg-clip-text text-transparent">
                   earthen vessels
                 </span>
               </Link>
@@ -116,7 +116,7 @@ export default component$(() => {
                   type="email"
                   placeholder="Enter your email"
                   aria-label="Enter email for newsletter"
-                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-600 rounded-l-full bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-800 rounded-l-full bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   bind:value={email}
                 />
                 <button
@@ -149,7 +149,7 @@ export default component$(() => {
                       {Icon && <Icon class="w-4 h-4" />}
                       {href ? (
                         <Link
-                          class="text-primary-700 hover:text-secondary-600 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
+                          class="text-primary-700 hover:text-secondary-800 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
                           href={href}
                           target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
                           rel={href.startsWith("http") || href.startsWith("mailto") ? "noopener noreferrer" : undefined}

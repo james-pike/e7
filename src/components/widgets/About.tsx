@@ -2,7 +2,7 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 import {
   LuHeart,
-  LuBrain,
+  LuFlower, // Replaced LuBrain with LuFlower for yoga-related icon
   LuLeaf,
   LuPalette,
   LuUsers,
@@ -35,7 +35,7 @@ export default component$(() => {
         "Engaging with clay requires focus and mindfulness, naturally shifting attention from stressors to a place of relaxation.",
     },
     {
-      icon: LuBrain,
+      icon: LuFlower, // Replaced LuBrain with LuFlower for yoga theme
       title: "Promote Mindfulness and Presence",
       description:
         "The slow, deliberate nature of clay encourages presence and self-awareness, creating lasting moments of awe.",
@@ -148,7 +148,7 @@ export default component$(() => {
 
           <div class="relative">
             <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd  from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 What To Expect
               </span>
             </h2>
@@ -177,7 +177,7 @@ export default component$(() => {
           </div>
         </section>
 
-        {/* Benefits Section - Unchanged */}
+        {/* Benefits Section */}
         <section class="relative overflow-hidden py-12 pb-20 md:py-16">
           {/* Decorations */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
@@ -191,20 +191,23 @@ export default component$(() => {
               </span>
             </h2>
             <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50"
-                >
-                  <benefit.icon class="w-6 h-6 text-secondary-600 dark:text-secondary-300 mb-2" />
-                  <p class="text-lg font-semibold tracking-tight text-secondary-900 dark:text-secondary-100">
-                    {benefit.title}
-                  </p>
-                  <p class="mt-2 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
+              {benefits.map((benefit, index) => {
+                const Icon = benefit.icon; // Capitalized variable for component rendering
+                return (
+                  <div
+                    key={index}
+                    class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50"
+                  >
+                    <Icon class="w-6 h-6 text-secondary-600 dark:text-secondary-300 mb-2" />
+                    <p class="text-lg font-semibold tracking-tight text-secondary-900 dark:text-secondary-100">
+                      {benefit.title}
+                    </p>
+                    <p class="mt-2 text-lg leading-7 text-primary-700 dark:text-primary-300">
+                      {benefit.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

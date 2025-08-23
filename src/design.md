@@ -13,7 +13,7 @@ This document outlines the complete design system for the Terra Pottery Studio w
   - `secondary-300`: #f8b87d
   - `secondary-400`: #f59347
   - `secondary-500`: #f2751f
-  - `secondary-600`: #e35d14
+  - `secondary-800`: #e35d14
   - `secondary-700`: #bc4513
   - `secondary-800`: #963817
   - `secondary-900`: #7a3018
@@ -141,7 +141,7 @@ box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 #### Content Section
 - **Typography**: Serif headings, sans-serif body text
 - **Spacing**: Consistent 1.5rem gaps
-- **Icons**: 16px SVG icons with secondary-600 color
+- **Icons**: 16px SVG icons with secondary-800 color
 
 #### Interactive States
 - **Hover**: Scale 105%, enhanced shadow
@@ -260,7 +260,7 @@ text-decoration: none;
 transition: color 200ms ease-in-out;
 
 /* Hover State */
-hover:text-secondary-600
+hover:text-secondary-800
 ```
 
 ### 7. Call-to-Action Sections

@@ -98,7 +98,7 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Get in Touch
             </span>
           </h2>
@@ -156,7 +156,7 @@ export default component$(() => {
               </p>
               <a
                 href="tel:+15035550123"
-                class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-secondary-600 via-tertiary-600 to-secondary-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-secondary-800 via-tertiary-600 to-secondary-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
@@ -178,7 +178,7 @@ export default component$(() => {
                     rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                     class="group flex items-start space-x-4 p-4 bg-gradient-to-br from-white/80 via-primary-50/20 to-secondary-50/20 !important dark:from-gray-800/80 dark:via-primary-900/20 dark:to-secondary-900/20 !important backdrop-blur-sm rounded-xl border-2 border-secondary-100 dark:border-secondary-700 hover:bg-gradient-to-br hover:from-white/90 hover:via-primary-50/40 hover:to-secondary-50/40 hover:shadow-lg transition-all duration-300 hover:border-secondary-200"
                   >
-                    <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary-100 to-secondary-200 dark:from-secondary-700 dark:to-secondary-800 rounded-xl flex items-center justify-center text-secondary-600 dark:text-secondary-300 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary-100 to-secondary-200 dark:from-secondary-700 dark:to-secondary-800 rounded-xl flex items-center justify-center text-secondary-800 dark:text-secondary-300 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                       {info.icon}
                     </div>
                     <div class="flex-1">

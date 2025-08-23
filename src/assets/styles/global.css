@@ -22,6 +22,18 @@
   opacity: 0.5; /* Increased opacity for more visible texture */
 }
 
+.fade-mask-center {
+  mask-image: radial-gradient(ellipse 120% 50% at 50% 20%, black 75%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 50% at 50% 20%, black 75%, transparent 95%);
+}
+
+.fade-mask-top {
+  mask-image: radial-gradient(ellipse 120% 50% at 50% 80%, black 75%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 50% at 50% 80%, black 75%, transparent 95%);
+}
+
+
+
 /* Optional: Layer a second subtle texture for added depth (uncomment if desired) */
 /* .bg-watercolor-texture::after {
   content: '';

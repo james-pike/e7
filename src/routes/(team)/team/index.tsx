@@ -84,12 +84,12 @@ export default component$(() => {
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Hello! Kwey! Bonjour!
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            Our dedicated professionals bring expertise and passion to every pottery and community challenge.
+            Our dedicated professionals bringing expertise and passion to every experience.
           </p>
         </div>
 

@@ -68,7 +68,7 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>
@@ -80,7 +80,7 @@ export default component$(() => {
         {/* Show loading state if FAQs are still loading */}
         {faqs.value.length === 0 ? (
           <div class="text-center py-12">
-            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-secondary-600"></div>
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-secondary-800"></div>
             <p class="mt-4 text-primary-600">Loading FAQs...</p>
           </div>
         ) : (
@@ -99,7 +99,7 @@ export default component$(() => {
                     onClick$={() => selectedCategory.value = category}
                     class={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 ${
                       selectedCategory.value === category
-                        ? 'bg-gradient-to-r from-secondary-600 to-tertiary-600 text-white shadow-lg'
+                        ? 'bg-gradient-to-r from-secondary-800 to-tertiary-600 text-white shadow-lg'
                         : 'bg-white/80 text-secondary-700 border-2 border-secondary-200 hover:border-secondary-300 shadow-md hover:shadow-lg'
                     }`}
                   >
@@ -124,7 +124,7 @@ export default component$(() => {
                   <p class="text-primary-600 text-lg">No questions found in this category.</p>
                   <button
                     onClick$={() => selectedCategory.value = 'All'}
-                    class="mt-4 px-6 py-2 bg-gradient-to-r from-secondary-600 to-tertiary-600 text-white rounded-full hover:scale-105 transition-all duration-300"
+                    class="mt-4 px-6 py-2 bg-gradient-to-r from-secondary-800 to-tertiary-600 text-white rounded-full hover:scale-105 transition-all duration-300"
                   >
                     View All Questions
                   </button>
@@ -160,7 +160,7 @@ export default component$(() => {
                             <div class={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                               openItems.value === item.id 
                                 ? 'bg-gradient-to-r from-secondary-500 to-tertiary-500 text-white shadow-lg' 
-                                : 'bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-600'
+                                : 'bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-800'
                             }`}>
                               <svg 
                                 class={`w-5 h-5 transition-transform duration-300 ${
@@ -224,7 +224,7 @@ export default component$(() => {
                             <div class={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                               openItems.value === item.id 
                                 ? 'bg-gradient-to-r from-secondary-500 to-tertiary-500 text-white shadow-lg' 
-                                : 'bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-600'
+                                : 'bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-800'
                             }`}>
                               <svg 
                                 class={`w-5 h-5 transition-transform duration-300 ${
@@ -277,7 +277,7 @@ export default component$(() => {
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-600 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
+                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-800 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span class="relative z-10">Contact Us</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-secondary-700 via-tertiary-700 to-secondary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

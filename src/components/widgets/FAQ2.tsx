@@ -59,7 +59,7 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
           </h2>
@@ -72,7 +72,7 @@ export default component$(() => {
         {/* FAQ Accordion - Two-column layout */}
         {safeFaqs.length === 0 ? (
           <div class="text-center py-12">
-            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-secondary-600"></div>
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-secondary-800"></div>
             <p class="mt-4 text-primary-600">Loading FAQs...</p>
           </div>
         ) : (
@@ -101,7 +101,7 @@ export default component$(() => {
                           class={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                             openItems.value === item.id
                               ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg"
-                              : "bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-600"
+                              : "bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-800"
                           }`}
                         >
                           <svg
@@ -169,7 +169,7 @@ export default component$(() => {
                           class={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                             openItems.value === item.id
                               ? "bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg"
-                              : "bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-600"
+                              : "bg-gradient-to-r from-secondary-100 to-primary-100 text-secondary-800"
                           }`}
                         >
                           <svg
