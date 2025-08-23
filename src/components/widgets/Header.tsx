@@ -64,7 +64,7 @@ export default component$(() => {
                             after:bottom-[6px]
                             after:left-1/2
                             after:h-[2px]
-                            after:bg-secondary-600
+                            after:bg-secondary-800
                             after:transition-all
                             after:duration-200
                             ${
@@ -123,7 +123,7 @@ export default component$(() => {
                                     after:bottom-[4px]
                                     after:left-1/2
                                     after:h-[2px]
-                                    after:bg-secondary-600
+                                    after:bg-secondary-800
                                     after:transition-all
                                     after:duration-200
                                     ${
@@ -158,7 +158,7 @@ export default component$(() => {
                           after:bottom-[6px]
                           after:left-1/2
                           after:h-[2px]
-                          after:bg-secondary-600
+                          after:bg-secondary-800
                           after:transition-all
                           after:duration-200
                           rounded-base
