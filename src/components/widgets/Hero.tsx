@@ -8,16 +8,8 @@ export default component$(() => {
       <div class="absolute inset-0 opacity-20" aria-hidden="true"></div>
 
       {/* Floating decorative elements */}
-      <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float"></div>
-      <div
-        class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float"
-        style="animation-delay: -2s;"
-      ></div>
-      <div
-        class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float"
-        style="animation-delay: -4s;"
-      ></div>
-
+   
+   
       
 
       <div class="grid grid-cols-1 md:grid-cols-2 items-center">
@@ -32,13 +24,13 @@ export default component$(() => {
         <div class="relative z-10 order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-12 md:order-1">
           <div class="text-center md:text-left px-2">
             {/* Headline (Desktop only) */}
-            <h1 class="hidden md:block text-4xl md:text-7xl font-bold font-serif tracking-tight mb-4">
-              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-700 xdxd bg-clip-text text-transparent">
+            <h1 class="hidden md:block text-4xl md:text-7xl font-bold tracking-tight mb-4">
+              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-700  bg-clip-text text-transparent">
                 earthen vessels
               </span>
             </h1>
             {/* Slogan */}
-            <h2 class="!text-3xl  md:!text-3xl xdxd font-bold text-secondary-800 md:text-primary-600 mb-4 mt-7">
+            <h2 class="!text-3xl  md:!text-3xl xdxd font-bold text-secondary-800 md:text-primary-600 mb-8 mt-4">
               Listening, Connecting, Creating
             </h2>
             {/* Subtitle */}

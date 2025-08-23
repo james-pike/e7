@@ -115,21 +115,18 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
-      <div class="absolute inset-0 " aria-hidden="true"></div>
-      <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-      <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;"></div>
-      
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+     
+
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
         <div class="text-center mb-12">
-          <h2 class="!text-5xl md:text-6xl xdxd  font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               What Participants are saying
             </span>
           </h2>
-          {/* <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
+          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
             Here's what our pottery lovers have to say about their earthen vessels experience.
-          </p> */}
+          </p>
         </div>
 
         <div class="relative max-w-6xl mx-auto">
@@ -140,20 +137,20 @@ export default component$(() => {
           ) : isHomePage ? (
             <>
               <div
-                class="overflow-x-auto snap-x snap-mandatory -mx-4 px-4 scrollbar-invisible"
+                class="overflow-x-auto snap-x snap-mandatory md:px-6 scrollbar-invisible"
                 ref={carouselRef}
               >
                 <div class="flex gap-6">
                   {safeReviews.map((review: Review) => (
                     <div key={review.id} class="flex-shrink-0 w-80 snap-center">
-                      <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-tertiary-200/50 flex flex-col h-full">
-                        <div class="flex justify-center mb-4">
+                      <div class="bg-gradient-to-br from-white/70 via-primary-50/70 to-secondary-50/70 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200 border-2 border-primary-100 dark:border-secondary-700">
+                        <div class="flex justify-center mb-4 pt-6">
                           <div class="flex space-x-1">{renderStars(review.rating)}</div>
                         </div>
-                        <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed">
+                        <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed px-6">
                           "{review.review}"
                         </blockquote>
-                        <div class="flex items-center space-x-3 mb-4">
+                        <div class="flex items-center space-x-3 mb-4 px-6">
                           <div class="text-left">
                             <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                               {review.name}
@@ -163,7 +160,7 @@ export default component$(() => {
                             )}
                           </div>
                         </div>
-                        <p class="text-primary-500 dark:text-primary-400 text-xs mt-3">
+                        <p class="text-primary-500 dark:text-primary-400 text-xs mt-3 pb-6 px-6">
                           {formatRelativeDate(review.date)}
                         </p>
                       </div>
@@ -218,14 +215,14 @@ export default component$(() => {
             <div class="multi-column-grid">
               {safeReviews.map((review: Review) => (
                 <div key={review.id} class="review-card">
-                  <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-tertiary-200/50 flex flex-col h-full">
-                    <div class="flex justify-center mb-4">
+                  <div class="bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:border-secondary-200 border-2 border-primary-100 dark:border-secondary-700">
+                    <div class="flex justify-center mb-4 pt-6">
                       <div class="flex space-x-1">{renderStars(review.rating)}</div>
                     </div>
-                    <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed">
+                    <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed px-6">
                       "{review.review}"
                     </blockquote>
-                    <div class="flex items-center space-x-3 mb-4">
+                    <div class="flex items-center space-x-3 mb-4 px-6">
                       <div class="text-left">
                         <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                           {review.name}
@@ -235,7 +232,7 @@ export default component$(() => {
                         )}
                       </div>
                     </div>
-                    <p class="text-primary-500 dark:text-primary-400 text-xs mt-3">
+                    <p class="text-primary-500 dark:text-primary-400 text-xs mt-3 pb-6 px-6">
                       {formatRelativeDate(review.date)}
                     </p>
                   </div>
@@ -249,19 +246,18 @@ export default component$(() => {
             <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Join Us!
             </h3>
-            {/* <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
+            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
               Experience the quality and craftsmanship that our customers love. 
               Start your pottery journey today!
-            </p> */}
+            </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-800 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
+                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span class="relative z-10">Book Now</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-500 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
-           
             </div>
           </div>
         </div>

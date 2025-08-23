@@ -25,8 +25,8 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
         <div
           key={index}
           class={cn(
-            index > 0 && "border-t border-primary-200", // Add top border only for items after the first
-            index === items.length - 1 && "border-b-0" // Remove bottom border for the last item
+            index > 0 && "border-t border-primary-200",
+            index === items.length - 1 && "border-b-0"
           )}
         >
           {item.hasSubmenu ? (
@@ -52,13 +52,14 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                   openIndex.value === index && "max-h-96"
                 )}
               >
-                <ul class="flex flex-col gap-0 pl-7">
+                <ul class="flex flex-col gap-0 pl-5">
                   {item.subitems!.map((subitem: any) => (
-                    <li key={subitem.title}>
+                    <li key={subitem.title} class="flex items-center">
+                      <span class="text-primary-400 mr-2">✦</span>
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 dark:text-gray-200 p-3 px-5 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                          "block text-gray-700 dark:text-gray-200 p-3 pl-1 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-background"
                         )}
                         onClick$={closeModal}
@@ -146,7 +147,7 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
         <Modal.Panel position="left" class="dark:bg-gray-950 border-r border-primary-200">
-          <div class="rounded-t-2xl border-primary-200 bg-white/50 dark:bg-gray-900 p-2">
+          <div class="rounded-t-2xl border-primary-200 bg-white/30 dark:bg-gray-900 p-2">
             <Modal.Title class="pt-2 pl-2.5">
               <a href="/" class="focus:outline-none">
                 <div style="width: 120px; height: 48px;">
@@ -154,14 +155,14 @@ export default component$(() => {
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-lg xdxd font-bold text-secondary-800 px-2.5 py-1 dark:text-gray-200">
+            <Modal.Description class="!text-lg xdxd !font-bold text-secondary-900 px-2.5 py-1 dark:text-gray-200">
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
           <nav class="mt-0 space-y-4 bg-white/40 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
-          <div class="rounded-b-2xl border-t border-primary-200 bg-white/50 dark:bg-gray-900 pb-5">
+          <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
             <div class="sm:max-w-md px-4 pt-5 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex w-2/3 sm:w-auto">
                 <a

@@ -77,11 +77,9 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float"></div>
-      <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -3s;"></div>
-      <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -1s;"></div>
+      
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
