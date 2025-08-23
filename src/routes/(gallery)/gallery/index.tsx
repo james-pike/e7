@@ -129,7 +129,7 @@ export default component$(() => {
   });
 
   return (
-    <section class="relative overflow-hidden py-12 md:py-16">
+    <section class="relative overflow-hidden py-0 md:py-12">
       {/* Background with pottery texture */}
       <div
         class="absolute inset-0 bg-pottery-texture opacity-20"
@@ -163,7 +163,7 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:!text-6xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              earthen vessels gallery
+              Studio gallery
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
