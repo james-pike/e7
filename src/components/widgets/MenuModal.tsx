@@ -20,7 +20,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   const closeModal = $(() => (show.value = false));
 
   return (
-    <div class="border-t border-primary-200">
+    <div class="border-t border-half border-primary-200">
       {items.map((item, index) => (
         <div
           key={index}
@@ -141,14 +141,14 @@ export default component$(() => {
         </div>
         <Modal.Panel position="left" class="dark:bg-gray-950 border-r border-primary-200">
           <div class="rounded-t-2xl border-primary-200 bg-white/50 dark:bg-gray-900 p-2">
-            <Modal.Title class="pt-2 pl-4">
+            <Modal.Title class="pt-2 pl-3">
               <a href="/" class="focus:outline-none">
                 <div style="width: 120px; height: 48px;">
                   <img src="/images/logo2.svg" alt="Logo" />
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-sm font-medium text-secondary-800 px-4 py-2 dark:text-gray-200">
+            <Modal.Description class="!text-lg font-bold xdxd text-secondary-800 px-3 py-1 dark:text-gray-200">
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
