@@ -25,7 +25,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
         <div
           key={index}
           class={cn(
-            "border-b border-primary-200",
+            "border-b border-half border-primary-200",
             index === items.length - 1 && "border-b-0"
           )}
         >
