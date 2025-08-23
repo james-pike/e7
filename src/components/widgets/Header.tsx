@@ -3,6 +3,8 @@ import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
 
+//
+
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
@@ -27,6 +29,8 @@ export default component$(() => {
         }
       }}
     >
+
+      
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 pr-2 -pl-0 md:pr-6 md:pl-2 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
