@@ -55,7 +55,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                 <ul class="flex flex-col gap-0 pl-5">
                   {item.subitems!.map((subitem: any) => (
                     <li key={subitem.title} class="flex items-center">
-                      <span class="text-primary-200 text-xs mr-3">✦</span>
+                      <span class="text-primary-400 text-xs mr-3">✦</span>
                       <a
                         href={subitem.href}
                         class={cn(
@@ -167,7 +167,7 @@ export default component$(() => {
               <div class="flex w-2/3 sm:w-auto">
                 <a
                   href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
-                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-5 py-4 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-5 py-4 text-xl font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
                 >
@@ -177,7 +177,7 @@ export default component$(() => {
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </span>
-                  <div class="absolute inset-0 bg-gradient-to-r from-primary-400/40 via-primary-200/30 to-primary-300/40 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="absolute inset-0 bg-gradient-to-r from-primary-300/40 via-primary-200/30 to-primary-300/40 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
             </div>
