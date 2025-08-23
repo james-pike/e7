@@ -37,7 +37,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
 
   return (
     <section class="relative overflow-hidden py-6 md:py-10 md:pb-16">
-      <div class="relative max-w-7xl mx-auto px-6 sm:px-6">
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
        
 
            <div class="-mt-2 max-w-4xl text-center mx-auto pb-10">
