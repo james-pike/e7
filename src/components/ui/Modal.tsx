@@ -13,7 +13,7 @@ export const panelVariants = cva(
   [
     'fixed w-full p-4 text-foreground border-2  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
     // Background styles from root component
-    'bg-watercolor-texture bg-secondary-100/50',
+    'bg-watercolor-texture bg-secondary-100/80',
     'bg-gradient-to-br from-primary-100/95 via-primary-200/80 to-tertiary-200/85',
     'bg-gradient-to-t from-tertiary-300/40 via-primary-200/50 to-primary-100/60',
     'data-[closing]:duration-300 data-[open]:duration-300 data-[open]:animate-in data-[closing]:animate-out',
