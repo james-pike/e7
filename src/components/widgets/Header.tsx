@@ -30,7 +30,7 @@ export default component$(() => {
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a class="flex items-center" href="/">
+          <a class="flex items-center ml-2 my-1" href="/">
             <div style="width: 100px; height: 40px;">
               <img src="/images/logo2.svg" alt="Logo" />
             </div>
