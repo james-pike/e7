@@ -23,7 +23,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} class="border-b border- border-x-2 border-tertiary-200 last:border-none last:rounded-b-base">
+        <div key={index} class="border-b border- border-x-2 border-tertiary-300 last:border-none last:rounded-b-base">
           {item.hasSubmenu ? (
             <>
               <button
@@ -130,12 +130,12 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-secondary dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-lg p-2 bg-secondary border-half border-tertiary-200">
+          <Modal.Trigger class="rounded-lg p-2 bg-secondary border-half border-tertiary-300">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block text-primary-600" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position="left" class="dark:bg-gray-950 border border-tertiary-200">
-          <div class="border-2 rounded-t-2xl border-tertiary-200 bg-white/50 dark:bg-gray-900 p-1">
+        <Modal.Panel position="left" class="dark:bg-gray-950 border border-tertiary-300">
+          <div class="border rounded-t-2xl border-tertiary-300 bg-white/50 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-3">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">
@@ -147,10 +147,10 @@ export default component$(() => {
               Listening, Connecting & Creating
             </Modal.Description>
           </div>
-          <nav class="mt-0 space-y-4 border-half border-tertiary-200 border-t-0 bg-white/40 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border-half border-tertiary-300 border-t-0 bg-white/40 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
-          <div class="border-half rounded-b-2xl border-tertiary-200 border-t-0 pb-4 bg-white/50 dark:bg-gray-900">
+          <div class="border-half rounded-b-2xl border-tertiary-300 border-t-0 pb-4 bg-white/50 dark:bg-gray-900">
             <div class="sm:max-w-md  px-5 pt-4 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-2/3 sm:w-auto">
                 <a
