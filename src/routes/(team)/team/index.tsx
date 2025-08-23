@@ -124,7 +124,7 @@ export default component$(() => {
                   expandedMember.value = expandedMember.value === member.name ? null : member.name;
                 }}
               >
-                <div class="flex flex-col items-center p-3 pt-6">
+                <div class="flex flex-col items-center p-2 pt-4">
                   <img
                     src={member.image}
                     alt={member.name}
