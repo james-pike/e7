@@ -1,12 +1,17 @@
 // src/components/Footer.tsx
-import { $, component$, useSignal } from "@builder.io/qwik";
+import { $, component$, useSignal, type JSXOutput, type JSXNode } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { LuMail, LuClock, LuMapPin, LuFacebook, LuInstagram } from "@qwikest/icons/lucide";
-import type { JSXNode } from "@builder.io/qwik";
+import {
+  LuMail,
+  LuClock,
+  LuMapPin,
+  LuFacebook,
+  LuInstagram,
+} from "@qwikest/icons/lucide";
 import type { SVGProps } from "@builder.io/qwik";
 
 interface Item {
-  title: string;
+  title: string | JSXNode | JSXOutput; // 👈 Updated
   href: string | null;
   icon?: (props: SVGProps<SVGSVGElement>) => JSXNode<unknown>;
 }
@@ -52,11 +57,11 @@ export default component$(() => {
           href: null,
           icon: LuClock,
         },
-        {
-          title: "36 Rosemount Ave, K1Y 1P4, Ottawa, ON",
-          href: "https://www.google.com/maps/search/?api=1&query=36+Rosemount+Ave,+K1Y+1P4,+Ottawa,+ON",
-          icon: LuMapPin,
-        },
+    {
+  title: "36 Rosemount Ave, Ottawa ON, K1Y 1P4",
+  href: "https://www.google.com/maps/search/?api=1&query=36+Rosemount+Ave,+K1Y+1P4,+Ottawa,+ON",
+  icon: LuMapPin,
+},
       ],
     },
 
@@ -92,7 +97,7 @@ export default component$(() => {
       {/* Gradient background */}
       <div class="absolute inset-0 bg-gradient-to-br from-primary-100/10 via-tertiary-50/15 to-secondary-50/50" aria-hidden="true"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="relative max-w-7xl mx-auto px-4 md:mr-4 sm:px-6 md:px-8">
         <div class="grid grid-cols-12 gap-4 gap-y-4 sm:gap-4 py-8 md:pt-12 md:pb-2">
           {/* First Column: Logo, Description, Newsletter */}
           <div class="col-span-12 lg:col-span-5 md:pr-8">

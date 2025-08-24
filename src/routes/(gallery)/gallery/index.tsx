@@ -161,9 +161,7 @@ export default component$(() => {
               class="w-full h-full object-cover transition-opacity duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            <h3 class="absolute bottom-4 left-4 text-xl font-semibold text-white font-serif">
-              {GALLERY_IMAGES[currentIndex.value].title}
-            </h3>
+        
           </div>
           <div class="flex gap-2 mt-4 justify-end"> {/* Changed to justify-end for far-right alignment */}
       <button
