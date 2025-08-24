@@ -1,9 +1,7 @@
 // src/components/Footer.tsx
 import { $, component$, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { LuMail, LuClock, LuMapPin } from "@qwikest/icons/lucide";
-import IconFacebook from "../icons/IconFacebook";
-import IconInstagram from "../icons/IconInstagram";
+import { LuMail, LuClock, LuMapPin, LuFacebook, LuInstagram } from "@qwikest/icons/lucide";
 import type { JSXNode } from "@builder.io/qwik";
 import type { SVGProps } from "@builder.io/qwik";
 
@@ -35,12 +33,12 @@ export default component$(() => {
       items: [
         { title: "Our Space", href: "#" },
         { title: "Benefits Of Clay", href: "#" },
-            { title: "Community", href: "#" },
+        { title: "Community", href: "#" },
         { title: "Gallery", href: "#" },
         { title: "FAQs", href: "#" },
       ],
     },
-  
+
     {
       title: "Connect",
       items: [
@@ -61,11 +59,22 @@ export default component$(() => {
         },
       ],
     },
-  ];
 
-  const social = [
-    { label: "Instagram", icon: IconInstagram, href: "https://www.instagram.com/earthenvesselsgathering/" },
-    { label: "Facebook", icon: IconFacebook, href: "https://www.facebook.com/p/earthen-vessels-61562702795370/" },
+        {
+      title: "Social",
+      items: [
+        {
+          title: "Instagram",
+          href: "https://www.instagram.com/earthenvesselsgathering/",
+          icon: LuInstagram,
+        },
+        {
+          title: "Facebook",
+          href: "https://www.facebook.com/p/earthen-vessels-61562702795370/",
+          icon: LuFacebook,
+        },
+      ],
+    },
   ];
 
   const email = useSignal("");
@@ -84,9 +93,9 @@ export default component$(() => {
       <div class="absolute inset-0 bg-gradient-to-br from-primary-100/10 via-tertiary-50/15 to-secondary-50/50" aria-hidden="true"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-        <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:pt-12 md:pb-4">
+        <div class="grid grid-cols-12 gap-4 gap-y-4 sm:gap-4 py-8 md:pt-12 md:pb-2">
           {/* First Column: Logo, Description, Newsletter */}
-<div class="col-span-12 lg:col-span-5 md:pr-8">
+          <div class="col-span-12 lg:col-span-5 md:pr-8">
             <div class="mb-4">
               <Link class="inline-block font-bold text-2xl -mt-2" href={"/"}>
                 <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
@@ -99,13 +108,13 @@ export default component$(() => {
             </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
-              <div class="text-sm font-semibold mb-3 -ml-5">
+              <div class="text-sm font-semibold mb-3 ml-1">
                 <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent flex items-center gap-2">
-                  <LuMail class="w-4 h-4" />
+                  {/* <LuMail class="w-4 h-4" /> */}
                   Join Our Newsletter
                 </span>
               </div>
-              <form onSubmit$={handleSubmit} class="flex">
+              <form onSubmit$={handleSubmit} class="flex ">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -129,10 +138,14 @@ export default component$(() => {
   <div
     key={index}
     class={`
-      col-span-6 md:col-span-3 lg:col-span-2
+      col-span-6 sm:col-span-6 md:col-span-3 mt-1
+      ${index === 0 ? 'lg:col-span-2' 
+       : index === 1 ? 'lg:col-span-2' 
+       : index === 2 ? 'lg:col-span-2'   // Connect full width
+       : 'lg:col-span-1'}                 // Social half width
     `}
   >
-    <div class="text-sm font-semibold mb-4">
+    <div class="text-sm font-semibold mb-4 mt-3">
       <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
         {title}
       </span>
@@ -160,23 +173,10 @@ export default component$(() => {
     )}
   </div>
 ))}
+
         </div>
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-4 pt-0 -mt-4 md:-mt-0 md:py-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
-          <ul class="flex mb-2 md:mb-0 md:ml-4 -ml-2 order-1 md:order-2">
-            {social.map(({ label, href, icon: Icon }, index) => (
-              <li key={index}>
-                <Link
-                  class="text-primary-600 dark:text-primary-400 hover:bg-secondary-100 dark:hover:bg-secondary-700 focus:outline-none focus:ring-4 focus:ring-secondary-200 dark:focus:ring-secondary-700 rounded-lg text-sm p-2.5 inline-flex items-center transition-all duration-200"
-                  aria-label={label}
-                  title={label}
-                  href={href}
-                >
-                  {typeof Icon !== "undefined" && <Icon />}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div class="inline-flex items-center text-sm text-primary-700 dark:text-primary-300 order-2 md:order-1">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-4 pt-0 -mt-3 md:-mt-0 md:py-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
+          <div class="inline-flex items-center text-sm pb-2 text-primary-700 dark:text-primary-300 order-2 md:order-1">
             <img
               src="/images/logo2.svg"
               alt="Earthen Vessels Logo"
