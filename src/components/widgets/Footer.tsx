@@ -181,7 +181,7 @@ export default component$(() => {
 
         </div>
         <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-0 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
-          <div class="inline-flex items-center text-sm text-primary-700 mt-1 dark:text-primary-300 order-2 md:order-1">
+          <div class="inline-flex items-center text-sm text-primary-700 mt-2 dark:text-primary-300 order-2 md:order-1">
             <img
               src="/images/logo2.svg"
               alt="Earthen Vessels Logo"
