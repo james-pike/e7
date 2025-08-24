@@ -6,7 +6,7 @@ import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
 
-const CustomAccordion = component$(({ items, show }: { items: any[], show: Signal<boolean> }) => {
+const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signal<boolean> }) => {
   const openIndex = useSignal<number | null>(null);
   const location = useLocation();
 
@@ -94,7 +94,6 @@ export default component$(() => {
   const show = useSignal(false);
 
   const menuItems = [
-    // { title: "Home", href: "/", badge: null },
     { title: "This Is Us", href: "/team/", hasSubmenu: false },
     {
       title: "About",
@@ -106,46 +105,29 @@ export default component$(() => {
         { title: "Benefits Of Clay", href: "/about" },
         { title: "Newsletter", href: "/newsletter" },
         { title: "FAQ", href: "/faq" },
-
       ],
     },
-    {
-      title: "Classes",
-      href: "/classes/",
-      hasSubmenu: false,
-      subitems: [
-        { title: "Web Design", href: "/services/web-design" },
-        { title: "Web Development", href: "/services/web-development" },
-        { title: "Branding", href: "/services/branding" },
-        { title: "Marketing", href: "/services/marketing" },
-      ],
-    },
+    { title: "Classes", href: "/classes/", hasSubmenu: false },
     { title: "Gallery", href: "/gallery/", badge: null },
-        { title: "Community", href: "/community/", badge: null },
-                { title: "Testimonials", href: "/testimonials/", badge: null },
-
-
-    // {
-    //   title: "More Info",
-    //   href: "",
-    //   hasSubmenu: true,
-    //   subitems: [
-    //     { title: "Testimonials", href: "/testimonials" },
-    //     { title: "FAQs", href: "/faq" },
-    //     { title: "Benefits Of Clay", href: "/about" },
-    //     { title: "Community Connections", href: "/community" },
-    //   ],
-    // },
+    { title: "Community", href: "/community/", badge: null },
+    { title: "Testimonials", href: "/testimonials/", badge: null },
   ];
 
   return (
     <>
       <Modal.Root bind:show={show}>
-        <div class="flex items-center hover:bg-secondary dark:hover:bg-gray-700">
-          <Modal.Trigger class="rounded-lg p-2 bg-secondary border border-primary-200">
-            <IconHamburger class="w-9 h-9 md:w-6 md:h-6 md:inline-block text-primary-600" />
+        {/* ✅ Restyled trigger to match team card background */}
+        <div class="absolute top-2 right-2 md:static">
+          <Modal.Trigger
+            class={cn(
+              "p-2 rounded-lg border-2 backdrop-blur-sm transition-all duration-300",
+              "bg-white/35 border-primary-200 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
+            )}
+          >
+            <IconHamburger class="w-7 h-7 text-primary-700 dark:text-secondary-200" />
           </Modal.Trigger>
         </div>
+
         <Modal.Panel position="left" class="dark:bg-gray-950 border-r border-primary-200">
           <div class="rounded-t-2xl border-primary-200 bg-white/30 dark:bg-gray-900 p-2">
             <Modal.Title class="pt-2 pl-2.5">
@@ -161,14 +143,16 @@ export default component$(() => {
               </span>
             </Modal.Description>
           </div>
+
           <nav class="mt-0 space-y-4 bg-white/40 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
+
           <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
             <div class="sm:max-w-md px-4 pt-5 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex w-2/3 sm:w-auto">
                 <a
-                  href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6"
+                  href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html"
                   class="w-full sm:w-auto group relative inline-flex items-center justify-center px-5 py-4 text-xl font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
@@ -184,6 +168,7 @@ export default component$(() => {
               </div>
             </div>
           </div>
+
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
