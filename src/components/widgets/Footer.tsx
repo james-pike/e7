@@ -94,8 +94,8 @@ export default component$(() => {
           {/* First Column: Logo, Description, Newsletter */}
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-4">
-              <Link class="inline-block font-bold text-2xl -mt-2 font-serif" href={"/"}>
-                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 xdxd bg-clip-text text-transparent">
+              <Link class="inline-block font-bold text-2xl -mt-2" href={"/"}>
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 bg-clip-text text-transparent">
                   earthen vessels
                 </span>
               </Link>
@@ -104,8 +104,7 @@ export default component$(() => {
               Listening, Connecting, Creating
             </h2> */}
             <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed">
-              Handcrafted pottery that brings the warmth of terracotta and the serenity of clay into your home. Each piece tells a story of earth, fire, and human creativity.
-            </div>
+At earthen vessels, we begin with a pause — creating space to listen inwardly and reconnect with ourselves. Clay becomes more than a craft; it’s a way to ground, reflect, and express gratitude. Our workshops are about nurturing authenticity and connection, as much as shaping clay            </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
               <h4 class="text-sm xdxd font-semibold text-secondary-800 dark:text-secondary-200 mb-3 flex items-center gap-2">

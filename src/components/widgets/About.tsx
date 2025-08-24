@@ -86,7 +86,7 @@ export default component$(() => {
 
 
                   <h1 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-                    <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-secondary-600 bg-clip-text text-transparent">
+                    <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                       Our Space
                     </span>
                   </h1>
@@ -131,7 +131,7 @@ export default component$(() => {
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
                   
                     <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 Our Offerings
               </span>
             </h2>
@@ -160,7 +160,7 @@ export default component$(() => {
               <div class="order-2 lg:order-1 self-start">
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
   <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 What To Expect
               </span>
             </h2>
@@ -196,7 +196,7 @@ export default component$(() => {
 
           <div id="clay" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="!text-4xl md:text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
-              <span class="bg-gradient-to-r from-secondary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Benefits of Clay
               </span>
             </h2>

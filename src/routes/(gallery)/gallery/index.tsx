@@ -143,7 +143,7 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:!text-6xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Studio gallery
             </span>
           </h1>
