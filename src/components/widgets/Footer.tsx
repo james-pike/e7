@@ -185,7 +185,7 @@ export default component$(() => {
             <img
               src="/images/logo2.svg"
               alt="Earthen Vessels Logo"
-              class="w-16 h-16 md:w-120 md:h-20 mr-2 rounded-sm"
+              class="w-24 h-24 md:w-120 md:h-30 mr-2 rounded-sm"
               width={80}
               height={80}
             />
