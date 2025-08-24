@@ -29,7 +29,7 @@ export default component$(() => {
       ],
     },
     {
-      title: "About",
+      title: "Community",
       items: [
         { title: "Our Space", href: "#" },
         { title: "Benefits Of Clay", href: "#" },
@@ -48,7 +48,7 @@ export default component$(() => {
           icon: LuMail,
         },
         {
-          title: "Hours: By appointment only",
+          title: "Hours: By appointment",
           href: null,
           icon: LuClock,
         },
@@ -60,7 +60,7 @@ export default component$(() => {
       ],
     },
 
-        {
+    {
       title: "Connect",
       items: [
         {
@@ -134,45 +134,45 @@ export default component$(() => {
             </div>
           </div>
           {/* Sitemap Columns */}
-        {links.map(({ title, items }, index) => (
-  <div
-    key={index}
-    class={`
+          {links.map(({ title, items }, index) => (
+            <div
+              key={index}
+              class={`
       col-span-6 sm:col-span-6 md:col-span-3 mt-1
-      ${index === 0 ? 'lg:col-span-2' 
-       : index === 1 ? 'lg:col-span-2' 
-       : index === 2 ? 'lg:col-span-2'   // Connect full width
-       : 'lg:col-span-1'}                 // Social half width
+      ${index === 0 ? 'lg:col-span-2'
+                  : index === 1 ? 'lg:col-span-2'
+                    : index === 2 ? 'lg:col-span-2'   // Connect full width
+                      : 'lg:col-span-1'}                 // Social half width
     `}
-  >
-    <div class="text-sm font-semibold mb-4 mt-3">
-      <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-        {title}
-      </span>
-    </div>
-    {Array.isArray(items) && items.length > 0 && (
-      <ul class="text-sm space-y-2">
-        {items.map(({ title, href, icon: Icon }, index2) => (
-          <li key={index2} class="flex items-center gap-2">
-            {Icon && <Icon class="w-4 h-4" />}
-            {href ? (
-              <Link
-                class="text-primary-700 hover:text-secondary-800 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
-                href={href}
-                target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
-                rel={href.startsWith("http") || href.startsWith("mailto") ? "noopener noreferrer" : undefined}
-              >
-                {title}
-              </Link>
-            ) : (
-              <span class="text-primary-700 dark:text-primary-300">{title}</span>
-            )}
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
-))}
+            >
+              <div class="text-sm font-semibold mb-4 mt-3">
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                  {title}
+                </span>
+              </div>
+              {Array.isArray(items) && items.length > 0 && (
+                <ul class="text-sm space-y-2">
+                  {items.map(({ title, href, icon: Icon }, index2) => (
+                    <li key={index2} class="flex items-center gap-2">
+                      {Icon && <Icon class="w-4 h-4" />}
+                      {href ? (
+                        <Link
+                          class="text-primary-700 hover:text-secondary-800 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
+                          href={href}
+                          target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
+                          rel={href.startsWith("http") || href.startsWith("mailto") ? "noopener noreferrer" : undefined}
+                        >
+                          {title}
+                        </Link>
+                      ) : (
+                        <span class="text-primary-700 dark:text-primary-300">{title}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
 
         </div>
         <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-4 pt-0 -mt-3 md:-mt-0 md:py-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
