@@ -194,7 +194,7 @@ export default component$(() => {
           <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
           <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
-          <div id="clay" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="clay" class="relative max-w-7xl mx-auto  sm:px-6 lg:px-8">
             <h2 class="!text-4xl md:text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Benefits of Clay

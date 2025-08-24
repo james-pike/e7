@@ -12,21 +12,22 @@ export default component$(() => {
   const location = useLocation();
 
   return (
-    <header
-      id="header"
-      class={`sticky top-0 z-40 bg-transparent flex-none mx-auto w-full border-primary-200 transition-[opacity] ease-in-out ${
-        store.isScrolling
-          ? "md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white/95 dark:bg-slate-900"
-          : ""
-      }`}
-      window:onScroll$={() => {
-        if (!store.isScrolling && window.scrollY >= 10) {
-          store.isScrolling = true;
-        } else if (store.isScrolling && window.scrollY < 10) {
-          store.isScrolling = false;
-        }
-      }}
-    >
+  <header
+  id="header"
+  class={`sticky top-0 z-40 flex-none mx-auto w-full border-primary-200 transition-all ease-in-out ${
+    store.isScrolling
+      ? "bg-primary-100/95 md:bg-primary-100/80 dark:bg-primary-900/80 md:backdrop-blur-sm"
+      : "bg-transparent"
+  }`}
+  window:onScroll$={() => {
+    console.log("ScrollY:", window.scrollY, "isScrolling:", store.isScrolling);
+    if (!store.isScrolling && window.scrollY >= 10) {
+      store.isScrolling = true;
+    } else if (store.isScrolling && window.scrollY < 10) {
+      store.isScrolling = false;
+    }
+  }}
+>
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
