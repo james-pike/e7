@@ -168,7 +168,7 @@ export default component$(() => {
             <div class="sm:max-w-md px-4 pt-5 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex w-2/3 sm:w-auto">
                 <a
-                  href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=0YjXAZVEzFFiBwNg%2BkaZkhbBjCBr4M%2B3Y%2BDUqCz9SnQ%3D&src=02b&type=41562UHUKUC196793426E6"
+                  href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6"
                   class="w-full sm:w-auto group relative inline-flex items-center justify-center px-5 py-4 text-xl font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
