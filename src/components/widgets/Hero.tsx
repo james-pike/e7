@@ -25,7 +25,7 @@ export default component$(() => {
           <div class="text-center md:text-left px-2">
             {/* Headline (Desktop only) */}
             <h1 class="hidden md:block text-4xl md:text-7xl font-bold tracking-tight mb-4">
-              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-700  bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600  bg-clip-text text-transparent">
                 earthen vessels
               </span>
             </h1>

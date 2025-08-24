@@ -1,3 +1,4 @@
+// src/components/Footer.tsx
 import { $, component$, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { LuMail, LuClock, LuMapPin } from "@qwikest/icons/lucide";
@@ -11,8 +12,6 @@ interface Item {
   href: string | null;
   icon?: (props: SVGProps<SVGSVGElement>) => JSXNode<unknown>;
 }
-
-//
 
 interface LinkSection {
   title: string;
@@ -28,27 +27,22 @@ export default component$(() => {
         { title: "Classes", href: "#" },
         { title: "Facilitators", href: "#" },
         { title: "Testimonials", href: "#" },
+        { title: "Newsletter", href: "#" },
       ],
     },
     {
       title: "About",
       items: [
         { title: "Our Space", href: "#" },
-        { title: "What To Expect", href: "#" },
         { title: "Benefits Of Clay", href: "#" },
+            { title: "Community", href: "#" },
+        { title: "Gallery", href: "#" },
         { title: "FAQs", href: "#" },
       ],
     },
+  
     {
-      title: "Community",
-      items: [
-        { title: "Partners", href: "#" },
-        { title: "Gallery", href: "#" },
-        { title: "Newsletter", href: "#" },
-      ],
-    },
-    {
-      title: "Contact Us",
+      title: "Connect",
       items: [
         {
           title: "hello@earthenvessels.ca",
@@ -92,30 +86,31 @@ export default component$(() => {
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:pt-12 md:pb-4">
           {/* First Column: Logo, Description, Newsletter */}
-          <div class="col-span-12 lg:col-span-4 pr-8">
+<div class="col-span-12 lg:col-span-5 md:pr-8">
             <div class="mb-4">
               <Link class="inline-block font-bold text-2xl -mt-2" href={"/"}>
-                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 bg-clip-text text-transparent">
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                   earthen vessels
                 </span>
               </Link>
             </div>
-             {/* <h2 class="!text-xs  md:!text-md font-bold text-primary-600 mb-4 -mt-2">
-              Listening, Connecting, Creating
-            </h2> */}
             <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed">
-At earthen vessels, we begin with a pause — creating space to listen inwardly and reconnect with ourselves. Clay becomes more than a craft; it’s a way to ground, reflect, and express gratitude. Our workshops are about nurturing authenticity and connection, as much as shaping clay            </div>
+              At earthen vessels, we begin with a pause — creating space to listen inwardly and reconnect with ourselves. Clay becomes more than a craft; it’s a way to ground, reflect, and express gratitude. Our workshops are about nurturing authenticity and connection, as much as shaping clay.
+            </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
-              <h4 class="text-sm xdxd font-semibold text-secondary-800 dark:text-secondary-200 mb-3 flex items-center gap-2">
-                <LuMail class="w-4 h-4" /> Join our newsletter
-              </h4>
+              <div class="text-sm font-semibold mb-3 -ml-5">
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent flex items-center gap-2">
+                  <LuMail class="w-4 h-4" />
+                  Join Our Newsletter
+                </span>
+              </div>
               <form onSubmit$={handleSubmit} class="flex">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   aria-label="Enter email for newsletter"
-                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-800 rounded-l-full bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-800 rounded-l-xl bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   bind:value={email}
                 />
                 <button
@@ -130,40 +125,41 @@ At earthen vessels, we begin with a pause — creating space to listen inwardly 
             </div>
           </div>
           {/* Sitemap Columns */}
-          {links.map(({ title, items }, index) => (
-            <div
-              key={index}
-              class={`
-                col-span-6 md:col-span-3 
-                ${index === 3 ? "lg:col-span-3 -ml-4 md:ml-0" : index === 2 ? "lg:col-span-1 md:-ml-6" : index === 1 ? "lg:col-span-2 -ml-4 md:ml-0" : "lg:col-span-2"}
-              `}
-            >
-              <div class={`text-secondary-800 dark:text-secondary-200 xdxd font-semibold mb-4 ${index === 3 || index === 1 ? "-ml-4 md:ml-0" : ""}`}>
+        {links.map(({ title, items }, index) => (
+  <div
+    key={index}
+    class={`
+      col-span-6 md:col-span-3 lg:col-span-2
+    `}
+  >
+    <div class="text-sm font-semibold mb-4">
+      <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+        {title}
+      </span>
+    </div>
+    {Array.isArray(items) && items.length > 0 && (
+      <ul class="text-sm space-y-2">
+        {items.map(({ title, href, icon: Icon }, index2) => (
+          <li key={index2} class="flex items-center gap-2">
+            {Icon && <Icon class="w-4 h-4" />}
+            {href ? (
+              <Link
+                class="text-primary-700 hover:text-secondary-800 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
+                href={href}
+                target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
+                rel={href.startsWith("http") || href.startsWith("mailto") ? "noopener noreferrer" : undefined}
+              >
                 {title}
-              </div>
-              {Array.isArray(items) && items.length > 0 && (
-                <ul class={`text-sm space-y-2 ${index === 3 || index === 1 ? "-ml-4 md:ml-0" : ""}`}>
-                  {items.map(({ title, href, icon: Icon }, index2) => (
-                    <li key={index2} class="flex items-center gap-2">
-                      {Icon && <Icon class="w-4 h-4" />}
-                      {href ? (
-                        <Link
-                          class="text-primary-700 hover:text-secondary-800 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
-                          href={href}
-                          target={href.startsWith("http") || href.startsWith("mailto") ? "_blank" : undefined}
-                          rel={href.startsWith("http") || href.startsWith("mailto") ? "noopener noreferrer" : undefined}
-                        >
-                          {title}
-                        </Link>
-                      ) : (
-                        <span class="text-primary-700 dark:text-primary-300">{title}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
+              </Link>
+            ) : (
+              <span class="text-primary-700 dark:text-primary-300">{title}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+))}
         </div>
         <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-4 pt-0 -mt-4 md:-mt-0 md:py-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
           <ul class="flex mb-2 md:mb-0 md:ml-4 -ml-2 order-1 md:order-2">
