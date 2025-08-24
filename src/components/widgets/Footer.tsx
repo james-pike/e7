@@ -40,7 +40,7 @@ export default component$(() => {
     },
 
     {
-      title: "Connect",
+      title: "Contact",
       items: [
         {
           title: "hello@earthenvessels.ca",
@@ -61,7 +61,7 @@ export default component$(() => {
     },
 
         {
-      title: "Social",
+      title: "Connect",
       items: [
         {
           title: "Instagram",

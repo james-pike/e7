@@ -155,8 +155,10 @@ export default component$(() => {
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-lg xdxd !font-bold text-secondary-900 px-2.5 py-1 dark:text-gray-200">
-              Listening, Connecting & Creating
+            <Modal.Description class="!text-lg xdxd !font-bold px-2.5 py-1 dark:text-gray-200">
+              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                Listening, Connecting & Creating
+              </span>
             </Modal.Description>
           </div>
           <nav class="mt-0 space-y-4 bg-white/40 dark:bg-gray-800">
