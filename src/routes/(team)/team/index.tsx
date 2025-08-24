@@ -77,11 +77,12 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
+      
 
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Hello! Kwey! Bonjour!
             </span>
           </h1>
@@ -90,9 +91,9 @@ export default component$(() => {
           </p>
         </div>
 
-        {/* 🧱 CSS GRID LAYOUT */}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {TEAM_MEMBERS.map((member, index) => (
+        {/* 🧱 MASONRY COLUMN LAYOUT */}
+        <div class="columns-1 sm:columns-2 lg:columns-4 gap-3 space-y-3">
+          {TEAM_MEMBERS.map((member) => (
             <div
               key={member.name}
               class={[
@@ -106,8 +107,6 @@ export default component$(() => {
                 minHeight: "300px", // Ensures consistent height for collapsed state
                 transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color",
                 transform: expandedMember.value === member.name ? "scale(1.02)" : "scale(1)",
-                // Ensure order matches array index
-                order: index,
               }}
               role="button"
               tabIndex={0}
@@ -124,7 +123,7 @@ export default component$(() => {
                   width={160}
                   height={160}
                 />
-                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 mb-1">
+                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-1">
                   {member.name}
                 </h3>
                 <span
