@@ -172,7 +172,7 @@ export default component$(() => {
                     No clay experience is necessary. Our facilitators gently guide the process, allowing each participant to engage with the clay without worrying about "doing it right."
                   </p>
                   <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    Whether you're a beginner or experienced, working with clay offers a valuable, enriching experience for your body, mind, and heart. Our classes are designed to focus on the process, letting the clay teach you about yourself.
+                    Whether you're a beginner or experienced, working with clay offers a valuable and enriching experience for your body, mind, and heart. Our classes are designed to focus on the process, letting the clay teach you about yourself.
                   </p>
                 </div>
               </div>
