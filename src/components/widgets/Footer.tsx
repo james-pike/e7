@@ -176,13 +176,13 @@ export default component$(() => {
 
         </div>
         <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-4 pt-0 -mt-3 md:-mt-0 md:py-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
-          <div class="inline-flex items-center text-sm pb-2 text-primary-700 dark:text-primary-300 order-2 md:order-1">
+          <div class="inline-flex items-center text-sm pb-2 text-primary-700 mt-1 dark:text-primary-300 order-2 md:order-1">
             <img
               src="/images/logo2.svg"
               alt="Earthen Vessels Logo"
-              class="w-12 h-12 md:w-16 md:h-16 mr-2 rounded-sm"
-              width={64}
-              height={64}
+              class="w-16 h-16 md:w-120 md:h-20 mr-2 rounded-sm"
+              width={80}
+              height={80}
             />
             <span>
               © 2025 earthen vessels · All rights reserved.
