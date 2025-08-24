@@ -111,7 +111,7 @@ export default component$(() => {
         </section>
 
         {/* Offerings Section */}
-        <section class="relative overflow-hidden py-6 pt-8 md:py-12">
+        <section class="relative overflow-hidden py-6 pt-12 md:py-12">
           {/* Decorations */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
           <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
@@ -148,7 +148,7 @@ export default component$(() => {
         </section>
 
         {/* What To Expect Section */}
-        <section id="what-to-expect" class="relative overflow-hidden py-6 pt-8 md:py-12">
+        <section id="what-to-expect" class="relative overflow-hidden py-6 pt-12 md:py-12">
           {/* Decorations */}
           <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
           <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
