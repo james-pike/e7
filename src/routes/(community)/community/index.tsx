@@ -13,7 +13,7 @@ const COMMUNITY_PARTNERS: Partner[] = [
     name: "Hintonburg Pottery",
     description:
       "This is a short description of Partner 1. They are involved in community wellness and arts. This is a short description of Partner 1. They are involved in community wellness and arts.",
-    image: "/images/hp.webp",
+    image: "/images/hp2.png",
   },
   {
     name: "PLEO",
@@ -95,7 +95,7 @@ export default component$(() => {
 
               {/* Info */}
               <div class="flex flex-col items-center p-3 pt-6">
-                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-2">
+                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 mb-2">
                   {partner.name}
                 </h3>
                 <p

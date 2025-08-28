@@ -24,8 +24,8 @@ export default component$(() => {
         <div class="relative z-10 order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-12 md:order-1">
           <div class="text-center md:text-left px-2">
             {/* Headline (Desktop only) */}
-            <h1 class="hidden md:block text-4xl md:text-7xl font-bold tracking-tight mb-4">
-              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600  bg-clip-text text-transparent">
+            <h1 class="hidden md:block text-4xl md:text-8xl font-bold tracking-tight mb-4">
+              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600  bg-clip-text text-transparent">
                 earthen vessels
               </span>
             </h1>
