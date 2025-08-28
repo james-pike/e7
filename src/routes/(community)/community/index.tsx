@@ -1,4 +1,4 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal, $ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { SITE } from "~/config.mjs";
 
@@ -14,7 +14,7 @@ const COMMUNITY_PARTNERS: Partner[] = [
     description: "Hintonburg Pottery is a vibrant clay studio where the community comes together to create, fostering wellness and artistic expression through hands-on pottery experiences.",
     image: "/images/hp2.png",
   },
-    {
+  {
     name: "Wellington West BIA",
     description: "Wellington West BIA cultivates cultural connections, enriching the area with diverse arts and music programs that celebrate local heritage.",
     image: "/images/wellington.jpeg",
@@ -24,7 +24,6 @@ const COMMUNITY_PARTNERS: Partner[] = [
     description: "PLEO empowers local youth through dynamic programs and creative projects, nurturing talent and innovation within the community.",
     image: "/images/pleo.png",
   },
- 
   {
     name: "Parkdale Food Centre",
     description: "Parkdale Food Centre builds strong community bonds by organizing gatherings and offering educational workshops on nutrition and sustainability.",
@@ -35,8 +34,7 @@ const COMMUNITY_PARTNERS: Partner[] = [
     description: "Soul Space offers mentorship and skill-building opportunities, rooting local youth in growth and development through supportive programs.",
     image: "/images/soulspace.png",
   },
-
-   {
+  {
     name: "Ottawa Rape Crisis Centre",
     description: "The Ottawa Rape Crisis Centre champions environmental sustainability and local green initiatives, promoting a healthier planet and community.",
     image: "/images/orc.png",
@@ -44,10 +42,22 @@ const COMMUNITY_PARTNERS: Partner[] = [
 ];
 
 export default component$(() => {
-  const expandedPartner = useSignal<string | null>(COMMUNITY_PARTNERS[0].name); // Default to first partner
+  const expandedPartner = useSignal<string | null>(null); // Default to null
+
+  // Set initial expanded partner based on screen size
+  const initializeExpandedPartner = $(() => {
+    if (window.innerWidth > 640) { // sm breakpoint (640px) as mobile threshold
+      expandedPartner.value = COMMUNITY_PARTNERS[0].name;
+    }
+  });
+
+  // Run initialization on mount
+  useSignal(() => {
+    initializeExpandedPartner();
+  });
 
   return (
-    <section class="relative overflow-hidden py-12 md:py-12">
+    <section class="relative overflow-hidden py-10 md:py-12">
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
@@ -95,9 +105,6 @@ export default component$(() => {
 
               {/* Info */}
               <div class="flex flex-col items-center p-3 pt-2">
-                {/* <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 mb-1">
-                  {partner.name}
-                </h3> */}
                 <p
                   class={[
                     "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center transition-all duration-300 ease-in-out",
