@@ -48,7 +48,7 @@ export default component$(() => {
   const expandedPartner = useSignal<string | null>(COMMUNITY_PARTNERS[0].name); // Default to first partner
 
   return (
-    <section class="relative overflow-hidden py-10 md:py-12">
+    <section class="relative overflow-hidden py-8 md:py-12">
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
