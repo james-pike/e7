@@ -23,28 +23,19 @@ export default component$(() => {
   const expandedPartner = useSignal<string | null>(null);
 
   return (
-    <section class="relative overflow-hidden py-6 pb-12 md:py-8">
+    <section class="relative overflow-hidden py-12 md:py-16">
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
-        
-        
-            <div class="-mt-2 max-w-4xl text-center mx-auto pb-8">
-          <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-4 border-2 border-secondary-200/50 dark:border-secondary-700/50">
-            <div class="text-center mb-12">
-              <h1 class="!text-5xl md:text-6xl font-bold xdxd mb-6 pt-4">
-                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-                      Community Connections
-                </span>
-              </h1>
-            </div>
-            <div class="-mt-4">
-             <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto mb-4">
-            We collaborate with a diverse network of community partners to bring creativity, wellness, and connection to everyone. Whether it’s a team-building retreat, a space for reflection, or a chance to reconnect with creativity, our workshops provide a welcoming environment for groups dedicated to making a difference in our communities. **images will be fitted better**
+        {/* Header and Subtitle */}
+        <div class="text-center mb-12">
+          <h1 class="!text-5xl md:text-6xl font-bold font-serif mb-6">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              Community Connections
+            </span>
+          </h1>
+          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
+            We collaborate with a diverse network of community partners to bring creativity, wellness, and connection to everyone. Whether it’s a team-building retreat, a space for reflection, or a chance to reconnect with creativity, our workshops provide a welcoming environment for groups dedicated to making a difference in our communities.
           </p>
-             
-            </div>
-          </div>
         </div>
-   
 
         {/* 🧱 MASONRY COLUMN LAYOUT */}
         <div class="columns-1 sm:columns-2 lg:columns-4 gap-3 space-y-4">
