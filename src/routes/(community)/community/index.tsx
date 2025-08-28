@@ -9,14 +9,47 @@ interface Partner {
 }
 
 const COMMUNITY_PARTNERS: Partner[] = [
-  { name: "Hintonburg Pottery", description: "This is a short description of Partner 1. They are involved in community wellness and arts. This is a short description of Partner 1. They are involved in community wellness and arts.", image: "/images/hp.webp" },
-  { name: "PLEO", description: "Partner 2 supports youth programs and creative projects in our area.", image: "/images/pleo.jpg" },
-  { name: "ORCC", description: "Partner 3 is dedicated to environmental sustainability and local green initiatives.", image: "/images/orc.png" },
-  { name: "Parkdale Food Centre", description: "Partner 4 organizes community gatherings and educational workshops.", image: "/images/parkdale.webp" },
-  { name: "Soul Space", description: "Partner 5 provides mentorship and skill-building opportunities for local youth.", image: "/images/soulspace.png" },
-  { name: "Wellington West BIA", description: "Partner 6 fosters cultural connections through arts and music programs.", image: "/images/wellington.jpeg" },
-  { name: "Partner 7", description: "Partner 7 focuses on wellness, mental health, and mindfulness initiatives.", image: "/images/cc7.png" },
-  { name: "Partner 8", description: "Partner 8 supports local small businesses and creative entrepreneurship.", image: "/images/cc8.png" },
+  {
+    name: "Hintonburg Pottery",
+    description:
+      "This is a short description of Partner 1. They are involved in community wellness and arts. This is a short description of Partner 1. They are involved in community wellness and arts.",
+    image: "/images/hp.webp",
+  },
+  {
+    name: "PLEO",
+    description: "Partner 2 supports youth programs and creative projects in our area.",
+    image: "/images/pleo.jpg",
+  },
+  {
+    name: "ORCC",
+    description: "Partner 3 is dedicated to environmental sustainability and local green initiatives.",
+    image: "/images/orc.png",
+  },
+  {
+    name: "Parkdale Food Centre",
+    description: "Partner 4 organizes community gatherings and educational workshops.",
+    image: "/images/parkdale.webp",
+  },
+  {
+    name: "Soul Space",
+    description: "Partner 5 provides mentorship and skill-building opportunities for local youth.",
+    image: "/images/soulspace.png",
+  },
+  {
+    name: "Wellington West BIA",
+    description: "Partner 6 fosters cultural connections through arts and music programs.",
+    image: "/images/wellington.jpeg",
+  },
+  {
+    name: "Partner 7",
+    description: "Partner 7 focuses on wellness, mental health, and mindfulness initiatives.",
+    image: "/images/cc7.png",
+  },
+  {
+    name: "Partner 8",
+    description: "Partner 8 supports local small businesses and creative entrepreneurship.",
+    image: "/images/cc8.png",
+  },
 ];
 
 export default component$(() => {
@@ -27,7 +60,7 @@ export default component$(() => {
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
-          <h1 class="!text-5xl md:text-6xl font-bold font-serif mb-6">
+          <h1 class="text-5xl md:text-6xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Community Connections
             </span>
@@ -37,7 +70,7 @@ export default component$(() => {
           </p>
         </div>
 
-        {/* 🧱 MASONRY COLUMN LAYOUT */}
+        {/* Masonry Column Layout */}
         <div class="columns-1 sm:columns-2 lg:columns-4 gap-3 space-y-4">
           {COMMUNITY_PARTNERS.map((partner) => (
             <div
@@ -66,7 +99,7 @@ export default component$(() => {
                 <div
                   class="h-32 sm:h-40 w-full bg-center bg-contain bg-no-repeat rounded-t-2xl"
                   style={{ backgroundImage: `url('${partner.image}')` }}
-                ></div>
+                />
               )}
 
               {/* Info */}
@@ -87,20 +120,6 @@ export default component$(() => {
                 >
                   {partner.description}
                 </p>
-                <div class="flex justify-center mt-2">
-                  <svg
-                    class={[
-                      "w-4 h-4 text-primary-600 transition-transform duration-300",
-                      expandedPartner.value === partner.name && "transform rotate-180",
-                    ]}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </div>
               </div>
             </div>
           ))}
