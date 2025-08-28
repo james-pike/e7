@@ -11,47 +11,47 @@ interface Partner {
 const COMMUNITY_PARTNERS: Partner[] = [
   {
     name: "Hintonburg Pottery",
-    description:
-      "This is a short description of Partner 1. They are involved in community wellness and arts. This is a short description of Partner 1. They are involved in community wellness and arts.",
+    description: "Hintonburg Pottery is a vibrant clay studio where the community comes together to create, fostering wellness and artistic expression through hands-on pottery experiences.",
     image: "/images/hp2.png",
+  },
+    {
+    name: "Wellington West BIA",
+    description: "Wellington West BIA cultivates cultural connections, enriching the area with diverse arts and music programs that celebrate local heritage.",
+    image: "/images/wellington.jpeg",
   },
   {
     name: "PLEO",
-    description: "Partner 2 supports youth programs and creative projects in our area.",
-    image: "/images/pleo.jpg",
+    description: "PLEO empowers local youth through dynamic programs and creative projects, nurturing talent and innovation within the community.",
+    image: "/images/pleo.png",
   },
-  {
-    name: "ORCC",
-    description: "Partner 3 is dedicated to environmental sustainability and local green initiatives.",
-    image: "/images/orc.png",
-  },
+ 
   {
     name: "Parkdale Food Centre",
-    description: "Partner 4 organizes community gatherings and educational workshops.",
-    image: "/images/parkdale.webp",
+    description: "Parkdale Food Centre builds strong community bonds by organizing gatherings and offering educational workshops on nutrition and sustainability.",
+    image: "/images/parkdale.png",
   },
   {
     name: "Soul Space",
-    description: "Partner 5 provides mentorship and skill-building opportunities for local youth.",
+    description: "Soul Space offers mentorship and skill-building opportunities, rooting local youth in growth and development through supportive programs.",
     image: "/images/soulspace.png",
   },
-  {
-    name: "Wellington West BIA",
-    description: "Partner 6 fosters cultural connections through arts and music programs.",
-    image: "/images/wellington.jpeg",
-  },
 
+   {
+    name: "Ottawa Rape Crisis Centre",
+    description: "The Ottawa Rape Crisis Centre champions environmental sustainability and local green initiatives, promoting a healthier planet and community.",
+    image: "/images/orc.png",
+  },
 ];
 
 export default component$(() => {
-  const expandedPartner = useSignal<string | null>(null);
+  const expandedPartner = useSignal<string | null>(COMMUNITY_PARTNERS[0].name); // Default to first partner
 
   return (
-    <section class="relative overflow-hidden py-12 md:py-16">
+    <section class="relative overflow-hidden py-12 md:py-12">
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
-          <h1 class="!text-4xl md:!text-5xl font-bold xdxd mb-6">
+          <h1 class="!text-4xl md:!text-5xl font-bold mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Community Connections
             </span>
@@ -62,12 +62,12 @@ export default component$(() => {
         </div>
 
         {/* Masonry Column Layout */}
-        <div class="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-4">
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
           {COMMUNITY_PARTNERS.map((partner) => (
             <div
               key={partner.name}
               class={[
-                "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
+                "break-inside-avoid group backdrop-blur-sm border-2 pt-4 rounded-2xl transition-all duration-300 ease-in-out",
                 "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
                 expandedPartner.value === partner.name
                   ? "bg-white/40 border-secondary-200"
@@ -94,13 +94,13 @@ export default component$(() => {
               )}
 
               {/* Info */}
-              <div class="flex flex-col items-center p-3 pt-6">
-                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 mb-2">
+              <div class="flex flex-col items-center p-3 pt-2">
+                {/* <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 mb-1">
                   {partner.name}
-                </h3>
+                </h3> */}
                 <p
                   class={[
-                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-2 transition-all duration-300 ease-in-out",
+                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center transition-all duration-300 ease-in-out",
                     expandedPartner.value !== partner.name && "line-clamp-2",
                   ]}
                   style={{
