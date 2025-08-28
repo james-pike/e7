@@ -90,6 +90,8 @@ module.exports = {
       },
       fontSize: {
         '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
+                '2xs': '0.625rem', // 10px
+
       },
       animation: {
         'from-left': 'slideFromLeft 0.2s 1',

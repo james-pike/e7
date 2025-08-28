@@ -38,24 +38,24 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
   return (
     <section class="relative overflow-hidden py-6 md:py-10 md:pb-16">
       <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
-       
 
-           <div class="-mt-2 max-w-4xl text-center mx-auto pb-10">
+
+        <div class="-mt-2 max-w-4xl text-center mx-auto pb-10">
           <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50">
             <div class="text-center mb-12">
-          <h1 class="!text-5xl md:text-6xl font-bold xdxd mb-6 pt-4">
-            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              Our Workshops
-            </span>
-          </h1>
-        </div>
-        <div class="-mt-2">
-            <p class="text-base/7 text-primary-700 dark:text-primary-300">
-              Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The Tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
-            </p>
-            <p class="mt-4 text-base/7 text-primary-700 dark:text-primary-300">
-              We also create customized workshops for private groups. Stay tuned for more.
-            </p>
+              <h1 class="!text-5xl md:text-6xl font-bold xdxd mb-6 pt-4">
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                  Our Workshops
+                </span>
+              </h1>
+            </div>
+            <div class="-mt-2">
+              <p class="text-base/7 text-primary-700 dark:text-primary-300">
+                Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The Tertiary' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and secondary. Upcoming 4 and 6 week courses will be posted soon.
+              </p>
+              <p class="mt-4 text-base/7 text-primary-700 dark:text-primary-300">
+                We also create customized workshops for private groups. Stay tuned for more.
+              </p>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                 >
                   {workshop.description}
                 </p>
-{/* 
+                {/* 
                 <div class="flex justify-center mt-2">
                   <svg
                     class={[
