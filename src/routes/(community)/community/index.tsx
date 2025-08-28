@@ -1,25 +1,130 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-
-
 import { SITE } from "~/config.mjs";
 
+interface Partner {
+  name: string;
+  description: string;
+  image: string;
+}
+
+const COMMUNITY_PARTNERS: Partner[] = [
+  { name: "Hintonburg Pottery", description: "This is a short description of Partner 1. They are involved in community wellness and arts. This is a short description of Partner 1. They are involved in community wellness and arts.", image: "/images/hp.webp" },
+  { name: "PLEO", description: "Partner 2 supports youth programs and creative projects in our area.", image: "/images/pleo.jpg" },
+  { name: "ORCC", description: "Partner 3 is dedicated to environmental sustainability and local green initiatives.", image: "/images/orc.png" },
+  { name: "Parkdale Food Centre", description: "Partner 4 organizes community gatherings and educational workshops.", image: "/images/parkdale.webp" },
+  { name: "Soul Space", description: "Partner 5 provides mentorship and skill-building opportunities for local youth.", image: "/images/soulspace.png" },
+  { name: "Wellington West BIA", description: "Partner 6 fosters cultural connections through arts and music programs.", image: "/images/wellington.jpeg" },
+  { name: "Partner 7", description: "Partner 7 focuses on wellness, mental health, and mindfulness initiatives.", image: "/images/cc7.png" },
+  { name: "Partner 8", description: "Partner 8 supports local small businesses and creative entrepreneurship.", image: "/images/cc8.png" },
+];
+
 export default component$(() => {
+  const expandedPartner = useSignal<string | null>(null);
+
   return (
-    <>
-    
- <h1> Community Connections</h1>
-     
-    </>
+    <section class="relative overflow-hidden py-6 pb-12 md:py-8">
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+        
+        
+            <div class="-mt-2 max-w-4xl text-center mx-auto pb-8">
+          <div class="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-gray-800 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-4 border-2 border-secondary-200/50 dark:border-secondary-700/50">
+            <div class="text-center mb-12">
+              <h1 class="!text-5xl md:text-6xl font-bold xdxd mb-6 pt-4">
+                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                      Community Connections
+                </span>
+              </h1>
+            </div>
+            <div class="-mt-4">
+             <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto mb-4">
+            We collaborate with a diverse network of community partners to bring creativity, wellness, and connection to everyone. Whether it’s a team-building retreat, a space for reflection, or a chance to reconnect with creativity, our workshops provide a welcoming environment for groups dedicated to making a difference in our communities. **images will be fitted better**
+          </p>
+             
+            </div>
+          </div>
+        </div>
+   
+
+        {/* 🧱 MASONRY COLUMN LAYOUT */}
+        <div class="columns-1 sm:columns-2 lg:columns-4 gap-3 space-y-4">
+          {COMMUNITY_PARTNERS.map((partner) => (
+            <div
+              key={partner.name}
+              class={[
+                "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out",
+                "hover:shadow-xl hover:border-secondary-200 hover:bg-white/45",
+                expandedPartner.value === partner.name
+                  ? "bg-white/40 border-secondary-200"
+                  : "bg-white/35 border-primary-200 dark:border-secondary-700",
+              ]}
+              style={{
+                minHeight: "260px",
+                transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color",
+                transform: expandedPartner.value === partner.name ? "scale(1.02)" : "scale(1)",
+              }}
+              role="button"
+              tabIndex={0}
+              aria-expanded={expandedPartner.value === partner.name}
+              onClick$={() => {
+                expandedPartner.value = expandedPartner.value === partner.name ? null : partner.name;
+              }}
+            >
+              {/* Image */}
+              {partner.image && (
+                <div
+                  class="h-32 sm:h-40 w-full bg-center bg-contain bg-no-repeat rounded-t-2xl"
+                  style={{ backgroundImage: `url('${partner.image}')` }}
+                ></div>
+              )}
+
+              {/* Info */}
+              <div class="flex flex-col items-center p-3 pt-6">
+                <h3 class="text-xl sm:text-2xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-2">
+                  {partner.name}
+                </h3>
+                <p
+                  class={[
+                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-2 transition-all duration-300 ease-in-out",
+                    expandedPartner.value !== partner.name && "line-clamp-2",
+                  ]}
+                  style={{
+                    maxHeight: expandedPartner.value === partner.name ? "1000px" : "4.5em",
+                    overflow: "hidden",
+                    transitionProperty: "max-height",
+                  }}
+                >
+                  {partner.description}
+                </p>
+                <div class="flex justify-center mt-2">
+                  <svg
+                    class={[
+                      "w-4 h-4 text-primary-600 transition-transform duration-300",
+                      expandedPartner.value === partner.name && "transform rotate-180",
+                    ]}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 });
 
 export const head: DocumentHead = {
-  title: SITE.title,
+  title: `${SITE.title} - Community Connections`,
   meta: [
     {
       name: "description",
-      content: SITE.description,
+      content: "Discover our community partners and learn about their role in fostering connection and creativity.",
     },
   ],
 };
