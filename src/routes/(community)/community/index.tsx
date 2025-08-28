@@ -40,16 +40,7 @@ const COMMUNITY_PARTNERS: Partner[] = [
     description: "Partner 6 fosters cultural connections through arts and music programs.",
     image: "/images/wellington.jpeg",
   },
-  {
-    name: "Partner 7",
-    description: "Partner 7 focuses on wellness, mental health, and mindfulness initiatives.",
-    image: "/images/cc7.png",
-  },
-  {
-    name: "Partner 8",
-    description: "Partner 8 supports local small businesses and creative entrepreneurship.",
-    image: "/images/cc8.png",
-  },
+
 ];
 
 export default component$(() => {
@@ -71,7 +62,7 @@ export default component$(() => {
         </div>
 
         {/* Masonry Column Layout */}
-        <div class="columns-1 sm:columns-2 lg:columns-4 gap-3 space-y-4">
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-4">
           {COMMUNITY_PARTNERS.map((partner) => (
             <div
               key={partner.name}
