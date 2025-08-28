@@ -2,6 +2,7 @@ import {  component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
+import { LuBook } from "@qwikest/icons/lucide";
 
 export default component$(() => {
   const store = useStore({
@@ -45,7 +46,7 @@ export default component$(() => {
           aria-label="Main navigation"
         >
           {menu && menu.items ? (
-            <ul class="flex flex-col md:flex-row text-primary-600 xdxd md:self-center w-full md:w-auto text-xl md:text-xl tracking-[0.01rem] font-medium">
+            <ul class="flex flex-col md:flex-row text-primary-600 md:self-center w-full md:w-auto text-xl md:text-xl tracking-[0.01rem] font-medium">
               {menu.items.map(({ text, href, items }, key) => {
                 const isActive = location.url.pathname === href;
                 return (
@@ -184,12 +185,16 @@ export default component$(() => {
           <div class="items-center flex justify-between w-full md:w-auto">
             <a
                   href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6"
-              class="w-full sm:w-auto group relative inline-flex items-center justify-center px-4 py-2 text-xl font-semibold font-serif text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-600-200"
+              class="w-full sm:w-auto group relative inline-flex items-center justify-center px-4 py-2 text-xl font-semibold text-white bg-gradient-to-r from-primary-500 via-primary-600 to-primary-500 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-600-200"
               role="button"
               aria-label="Book a workshop"
             >
-              <span class="relative z-10 xdxd flex items-center gap-2">
-                Book a Class
+              <span class="relative z-10 flex items-center gap-2">
+
+             
+                Book
+
+                   <LuBook/>
               </span>
               <div class="absolute inset-0 bg-gradient-to-r from-primary-400 via-primary-300 to-primary-300 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
