@@ -93,7 +93,7 @@ export default component$(() => {
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl xdxd font-bold font-serif mb-6">
+          <h2 class="text-4xl md:text-5xl xdxd font-bold mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Get in Touch
             </span>
@@ -110,7 +110,7 @@ export default component$(() => {
             {/* Studio Image */}
             <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-secondary-200/50">
               <Image
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/images/space.jpeg"
                 layout="constrained"
                 width={600}
                 height={400}
@@ -120,14 +120,14 @@ export default component$(() => {
               />
               <div class="absolute inset-0 bg-gradient-to-t from-secondary-900/60 via-transparent to-transparent"></div>
               <div class="absolute bottom-6 left-6 text-white">
-                <h3 class="text-xl font-bold font-serif mb-2">Visit Our Studio</h3>
+                <h3 class="text-xl font-bold mb-2">Visit Our Studio</h3>
                 <p class="text-secondary-100">Experience the magic of pottery making</p>
               </div>
             </div>
 
             {/* Studio Features */}
             <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 !important dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 !important backdrop-blur-sm rounded-2xl p-6 border-2 border-secondary-100 dark:border-secondary-700 shadow-lg">
-              <h3 class="text-xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
+              <h3 class="text-xl font-bold text-secondary-900 dark:text-secondary-100 mb-4">
                 Studio Amenities
               </h3>
               <div class="space-y-3">
@@ -178,10 +178,10 @@ export default component$(() => {
                       {info.icon}
                     </div>
                     <div class="flex-1">
-                      <h3 class="text-sm font-semibold text-secondary-900 dark:text-secondary-100 font-serif mb-1">
+                      <h3 class="text-md font-semibold text-secondary-900 dark:text-secondary-100 mb-1">
                         {info.title}
                       </h3>
-                      <p class="text-xs text-primary-700 dark:text-primary-300">
+                      <p class="text-sm text-primary-700 dark:text-primary-300">
                         {info.details}
                       </p>
                     </div>
