@@ -76,7 +76,7 @@ export default component$(() => {
                           `}
                           onClick$={() => {
                             if (location.url.pathname !== "/") {
-                              window.location.href = "/#services";
+                              window.location.href = "/about";
                             } else {
                               const servicesSection = document.getElementById("services");
                               if (servicesSection) {

@@ -109,8 +109,7 @@ export default component$(() => {
               </Link>
             </div>
             <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed">
-              At earthen vessels, we begin with a pause — creating space to listen inwardly and reconnect with ourselves. Clay becomes more than a craft; it’s a way to ground, reflect, and express gratitude. Our workshops are about nurturing authenticity and connection, as much as shaping clay.
-            </div>
+earthen vessels offers a welcoming space where mindfulness and creativity come together. The process invites us to slow down, listen inwardly and discover new ways to express ourselves.             </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
               <div class="text-sm font-semibold mb-3 ml-1">

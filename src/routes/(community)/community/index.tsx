@@ -6,43 +6,51 @@ interface Partner {
   name: string;
   description: string;
   image: string;
+  website: string;
 }
 
 const COMMUNITY_PARTNERS: Partner[] = [
   {
     name: "Hintonburg Pottery",
-    description: "Hintonburg Pottery is a vibrant clay studio where the community comes together to create, fostering wellness and artistic expression through hands-on pottery experiences.",
+    description: "Hintonburg Pottery is a vibrant clay studio where the community comes together to create, fostering wellness and artistic expression through hands-on pottery experiences. Extra line to test fifth line of height.",
     image: "/images/hp2.png",
+    website: "https://example.com/hintonburg-pottery", // Replace with actual URL
   },
   {
     name: "Wellington West BIA",
     description: "Wellington West BIA cultivates cultural connections, enriching the area with diverse arts and music programs that celebrate local heritage.",
     image: "/images/wellington.jpeg",
+    website: "https://example.com/wellington-west-bia", // Replace with actual URL
   },
   {
-    name: "Ottawa Rape Crisis Centre",
+    name: "Somerset Health & Wellness",
     description: "The Ottawa Rape Crisis Centre champions environmental sustainability and local green initiatives, promoting a healthier planet and community.",
     image: "/images/somerset.webp",
+    website: "https://example.com/ottawa-rape-crisis-centre", // Replace with actual URL
   },
   {
     name: "PLEO",
     description: "PLEO empowers local youth through dynamic programs and creative projects, nurturing talent and innovation within the community.",
     image: "/images/pleo.png",
+    website: "https://example.com/pleo", // Replace with actual URL
   },
   {
     name: "Soul Space",
     description: "Soul Space offers mentorship and skill-building opportunities, rooting local youth in growth and development through supportive programs.",
     image: "/images/soulspace.png",
+    website: "https://example.com/soul-space", // Replace with actual URL
   },
   {
     name: "Parkdale Food Centre",
     description: "Parkdale Food Centre builds strong community bonds by organizing gatherings and offering educational workshops on nutrition and sustainability.",
     image: "/images/parkdale.png",
+    website: "https://example.com/parkdale-food-centre", // Replace with actual URL
   },
   {
     name: "Ottawa Rape Crisis Centre",
     description: "The Ottawa Rape Crisis Centre champions environmental sustainability and local green initiatives, promoting a healthier planet and community.",
     image: "/images/orc.png",
+    website: "https://example.com/ottawa-rape-crisis-centre", // Replace with actual URL
   },
 ];
 
@@ -64,12 +72,12 @@ export default component$(() => {
   const columns = distributePartners(COMMUNITY_PARTNERS, lgColumns);
 
   return (
-    <section class="relative overflow-hidden py-20 md:py-28">
+    <section class="relative overflow-hidden py-12 md:py-16">
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
           <h1 class="!text-4xl md:!text-5xl font-bold mb-6">
-            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Our Community Connections
             </span>
           </h1>
@@ -84,7 +92,7 @@ export default component$(() => {
             <div
               key={index}
               class="flex-1 flex flex-col gap-5"
-              style={{ minWidth: '0' }} // Prevents flex items from overflowing
+              style={{ minWidth: "0" }} // Prevents flex items from overflowing
             >
               {columnPartners.map((partner) => (
                 <div
@@ -100,7 +108,6 @@ export default component$(() => {
                     transitionProperty: "transform, box-shadow, background-color, border-color",
                     transform: expandedPartner.value === partner.name ? "scale(1.02)" : "scale(1)",
                     minHeight: "200px",
-                    // Removed opacity from transition to avoid flicker
                   }}
                   role="button"
                   tabIndex={0}
@@ -119,20 +126,49 @@ export default component$(() => {
 
                   {/* Info */}
                   <div class="flex flex-col items-center p-3 pt-2">
-                    <p
-                      class={[
-                        "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
-                        expandedPartner.value !== partner.name && "line-clamp-2",
-                      ]}
-                      style={{
-                        maxHeight: expandedPartner.value === partner.name ? "600px" : "3em", // Adjusted max-height
-                        overflow: "hidden",
-                        transitionProperty: "max-height, opacity",
-                        opacity: expandedPartner.value === partner.name ? 1 : 0.9, // Subtle opacity transition
-                      }}
-                    >
-                      {partner.description}
-                    </p>
+                    <div class="relative w-full flex items-center justify-center mb-2">
+                      <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200">
+                        {partner.name}
+                      </h3>
+                      <a
+                        href={partner.website}
+                        class="pl-2 text-primary-600 dark:text-primary-400 hover:text-secondary-600 dark:hover:text-secondary-400 transition-colors duration-300 ease-in-out"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit ${partner.name} website`}
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="relative flex flex-col items-center">
+                      <p
+                        class={[
+                          "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
+                          expandedPartner.value !== partner.name && "line-clamp-3",
+                        ]}
+                        style={{
+                          maxHeight: expandedPartner.value === partner.name ? "600px" : "4.5em",
+                          overflow: "hidden",
+                          transitionProperty: "max-height, opacity",
+                          opacity: expandedPartner.value === partner.name ? 1 : 0.9,
+                        }}
+                      >
+                        {partner.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}

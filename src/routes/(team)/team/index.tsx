@@ -15,7 +15,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Ginger",
     role: "Facilitator",
     description:
-      "Ginger took her first pottery course over 35 years ago and was immediately drawn to the tactile joy of shaping clay. Over time, her focus shifted from creating objects to exploring the quiet lessons clay offers — about living with care, finding belonging, and honoring the relationships that shape our lives.\n\nThe vision for earthen vessels began years ago in a small pottery community in Venezuela. Back in Canada, Ginger created the first ‘Touch the Earth' workshops, weaving together clay connection and the gentle practice of belonging. She continues her studies with the Centre for Courage and Renewal, founded by Parker J Palmer, whose work centers on living and leading with integrity. In earthen vessels, clay becomes a practice of slowing down, listening inwardly, and allowing creativity to open new possibilities.\n\nGinger is also the founder and owner of Hintonburg Pottery, which she envisioned as both a shop for local ceramic artists and a teaching studio for adults and children. Over 13 years, the studio has extended its reach into the wider community, supporting charities and not-for-profits to make clay programs more accessible.",
+      "Ginger took her first pottery course over 35 years ago and was immediately drawn to the tactile joy of shaping clay. Over time, her focus shifted from creating objects to exploring the quiet lessons clay offers — about living with care, finding belonging, and honoring the relationships that shape our lives.\n\nThe vision for earthen vessels began years ago in a small pottery community in Venezuela. Back in Canada, Ginger created the first ‘Touch the Earth' workshops, weaving together clay connection and the gentle practice of belonging. She continues her studies with the Centre for Courage and Renewal, founded by Parker J Palmer, whose work centers on living and leading with integrity. In earthen vessels, clay becomes a practice of slowing down, listening inwardly, and allowing creativity to open new possibilities.\n\nGinger is also the founder and owner of Hintonburg Pottery, which she envisioned as both a shop for local ceramic artists and a teaching studio for adults and children. For 13 years, the studio has extended its reach into the wider community, supporting charities and not-for-profits to make clay programs more accessible.",
     image: "/images/ginger.webp",
   },
 
@@ -26,7 +26,7 @@ const TEAM_MEMBERS: TeamMember[] = [
       "Michelle’s journey with ceramics began in 2002, and since then, she has immersed herself in the craft—taking countless courses, working as a studio potter, and teaching at Hintonburg Pottery. Now, she brings her passion for clay to earthen vessels as a facilitator. With over 30 years in education as a teacher, guidance counselor, and school principal, Michelle has dedicated her career to supporting growth and well-being. She holds a Master’s Degree in Counselling from the University of Ottawa and a Certificate in Positive Psychology from Wilfrid Laurier University. Her experience leading wellness initiatives in schools, combined with her love of pottery, has led her to earthen vessels, where she shares the joy of clay as a source of grounding, meditation, renewal, and fun.",
     image: "/images/michelle.webp",
   },
-    {
+  {
     name: "Mary",
     role: "Facilitator",
     description:
@@ -78,7 +78,6 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
       <div class="absolute inset-0 bg-pottery-texture opacity-20" aria-hidden="true"></div>
-      
 
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
         <div class="text-center mb-12">
@@ -134,8 +133,10 @@ export default component$(() => {
                 </span>
                 <p
                   class={[
-                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4 transition-all duration-300 ease-in-out",
-                    expandedMember.value !== member.name && "line-clamp-3",
+                    "text-primary-700 dark:text-primary-300 text-sm sm:text-base leading-relaxed text-center mt-4",
+                    expandedMember.value === member.name
+                      ? "transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+                      : "transition-all duration-300 ease-in-out line-clamp-3",
                   ]}
                   style={{
                     maxHeight: expandedMember.value === member.name ? "1000px" : "4.5em", // Adjust max-height for smooth expansion
