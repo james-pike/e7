@@ -1,0 +1,1 @@
+import{_ as s}from"./q-CF2Nn7YE.js";import{$ as t,R as _,c as r,b as e,X as n}from"./q-ZijM65OL.js";const a=t(_(()=>s(()=>import("./q-BVKCNGEo.js").then(o=>o.a),[]),"s_cNMCwfbC644")),c=o=>r(a,{role:"region",...o,children:r(n,null,3,"8k_0"),[e]:{role:e}},0,"8k_1");export{c as s_R7SZxU0Cg0Q};

@@ -7,7 +7,7 @@
 - [What To Expect](/about#what-to-expect)
 - [Benefits of Clay](/about#clay)
 - [Newsletter](/newsletter)
-- [Gift Cards](/gifts)
+- [Gift Cards](https://www-1553p.bookeo.com/bookeo/b_hintonburgpottery_start.html?buyvoucher=truectlsrc2=KV%2FrAmqkCeyRJOkuueDRJIxqQvHIJ62FuPNnlHILvZk%3D&src=02b)
 - [FAQ](/faq)
 
 
