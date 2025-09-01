@@ -177,10 +177,10 @@ export default component$(() => {
         </section>
 
         {/* Benefits Section */}
-        <section class="relative overflow-hidden py-12 pb-20 md:py-16">
+        <section id="clay" class="relative overflow-hidden -mt-12 py-12 pb-20 md:py-16">
           {/* Decorations */}
 
-          <div id="clay" class="relative max-w-7xl mx-auto ">
+          <div  class="relative max-w-7xl mt-16 mx-auto ">
             <h2 class="!text-4xl md:!text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Benefits of Clay

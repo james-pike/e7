@@ -179,7 +179,7 @@ earthen vessels offers a welcoming space where mindfulness and creativity come t
           ))}
 
         </div>
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-0 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
           <div class="inline-flex items-center text-sm text-primary-700 mt-2 dark:text-primary-300 order-2 md:order-1">
             <img
               src="/images/logo2.svg"

@@ -14,7 +14,6 @@
 ## [Classes](/classes)
 ## [Gallery](/gallery)
 ## [Testimonials](/testimonials)
-
 ## [Community](/community)
 
 

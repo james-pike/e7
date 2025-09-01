@@ -104,6 +104,8 @@ export default component$(() => {
         { title: "What To Expect", href: "/about" },
         { title: "Benefits Of Clay", href: "/about" },
         { title: "Newsletter", href: "/newsletter" },
+        { title: "Gift Cards", href: "/newsletter" },
+
         { title: "FAQ", href: "/faq" },
       ],
     },
