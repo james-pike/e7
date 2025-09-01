@@ -222,8 +222,8 @@ export default component$(() => {
               Still Have Questions?
             </h3>
             <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
-              Our pottery experts are here to help! Reach out to us for
-              personalized assistance with your pottery needs.
+              We are here to help! Reach out to us for
+              personalized assistance.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a

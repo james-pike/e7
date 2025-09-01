@@ -92,7 +92,7 @@ export default component$(() => {
                     earthen vessels studio is a grounding space where working with clay becomes a pathway to a deeper connection—with ourselves, the earth, and each other—through reflections, mindful creativity, play, and listening to the voice within.
                   </p>
                   <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    In this nurturing space, creativity and exploration thrive, welcoming all, even those without clay experience. With our facilitators' gentle guidance, each participant can engage with the clay and set aside fears or anxieties about "not being able to do it right"—it's truly freeing!
+                    In this nurturing space, creativity and exploration thrive, welcoming all - first time with clay to life long clay lovers. With our facilitators' gentle guidance, each participant can engage with the clay and set aside fears or anxieties about "not being able to do it right"—it's truly freeing!
                   </p>
                 </div>
               </div>

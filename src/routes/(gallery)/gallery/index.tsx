@@ -147,7 +147,7 @@ export default component$(() => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // Navigate to external link
-    window.location.href = "https://example.com/book-class"; // Replace with your actual external link
+    window.location.href = "https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6"; // Replace with your actual external link
   });
 
   return (
@@ -161,7 +161,7 @@ export default component$(() => {
       <div class="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h1 class="!text-5xl md:!text-6xl font-bold font-serif mb-6">
+          <h1 class="!text-4xl md:!text-5xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Studio Gallery
             </span>

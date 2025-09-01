@@ -67,7 +67,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
   if (!workshops || workshops.length === 0) {
     return (
       <section class="relative overflow-hidden py-16 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6 text-secondary-900 dark:text-primary-100">
+        <h2 class="text-4xl md:text-5xl xdxd font-bold font-serif mb-6 text-secondary-900 dark:text-primary-100">
           <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
             Our Workshops
           </span>
@@ -82,7 +82,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
               Past Workshops
             </span>
           </h2>
-          <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {dummyInactiveWorkshops.map((workshop) => (
               <div
                 key={workshop.id}
@@ -171,11 +171,11 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
-      <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
+      <div class="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
-          <h1 class="text-5xl md:text-6xl !xdxd font-bold mb-6">
-            <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+          <h1 class="!text-4xl md:!text-5xl xdxd font-bold mb-6">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Our Offerings
             </span>
           </h1>
@@ -185,10 +185,10 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
         </div>
 
         {/* Upcoming Workshops */}
-        <h2 class="text-3xl font-bold mb-8 text-secondary-900 dark:text-primary-100 text-center">
+        <h2 class="!text-3xl xdxd font-bold mb-8 text-secondary-900 dark:text-primary-100 text-center">
           Upcoming Classes
         </h2>
-        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {workshops.map((workshop) => (
             <div
               key={workshop.id}
@@ -266,6 +266,19 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                 >
                   {workshop.description}
                 </p>
+
+                {/* Book Class Button (visible when expanded) */}
+                {/* {expandedWorkshop.value === workshop.id && (
+                  <button
+                    class="mt-4 px-4 py-2 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors duration-300 ease-in-out"
+                    onClick$={() => {
+                      // Placeholder for booking logic
+                      console.log(`Booking class for ${workshop.title}`);
+                    }}
+                  >
+                    Book Class
+                  </button>
+                )} */}
               </div>
             </div>
           ))}
@@ -273,12 +286,12 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
 
         {/* Past Workshops (dummy workshops only) */}
         <div class="mt-12">
-          <h2 class="text-3xl font-bold mb-8 text-secondary-900 dark:text-primary-100 text-center">
+          <h2 class="!text-3xl xdxd font-bold mb-8 text-secondary-900 dark:text-primary-100 text-center">
             <span class="bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 bg-clip-text text-transparent">
               Past Workshops
             </span>
           </h2>
-          <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {dummyInactiveWorkshops.map((workshop) => (
               <div
                 key={workshop.id}

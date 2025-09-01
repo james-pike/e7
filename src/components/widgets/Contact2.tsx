@@ -82,22 +82,18 @@ export default component$(() => {
   ];
 
   return (
-    <section id="contact" class="relative overflow-hidden py-16 md:py-20">
+    <section id="contact" class="relative overflow-hidden py-12 md:py-16">
       {/* Background with pottery texture */}
       <div class="absolute inset-0 bg-pottery-texture opacity-20 !important" aria-hidden="true"></div>
 
       {/* Gradient background */}
-      <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-white to-secondary-50/50 !important dark:from-primary-900/50 dark:via-gray-900 dark:to-secondary-900/50 !important" aria-hidden="true"></div>
 
       {/* Floating decorative elements */}
-      <div class="absolute top-20 left-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-      <div class="absolute bottom-20 right-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-bold font-serif mb-6">
+          <h2 class="text-4xl md:text-5xl xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Get in Touch
             </span>
@@ -108,7 +104,7 @@ export default component$(() => {
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Side - Studio Image, Features, & Quick Contact CTA */}
           <div class="space-y-8">
             {/* Studio Image */}
@@ -168,7 +164,7 @@ export default component$(() => {
 
           {/* Right Side - Contact Info Cards */}
           <div class="relative">
-            <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 !important dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 !important backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
+            <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 !important dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 !important backdrop-blur-sm rounded-3xl shadow-xl p-4 md:p-6 border-2 border-secondary-100 dark:border-secondary-700">
               <div class="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
