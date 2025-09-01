@@ -252,7 +252,7 @@ export default component$(() => {
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=gQpfIHL0hAzcbC5GyHjGNqbcjrLZrVN6ba4TgxE6uYY%3D&src=02b&type=41562UHUKUC196793426E6"
+                href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=%2FHfNXcGN3w7lx04jDGdyb2MKip8ZofU%2Bd4eGFIcgTNA%3D&src=02r&type=41562UHUKUC196793426E6"
                 class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span class="relative z-10">Book Now</span>

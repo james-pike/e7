@@ -180,7 +180,8 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            Our offerings are unique and evolving. We currently offer themed workshops from our 'Touch The Clay' series: Open Like a Bowl - ready to be filled, Lanterns for the Journey, and Like the Turtle - practising patience and resilience. Labyrinth and clay. Upcoming 4 and 6 week courses will be posted soon. We also create customized workshops for private groups. Stay tuned for more.
+Explore our workshops and courses designed to foster creativity and connection. From beginner sessions to advanced techniques, we offer a range of experiences tailored to all levels.
+Join us for guided sessions where you’ll learn new skills, connect with others, and find joy in the creative process.
           </p>
         </div>
 
