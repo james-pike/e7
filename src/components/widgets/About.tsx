@@ -98,7 +98,7 @@ export default component$(() => {
               </div>
               <div class="order-1 lg:order-2 self-start">
                 <Image
-                  src="/images/a1.webp"
+                  src="/images/a2.webp"
                   alt="earthen vessels Studio"
                   class="w-full max-w-lg lg:max-w-none rounded-2xl object-cover shadow-lg"
                 />
