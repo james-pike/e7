@@ -103,7 +103,7 @@ export default component$(() => {
           <div class="col-span-12 lg:col-span-5 md:pr-8">
             <div class="mb-4">
               <Link class="inline-block font-bold text-2xl -mt-2" href={"/"}>
-                <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                   earthen vessels
                 </span>
               </Link>

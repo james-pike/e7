@@ -58,7 +58,7 @@ export default component$(() => {
       <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h2 class="!text-5xl md:text-6xl xdxd font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl xdxd font-bold mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 bg-clip-text text-transparent">
               Frequently Asked Questions
             </span>
@@ -218,7 +218,7 @@ export default component$(() => {
         {/* Contact CTA */}
         <div class="text-center mt-12">
           <div class="bg-gradient-to-r from-secondary-50/50 via-tertiary-50/50 to-primary-50/50 dark:from-secondary-900 dark:via-tertiary-900 dark:to-primary-900 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700 shadow-xl">
-            <h3 class="text-2xl md:!text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
+            <h3 class="text-2xl md:!text-3xl font-bold text-secondary-900 dark:text-secondary-100  mb-4">
               Still Have Questions?
             </h3>
             <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
