@@ -42,7 +42,7 @@ export default component$(() => {
     },
     {
       icon: LuLeaf,
-      title: "Foster Patience and Resilience",
+      title: "Foster Patience, Resilience, and Humility",
       description:
         "Moving beyond perfection, clay teaches patience and resilience, embracing the joy of wholeness.",
     },
@@ -92,7 +92,7 @@ export default component$(() => {
                     earthen vessels studio is a grounding space where working with clay becomes a pathway to a deeper connection—with ourselves, the earth, and each other—through reflections, mindful creativity, play, and listening to the voice within.
                   </p>
                   <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    In this nurturing space, creativity and exploration thrive, welcoming all - first time with clay to life long clay lovers. With our facilitators' gentle guidance, each participant can engage with the clay and set aside fears or anxieties about "not being able to do it right"—it's truly freeing!
+                    In this nurturing space, creativity and exploration thrive, welcoming all. With our facilitators' gentle guidance, each participant can engage with the clay and set aside fears or anxieties about "not being able to do it right"—it's truly freeing!
                   </p>
                 </div>
               </div>
@@ -130,9 +130,7 @@ export default component$(() => {
                     </span>
                   </h2>
                   <p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    Our offerings are unique and evolving.
-                    We currently offer themed workshops from our 'Touch The Clay' series: Open Like a Bowl - ready to be filled, Lanterns - tending to my fire,  and Like the Turtle - practising patience and resilience.  Upcoming 4 and 6 week courses will be posted soon. We also create customized workshops for private groups and organizations. Stay tuned for more.
-                  </p>
+Our Offerings are unique and evolving.  We currently offer themed workshops from our Touch the Clay series.  We also design custom workshops for private and organizations.  Contact us for more information.                    </p>
 
                 </div>
               </div>
