@@ -72,12 +72,9 @@ export default component$(() => {
         {/* Hero Section */}
         <section class="relative overflow-hidden py-6 pt-3 md:py-12">
           {/* Floating decorations */}
-          <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div id="space" class="relative">
-          
+
             <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-2 lg:order-1 self-start">
 
@@ -113,12 +110,9 @@ export default component$(() => {
         {/* Offerings Section */}
         <section class="relative overflow-hidden py-6 pt-12 md:py-12">
           {/* Decorations */}
-          <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
           <div class="relative">
-          
+
             <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-1 lg:order-1 self-start">
                 <Image
@@ -129,18 +123,17 @@ export default component$(() => {
               </div>
               <div class="order-2 lg:order-2 self-start">
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
-                  
-                    <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-                Our Offerings
-              </span>
-            </h2>
+
+                  <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
+                    <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                      Our Offerings
+                    </span>
+                  </h2>
                   <p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    Explore our workshops and courses designed to foster creativity and connection through clay. From beginner sessions to advanced techniques, we offer a range of experiences tailored to all levels.
+                    Our offerings are unique and evolving.
+                    We currently offer themed workshops from our 'Touch The Clay' series: Open Like a Bowl - ready to be filled, Lanterns - tending to my fire,  and Like the Turtle - practising patience and resilience.  Upcoming 4 and 6 week courses will be posted soon. We also create customized workshops for private groups and organizations. Stay tuned for more.
                   </p>
-                  <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    Join us for guided sessions where you’ll learn new skills, connect with others, and find joy in the creative process—all in a supportive environment.
-                  </p>
+
                 </div>
               </div>
             </div>
@@ -150,30 +143,26 @@ export default component$(() => {
         {/* What To Expect Section */}
         <section id="what-to-expect" class="relative overflow-hidden py-6 pt-12 md:py-12">
           {/* Decorations */}
-          <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
+
 
           <div class="relative">
-          
+
             <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-2 lg:order-1 self-start">
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
-  <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
-              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-                What To Expect
-              </span>
-            </h2>
+                  <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight text-center text-balance mb-8">
+                    <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                      What To Expect
+                    </span>
+                  </h2>
 
-<p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    Our clay and personal transformation workshops begin with guided meditations and reflections, leading a small group into a deeper self-awareness, followed by a hands-on, mindful clay experience.
+                  <p class="text-lg leading-7 text-primary-700 dark:text-primary-300">
+                    Our clay workshops begin with guided meditations and reflections, leading a small group into a deeper self-awareness, followed by a hands-on, mindful clay experience.                  </p>
+                  <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
+                    Previous clay experience is not necessary for our programs.  Our facilitators gently guide the process, allowing each participant to engage with the clay in a relaxed atmosphere.
                   </p>
                   <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    No clay experience is necessary. Our facilitators gently guide the process, allowing each participant to engage with the clay without worrying about "doing it right."
-                  </p>
-                  <p class="mt-4 text-lg leading-7 text-primary-700 dark:text-primary-300">
-                    Whether you're a beginner or experienced, working with clay offers a valuable and enriching experience for your body, mind, and heart. Our classes are designed to focus on the process, letting the clay teach you about yourself.
-                  </p>
+                    Whether you're a beginner or experienced, working with clay offers a valuable experience for your body, mind, and heart. Our classes are designed to focus on the process. Check below for the benefits of clay.                  </p>
                 </div>
               </div>
               <div class="order-1 lg:order-2 self-start">
@@ -190,17 +179,14 @@ export default component$(() => {
         {/* Benefits Section */}
         <section class="relative overflow-hidden py-12 pb-20 md:py-16">
           {/* Decorations */}
-          <div class="absolute top-20 right-10 w-24 h-24 bg-secondary-300/20 rounded-full blur-xl animate-float" aria-hidden="true"></div>
-          <div class="absolute bottom-20 left-10 w-20 h-20 bg-primary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -2s;" aria-hidden="true"></div>
-          <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-tertiary-300/20 rounded-full blur-xl animate-float" style="animation-delay: -4s;" aria-hidden="true"></div>
 
-          <div id="clay" class="relative max-w-7xl mx-auto  sm:px-6 lg:px-8">
-            <h2 class="!text-4xl md:text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
+          <div id="clay" class="relative max-w-7xl mx-auto ">
+            <h2 class="!text-4xl md:!text-5xl text-center font-bold font-serif tracking-tight xdxd mb-16">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Benefits of Clay
               </span>
             </h2>
-            <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon; // Capitalized variable for component rendering
                 return (

@@ -19,6 +19,11 @@ const COMMUNITY_PARTNERS: Partner[] = [
     description: "Wellington West BIA cultivates cultural connections, enriching the area with diverse arts and music programs that celebrate local heritage.",
     image: "/images/wellington.jpeg",
   },
+     {
+    name: "Ottawa Rape Crisis Centre",
+    description: "The Ottawa Rape Crisis Centre champions environmental sustainability and local green initiatives, promoting a healthier planet and community.",
+    image: "/images/somerset.webp",
+  },
 
   {
     name: "PLEO",
@@ -54,12 +59,11 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h1 class="!text-4xl md:!text-5xl font-bold mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              Community Connections
+              Our Community Connections
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            We collaborate with a diverse network of community partners to bring creativity, wellness, and connection to everyone. Whether it’s a team-building retreat, a space for reflection, or a chance to reconnect with creativity, our workshops provide a welcoming environment for groups dedicated to making a difference in our communities.
-          </p>
+We collaborate with a diverse network of community groups to bring creativity, wellness, and connection to one another. Our workshops create a space for reflection, creativity, and team-building, welcoming groups who are committed to making a positive impact in their communities.          </p>
         </div>
 
         {/* Masonry Column Layout */}

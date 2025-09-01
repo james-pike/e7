@@ -26,21 +26,21 @@ export default component$(() => {
     {
       title: "About",
       items: [
-        { title: "About Us", href: "#" },
-        { title: "Classes", href: "#" },
-        { title: "Facilitators", href: "#" },
-        { title: "Testimonials", href: "#" },
-        { title: "Newsletter", href: "#" },
+        { title: "About Us", href: "/about" },
+        { title: "Classes", href: "/classes" },
+        { title: "Facilitators", href: "/team" },
+        { title: "Testimonials", href: "/testimonials" },
+        { title: "Newsletter", href: "/newsletter" },
       ],
     },
     {
       title: "Community",
       items: [
-        { title: "Our Space", href: "#" },
-        { title: "Benefits Of Clay", href: "#" },
-        { title: "Community", href: "#" },
-        { title: "Gallery", href: "#" },
-        { title: "FAQs", href: "#" },
+        { title: "Our Space", href: "/about" },
+        { title: "Benefits Of Clay", href: "/about#clay" },
+        { title: "Community", href: "/community" },
+        { title: "Gallery", href: "/gallery" },
+        { title: "FAQs", href: "/faq" },
       ],
     },
 
