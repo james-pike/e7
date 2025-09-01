@@ -1,9 +1,9 @@
+// src/components/widgets/Team.tsx
 import { component$, useSignal, useVisibleTask$, $, } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LuChevronLeft, LuChevronRight, LuPause, LuPlay } from "@qwikest/icons/lucide";
 import { SITE } from "~/config.mjs";
 import confetti from 'canvas-confetti';
-
 
 // Interface for gallery images
 interface GalleryImage {
@@ -70,24 +70,21 @@ export default component$(() => {
   const selectedImage = useSignal<GalleryImage | null>(null);
   const autoPlay = useSignal(true);
   const isFullscreen = useSignal(false);
-    const bookButtonRef = useSignal<HTMLAnchorElement>(); // Signal for the Book a Class button
+  const bookButtonRef = useSignal<HTMLAnchorElement>(); // Signal for the Book a Class button
   const didClickSig = useSignal(false);
 
   // Auto-play logic with reactive pause/play support
   useVisibleTask$(({ cleanup, track }) => {
-    // Track changes to autoPlay.value
     track(() => autoPlay.value);
 
     let interval: NodeJS.Timeout | null = null;
 
-    // Start or stop interval based on autoPlay.value
     if (autoPlay.value) {
       interval = setInterval(() => {
         currentIndex.value = (currentIndex.value + 1) % GALLERY_IMAGES.length;
       }, 5000); // Change image every 5 seconds
     }
 
-    // Cleanup interval on component unmount or when autoPlay changes
     cleanup(() => {
       if (interval) clearInterval(interval);
     });
@@ -128,6 +125,31 @@ export default component$(() => {
     }
   });
 
+  // Handle button click with delay and navigation
+  const handleBookClick = $(async () => {
+    didClickSig.value = true;
+    if (!bookButtonRef.value) return;
+    const rect = bookButtonRef.value.getBoundingClientRect();
+
+    if (!rect) return;
+
+    // Calculate confetti origin relative to the button
+    const x = (rect.left + rect.width / 2) / window.innerWidth;
+    const y = rect.top / window.innerHeight;
+
+    // Trigger confetti effect
+    await confetti({
+      colors: ['#02B9FC', '#B57DFC'],
+      origin: { x, y },
+    });
+
+    // Delay navigation by 1 second
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    // Navigate to external link
+    window.location.href = "https://example.com/book-class"; // Replace with your actual external link
+  });
+
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
       {/* Background with pottery texture */}
@@ -136,15 +158,12 @@ export default component$(() => {
         aria-hidden="true"
       ></div>
 
-      {/* Gradient background */}
-    
-
       <div class="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:!text-6xl font-bold font-serif mb-6">
             <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              Studio gallery
+              Studio Gallery
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
@@ -161,31 +180,30 @@ export default component$(() => {
               class="w-full h-full object-cover transition-opacity duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        
           </div>
-          <div class="flex gap-2 mt-4 justify-end"> {/* Changed to justify-end for far-right alignment */}
-      <button
-        class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
-        onClick$={goToPrev}
-        aria-label="Previous slide"
-      >
-        <LuChevronLeft class="w-5 h-5" />
-      </button>
-      <button
-        class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
-        onClick$={toggleAutoPlay}
-        aria-label={autoPlay.value ? "Pause carousel" : "Play carousel"}
-      >
-        {autoPlay.value ? <LuPause class="w-5 h-5" /> : <LuPlay class="w-5 h-5" />}
-      </button>
-      <button
-        class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
-        onClick$={goToNext}
-        aria-label="Next slide"
-      >
-        <LuChevronRight class="w-5 h-5" />
-      </button>
-    </div>
+          <div class="flex gap-2 mt-4 justify-end">
+            <button
+              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+              onClick$={goToPrev}
+              aria-label="Previous slide"
+            >
+              <LuChevronLeft class="w-5 h-5" />
+            </button>
+            <button
+              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+              onClick$={toggleAutoPlay}
+              aria-label={autoPlay.value ? "Pause carousel" : "Play carousel"}
+            >
+              {autoPlay.value ? <LuPause class="w-5 h-5" /> : <LuPlay class="w-5 h-5" />}
+            </button>
+            <button
+              class="px-4 py-2 bg-white/80 dark:bg-secondary-800/80 text-secondary-900 dark:text-secondary-100 rounded-full shadow-sm hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200"
+              onClick$={goToNext}
+              aria-label="Next slide"
+            >
+              <LuChevronRight class="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Lightbox/Modal */}
@@ -268,41 +286,25 @@ export default component$(() => {
         </div>
 
         {/* Come Join Us CTA */}
-       <div class="text-center mt-12">
-        <div class="bg-gradient-to-r max-w-4xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
-          <h3 class="!text-3xl xdxd md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
-            Come Join Us
-          </h3>
-          <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
-            Experience the joy of pottery with us!
-          </p>
-          <a
-            ref={bookButtonRef}
-            onClick$={async () => {
-              didClickSig.value = true;
-              if (!bookButtonRef.value) return;
-              const rect = bookButtonRef.value.getBoundingClientRect();
-
-              if (!rect) return;
-
-              // Calculate confetti origin relative to the button
-              const x = (rect.left + rect.width / 2) / window.innerWidth;
-              const y = rect.top / window.innerHeight;
-
-              // Trigger confetti effect
-              await confetti({
-                colors: ['#02B9FC', '#B57DFC'], // Use the non-intro colors from ConfettiButton
-                origin: { x, y },
-              });
-            }}
-            class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-800 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
-          >
-            <span class="relative z-10">Book a Class</span>
+        <div class="text-center mt-12">
+          <div class="bg-gradient-to-r max-w-4xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
+            <h3 class="!text-3xl xdxd md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
+              Come Join Us
+            </h3>
+            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
+              Experience the joy of clay with us!
+            </p>
+            <a
+              ref={bookButtonRef}
+              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=gQpfIHL0hAzcbC5GyHjGNqbcjrLZrVN6ba4TgxE6uYY%3D&src=02b&type=41562UHUKUC196793426E6" // External link (replace with your actual URL)
+              onClick$={handleBookClick}
+              class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-800 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
+            >
+              <span class="relative z-10">Book a Class</span>
               <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-500 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </a>
-       
+            </a>
+          </div>
         </div>
-      </div>
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Michelle",
     role: "Facilitator",
     description:
-      "Michelle’s journey with ceramics began in 2002, and since then, she has immersed herself in the craft—taking countless courses, working as a studio potter, and teaching at Hintonburg Pottery. Now, she brings her passion for clay to earthen vessels as a facilitator. With over 30 years in education as a teacher, guidance counselor, and school principal, Michelle has dedicated her career to supporting growth and well-being. She holds a Master’s Degree in Counselling from the University of Ottawa and a Certificate in Positive Psychology from Wilfrid Laurier University. Her experience leading wellness initiatives in schools, combined with her love of pottery, has led her to earthen vessels, where she shares the joy of clay as a source of grounding, meditation, renewal, and fun.",
+      "Michelle’s journey with clay began in 2002, and since then, she has immersed herself in the craft—taking countless courses, working as a studio potter, and teaching at Hintonburg Pottery. Now, she brings her passion for clay to earthen vessels as a facilitator. With over 30 years in education as a teacher, guidance counselor, and school principal, Michelle has dedicated her career to supporting growth and well-being. She holds a Master’s Degree in Counselling from the University of Ottawa and a Certificate in Positive Psychology from Wilfrid Laurier University. Her experience leading wellness initiatives in schools, combined with her love of pottery, has led her to earthen vessels, where she shares the joy of clay as a source of grounding, meditation, renewal, and fun.",
     image: "/images/michelle.webp",
   },
   {

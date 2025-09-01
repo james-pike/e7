@@ -125,7 +125,7 @@ export default component$(() => {
             </span>
           </h2>
           <p class="text-xl text-primary-700 px-4 dark:text-primary-300 max-w-3xl mx-auto">
-            Here's what our pottery lovers say about their earthen vessels experience.
+            Here's what our pottery _____ say about their earthen vessels experience.
           </p>
         </div>
 
@@ -252,7 +252,7 @@ export default component$(() => {
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#contact"
+                href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=gQpfIHL0hAzcbC5GyHjGNqbcjrLZrVN6ba4TgxE6uYY%3D&src=02b&type=41562UHUKUC196793426E6"
                 class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span class="relative z-10">Book Now</span>
