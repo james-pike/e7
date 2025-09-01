@@ -167,7 +167,7 @@ export default component$(() => {
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            Discover us gathering, listening, connecting, and creating
+            Discover us listening, connecting, and creating
           </p>
         </div>
 
@@ -291,9 +291,7 @@ export default component$(() => {
             <h3 class="!text-3xl xdxd md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Come Join Us
             </h3>
-            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
-              Experience the joy of clay with us!
-            </p>
+            
             <a
               ref={bookButtonRef}
               href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=gQpfIHL0hAzcbC5GyHjGNqbcjrLZrVN6ba4TgxE6uYY%3D&src=02b&type=41562UHUKUC196793426E6" // External link (replace with your actual URL)

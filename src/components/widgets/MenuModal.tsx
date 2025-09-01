@@ -111,7 +111,7 @@ export default component$(() => {
     },
     { title: "Classes", href: "/classes/", hasSubmenu: false },
     { title: "Gallery", href: "/gallery/", badge: null },
-    { title: "Community", href: "/community/", badge: null },
+    { title: "Connections", href: "/connections/", badge: null },
     { title: "Testimonials", href: "/testimonials/", badge: null },
   ];
 

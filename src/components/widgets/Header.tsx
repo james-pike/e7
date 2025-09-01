@@ -2,7 +2,6 @@ import { component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
-import { LuBook } from "@qwikest/icons/lucide";
 
 export default component$(() => {
   const store = useStore({
@@ -190,7 +189,7 @@ export default component$(() => {
             >
               <span class="relative z-10 flex items-center gap-1">
                 Book a Class
-                <LuBook />
+              
               </span>
               <div class="absolute inset-0 bg-white/5 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>

@@ -124,9 +124,7 @@ export default component$(() => {
               What Participants are saying
             </span>
           </h2>
-          <p class="text-xl text-primary-700 px-4 dark:text-primary-300 max-w-3xl mx-auto">
-            Here's what our pottery _____ say about their earthen vessels experience.
-          </p>
+        
         </div>
 
         <div class="relative max-w-6xl mx-auto">
@@ -246,10 +244,7 @@ export default component$(() => {
             <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Join Us!
             </h3>
-            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
-              Experience the quality and craftsmanship that our customers love. 
-              Start your pottery journey today!
-            </p>
+          
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=%2FHfNXcGN3w7lx04jDGdyb2MKip8ZofU%2Bd4eGFIcgTNA%3D&src=02r&type=41562UHUKUC196793426E6"

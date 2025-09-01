@@ -63,10 +63,7 @@ export default component$(() => {
               Frequently Asked Questions
             </span>
           </h2>
-          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            Find answers to common questions about our pottery, workshops, and
-            studio.
-          </p>
+        
         </div>
 
         {/* FAQ Accordion - Two-column layout */}
@@ -221,10 +218,7 @@ export default component$(() => {
             <h3 class="text-2xl md:!text-3xl font-bold text-secondary-900 dark:text-secondary-100  mb-4">
               Still Have Questions?
             </h3>
-            <p class="text-primary-700 dark:text-primary-300 mb-6 max-w-2xl mx-auto">
-              We are here to help! Reach out to us for
-              personalized assistance.
-            </p>
+           
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
