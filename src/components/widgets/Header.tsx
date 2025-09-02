@@ -1,5 +1,5 @@
 // src/components/Header.tsx
-import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useStore, useVisibleTask$, useSignal } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
@@ -10,6 +10,8 @@ export default component$(() => {
     isMobile: false, // Track if device is mobile (<768px)
   });
 
+  const isInitialized = useSignal(false); // Track when mobile detection is complete
+
   const { menu } = useContent();
   const location = useLocation();
 
@@ -17,6 +19,7 @@ export default component$(() => {
   useVisibleTask$(() => {
     const mediaQuery = window.matchMedia("(max-width: 767px)"); // Tailwind's md breakpoint
     store.isMobile = mediaQuery.matches;
+    isInitialized.value = true; // Mark initialization complete
     const handler = (e: MediaQueryListEvent) => {
       store.isMobile = e.matches;
     };
@@ -57,9 +60,10 @@ export default component$(() => {
                 height: "40px",
                 position: "relative",
                 overflow: "hidden",
+                visibility: isInitialized.value ? "visible" : "hidden", // Hide until initialized
               }}
             >
-              {store.isMobile && (
+              {store.isMobile && isInitialized.value && (
                 <img
                   src="/images/logo2-cropped.svg"
                   alt="Logo Cropped"
@@ -70,15 +74,17 @@ export default component$(() => {
                   }}
                 />
               )}
-              <img
-                src="/images/logo22.svg"
-                alt="Logo"
-                class={{
-                  "absolute top-0 left-0 w-[100px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
-                  "opacity-0 -translate-x-full": store.isMobile && !store.isScrolling, // Start left when not scrolling
-                  "opacity-100 translate-x-0": !store.isMobile || store.isScrolling, // Slide in from left or always show on desktop
-                }}
-              />
+              {isInitialized.value && (
+                <img
+                  src="/images/logo22.svg"
+                  alt="Logo"
+                  class={{
+                    "absolute top-0 left-0 w-[100px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
+                    "opacity-0 -translate-x-full": store.isMobile && !store.isScrolling, // Start left when not scrolling
+                    "opacity-100 translate-x-0": !store.isMobile || store.isScrolling, // Slide in from left or always show on desktop
+                  }}
+                />
+              )}
             </div>
           </a>
           <div class="flex items-center md:hidden gap-1">
