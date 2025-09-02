@@ -98,7 +98,7 @@ export default component$(() => {
         {/* Header */}
         <div class="text-center mb-12">
           <h1 class="!text-4xl md:!text-5xl font-bold mb-6">
-            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Our Community Connections
             </span>
           </h1>

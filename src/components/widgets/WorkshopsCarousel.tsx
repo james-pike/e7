@@ -25,33 +25,33 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
   const dummyInactiveWorkshops: Workshop[] = [
     {
       id: 9991,
-      title: "Clay Bowls: Open Like a Bowl",
+      title: "Summer On The Table",
       description:
         "A reflective workshop exploring openness and receptivity through crafting clay bowls. Participants connected with the tactile process of shaping clay to foster mindfulness and creativity.",
       date: "2025-03-15",
       duration: "2 hours",
       price: "$45",
-      image: "/images/bowl-workshop.webp",
+      image: "/images/summer.jpg",
       instructor: "Ginger",
       spots: 12,
       isActive: false,
     },
     {
       id: 9992,
-      title: "Lanterns for the Journey",
+      title: "Whimsy Summer Animals",
       description:
         "In this workshop, participants crafted clay lanterns to symbolize guidance and hope. The session emphasized creativity, community, and personal reflection through hands-on clay work.",
       date: "2025-02-10",
       duration: "3 hours",
       price: "$60",
-      image: "/images/lantern-workshop.webp",
+      image: "/images/lamma.jpg",
       instructor: "Michelle",
       spots: 10,
       isActive: false,
     },
     {
       id: 9993,
-      title: "Like the Turtle: Patience in Clay",
+      title: "Clay Labyrinth",
       description:
         "This workshop focused on patience and resilience, guiding participants to create turtle-inspired clay pieces. A meditative experience combining clay work with themes of growth and perseverance.",
       date: "2024-11-20",
@@ -108,10 +108,13 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
               >
                 {/* Image */}
                 {workshop.image && (
-                  <div
-                    class="h-40 w-full bg-center bg-cover rounded-t-2xl opacity-70"
-                    style={{ backgroundImage: `url('${workshop.image}')` }}
-                  />
+                  <div class="h-40 w-full rounded-t-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={workshop.image}
+                      alt={workshop.title}
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
                 )}
 
                 {/* Info */}
@@ -119,32 +122,6 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                   <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 text-center line-clamp-2">
                     {workshop.title}
                   </h3>
-
-                  {/* Icons line above description */}
-                  <div class="flex flex-wrap gap-3 text-xs text-gray-700 dark:text-gray-300 mt-2 justify-center">
-                    {workshop.duration && (
-                      <span class="flex items-center gap-1">
-                        <LuClock class="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                        {workshop.duration}
-                      </span>
-                    )}
-                    {workshop.instructor && (
-                      <span class="flex items-center gap-1">
-                        <LuUser class="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                        {workshop.instructor}
-                      </span>
-                    )}
-                    {workshop.price && (
-                      <span class="flex items-center gap-1">{workshop.price}</span>
-                    )}
-                    {workshop.spots && <span>{workshop.spots} spots</span>}
-                    {workshop.date && (
-                      <span class="flex items-center gap-1">
-                        <LuCalendar class="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                        {new Date(workshop.date).toLocaleDateString()}
-                      </span>
-                    )}
-                  </div>
 
                   {/* Description */}
                   <p
@@ -185,7 +162,6 @@ Join us for guided sessions where you’ll learn new skills, connect with others
           </p>
         </div>
 
-  
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {workshops.map((workshop) => (
             <div
@@ -224,32 +200,6 @@ Join us for guided sessions where you’ll learn new skills, connect with others
                   {workshop.title}
                 </h3>
 
-                {/* Icons line above description */}
-                <div class="flex flex-wrap gap-3 text-xs text-primary-700 dark:text-primary-300 mt-2 justify-center">
-                  {workshop.duration && (
-                    <span class="flex items-center gap-1">
-                      <LuClock class="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                      {workshop.duration}
-                    </span>
-                  )}
-                  {workshop.instructor && (
-                    <span class="flex items-center gap-1">
-                      <LuUser class="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                      {workshop.instructor}
-                    </span>
-                  )}
-                  {workshop.price && (
-                    <span class="flex items-center gap-1">{workshop.price}</span>
-                  )}
-                  {workshop.spots && <span>{workshop.spots} spots</span>}
-                  {workshop.date && (
-                    <span class="flex items-center gap-1">
-                      <LuCalendar class="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                      {new Date(workshop.date).toLocaleDateString()}
-                    </span>
-                  )}
-                </div>
-
                 {/* Description */}
                 <p
                   class={[
@@ -264,19 +214,6 @@ Join us for guided sessions where you’ll learn new skills, connect with others
                 >
                   {workshop.description}
                 </p>
-
-                {/* Book Class Button (visible when expanded) */}
-                {/* {expandedWorkshop.value === workshop.id && (
-                  <button
-                    class="mt-4 px-4 py-2 bg-secondary-600 text-white rounded-lg hover:bg-secondary-700 transition-colors duration-300 ease-in-out"
-                    onClick$={() => {
-                      // Placeholder for booking logic
-                      console.log(`Booking class for ${workshop.title}`);
-                    }}
-                  >
-                    Book Class
-                  </button>
-                )} */}
               </div>
             </div>
           ))}
@@ -315,10 +252,13 @@ Join us for guided sessions where you’ll learn new skills, connect with others
               >
                 {/* Image */}
                 {workshop.image && (
-                  <div
-                    class="h-40 w-full bg-center bg-cover rounded-t-2xl opacity-70"
-                    style={{ backgroundImage: `url('${workshop.image}')` }}
-                  />
+                  <div class="h-40 w-full rounded-t-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={workshop.image}
+                      alt={workshop.title}
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
                 )}
 
                 {/* Info */}
@@ -326,32 +266,6 @@ Join us for guided sessions where you’ll learn new skills, connect with others
                   <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 text-center line-clamp-2">
                     {workshop.title}
                   </h3>
-
-                  {/* Icons line above description */}
-                  <div class="flex flex-wrap gap-3 text-xs text-gray-700 dark:text-gray-300 mt-2 justify-center">
-                    {workshop.duration && (
-                      <span class="flex items-center gap-1">
-                        <LuClock class="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                        {workshop.duration}
-                      </span>
-                    )}
-                    {workshop.instructor && (
-                      <span class="flex items-center gap-1">
-                        <LuUser class="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                        {workshop.instructor}
-                      </span>
-                    )}
-                    {workshop.price && (
-                      <span class="flex items-center gap-1">{workshop.price}</span>
-                    )}
-                    {workshop.spots && <span>{workshop.spots} spots</span>}
-                    {workshop.date && (
-                      <span class="flex items-center gap-1">
-                        <LuCalendar class="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                        {new Date(workshop.date).toLocaleDateString()}
-                      </span>
-                    )}
-                  </div>
 
                   {/* Description */}
                   <p
