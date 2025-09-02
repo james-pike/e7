@@ -36,7 +36,7 @@ export default component$(() => {
           {cards.map((card, index) => (
             <div
               key={index}
-              class="relative h-48 md:h-56 rounded-2xl overflow-hidden border-2 shadow-xl transition-all duration-500 ease-in-out hover:shadow-2xl hover:border-secondary-200"
+              class="relative h-48  rounded-2xl overflow-hidden border-2 shadow-xl transition-all duration-500 ease-in-out hover:shadow-2xl hover:border-secondary-200"
             >
               {/* Full background image */}
               <img
