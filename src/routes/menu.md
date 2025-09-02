@@ -15,7 +15,6 @@
 
 
 
-## [Classes](/classes)
 ## [Gallery](/gallery)
 ## [Testimonials](/testimonials)
 ## [Connections](/connections)
