@@ -1,6 +1,6 @@
 {
 	"version": "1",
-	"manifestHash": "6mbom7",
+	"manifestHash": "547r7v",
 	"options": {
 		"target": "client",
 		"buildMode": "production",
@@ -10,7 +10,7 @@
 	},
 	"core": "q-ZijM65OL.js",
 	"preloader": "q-CF2Nn7YE.js",
-	"bundleGraphAsset": "assets/JP5nOkrM-bundle-graph.json",
+	"bundleGraphAsset": "assets/BTccCwXt-bundle-graph.json",
 	"injections": [],
 	"mapping": {
 		"s_1G4dN34YaXY": "q-DgXYLBAv.js",
@@ -56,6 +56,7 @@
 		"s_AAc7RaZeB6g": "q-DvImFxVA.js",
 		"s_AcPqTIMjfw0": "q-BEDPSjDw.js",
 		"s_AgaKlJcyJwk": "q-Bjlnwm1L.js",
+		"s_BARr4V7Cvm8": "q-2lgX72IA.js",
 		"s_BZarJRvI8KE": "q-B2WJEeFo.js",
 		"s_C0wkbE2I1wY": "q-EYEEt-ed.js",
 		"s_DxG6sQh9BTQ": "q-BfL1YMlo.js",
@@ -374,7 +375,6 @@
 		"s_AE0mtntB10I": "q-DAtOstxR.js",
 		"s_APtr99JExbE": "q-cM6GnZW2.js",
 		"s_B09diCDxO1Y": "q-g6O2ij7E.js",
-		"s_BARr4V7Cvm8": "q-2lgX72IA.js",
 		"s_BV8CALR7MhQ": "q-CRVZfmN8.js",
 		"s_CcxZJ6RhhJ0": "q-CbxDKLJt.js",
 		"s_CeMKM8iHCQw": "q-BDohaVA3.js",
@@ -4613,7 +4613,7 @@
 		}
 	},
 	"assets": {
-		"assets/JP5nOkrM-bundle-graph.json": {
+		"assets/BTccCwXt-bundle-graph.json": {
 			"name": "bundle-graph.json",
 			"size": 2024
 		}
@@ -4727,8 +4727,8 @@
 			"parent": "s_UB0EleXO2IY",
 			"origin": "components/widgets/WorkshopsCarousel.tsx",
 			"loc": [
-				7616,
-				7759
+				7547,
+				7690
 			]
 		},
 		"s_hPpJkNMRSU0": {
@@ -4811,8 +4811,8 @@
 			"parent": "s_UB0EleXO2IY",
 			"origin": "components/widgets/WorkshopsCarousel.tsx",
 			"loc": [
-				10429,
-				10578
+				10360,
+				10509
 			]
 		},
 		"s_xn90vH1B1wg": {
@@ -4825,8 +4825,8 @@
 			"parent": "s_UB0EleXO2IY",
 			"origin": "components/widgets/WorkshopsCarousel.tsx",
 			"loc": [
-				4090,
-				4239
+				4021,
+				4170
 			]
 		},
 		"s_WPdRRFa79WA": {
@@ -5212,6 +5212,20 @@
 			"loc": [
 				945,
 				1198
+			]
+		},
+		"s_BARr4V7Cvm8": {
+			"displayName": "accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onFocus",
+			"hash": "BARr4V7Cvm8",
+			"ctxKind": "jSXProp",
+			"ctxName": "onFocus$",
+			"captures": true,
+			"canonicalFilename": "accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onFocus_BARr4V7Cvm8",
+			"parent": "s_rhuWNwHJY4Y",
+			"origin": "../node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs",
+			"loc": [
+				2466,
+				2527
 			]
 		},
 		"s_BZarJRvI8KE": {
@@ -7034,8 +7048,8 @@
 			"canonicalFilename": "index.tsx_routes_component_PioeegRlDss",
 			"origin": "routes/index.tsx",
 			"loc": [
-				404,
-				526
+				370,
+				492
 			]
 		},
 		"s_Qzz2i50w0p4": {
@@ -7151,8 +7165,8 @@
 			"canonicalFilename": "WorkshopsCarousel.tsx_WorkshopsCarousel_component_UB0EleXO2IY",
 			"origin": "components/widgets/WorkshopsCarousel.tsx",
 			"loc": [
-				497,
-				12049
+				428,
+				11980
 			]
 		},
 		"s_UDe6sBHN0iQ": {
@@ -9465,20 +9479,6 @@
 			"loc": [
 				757,
 				1074
-			]
-		},
-		"s_BARr4V7Cvm8": {
-			"displayName": "accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onFocus",
-			"hash": "BARr4V7Cvm8",
-			"ctxKind": "jSXProp",
-			"ctxName": "onFocus$",
-			"captures": true,
-			"canonicalFilename": "accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onFocus_BARr4V7Cvm8",
-			"parent": "s_rhuWNwHJY4Y",
-			"origin": "../node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs",
-			"loc": [
-				2466,
-				2527
 			]
 		},
 		"s_BV8CALR7MhQ": {
