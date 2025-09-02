@@ -121,7 +121,7 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h2 class="!text-5xl md:text-6xl px-4 xdxd font-bold font-serif mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              What Participants are saying
+              Testimonials
             </span>
           </h2>
         

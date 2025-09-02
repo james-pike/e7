@@ -104,12 +104,16 @@ export default component$(() => {
         { title: "What To Expect", href: "/about" },
         { title: "Benefits Of Clay", href: "/about#clay" },
         { title: "Newsletter", href: "/newsletter" },
-        { title: "Gift Cards", href: "https://bookeo.com/earthenvessels/buyvoucher" },
 
         { title: "FAQ", href: "/faq" },
       ],
     },
-    { title: "Classes", href: "/classes/", hasSubmenu: false },
+    { title: "Classes", href: "/classes/", hasSubmenu: true,  subitems: [
+               { title: "Our Offerings", href: "/classes" },
+
+        { title: "Gift Cards", href: "https://bookeo.com/earthenvessels/buyvoucher" },
+
+      ], },
     { title: "Gallery", href: "/gallery/", badge: null },
     { title: "Connections", href: "/connections/", badge: null },
     { title: "Testimonials", href: "/testimonials/", badge: null },
