@@ -142,10 +142,7 @@ export default component$(() => {
                   tabIndex={0}
                   aria-expanded={expandedPartner.value === partner.name}
                   onClick$={() => {
-                    expandedPartner.value =
-                      expandedPartner.value === partner.name
-                        ? null
-                        : partner.name;
+                    window.open(partner.website, "_blank", "noopener,noreferrer");
                   }}
                 >
                   {/* Image */}
@@ -158,7 +155,7 @@ export default component$(() => {
 
                   {/* Info */}
                   <div class="flex flex-col items-center p-3 pt-2">
-                    <div class="relative w-full flex items-center justify-center mb-2 group/link">
+                    <div class="relative w-full flex flex-col items-center justify-center mb-2 group/link">
                       <a
                         href={partner.website}
                         target="_blank"
@@ -166,7 +163,7 @@ export default component$(() => {
                         aria-label={`Visit ${partner.name} website`}
                         class="flex items-center gap-2 group/link"
                       >
-                        <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200 underline decoration-2 underline-offset-4 group-hover/link:text-secondary-800 dark:group-hover/link:text-secondary-800 transition-colors duration-200 ease-in-out">
+                        <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200 transition-colors duration-200 ease-in-out">
                           {partner.name}
                         </h3>
                         <svg
@@ -183,9 +180,14 @@ export default component$(() => {
                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                           />
                         </svg>
-                        <span class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover/link:block text-sm text-primary-800 dark:text-primary-200 bg-white dark:bg-gray-800 border border-secondary-800 rounded px-2 py-1 shadow-md z-10 max-w-[200px] truncate">
-                          {getDomain(partner.website)}
-                        </span>
+                      </a>
+                      <a
+                        href={partner.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-primary-600 dark:text-primary-400 mt-1 transition-all duration-200 ease-in-out group-hover:text-secondary-800 dark:group-hover:text-secondary-800 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4"
+                      >
+                        {getDomain(partner.website)}
                       </a>
                     </div>
                   </div>
