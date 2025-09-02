@@ -10,7 +10,7 @@ interface Workshop {
   image: string;
   instructor: string;
   spots: number;
-  isActive?: boolean; // Optional to match original interface compatibility
+  isActive?: boolean;
 }
 
 interface WorkshopsGridProps {
@@ -20,7 +20,6 @@ interface WorkshopsGridProps {
 export default component$<WorkshopsGridProps>(({ workshops }) => {
   const expandedWorkshop = useSignal<number | null>(null);
 
-  // Hardcoded dummy inactive workshops
   const dummyInactiveWorkshops: Workshop[] = [
     {
       id: 9991,
@@ -56,7 +55,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
       date: "2024-11-20",
       duration: "2.5 hours",
       price: "$50",
-      image: "/images/turtle-workshop.webp",
+      image: "/images/labyrinth.jpeg",
       instructor: "Natalie",
       spots: 8,
       isActive: false,
@@ -111,7 +110,10 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
                     <img
                       src={workshop.image}
                       alt={workshop.title}
-                      class="h-full w-full object-contain"
+                      class="h-full w-full object-cover"
+                      style={{
+                        objectPosition: workshop.id === 9991 ? "50% 20%" : "50% 50%",
+                      }}
                     />
                   </div>
                 )}
@@ -156,8 +158,8 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-Explore our workshops and courses designed to foster creativity and connection. From beginner sessions to advanced techniques, we offer a range of experiences tailored to all levels.
-Join us for guided sessions where you’ll learn new skills, connect with others, and find joy in the creative process.
+            Explore our workshops and courses designed to foster creativity and connection. From beginner sessions to advanced techniques, we offer a range of experiences tailored to all levels.
+            Join us for guided sessions where you’ll learn new skills, connect with others, and find joy in the creative process.
           </p>
         </div>
 
@@ -187,10 +189,13 @@ Join us for guided sessions where you’ll learn new skills, connect with others
             >
               {/* Image */}
               {workshop.image && (
-                <div
-                  class="h-40 w-full bg-center bg-cover rounded-t-2xl"
-                  style={{ backgroundImage: `url('${workshop.image}')` }}
-                />
+                <div class="h-40 w-full rounded-t-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={workshop.image}
+                    alt={workshop.title}
+                    class="h-full w-full object-cover"
+                  />
+                </div>
               )}
 
               {/* Info */}
@@ -255,7 +260,10 @@ Join us for guided sessions where you’ll learn new skills, connect with others
                     <img
                       src={workshop.image}
                       alt={workshop.title}
-                      class="h-full w-full object-contain"
+                      class="h-full w-full object-cover"
+                      style={{
+                        objectPosition: workshop.id === 9991 ? "50% 85%" : "50% 50%",
+                      }}
                     />
                   </div>
                 )}
