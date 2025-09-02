@@ -44,7 +44,7 @@ export default component$(() => {
           {post.image ? (
             <img
               src={post.image}
-              class="mx-auto mt-4 mb-6 max-w-full bg-gray-400 dark:bg-slate-700 sm:rounded-md lg:max-w-6xl"
+              class="mx-auto mt-4 mb-6 max-h-56 max-w-full bg-gray-400 dark:bg-slate-700 sm:rounded-md lg:max-w-6xl"
               sizes="(max-width: 900px) 400px, 900px"
               alt={post.excerpt}
               loading="eager"
