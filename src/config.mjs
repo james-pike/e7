@@ -2,7 +2,7 @@ export const SITE = {
   name: "earthen vessels",
 
   title:
-    "earthen vessels - Listening, Connecting, Creating" ,
+    "earthen vessels" ,
   description:
     "earthen vessels - Listening, Connecting, Creating" ,
 

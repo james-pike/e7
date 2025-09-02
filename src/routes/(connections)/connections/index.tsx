@@ -201,7 +201,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: `${SITE.title} - Community Connections`,
+  title: `${SITE.title} - Connections`,
   meta: [
     {
       name: "description",
