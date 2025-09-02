@@ -89,7 +89,7 @@ export default component$(() => {
     return result;
   };
 
-  const lgColumns = 3;
+  const lgColumns = 4;
   const columns = distributePartners(COMMUNITY_PARTNERS, lgColumns);
 
   return (
