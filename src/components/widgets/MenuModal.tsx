@@ -126,7 +126,7 @@ export default component$(() => {
         <div class="absolute top-2 right-2 md:static">
           <Modal.Trigger
             class={cn(
-              "p-1 rounded-lg border backdrop-blur-sm transition-all duration-300",
+              "p-1.5 rounded-lg border backdrop-blur-sm transition-all duration-300",
               "bg-white/35 border-primary-300 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
             )}
           >
