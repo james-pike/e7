@@ -106,7 +106,7 @@ export default component$(() => {
           {/* First Column: Logo, Description, Newsletter */}
           <div class="col-span-12 lg:col-span-5 md:pr-8">
             <div class="mb-4">
-              <Link class="inline-block xdxd font-bold !text-2xl" href={"/"}>
+              <Link class="inline-block xdxd font-bold !text-3xl" href={"/"}>
                 <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                   earthen vessels
                 </span>
@@ -182,7 +182,7 @@ export default component$(() => {
             </div>
           ))}
         </div>
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-2 md:pb-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
           <div class="inline-flex items-center text-sm text-primary-700 mt-2 dark:text-primary-300 order-2 md:order-1">
             <img
               src="/images/logo2.svg"

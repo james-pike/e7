@@ -240,7 +240,7 @@ export default component$(() => {
           )}
         </div>
         <div class="text-center mt-12 mb-0 px-4">
-          <div class="max-w-3xl mx-auto bg-gradient-to-r from-secondary-50/50 via-tertiary-50/50 to-primary-50/50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
+          <div class="max-w-2xl mx-auto bg-gradient-to-r from-secondary-50/50 via-tertiary-50/50 to-primary-50/50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
             <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Join Us!
             </h3>

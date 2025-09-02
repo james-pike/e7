@@ -18,7 +18,6 @@ export function tursoClient(options: RequestEventBase | { env: EnvGetter }): Cli
     throw new Error('PRIVATE_TURSO_AUTH_TOKEN is not defined');
   }
 
-  console.log('Turso DB URL:', url); // Log for debugging
   return createClient({
     url,
     authToken,
