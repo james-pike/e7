@@ -14,7 +14,7 @@ We acknowledge that earthen vessels is on the traditional unceded territory of t
       title: "Everyone is Welcome at Earthen Vessels",
       text: (
         <>
-          We pride ourselves on welcoming everyone into our studio, regardless of age, race, ethnicity, physical ability or attributes, religion, sexual orientation, gender identity or gender expression. Please let us know if there is anything we can do to make you feel more welcome.
+          We pride ourselves on welcoming everyone into our studio, regardless of age, race, ethnicity, physical ability or attributes, religion, sexual orientation, gender identity or gender expression. All Are Welcome!
         </>
       ),
       image: "/images/space.jpeg",
