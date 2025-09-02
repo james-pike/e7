@@ -1,5 +1,4 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import { LuCalendar, LuClock, LuUser } from "@qwikest/icons/lucide";
 
 interface Workshop {
   id: number;
