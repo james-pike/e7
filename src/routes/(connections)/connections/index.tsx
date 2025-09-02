@@ -143,7 +143,7 @@ export default component$(() => {
                         transitionDuration: "200ms",
                       }}
                     >
-                      <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200 underline decoration-secondary-800 decoration-2 underline-offset-4 group-hover/link:text-secondary-800 dark:group-hover/link:text-secondary-800 transition-colors duration-200 ease-in-out">
+                      <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200 underline  decoration-2 underline-offset-4 group-hover/link:text-secondary-800 dark:group-hover/link:text-secondary-800 transition-colors duration-200 ease-in-out">
                         {partner.name}
                       </h3>
                       <a
