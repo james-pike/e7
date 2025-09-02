@@ -1,4 +1,5 @@
-import { component$, useStore } from "@builder.io/qwik";
+// src/components/Header.tsx
+import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
@@ -6,10 +7,22 @@ import MenuModal from "./MenuModal";
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
+    isMobile: false, // Track if device is mobile (<768px)
   });
 
   const { menu } = useContent();
   const location = useLocation();
+
+  // Detect mobile vs. desktop on client-side
+  useVisibleTask$(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)"); // Tailwind's md breakpoint
+    store.isMobile = mediaQuery.matches;
+    const handler = (e: MediaQueryListEvent) => {
+      store.isMobile = e.matches;
+    };
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  });
 
   return (
     <header
@@ -30,9 +43,42 @@ export default component$(() => {
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a class="flex items-center ml-2" href="/">
-            <div style="width: 100px; height: 40px;">
-              <img src="/images/logo2.svg" alt="Logo" />
+          <a
+            class={{
+              "flex items-center": true,
+              "ml-2": store.isMobile && !store.isScrolling, // Only apply ml-2 on mobile when showing cropped logo
+              "ml-0 md:ml-0": store.isMobile && store.isScrolling, // Remove margin when showing full logo on mobile
+            }}
+            href="/"
+          >
+            <div
+              style={{
+                width: store.isMobile ? (store.isScrolling ? "100px" : "40px") : "100px",
+                height: "40px",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              {store.isMobile && (
+                <img
+                  src="/images/logo2-cropped.svg"
+                  alt="Logo Cropped"
+                  class={{
+                    "absolute top-0 left-0 w-[40px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
+                    "opacity-100 translate-x-0": !store.isScrolling, // Slide in from right when returning
+                    "opacity-0 translate-x-full": store.isScrolling, // Slide out to right when scrolling
+                  }}
+                />
+              )}
+              <img
+                src="/images/logo22.svg"
+                alt="Logo"
+                class={{
+                  "absolute top-0 left-0 w-[100px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
+                  "opacity-0 -translate-x-full": store.isMobile && !store.isScrolling, // Start left when not scrolling
+                  "opacity-100 translate-x-0": !store.isMobile || store.isScrolling, // Slide in from left or always show on desktop
+                }}
+              />
             </div>
           </a>
           <div class="flex items-center md:hidden gap-1">
@@ -189,7 +235,6 @@ export default component$(() => {
             >
               <span class="relative z-10 flex items-center gap-1">
                 Book a Class
-              
               </span>
               <div class="absolute inset-0 bg-white/5 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
