@@ -11,7 +11,7 @@ import {
 import type { SVGProps } from "@builder.io/qwik";
 
 interface Item {
-  title: string | JSXNode | JSXOutput; // 👈 Updated
+  title: string | JSXNode | JSXOutput;
   href: string | null;
   icon?: (props: SVGProps<SVGSVGElement>) => JSXNode<unknown>;
 }
@@ -43,7 +43,6 @@ export default component$(() => {
         { title: "FAQs", href: "/faq" },
       ],
     },
-
     {
       title: "Contact",
       items: [
@@ -57,14 +56,19 @@ export default component$(() => {
           href: null,
           icon: LuClock,
         },
-    {
-  title: "36 Rosemount Ave, Ottawa ON, K1Y 1P4",
-  href: "https://www.google.com/maps/search/?api=1&query=36+Rosemount+Ave,+K1Y+1P4,+Ottawa,+ON",
-  icon: LuMapPin,
-},
+        {
+          title: (
+            <span class="block leading-tight">
+              <span class="block">36 Rosemount Ave</span>
+              <span class="block">Ottawa, ON</span>
+              <span class="block">K1Y 1P4</span>
+            </span>
+          ),
+          href: "https://www.google.com/maps/search/?api=1&query=36+Rosemount+Ave,+K1Y+1P4,+Ottawa,+ON",
+          icon: LuMapPin,
+        },
       ],
     },
-
     {
       title: "Connect",
       items: [
@@ -102,23 +106,23 @@ export default component$(() => {
           {/* First Column: Logo, Description, Newsletter */}
           <div class="col-span-12 lg:col-span-5 md:pr-8">
             <div class="mb-4">
-              <Link class="inline-block xdxd font-bold !text-2xl " href={"/"}>
+              <Link class="inline-block xdxd font-bold !text-2xl" href={"/"}>
                 <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                   earthen vessels
                 </span>
               </Link>
             </div>
             <div class="text-sm text-primary-700 dark:text-primary-300 leading-relaxed">
-earthen vessels offers a welcoming space where mindfulness and creativity come together. The process invites us to slow down, listen inwardly and discover new ways to express ourselves.             </div>
+              earthen vessels offers a welcoming space where mindfulness and creativity come together. The process invites us to slow down, listen inwardly and discover new ways to express ourselves.
+            </div>
             {/* Newsletter Signup */}
             <div class="mt-6">
               <div class="text-sm font-semibold mb-3 ml-1">
                 <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent flex items-center gap-2">
-                  {/* <LuMail class="w-4 h-4" /> */}
                   Join Our Newsletter
                 </span>
               </div>
-              <form onSubmit$={handleSubmit} class="flex ">
+              <form onSubmit$={handleSubmit} class="flex">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -142,12 +146,12 @@ earthen vessels offers a welcoming space where mindfulness and creativity come t
             <div
               key={index}
               class={`
-      col-span-6 sm:col-span-6 md:col-span-3 mt-1
-      ${index === 0 ? 'lg:col-span-2'
+                col-span-6 sm:col-span-6 md:col-span-3 mt-1
+                ${index === 0 ? 'lg:col-span-2'
                   : index === 1 ? 'lg:col-span-2'
-                    : index === 2 ? 'lg:col-span-2'   // Connect full width
-                      : 'lg:col-span-1'}                 // Social half width
-    `}
+                    : index === 2 ? 'lg:col-span-2'
+                      : 'lg:col-span-1'}
+              `}
             >
               <div class="text-sm font-semibold mb-4 mt-2">
                 <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
@@ -157,8 +161,8 @@ earthen vessels offers a welcoming space where mindfulness and creativity come t
               {Array.isArray(items) && items.length > 0 && (
                 <ul class="text-sm space-y-2">
                   {items.map(({ title, href, icon: Icon }, index2) => (
-                    <li key={index2} class="flex items-center gap-2">
-                      {Icon && <Icon class="w-4 h-4" />}
+                    <li key={index2} class="flex items-start gap-2">
+                      {Icon && <Icon class="w-4 h-4 flex-shrink-0 mt-0.5" />}
                       {href ? (
                         <Link
                           class="text-primary-700 hover:text-secondary-800 dark:text-primary-300 dark:hover:text-secondary-300 transition-colors duration-200 ease-in-out"
@@ -177,7 +181,6 @@ earthen vessels offers a welcoming space where mindfulness and creativity come t
               )}
             </div>
           ))}
-
         </div>
         <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
           <div class="inline-flex items-center text-sm text-primary-700 mt-2 dark:text-primary-300 order-2 md:order-1">

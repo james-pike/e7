@@ -182,7 +182,7 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <a
-              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6"
+              href="https://bookeo.com/earthenvessels"
               class="w-full sm:w-auto bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 group relative inline-flex items-center justify-center px-4 pl-5 py-2 text-xl font-semibold text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-secondary-600 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-full before:opacity-0 before:transform before:-translate-x-full group-hover:before:opacity-100 group-hover:before:translate-x-0 before:transition-all before:duration-500"
               role="button"
               aria-label="Book a workshop"

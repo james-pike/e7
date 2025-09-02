@@ -6,7 +6,7 @@ export const SITE = {
   description:
     "earthen vessels - Listening, Connecting, Creating" ,
 
-  origin: "https://qwind.pages.dev",
+  origin: "https://earthenvessels.ca",
   basePathname: "/",
   trailingSlash: true,
 };

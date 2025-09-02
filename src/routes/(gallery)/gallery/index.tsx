@@ -294,7 +294,7 @@ export default component$(() => {
             
             <a
               ref={bookButtonRef}
-              href="https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=gQpfIHL0hAzcbC5GyHjGNqbcjrLZrVN6ba4TgxE6uYY%3D&src=02b&type=41562UHUKUC196793426E6" // External link (replace with your actual URL)
+              href="https://bookeo.com/earthenvessels" // External link (replace with your actual URL)
               onClick$={handleBookClick}
               class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-secondary-800 via-tertiary-600 to-secondary-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
             >

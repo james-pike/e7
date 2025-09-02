@@ -102,9 +102,9 @@ export default component$(() => {
       subitems: [
         { title: "Our Space", href: "/about" },
         { title: "What To Expect", href: "/about" },
-        { title: "Benefits Of Clay", href: "/about" },
+        { title: "Benefits Of Clay", href: "/about#clay" },
         { title: "Newsletter", href: "/newsletter" },
-        { title: "Gift Cards", href: "/newsletter" },
+        { title: "Gift Cards", href: "https://bookeo.com/earthenvessels/buyvoucher" },
 
         { title: "FAQ", href: "/faq" },
       ],
