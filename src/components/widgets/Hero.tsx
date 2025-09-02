@@ -17,14 +17,14 @@ export default component$(() => {
         <img
           src="/images/logo22.svg"
           alt="earthen vessels Logo"
-          class="px-12 pt-4 mt-2 h-56 mx-auto md:hidden"
+          class="px-14 mt-2 h-56 mx-auto md:hidden"
         />
 
         {/* Left Column (Desktop) / Text Content (Mobile) */}
         <div class="relative z-10 order-1 flex items-center justify-center px-4 pt-4 pb-10 md:px-8 md:py-12 md:order-1">
           <div class="text-center md:text-left px-2">
             {/* Headline (Desktop only) */}
-            <h1 class=" md:block text-6xl md:text-8xl font-bold tracking-tight mb-10 -mt-6">
+            <h1 class=" md:block text-5xl md:text-8xl font-bold tracking-tight mb-10 -mt-8">
               <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-secondary-800  bg-clip-text text-transparent">
                 earthen vessels
               </span>
