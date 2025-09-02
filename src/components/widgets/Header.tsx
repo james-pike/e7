@@ -1,7 +1,7 @@
 // src/components/Header.tsx
 import { component$, useStore, useVisibleTask$, useSignal } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
-import IconChevronDown from "../icons/IconChevronDown";
+import IconChevronDown from "..//icons/IconChevronDown";
 import MenuModal from "./MenuModal";
 
 export default component$(() => {
@@ -11,9 +11,10 @@ export default component$(() => {
   });
 
   const isInitialized = useSignal(false); // Track when mobile detection is complete
+  const location = useLocation();
+  const isHomeRoute = location.url.pathname === "/"; // Check if on home route
 
   const { menu } = useContent();
-  const location = useLocation();
 
   // Detect mobile vs. desktop on client-side
   useVisibleTask$(() => {
@@ -49,21 +50,21 @@ export default component$(() => {
           <a
             class={{
               "flex items-center": true,
-              "ml-2": store.isMobile && !store.isScrolling, // Only apply ml-2 on mobile when showing cropped logo
-              "ml-0 md:ml-0": store.isMobile && store.isScrolling, // Remove margin when showing full logo on mobile
+              "ml-2": store.isMobile && isHomeRoute && !store.isScrolling, // Only apply ml-2 on mobile home route when showing cropped logo
+              "ml-0 md:ml-0": !isHomeRoute || (store.isMobile && store.isScrolling), // No margin on non-home routes or when showing full logo
             }}
             href="/"
           >
             <div
               style={{
-                width: store.isMobile ? (store.isScrolling ? "100px" : "40px") : "100px",
+                width: store.isMobile && isHomeRoute && !store.isScrolling ? "40px" : "100px",
                 height: "40px",
                 position: "relative",
                 overflow: "hidden",
                 visibility: isInitialized.value ? "visible" : "hidden", // Hide until initialized
               }}
             >
-              {store.isMobile && isInitialized.value && (
+              {store.isMobile && isHomeRoute && isInitialized.value && (
                 <img
                   src="/images/logo2-cropped.svg"
                   alt="Logo Cropped"
@@ -79,9 +80,11 @@ export default component$(() => {
                   src="/images/logo22.svg"
                   alt="Logo"
                   class={{
-                    "absolute top-0 left-0 w-[100px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
-                    "opacity-0 -translate-x-full": store.isMobile && !store.isScrolling, // Start left when not scrolling
-                    "opacity-100 translate-x-0": !store.isMobile || store.isScrolling, // Slide in from left or always show on desktop
+                    "absolute top-0 left-0 w-[100px] h-[40px] object-contain": true,
+                    // Only apply transition on mobile home route
+                    "transition-all duration-500 ease-in-out": store.isMobile && isHomeRoute,
+                    "opacity-0 -translate-x-full": store.isMobile && isHomeRoute && !store.isScrolling, // Start left when not scrolling on home
+                    "opacity-100 translate-x-0": !store.isMobile || !isHomeRoute || store.isScrolling, // Show on desktop, non-home routes, or scrolled home
                   }}
                 />
               )}

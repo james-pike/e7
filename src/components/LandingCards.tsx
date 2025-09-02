@@ -8,7 +8,7 @@ export default component$(() => {
         <>
 We acknowledge that earthen vessels is on the traditional unceded territory of the Algonquin people. We are grateful to gather on this land held by rivers, trees, & the clay beneath our feet. Together, we honour the enduring presence & artistry of indigenous people who have long tended this land.        </>
       ),
-      image: "/images/space.jpeg",
+      image: "/images/land.jpeg",
     },
     {
       title: "Everyone is Welcome at Earthen Vessels",
