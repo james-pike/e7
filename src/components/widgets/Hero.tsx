@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
-import LandingCards from "../LandingCards";
 
 export default component$(() => {
   return (
@@ -61,7 +60,6 @@ export default component$(() => {
           />
         </div>
       </div>
-<LandingCards/>
     </section>
   );
 });
