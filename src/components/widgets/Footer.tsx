@@ -106,7 +106,7 @@ export default component$(() => {
         message.value = "Please enter a valid email address.";
       } else {
         isSubmitted.value = true; // Mark as submitted to disable further actions
-        message.value = "Oops! Newsletter signup coming soon"; // Set feedback message
+        message.value = "Error: Newsletter signup coming soon"; // Set feedback message
       }
     }
   });

@@ -27,10 +27,12 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
       {items.map((item, index) => {
         // Check if the current route matches the item or any subitem
         const currentPath = normalizePath(location.url.pathname);
-        const isActive = normalizePath(item.href) === currentPath || 
-          (item.hasSubmenu && item.subitems?.some((subitem: any) => 
-            normalizePath(subitem.href.split("#")[0]) === currentPath
-          ));
+        const isActive =
+          normalizePath(item.href) === currentPath ||
+          (item.hasSubmenu &&
+            item.subitems?.some((subitem: any) =>
+              normalizePath(subitem.href.split("#")[0]) === currentPath
+            ));
         return (
           <div
             key={index}
@@ -44,7 +46,8 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                 <button
                   class={cn(
                     "!text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-3 px-5",
-                    isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
+                    isActive &&
+                      "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                     "hover:bg-primary-100 dark:hover:bg-primary-100/80 transition-all duration-200"
                   )}
                   onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
@@ -65,8 +68,10 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                 >
                   <ul class="flex flex-col gap-0 pl-5">
                     {item.subitems!.map((subitem: any) => {
-                      const subitemBasePath = normalizePath(subitem.href.split("#")[0]);
-                      const isSubitemActive = subitemBasePath === currentPath;
+                      // Updated logic: Compare full href (including hash) with current pathname + hash
+                      const isSubitemActive =
+                        normalizePath(subitem.href) ===
+                        normalizePath(location.url.pathname + (location.url.hash || ""));
                       return (
                         <li key={subitem.title} class="flex items-center">
                           <span class="text-primary-300 !text-2xs mr-3">✦</span>
@@ -74,7 +79,8 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                             href={subitem.href}
                             class={cn(
                               "block text-gray-700 dark:text-gray-200 p-3 pl-1 font-medium transition-all duration-200",
-                              isSubitemActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
+                              isSubitemActive &&
+                                "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                               "hover:bg-primary-100 dark:hover:bg-primary-100/80"
                             )}
                             onClick$={closeModal}
@@ -92,7 +98,8 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                 href={item.href}
                 class={cn(
                   "block !text-xl text-gray-700 dark:text-gray-200 p-3 px-5 font-medium transition-all duration-200",
-                  isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
+                  isActive &&
+                    "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                   "hover:bg-primary-100 dark:hover:bg-primary-100/80"
                 )}
                 onClick$={closeModal}
@@ -153,7 +160,10 @@ export default component$(() => {
           </Modal.Trigger>
         </div>
 
-        <Modal.Panel position="left" class="dark:bg-gray-950 border-r border-primary-200">
+        <Modal.Panel
+          position="left"
+          class="dark:bg-gray-950 border-r border-primary-200 overflow-y-auto max-h-[100vh]"
+        >
           <div class="rounded-t-2xl border-primary-200 bg-white/30 dark:bg-gray-900 p-2">
             <Modal.Title class="pt-2 pl-2.5">
               <a href="/" class="focus:outline-none">
