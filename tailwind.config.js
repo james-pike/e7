@@ -88,10 +88,11 @@ module.exports = {
       fontFamily: {
         sans: ["'Inter Variable'", ...defaultTheme.fontFamily.sans],
       },
-    fontSize: {
+fontSize: {
+  '2xs': '0.625rem', // 10px
+  '2.5xl': ['1.625rem', { lineHeight: '1.75rem' }], // 26px, line-height 28px
   '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
   '5.5xl': ['3.375rem', { lineHeight: '3.5rem' }],
-  '2xs': '0.625rem', // 10px
 },
       animation: {
         'from-left': 'slideFromLeft 0.2s 1',

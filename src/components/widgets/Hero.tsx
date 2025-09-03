@@ -30,7 +30,7 @@ export default component$(() => {
               </span>
             </h1>
             {/* Slogan */}
-            <h2 class="!text-3xl  md:!text-3xl xdxd font-bold text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-4 ">
+            <h2 class="!text-2.5xl  md:!text-3xl xdxd font-bold text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-4 ">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Listening, Connecting & Creating
               </span>
@@ -43,7 +43,7 @@ export default component$(() => {
         </div>
 
         {/* Mobile Image (Below Buttons) */}
-        <div class="md:hidden px-6 pb-10 -mt-4 order-2">
+        <div class="md:hidden px-6 pb-10 -mt-6 order-2">
           <Image
             src="/images/hero.webp"
             alt="earthen vessels Pottery"
