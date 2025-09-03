@@ -143,7 +143,6 @@ export default component$(() => {
     { title: "Gallery", href: "/gallery/", badge: null },
     { title: "Reviews", href: "/reviews/", badge: null },
     { title: "Connections", href: "/connections/", badge: null },
-    { title: "Contact", href: "/contact/", hasSubmenu: false },
   ];
 
   return (
