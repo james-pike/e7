@@ -152,7 +152,7 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-        <div class="absolute top-2 right-2 pr-1 md:static">
+        <div class="absolute top-2 right-2  md:static">
           <Modal.Trigger
             class={cn(
               "p-2 py-1  rounded-lg border backdrop-blur-sm transition-all duration-300",
@@ -187,11 +187,11 @@ export default component$(() => {
           </nav>
 
           <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
-            <div class="sm:max-w-md px-5 pt-5 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
+            <div class="sm:max-w-md px-5 pt-4 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex-shrink-0">
                 <a
                   href="https://www.bookeo.com/earthenvessels"
-                  class="group relative inline-flex items-center justify-center px-5 py-3 text-lg font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="group relative inline-flex items-center justify-center px-5 py-2.5 text-lg font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
                 >
@@ -222,7 +222,7 @@ export default component$(() => {
               </div>
             </div>
             {/* Banner with Added Border */}
-            <div class="mt-5 pt-5 px-5 border-t border-primary-200">
+            <div class="mt-5 pt-4 px-5 border-t border-primary-200">
               <div
                 class="w-full px-5 py-4 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-2"
               >
@@ -252,7 +252,7 @@ export default component$(() => {
             )}
             type="submit"
           >
-            <LuX class="h-6 w-6" />
+            <LuX class="h-5 w-5" />
           </Modal.Close>
         </Modal.Panel>
       </Modal.Root>
