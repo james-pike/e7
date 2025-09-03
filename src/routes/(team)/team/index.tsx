@@ -11,16 +11,12 @@ interface TeamMember {
 }
 
 const TEAM_MEMBERS: TeamMember[] = [
-  {
-    name: "Ginger",
-    role: "Facilitator",
-    description:
-      "Ginger took her first pottery course over 35 years ago and was immediately drawn to the tactile joy of shaping clay. Over time, her focus shifted from creating objects to exploring the quiet lessons clay offers — about living with care, finding belonging, and honoring the relationships that shape our lives.\n\nThe vision for earthen vessels began years ago in a small pottery community in Venezuela. Back in Canada, Ginger created the first ‘Touch the Earth' workshops, weaving together clay connection and the gentle practice of belonging. \n\nShe is also the founder and owner of Hintonburg Pottery, which she envisioned as both a shop for local ceramic artists and a teaching studio for adults and children. For 13 years, the studio has extended its reach into the wider community, supporting charities and not-for-profits to make clay programs more accessible.",
-    image: "/images/ginger.webp",
-  },
-
-
-
+ {
+  name: "Ginger",
+  role: "Facilitator",
+  description: "Ginger took her first pottery course over 35 years ago and was immediately drawn to the tactile joy of shaping clay. Over time, she shifted from making things to discovering in clay a grounding and fulfilling experience of connection - to self, to others and to the earth.\n\nThe vision for earthen vessels was seeded by a small pottery community in Venezuela. Years later, that inspiration grew to the creation of the first ‘Touch the Earth' workshops. Ginger blends clay workshops with her studies at The Centre for Courage and Renewal - a global community founded by Parker J Palmer, whose work centers on living and leading with integrity. In earthen vessels, clay becomes a practice of slowing down, allowing creativity to open up new possibilities.\n\nIn 2012 Ginger also founded Hintonburg Pottery, rooted in the local community, a studio that welcomes children and adults and offers ceramic artists a place to showcase their work.",
+  image: "/images/ginger.webp"
+},
   {
     name: "Michelle",
     role: "Facilitator",
