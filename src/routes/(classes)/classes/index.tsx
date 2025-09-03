@@ -117,7 +117,7 @@ export default component$<WorkshopsGridProps>(() => {
     // },
   ];
 
-  return (
+ return (
     <section class="relative overflow-hidden py-12 md:py-16">
       <div class="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Header and Subtitle */}
@@ -159,13 +159,17 @@ export default component$<WorkshopsGridProps>(() => {
             >
               {/* Image */}
               {workshop.image && (
-                <div class="h-40 w-full rounded-t-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={workshop.image}
-                    alt={workshop.title}
-                    class="h-full w-full object-cover"
-                  />
-                </div>
+                <div
+                  class="h-40 w-full rounded-t-2xl bg-gray-100 overflow-hidden"
+                  style={{
+                    backgroundImage: `url('${workshop.image}')`,
+                    backgroundSize: "cover", // Ensures the image fills the space, cropping if needed
+                    backgroundPosition: "center", // Centers the image
+                    backgroundRepeat: "no-repeat", // Prevents tiling
+                  }}
+                  role="img"
+                  aria-label={workshop.title}
+                />
               )}
 
               {/* Info */}
@@ -185,7 +189,7 @@ export default component$<WorkshopsGridProps>(() => {
                     </a>
                   ) : (
                     <button
-                      class="px-3 py-1 bg-gradient-to-r from-yellow-400 to-yellow-400 text-white text-sm font-medium rounded-xl  transition-all duration-200"
+                      class="px-3 py-1 bg-gradient-to-r from-yellow-400 to-yellow-400 text-white text-sm font-medium rounded-xl transition-all duration-200"
                       aria-label={`Archived ${workshop.title}`}
                       disabled
                     >
@@ -216,6 +220,8 @@ export default component$<WorkshopsGridProps>(() => {
     </section>
   );
 });
+
+
 
 export const head: DocumentHead = {
   title: `${SITE.title} - Classes`,
