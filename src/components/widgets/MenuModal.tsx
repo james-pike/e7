@@ -152,14 +152,14 @@ export default component$(() => {
   return (
     <>
       <Modal.Root bind:show={show}>
-        <div class="absolute top-2 right-2 md:static">
+        <div class="absolute top-2 right-2 pr-1 md:static">
           <Modal.Trigger
             class={cn(
-              "p-1  rounded-lg border backdrop-blur-sm transition-all duration-300",
-              "bg-white/35 mb-1 border-primary-300 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
+              "p-2 py-1  rounded-lg border backdrop-blur-sm transition-all duration-300",
+              "bg-white/35 mb-1 border-primary-200 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
             )}
           >
-            <IconHamburger class="w-7 h-7 text-primary-400 dark:text-secondary-200" />
+            <IconHamburger class="w-6 h-7 text-secondary-800/50 dark:text-secondary-200" />
           </Modal.Trigger>
         </div>
 
@@ -207,7 +207,7 @@ export default component$(() => {
                   href="https://www.facebook.com/p/earthen-vessels-61562702795370/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-gray-600 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  class="text-gray-600 dark:text-gray-200 hover:text-secondary-800 dark:hover:text-primary-400 transition-colors"
                 >
                   <LuFacebook class="h-7 w-7" />
                 </a>
@@ -215,7 +215,7 @@ export default component$(() => {
                   href="https://www.instagram.com/earthenvesselsgathering/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-gray-600 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  class="text-gray-600 dark:text-gray-200 hover:text-secondary-800 dark:hover:text-primary-400 transition-colors"
                 >
                   <LuInstagram class="h-7 w-7" />
                 </a>
@@ -248,11 +248,11 @@ export default component$(() => {
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
-              "absolute right-5 top-5 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900"
+              "absolute right-5 top-5 text-primary-300 hover:text-secondary-800 dark:text-white dark:hover:bg-gray-900"
             )}
             type="submit"
           >
-            <LuX class="h-7 w-7" />
+            <LuX class="h-6 w-6" />
           </Modal.Close>
         </Modal.Panel>
       </Modal.Root>
