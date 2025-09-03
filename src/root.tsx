@@ -26,6 +26,8 @@ export default component$(() => {
                                 <link rel="preload" href="/images/turtle.jpeg" as="image" type="image/svg+xml" />
 
                 <link rel="preload" href="/images/lantern.jpeg" as="image" type="image/svg+xml" />
+                                <link rel="preload" href="/images/hero.webp" as="image" type="image/svg+xml" />
+
                                 <link rel="preload" href="/images/mug.jpg" as="image" type="image/svg+xml" />
 
 
