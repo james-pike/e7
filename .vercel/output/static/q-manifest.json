@@ -1,6 +1,6 @@
 {
 	"version": "1",
-	"manifestHash": "3lt15v",
+	"manifestHash": "ic4ssz",
 	"options": {
 		"target": "client",
 		"buildMode": "production",
@@ -10,7 +10,7 @@
 	},
 	"core": "q-D42ibeys.js",
 	"preloader": "q-CF2Nn7YE.js",
-	"bundleGraphAsset": "assets/CR7g3-QQ-bundle-graph.json",
+	"bundleGraphAsset": "assets/J4N9Nbq3-bundle-graph.json",
 	"injections": [],
 	"mapping": {
 		"s_1G4dN34YaXY": "q-qroLNK6O.js",
@@ -20,9 +20,9 @@
 		"s_97jpgWPow2Y": "q-C9CqsJ9l.js",
 		"s_9q75oWDLzWQ": "q-DHMWh2Ad.js",
 		"s_AO0A0Ebcgl4": "q-BoKA9oqZ.js",
-		"s_ARUHB3lzAFM": "q-2fyU3Bc3.js",
+		"s_ARUHB3lzAFM": "q-CVrk8wIe.js",
 		"s_hPpJkNMRSU0": "q-BHfRZdX9.js",
-		"s_i28rqrPwLb4": "q-2fyU3Bc3.js",
+		"s_i28rqrPwLb4": "q-CVrk8wIe.js",
 		"s_jSAM64L8G0M": "q-qroLNK6O.js",
 		"s_ktFBHy3fyWE": "q-BHfRZdX9.js",
 		"s_slyxG1SRHTg": "q-DJY2tkM6.js",
@@ -30,7 +30,7 @@
 		"s_JGYumHdIp0c": "q-B5tTPv9r.js",
 		"s_dK0R5AEqWN0": "q-BBVt9e2O.js",
 		"s_WEa7jw1HPtk": "q-Wh9m0rsS.js",
-		"s_iVw374IU4UQ": "q-2fyU3Bc3.js",
+		"s_iVw374IU4UQ": "q-CVrk8wIe.js",
 		"s_0F0iObhP9a4": "q-B2jO3XhK.js",
 		"s_0rlL7wZNOGI": "q-BBtXA80z.js",
 		"s_0z0JOZS9bX0": "q-B2jO3XhK.js",
@@ -67,21 +67,20 @@
 		"s_ILSPVFnTltk": "q-dmj3UXrQ.js",
 		"s_ISa0TC0f0js": "q-D4FWUyCm.js",
 		"s_IoHN51aolks": "q-B_dztjwE.js",
-		"s_Ip1q8BSSuoM": "q-DvDLrMd0.js",
 		"s_JVe0Y1b9ywk": "q-CgeMvtbH.js",
 		"s_JqPJDLJ1jGY": "q-BiQ7smfy.js",
 		"s_JtYZ0DkQwGY": "q-D4FWUyCm.js",
 		"s_KCcv0P7PO8Q": "q-DbPZpjZ7.js",
 		"s_KTEH27W6G6w": "q-DnIlm0gu.js",
-		"s_LMnVT41rn8k": "q-B2QG2PU4.js",
+		"s_LMnVT41rn8k": "q-C-VVxu1x.js",
 		"s_LSzR04j3gaE": "q-BUyryILZ.js",
 		"s_OPTtEfVn28c": "q-CJjst2Wo.js",
 		"s_Pbi07ZujVnU": "q-BVLm2a2b.js",
 		"s_Rg7OwuHeKqY": "q-BUyryILZ.js",
-		"s_SmndXof9cHk": "q-DkY4TiX9.js",
+		"s_SmndXof9cHk": "q-CGVyUUEK.js",
 		"s_TSW9Ma9P3qo": "q-Czj03Du7.js",
 		"s_TVsPnsyqefg": "q-DXELMTJn.js",
-		"s_TXrIqUdl0Sk": "q-DkY4TiX9.js",
+		"s_TXrIqUdl0Sk": "q-CGVyUUEK.js",
 		"s_Ti64mbtyWt8": "q-B_dztjwE.js",
 		"s_V1wzWCUCi0g": "q-a4xGutao.js",
 		"s_VHzf44u2X2s": "q-ChpKfRTS.js",
@@ -92,7 +91,7 @@
 		"s_a0uu0BOYJns": "q--XKnVTA-.js",
 		"s_cZ4WDc9kpps": "q-CtwQPKp1.js",
 		"s_cmbd202OL0s": "q-B0tIl8U9.js",
-		"s_d9zYDJjVx04": "q-DkY4TiX9.js",
+		"s_d9zYDJjVx04": "q-CGVyUUEK.js",
 		"s_eHfh0450YBk": "q-Wh9m0rsS.js",
 		"s_eYmnRaU0exw": "q-CQE1rKgi.js",
 		"s_f0hDK4VFhz8": "q-BsVoOXQ8.js",
@@ -108,7 +107,7 @@
 		"s_n4ZZigoiDko": "q-DYEvFxov.js",
 		"s_ogBfCDx20Fo": "q-3jNPLcua.js",
 		"s_rNhmcKUnNSU": "q-DbPZpjZ7.js",
-		"s_sP42ISsT0EI": "q-DkY4TiX9.js",
+		"s_sP42ISsT0EI": "q-CGVyUUEK.js",
 		"s_tQ0wP3hyszw": "q-BsVoOXQ8.js",
 		"s_tt4krYlaqOk": "q-BiQ7smfy.js",
 		"s_uIRXdeAL504": "q-D9PQhf9x.js",
@@ -121,7 +120,7 @@
 		"s_yuGlA2bStf8": "q-CAThTUkJ.js",
 		"s_Ii10NsAVzGM": "q-kFHSqe-_.js",
 		"s_BY0lBi9Rp8E": "q-CRA27Keb.js",
-		"s_DDhYYpqUxTw": "q-2fyU3Bc3.js",
+		"s_DDhYYpqUxTw": "q-CVrk8wIe.js",
 		"s_QBSyMS7VyAw": "q-DJY2tkM6.js",
 		"s_qYGYxzU1W7k": "q-D21R3joT.js",
 		"s_y3LkScvzKP4": "q-BHfRZdX9.js",
@@ -141,7 +140,6 @@
 		"s_5d22tiGrplw": "q-BWgQ_CMN.js",
 		"s_63s3s3dA3Kc": "q-BBVt9e2O.js",
 		"s_6B4vyeHNPeM": "q-D8VjpKMb.js",
-		"s_6hePc9eXONM": "q-DvDLrMd0.js",
 		"s_6hy4EF63d9w": "q-DsbjLLqq.js",
 		"s_73mPuDtQDv0": "q-Md99CWmY.js",
 		"s_782FWuJoYZA": "q-DUQwmgdH.js",
@@ -159,10 +157,10 @@
 		"s_CRXCSu0dsuY": "q-Dqa1PY4W.js",
 		"s_D3vcK8xw7o4": "q-DKIK0O0U.js",
 		"s_DtleXXQTdrY": "q-Do2DxUq2.js",
-		"s_EeX9Wzi2BhI": "q-Dz1Mok4x.js",
+		"s_EeX9Wzi2BhI": "q-iATw0BB7.js",
 		"s_EpeMIBSkItM": "q-BO9c6obc.js",
 		"s_Eun0aodofB0": "q-DHMWh2Ad.js",
-		"s_EwnDU04ffrY": "q-DkY4TiX9.js",
+		"s_EwnDU04ffrY": "q-CGVyUUEK.js",
 		"s_Gd6c6uAzGKo": "q-D21R3joT.js",
 		"s_H5GV92crtCM": "q-Wh9m0rsS.js",
 		"s_H60y6T01QGA": "q-CBH1fA_l.js",
@@ -220,7 +218,7 @@
 		"s_a7saMtiPNxQ": "q-BZhoufMV.js",
 		"s_aGhrVvVvs38": "q-CXU06X4m.js",
 		"s_cNMCwfbC644": "q-a4xGutao.js",
-		"s_d95mSi8t8U8": "q-v8VwqDsO.js",
+		"s_d95mSi8t8U8": "q-BAzn9TPD.js",
 		"s_eONQhETsk6E": "q-D9PQhf9x.js",
 		"s_eSEdmOBETiI": "q-CgeMvtbH.js",
 		"s_epjLegg4bMI": "q-CAjh_qLn.js",
@@ -236,7 +234,7 @@
 		"s_kP7Al07sSc8": "q-CYuMQ7Q9.js",
 		"s_lDaH5RZh24k": "q-DX9RiD9V.js",
 		"s_lpKC0h7DvHc": "q-CwIxCyOs.js",
-		"s_mHCKGza3XBU": "q-2fyU3Bc3.js",
+		"s_mHCKGza3XBU": "q-CVrk8wIe.js",
 		"s_mL0Jg03K2K0": "q-DIED_J5Q.js",
 		"s_nAS076KrB9o": "q-DBUewoCC.js",
 		"s_nppOlRQsEHw": "q-BDI5wMHm.js",
@@ -251,8 +249,8 @@
 		"s_qug2Wrv95bc": "q-bFTdsW-U.js",
 		"s_r4RKnjtzP0o": "q-CjxypFPc.js",
 		"s_re5wYGqyu0M": "q-BsVoOXQ8.js",
-		"s_rhuWNwHJY4Y": "q-BrNJ4hfO.js",
-		"s_s53cIOnr3wE": "q-B2QG2PU4.js",
+		"s_rhuWNwHJY4Y": "q-CKXF0x4u.js",
+		"s_s53cIOnr3wE": "q-C-VVxu1x.js",
 		"s_sCk3ZQGX8ts": "q-CQE1rKgi.js",
 		"s_tgIn0qnfL40": "q-LRELwa64.js",
 		"s_ufpIUP2uhTw": "q-Bzdg8NdN.js",
@@ -272,7 +270,7 @@
 		"s_0tHABB6BXZ4": "q-Wh9m0rsS.js",
 		"s_53mHdMsD7vQ": "q-DbPZpjZ7.js",
 		"s_B33Wz3HL6gU": "q-DtTw8aIC.js",
-		"s_BluJujxReuI": "q-v8VwqDsO.js",
+		"s_BluJujxReuI": "q-BAzn9TPD.js",
 		"s_JPMxh0peHwA": "q-3jNPLcua.js",
 		"s_KJkno4FcNSM": "q-DYEvFxov.js",
 		"s_lE0ukv44kEA": "q-bFTdsW-U.js",
@@ -371,7 +369,9 @@
 		"s_AE0mtntB10I": "q-BHfRZdX9.js",
 		"s_APtr99JExbE": "q-BXLUVMtH.js",
 		"s_B09diCDxO1Y": "q-CAjh_qLn.js",
-		"s_BARr4V7Cvm8": "q-BrNJ4hfO.js",
+		"s_BARr4V7Cvm8": "q-CKXF0x4u.js",
+		"s_Ip1q8BSSuoM": "q-DvDLrMd0.js",
+		"s_6hePc9eXONM": "q-DvDLrMd0.js",
 		"s_BV8CALR7MhQ": "q-Czj03Du7.js",
 		"s_CeMKM8iHCQw": "q-BUyryILZ.js",
 		"s_Cw90lRLHnYM": "q-C2ar8pnR.js",
@@ -384,7 +384,7 @@
 		"s_EPMPw06vyds": "q-dmj3UXrQ.js",
 		"s_EZ8DF0m0KJI": "q-BVLm2a2b.js",
 		"s_EZCkGXjZ7sU": "q-D4FWUyCm.js",
-		"s_F0uVAzA1djQ": "q-B2QG2PU4.js",
+		"s_F0uVAzA1djQ": "q-C-VVxu1x.js",
 		"s_FphnYQfv2P4": "q-DkJtP_5E.js",
 		"s_GYNIdba59og": "q-B1bLna5d.js",
 		"s_HUUV6RpRAdg": "q-BSAbXi7H.js",
@@ -394,7 +394,7 @@
 		"s_IoKYfB0IPAk": "q-CQHOsRzK.js",
 		"s_JHKhCEHH3og": "q-BPSbWE8U.js",
 		"s_KBOLUgu2og8": "q-BSAbXi7H.js",
-		"s_KC6EBsuJmU8": "q-DkY4TiX9.js",
+		"s_KC6EBsuJmU8": "q-CGVyUUEK.js",
 		"s_KdPShgSAlU8": "q-DXELMTJn.js",
 		"s_KiSrXAwD8XE": "q-BsVoOXQ8.js",
 		"s_KmCjHD4UzmQ": "q-BsVoOXQ8.js",
@@ -433,7 +433,7 @@
 		"s_X2qHtq5iZps": "q-D4FWUyCm.js",
 		"s_Y9UQHBob03g": "q-DXELMTJn.js",
 		"s_YZuhmt704h0": "q-BXLUVMtH.js",
-		"s_YrAxuuHWX7Y": "q-BrNJ4hfO.js",
+		"s_YrAxuuHWX7Y": "q-CKXF0x4u.js",
 		"s_Z0XCAwKTMeU": "q-C2ar8pnR.js",
 		"s_a0VzjnNavWQ": "q-C2ar8pnR.js",
 		"s_aJ2mxKP4YP8": "q-CBH1fA_l.js",
@@ -483,7 +483,7 @@
 		"s_sAhhcev1FJY": "q-DtTw8aIC.js",
 		"s_sWLjB2NUGpU": "q-CJjst2Wo.js",
 		"s_sXyePZEo60w": "q-BiQ7smfy.js",
-		"s_smxYR39Ynms": "q-BrNJ4hfO.js",
+		"s_smxYR39Ynms": "q-CKXF0x4u.js",
 		"s_ti7d9tEWgMY": "q-Md99CWmY.js",
 		"s_to4Cpc6M0Og": "q-C2ar8pnR.js",
 		"s_uu8DWCpa0pk": "q-C2ar8pnR.js",
@@ -500,7 +500,7 @@
 		"s_xuvmGl0vw3E": "q-eznKgx3Z.js",
 		"s_yAxBA0nMDFc": "q-BwtM47Sj.js",
 		"s_yMTE0NqLxIA": "q-Do2DxUq2.js",
-		"s_yR6a96tQxH0": "q-BrNJ4hfO.js",
+		"s_yR6a96tQxH0": "q-CKXF0x4u.js",
 		"s_yc4CjAtKSCA": "q-BSAbXi7H.js",
 		"s_z6ld82G3TyU": "q-BSAbXi7H.js",
 		"s_zpPTYFT5jfI": "q-CJjst2Wo.js"
@@ -693,36 +693,6 @@
 				"s_gVuntBgRpeY"
 			],
 			"interactivity": 2
-		},
-		"q-2fyU3Bc3.js": {
-			"size": 10328,
-			"total": 141860,
-			"imports": [
-				"q-CF2Nn7YE.js",
-				"q-CQHOsRzK.js",
-				"q-D42ibeys.js"
-			],
-			"dynamicImports": [
-				"q-DJY2tkM6.js",
-				"q-Dz1Mok4x.js"
-			],
-			"origins": [
-				"src/components/icons/IconChevronDown.tsx",
-				"src/components/widgets/Header.tsx_Header_component_header_div_nav_ul_li_Fragment_button_onClick_i28rqrPwLb4.js",
-				"src/components/widgets/Header.tsx_Header_component_header_div_nav_ul_li_Fragment_ul_li_a_onClick_ARUHB3lzAFM.js",
-				"src/components/widgets/Header.tsx_Header_component_header_window_onScroll_iVw374IU4UQ.js",
-				"src/components/widgets/Header.tsx_Header_component_mHCKGza3XBU.js",
-				"src/components/widgets/Header.tsx_Header_component_useVisibleTask_DDhYYpqUxTw.js",
-				"src/components/widgets/MenuModal.tsx"
-			],
-			"symbols": [
-				"s_ARUHB3lzAFM",
-				"s_DDhYYpqUxTw",
-				"s_i28rqrPwLb4",
-				"s_iVw374IU4UQ",
-				"s_mHCKGza3XBU"
-			],
-			"interactivity": 5
 		},
 		"q-2LYh6eS9.js": {
 			"size": 1722,
@@ -948,26 +918,6 @@
 			],
 			"interactivity": 3
 		},
-		"q-B2QG2PU4.js": {
-			"size": 1176,
-			"total": 125700,
-			"imports": [
-				"q-CF2Nn7YE.js",
-				"q-D42ibeys.js",
-				"q-DkY4TiX9.js"
-			],
-			"origins": [
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-root.qwik.mjs_HAccordionRootImpl_component_itemsMapSig_useComputed_F0uVAzA1djQ.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-root.qwik.mjs_HAccordionRootImpl_component_s53cIOnr3wE.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-root.qwik.mjs_HAccordionRootImpl_component_useTask_LMnVT41rn8k.js"
-			],
-			"symbols": [
-				"s_F0uVAzA1djQ",
-				"s_LMnVT41rn8k",
-				"s_s53cIOnr3wE"
-			],
-			"interactivity": 3
-		},
 		"q-B3x47yoE.js": {
 			"size": 799,
 			"total": 61721,
@@ -1151,6 +1101,31 @@
 				"src/routes/(reviews)/reviews/index.tsx"
 			],
 			"interactivity": 0
+		},
+		"q-BAzn9TPD.js": {
+			"size": 211432,
+			"total": 342964,
+			"imports": [
+				"q-CF2Nn7YE.js",
+				"q-CQHOsRzK.js",
+				"q-D42ibeys.js"
+			],
+			"dynamicImports": [
+				"q-CVrk8wIe.js",
+				"q-Dj4u9zla.js"
+			],
+			"origins": [
+				"src/assets/styles/global.css?inline",
+				"src/components/common/RouterHead.tsx",
+				"src/components/widgets/Header.tsx",
+				"src/root.tsx_root_component_d95mSi8t8U8.js",
+				"src/root.tsx_root_component_useStyles_BluJujxReuI.js"
+			],
+			"symbols": [
+				"s_BluJujxReuI",
+				"s_d95mSi8t8U8"
+			],
+			"interactivity": 2
 		},
 		"q-BbbpLWbs.js": {
 			"size": 313,
@@ -1553,37 +1528,6 @@
 			],
 			"interactivity": 3
 		},
-		"q-BrNJ4hfO.js": {
-			"size": 2668,
-			"total": 127192,
-			"imports": [
-				"q-CF2Nn7YE.js",
-				"q-D42ibeys.js",
-				"q-DkY4TiX9.js"
-			],
-			"dynamicImports": [
-				"q-DJi7ceLl.js",
-				"q-DJi7ceLl.js",
-				"q-E3OQhJVH.js"
-			],
-			"origins": [
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onClick_smxYR39Ynms.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onFocus_BARr4V7Cvm8.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_focusManager_yR6a96tQxH0.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_handleKeyDown_YrAxuuHWX7Y.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_rhuWNwHJY4Y.js",
-				"node_modules/@qwik-ui/headless/components/collapsible/collapsible-trigger.qwik.mjs",
-				"node_modules/@qwik-ui/headless/hooks/use-enabled-index.qwik.mjs"
-			],
-			"symbols": [
-				"s_BARr4V7Cvm8",
-				"s_rhuWNwHJY4Y",
-				"s_smxYR39Ynms",
-				"s_yR6a96tQxH0",
-				"s_YrAxuuHWX7Y"
-			],
-			"interactivity": 5
-		},
 		"q-BSAbXi7H.js": {
 			"size": 5266,
 			"total": 131237,
@@ -1939,21 +1883,6 @@
 			],
 			"interactivity": 2
 		},
-		"q-BZ0I2svX.js": {
-			"size": 171,
-			"total": 61093,
-			"imports": [
-				"q-CF2Nn7YE.js",
-				"q-D42ibeys.js"
-			],
-			"dynamicImports": [
-				"q-v8VwqDsO.js"
-			],
-			"origins": [
-				"src/root.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-Bzdg8NdN.js": {
 			"size": 853,
 			"total": 126824,
@@ -2001,6 +1930,26 @@
 				"s_xJ1MJVK5MOM"
 			],
 			"interactivity": 2
+		},
+		"q-C-VVxu1x.js": {
+			"size": 1176,
+			"total": 125700,
+			"imports": [
+				"q-CF2Nn7YE.js",
+				"q-CGVyUUEK.js",
+				"q-D42ibeys.js"
+			],
+			"origins": [
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-root.qwik.mjs_HAccordionRootImpl_component_itemsMapSig_useComputed_F0uVAzA1djQ.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-root.qwik.mjs_HAccordionRootImpl_component_s53cIOnr3wE.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-root.qwik.mjs_HAccordionRootImpl_component_useTask_LMnVT41rn8k.js"
+			],
+			"symbols": [
+				"s_F0uVAzA1djQ",
+				"s_LMnVT41rn8k",
+				"s_s53cIOnr3wE"
+			],
+			"interactivity": 3
 		},
 		"q-C0_looWO.js": {
 			"size": 1287,
@@ -2071,6 +2020,21 @@
 			],
 			"origins": [
 				"src/routes/(contact)/contact/index.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-C3732B1R.js": {
+			"size": 171,
+			"total": 61093,
+			"imports": [
+				"q-CF2Nn7YE.js",
+				"q-D42ibeys.js"
+			],
+			"dynamicImports": [
+				"q-BAzn9TPD.js"
+			],
+			"origins": [
+				"src/root.tsx"
 			],
 			"interactivity": 0
 		},
@@ -2388,6 +2352,36 @@
 			],
 			"interactivity": 3
 		},
+		"q-CGVyUUEK.js": {
+			"size": 2680,
+			"total": 63602,
+			"imports": [
+				"q-CF2Nn7YE.js",
+				"q-D42ibeys.js"
+			],
+			"dynamicImports": [
+				"q-DvDLrMd0.js"
+			],
+			"origins": [
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-context.qwik.mjs",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_EwnDU04ffrY.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_localIndexSig_useComputed_KC6EBsuJmU8.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_1_sP42ISsT0EI.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_2_SmndXof9cHk.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_3_d9zYDJjVx04.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_TXrIqUdl0Sk.js",
+				"node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs"
+			],
+			"symbols": [
+				"s_d9zYDJjVx04",
+				"s_EwnDU04ffrY",
+				"s_KC6EBsuJmU8",
+				"s_SmndXof9cHk",
+				"s_sP42ISsT0EI",
+				"s_TXrIqUdl0Sk"
+			],
+			"interactivity": 3
+		},
 		"q-ChpKfRTS.js": {
 			"size": 3357,
 			"total": 126723,
@@ -2489,6 +2483,37 @@
 				"s_r4RKnjtzP0o"
 			],
 			"interactivity": 2
+		},
+		"q-CKXF0x4u.js": {
+			"size": 2668,
+			"total": 127192,
+			"imports": [
+				"q-CF2Nn7YE.js",
+				"q-CGVyUUEK.js",
+				"q-D42ibeys.js"
+			],
+			"dynamicImports": [
+				"q-DJi7ceLl.js",
+				"q-DJi7ceLl.js",
+				"q-E3OQhJVH.js"
+			],
+			"origins": [
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onClick_smxYR39Ynms.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_HCollapsibleTrigger_onFocus_BARr4V7Cvm8.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_focusManager_yR6a96tQxH0.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_handleKeyDown_YrAxuuHWX7Y.js",
+				"node_modules/@qwik-ui/headless/components/accordion/accordion-trigger.qwik.mjs_HAccordionTrigger_component_rhuWNwHJY4Y.js",
+				"node_modules/@qwik-ui/headless/components/collapsible/collapsible-trigger.qwik.mjs",
+				"node_modules/@qwik-ui/headless/hooks/use-enabled-index.qwik.mjs"
+			],
+			"symbols": [
+				"s_BARr4V7Cvm8",
+				"s_rhuWNwHJY4Y",
+				"s_smxYR39Ynms",
+				"s_yR6a96tQxH0",
+				"s_YrAxuuHWX7Y"
+			],
+			"interactivity": 5
 		},
 		"q-CNr08XRR.js": {
 			"size": 1501,
@@ -2717,6 +2742,36 @@
 				"s_ylJ72s2ZnR0"
 			],
 			"interactivity": 3
+		},
+		"q-CVrk8wIe.js": {
+			"size": 10333,
+			"total": 141865,
+			"imports": [
+				"q-CF2Nn7YE.js",
+				"q-CQHOsRzK.js",
+				"q-D42ibeys.js"
+			],
+			"dynamicImports": [
+				"q-DJY2tkM6.js",
+				"q-iATw0BB7.js"
+			],
+			"origins": [
+				"src/components/icons/IconChevronDown.tsx",
+				"src/components/widgets/Header.tsx_Header_component_header_div_nav_ul_li_Fragment_button_onClick_i28rqrPwLb4.js",
+				"src/components/widgets/Header.tsx_Header_component_header_div_nav_ul_li_Fragment_ul_li_a_onClick_ARUHB3lzAFM.js",
+				"src/components/widgets/Header.tsx_Header_component_header_window_onScroll_iVw374IU4UQ.js",
+				"src/components/widgets/Header.tsx_Header_component_mHCKGza3XBU.js",
+				"src/components/widgets/Header.tsx_Header_component_useVisibleTask_DDhYYpqUxTw.js",
+				"src/components/widgets/MenuModal.tsx"
+			],
+			"symbols": [
+				"s_ARUHB3lzAFM",
+				"s_DDhYYpqUxTw",
+				"s_i28rqrPwLb4",
+				"s_iVw374IU4UQ",
+				"s_mHCKGza3XBU"
+			],
+			"interactivity": 5
 		},
 		"q-CwIxCyOs.js": {
 			"size": 292,
@@ -3347,36 +3402,6 @@
 				"s_qs5u3cHJ5mw"
 			],
 			"interactivity": 2
-		},
-		"q-DkY4TiX9.js": {
-			"size": 2680,
-			"total": 63602,
-			"imports": [
-				"q-CF2Nn7YE.js",
-				"q-D42ibeys.js"
-			],
-			"dynamicImports": [
-				"q-DvDLrMd0.js"
-			],
-			"origins": [
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-context.qwik.mjs",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_EwnDU04ffrY.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_localIndexSig_useComputed_KC6EBsuJmU8.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_1_sP42ISsT0EI.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_2_SmndXof9cHk.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_3_d9zYDJjVx04.js",
-				"node_modules/@qwik-ui/headless/components/accordion/accordion-item.qwik.mjs_HAccordionItem_component_useTask_TXrIqUdl0Sk.js",
-				"node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs"
-			],
-			"symbols": [
-				"s_d9zYDJjVx04",
-				"s_EwnDU04ffrY",
-				"s_KC6EBsuJmU8",
-				"s_SmndXof9cHk",
-				"s_sP42ISsT0EI",
-				"s_TXrIqUdl0Sk"
-			],
-			"interactivity": 3
 		},
 		"q-dmj3UXrQ.js": {
 			"size": 5578,
@@ -4115,32 +4140,6 @@
 			],
 			"interactivity": 3
 		},
-		"q-Dz1Mok4x.js": {
-			"size": 5472,
-			"total": 1798843,
-			"imports": [
-				"q--XKnVTA-.js",
-				"q-2fyU3Bc3.js",
-				"q-BUzDUeAg.js",
-				"q-CF2Nn7YE.js",
-				"q-CQHOsRzK.js",
-				"q-D42ibeys.js",
-				"q-DNQ2WFBb.js",
-				"q-DqF0TQ0K.js",
-				"q-Drmvoj0q.js"
-			],
-			"dynamicImports": [
-				"q-Be9KAc8K.js"
-			],
-			"origins": [
-				"src/components/icons/IconHamburger.tsx",
-				"src/components/widgets/MenuModal.tsx_MenuModal_component_EeX9Wzi2BhI.js"
-			],
-			"symbols": [
-				"s_EeX9Wzi2BhI"
-			],
-			"interactivity": 2
-		},
 		"q-E3OQhJVH.js": {
 			"size": 1465,
 			"total": 125134,
@@ -4220,6 +4219,32 @@
 			],
 			"symbols": [
 				"s_1xgCKL7XGns"
+			],
+			"interactivity": 2
+		},
+		"q-iATw0BB7.js": {
+			"size": 5478,
+			"total": 1798854,
+			"imports": [
+				"q--XKnVTA-.js",
+				"q-BUzDUeAg.js",
+				"q-CF2Nn7YE.js",
+				"q-CQHOsRzK.js",
+				"q-CVrk8wIe.js",
+				"q-D42ibeys.js",
+				"q-DNQ2WFBb.js",
+				"q-DqF0TQ0K.js",
+				"q-Drmvoj0q.js"
+			],
+			"dynamicImports": [
+				"q-Be9KAc8K.js"
+			],
+			"origins": [
+				"src/components/icons/IconHamburger.tsx",
+				"src/components/widgets/MenuModal.tsx_MenuModal_component_EeX9Wzi2BhI.js"
+			],
+			"symbols": [
+				"s_EeX9Wzi2BhI"
 			],
 			"interactivity": 2
 		},
@@ -4512,31 +4537,6 @@
 			],
 			"interactivity": 1
 		},
-		"q-v8VwqDsO.js": {
-			"size": 211341,
-			"total": 342873,
-			"imports": [
-				"q-CF2Nn7YE.js",
-				"q-CQHOsRzK.js",
-				"q-D42ibeys.js"
-			],
-			"dynamicImports": [
-				"q-2fyU3Bc3.js",
-				"q-Dj4u9zla.js"
-			],
-			"origins": [
-				"src/assets/styles/global.css?inline",
-				"src/components/common/RouterHead.tsx",
-				"src/components/widgets/Header.tsx",
-				"src/root.tsx_root_component_d95mSi8t8U8.js",
-				"src/root.tsx_root_component_useStyles_BluJujxReuI.js"
-			],
-			"symbols": [
-				"s_BluJujxReuI",
-				"s_d95mSi8t8U8"
-			],
-			"interactivity": 2
-		},
 		"q-Wh9m0rsS.js": {
 			"size": 3966,
 			"total": 206892,
@@ -4585,7 +4585,7 @@
 		}
 	},
 	"assets": {
-		"assets/CR7g3-QQ-bundle-graph.json": {
+		"assets/J4N9Nbq3-bundle-graph.json": {
 			"name": "bundle-graph.json",
 			"size": 2011
 		}
@@ -4699,8 +4699,8 @@
 			"parent": "s_mHCKGza3XBU",
 			"origin": "components/widgets/Header.tsx",
 			"loc": [
-				10003,
-				10816
+				10008,
+				10821
 			]
 		},
 		"s_hPpJkNMRSU0": {
@@ -4727,8 +4727,8 @@
 			"parent": "s_mHCKGza3XBU",
 			"origin": "components/widgets/Header.tsx",
 			"loc": [
-				6683,
-				7177
+				6688,
+				7182
 			]
 		},
 		"s_jSAM64L8G0M": {
@@ -5338,20 +5338,6 @@
 			"loc": [
 				2305,
 				2350
-			]
-		},
-		"s_Ip1q8BSSuoM": {
-			"displayName": "collapsible.qwik.mjs_HCollapsible_component_useTask",
-			"hash": "Ip1q8BSSuoM",
-			"ctxKind": "function",
-			"ctxName": "useTask$",
-			"captures": true,
-			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_useTask_Ip1q8BSSuoM",
-			"parent": "s_6hePc9eXONM",
-			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
-			"loc": [
-				955,
-				1134
 			]
 		},
 		"s_JVe0Y1b9ywk": {
@@ -6360,19 +6346,6 @@
 				322
 			]
 		},
-		"s_6hePc9eXONM": {
-			"displayName": "collapsible.qwik.mjs_HCollapsible_component",
-			"hash": "6hePc9eXONM",
-			"ctxKind": "function",
-			"ctxName": "component$",
-			"captures": false,
-			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_6hePc9eXONM",
-			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
-			"loc": [
-				373,
-				2371
-			]
-		},
 		"s_6hy4EF63d9w": {
 			"displayName": "select-item-indicator.qwik.mjs_HSelectItemIndicator_component",
 			"hash": "6hy4EF63d9w",
@@ -6604,7 +6577,7 @@
 			"origin": "components/widgets/MenuModal.tsx",
 			"loc": [
 				5041,
-				11377
+				11383
 			]
 		},
 		"s_EpeMIBSkItM": {
@@ -7605,7 +7578,7 @@
 			"origin": "components/widgets/Header.tsx",
 			"loc": [
 				259,
-				13777
+				13782
 			]
 		},
 		"s_mL0Jg03K2K0": {
@@ -9410,6 +9383,33 @@
 			"loc": [
 				2466,
 				2527
+			]
+		},
+		"s_Ip1q8BSSuoM": {
+			"displayName": "collapsible.qwik.mjs_HCollapsible_component_useTask",
+			"hash": "Ip1q8BSSuoM",
+			"ctxKind": "function",
+			"ctxName": "useTask$",
+			"captures": true,
+			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_useTask_Ip1q8BSSuoM",
+			"parent": "s_6hePc9eXONM",
+			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
+			"loc": [
+				955,
+				1134
+			]
+		},
+		"s_6hePc9eXONM": {
+			"displayName": "collapsible.qwik.mjs_HCollapsible_component",
+			"hash": "6hePc9eXONM",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_6hePc9eXONM",
+			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
+			"loc": [
+				373,
+				2371
 			]
 		},
 		"s_BV8CALR7MhQ": {
