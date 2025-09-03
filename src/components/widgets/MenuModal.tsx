@@ -187,7 +187,7 @@ export default component$(() => {
           </nav>
 
           <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
-            <div class="sm:max-w-md px-5 pt-6 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
+            <div class="sm:max-w-md px-5 pt-5 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex-shrink-0">
                 <a
                   href="https://www.bookeo.com/earthenvessels"
@@ -224,9 +224,9 @@ export default component$(() => {
               </div>
             </div>
             {/* Updated Banner without Close Button */}
-            <div class="mt-6 px-5 ">
+            <div class="mt-5 px-5 ">
               <div
-                class="w-full px-3 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-2"
+                class="w-full px-5 py-4 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-2"
               >
                 <div class="text-center">
                   <h3 class="text-base font-bold text-gray-800 dark:text-gray-200">Open House</h3>
@@ -237,7 +237,7 @@ export default component$(() => {
                 </div>
                 <a
                   href="mailto:hello@earthenvessels.ca"
-                  class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary-500 via-tertiary-500 to-primary-500 rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="inline-flex items-center justify-center  px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary-400 via-tertiary-400 to-primary-400 rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Get more info about the open house"
                 >
