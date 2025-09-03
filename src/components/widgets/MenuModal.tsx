@@ -146,7 +146,7 @@ export default component$(() => {
           <Modal.Trigger
             class={cn(
               "p-1.5 rounded-lg border backdrop-blur-sm transition-all duration-300",
-              "bg-white/35 border-primary-300 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
+              "bg-white/35 mb-1 border-primary-300 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
             )}
           >
             <IconHamburger class="w-8 h-8 text-primary-400 dark:text-secondary-200" />
