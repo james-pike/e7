@@ -167,7 +167,7 @@ export default component$(() => {
           position="left"
           class="dark:bg-gray-950 border-r border-primary-200 overflow-y-auto max-h-[100vh]"
         >
-          <div class="rounded-t-2xl border-primary-200 bg-white/30 dark:bg-gray-900 p-2">
+          <div class="rounded-t-none border-primary-200 bg-white/30 dark:bg-gray-900 p-2">
             <Modal.Title class="pt-3 pb-2 pl-2.5">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">

@@ -11,7 +11,7 @@ const Close = HeadlessModal.Close;
 
 export const panelVariants = cva(
   [
-    'fixed w-full p-4 text-foreground border-half  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
+    'fixed w-full px-4 py-0 text-foreground border-half  transition-all backdrop:brightness-50 backdrop:backdrop-blur-sm',
     // Background styles from root component
     'bg-watercolor-texture bg-primary-100/90',
     'bg-gradient-to-br from-primary-100/95 via-primary-200/80 to-tertiary-200/85',
@@ -26,7 +26,7 @@ export const panelVariants = cva(
           'max-w-lg rounded-base shadow-lg data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=open]:slide-in-from-bottom-2 backdrop:data-[closing]:fade-out backdrop:data-[open]:fade-in',
         top: 'inset-x-0 top-0 mt-0 rounded-b-base border-b data-[closing]:slide-out-to-top data-[open]:slide-in-from-top',
         bottom:
-          'inset-x-0 bottom-0 mb-0 rounded-t-base border-t data-[closing]:slide-out-to-bottom data-[open]:slide-in-from-bottom',
+          'inset-x-0 bottom-0 mb-0 rounded-none border-t data-[closing]:slide-out-to-bottom data-[open]:slide-in-from-bottom',
         left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base border-r border-half data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
         right:
           'inset-y-0 right-0 mr-0 h-full max-w-sm rounded-l-base border-l data-[closing]:slide-out-to-right data-[open]:slide-in-from-right',
