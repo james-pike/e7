@@ -26,21 +26,27 @@ export default component$(() => {
     {
       title: "About",
       items: [
-        { title: "About Us", href: "/about" },
-        { title: "Classes", href: "/classes" },
-        { title: "Facilitators", href: "/team" },
-        { title: "Testimonials", href: "/testimonials" },
-        { title: "Newsletter", href: "/newsletter" },
+                { title: "Our Space", href: "/about" },
+
+        { title: "What To Expect", href: "/about#what-to-expect" },
+                { title: "Benefits Of Clay", href: "/about#clay" },
+        { title: "Gallery", href: "/gallery" },
+
+        
+                { title: "FAQs", href: "/faq" },
+
       ],
     },
     {
       title: "Community",
       items: [
-        { title: "Our Space", href: "/about" },
-        { title: "Benefits Of Clay", href: "/about#clay" },
-        { title: "Community", href: "/community" },
-        { title: "Gallery", href: "/gallery" },
-        { title: "FAQs", href: "/faq" },
+        { title: "Classes", href: "/classes" },
+        { title: "Facilitators", href: "/team" },
+                { title: "Connections", href: "/connections" },
+
+        { title: "Reviews", href: "/reviews" },
+                { title: "Contact", href: "/contact" },
+
       ],
     },
     {
@@ -87,11 +93,22 @@ export default component$(() => {
   ];
 
   const email = useSignal("");
-  const handleSubmit = $(async () => {
-    console.log("Subscribing:", email.value);
-    // Placeholder for API call (e.g., Mailchimp)
-    // await fetch("/api/newsletter", { method: "POST", body: JSON.stringify({ email: email.value }) });
-    email.value = "";
+  const isSubmitted = useSignal(false); // Track if form has been submitted
+  const message = useSignal(""); // Store the feedback message
+
+  // Handle form submission with validation
+  const handleSubmit = $(async (e: Event) => {
+    e.preventDefault(); // Prevent default form submission
+    const emailValue = email.value.trim();
+    if (!isSubmitted.value) {
+      // Basic email validation: check for @ and .
+      if (!emailValue.includes("@") || !emailValue.includes(".")) {
+        message.value = "Please enter a valid email address.";
+      } else {
+        isSubmitted.value = true; // Mark as submitted to disable further actions
+        message.value = "Oops! Newsletter signup coming soon"; // Set feedback message
+      }
+    }
   });
 
   return (
@@ -129,16 +146,23 @@ export default component$(() => {
                   aria-label="Enter email for newsletter"
                   class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-800 rounded-l-xl bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   bind:value={email}
+                  disabled={isSubmitted.value} // Disable input after submission
                 />
                 <button
                   type="submit"
                   class="px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-medium rounded-r-full hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
                   role="button"
                   aria-label="Subscribe to newsletter"
+                  disabled={isSubmitted.value} // Disable button after submission
                 >
                   Subscribe
                 </button>
               </form>
+              {message.value && (
+                <p class="mt-2 text-sm text-primary-700 dark:text-primary-300">
+                  {message.value}
+                </p>
+              )}
             </div>
           </div>
           {/* Sitemap Columns */}

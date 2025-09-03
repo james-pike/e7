@@ -152,7 +152,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
       <div class="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
-          <h1 class="!text-4xl md:!text-5xl xdxd font-bold mb-6">
+          <h1 class="!text-5xl md:!text-5xl xdxd font-bold mb-6">
             <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Our Offerings
             </span>
@@ -163,7 +163,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {workshops.map((workshop) => (
             <div
               key={workshop.id}

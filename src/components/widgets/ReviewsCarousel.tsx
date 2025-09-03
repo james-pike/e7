@@ -19,57 +19,64 @@ export default component$(() => {
   const isHomePage = location.url.pathname === "/";
 
   // Hardcoded reviews
-  const hardcodedReviews: Review[] = [
-      {
-      id: 2,
-      name: "anna ferrabee",
-      review: "A Friendship Mugs of Love workshop was organized to bring nine friends together to celebrate one of the women's completion of cancer treatment. It was joyous and meaningful way to recognize this great accomplishment and very happy occasion. The space itself is bring, calming and inspiring. Michelle, who facilitated the workshop, did a skillful job leading the participants, all with varying experience working with clay, to successfully complete a beautiful mug. I would love to do other workshops offered by earthen vessels. I highly recommend!",
-      rating: 5,
-      date: "2025-08-05T10:00:00Z",
-      role: "Craft Enthusiast",
-    },
-    {
-      id: 1,
-      name: "Chantal Hospodar",
-      review: "The studio is calming and thoughtfully organized to inspire creativity. The instructors are patient and approachable, making it easy for us beginner hand-building potters to feel at home. The experience didn't just teach me how to work with clay, it gave me a space for self reflection, connection and expression. This naturally showed up in the piece I made. Great time!",
-      rating: 5,
-      date: "2025-05-02T14:30:00Z",
-      role: "Beginner Potter",
-    },
-  
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      review: "A fantastic way to spend a weekend! The team’s passion for teaching shines through, though I wish we had more time to practice.",
-      rating: 4,
-      date: "2025-06-10T16:45:00Z",
-      role: "Hobbyist",
-    },
-    {
-      id: 4,
-      name: "David Patel",
-      review: "Absolutely loved the open house event! The ceramics class was both fun and educational, perfect for all skill levels.",
-      rating: 5,
-      date: "2025-05-25T12:15:00Z",
-      role: "Art Student",
-    },
-    {
-      id: 5,
-      name: "Lisa Thompson",
-      review: "The workshop environment was so welcoming. I created something unique and can’t wait to come back for more!",
-      rating: 5,
-      date: "2025-04-18T09:20:00Z",
-      role: "Creative Explorer",
-    },
-    {
-      id: 6,
-      name: "James Carter",
-      review: "Great instructors and a well-organized session. My only critique is the class size could be smaller for more personal attention.",
-      rating: 4,
-      date: "2025-03-30T13:50:00Z",
-      role: "Pottery Novice",
-    },
-  ];
+const hardcodedReviews: Review[] = [
+  {
+    id: 3,
+    name: "Wendy",
+    review: "Thank you for creating such a warm and inviting atmosphere for us to tap into the power of community, connection and play! It was super fun, calming and inspiring. I look forward to taking part in future offerings and am excited to see my finished product in a few weeks!!",
+    rating: 5,
+    date: "2025-08-25T19:00:00Z", // Late August 2025
+    role: "Community Member",
+  },
+  {
+    id: 2,
+    name: "Patricia",
+    review: "Loved the whole experience! From the warm welcome into the space, to the grounding and connecting to others and self, to immersing myself into the process of exploring and experimenting with the clay to make a beautiful lantern. Thank you for such a grounding workshop and evening.",
+    rating: 5,
+    date: "2025-08-20T18:30:00Z", // Late August 2025
+    role: "Workshop Participant",
+  },
+  {
+    id: 1,
+    name: "Chris",
+    review: "It was a beautiful, calming and restorative experience; my first time playing with clay in nearly 50 years! I loved it all. Looking forward to having my finished lantern at the centre of my altar or dinner table. Many thanks for your finely crafted and mindfully presented workshop!",
+    rating: 5,
+    date: "2025-08-15T14:00:00Z", // Mid-August 2025
+    role: "First-Time Potter",
+  },
+  {
+    id: 7,
+    name: "anna ferrabee",
+    review: "A Friendship Mugs of Love workshop was organized to bring nine friends together to celebrate one of the women's completion of cancer treatment. It was joyous and meaningful way to recognize this great accomplishment and very happy occasion. The space itself is bring, calming and inspiring. Michelle, who facilitated the workshop, did a skillful job leading the participants, all with varying experience working with clay, to successfully complete a beautiful mug. I would love to do other workshops offered by earthen vessels. I highly recommend!",
+    rating: 5,
+    date: "2025-08-05T10:00:00Z", // Early August 2025
+    role: "Craft Enthusiast",
+  },
+  {
+    id: 5,
+    name: "Kimia",
+    review: "I recently attended a workshop at Earthen Vessels, and it was such a meaningful and calming experience. The workshop focused on mindfulness and how we can metaphorically present ourselves through creating a pottery bowl. The atmosphere was incredibly relaxing, and the instructor provided clear and thoughtful guidance, making it easy to focus on the process rather than just the outcome. As someone with prior experience working with clay, I found this workshop especially soothing because it allowed me to step away from perfectionism and truly enjoy the act of creating. Surprisingly, the final bowl turned out beautifully, but what stayed with me most was the sense of calm and presence I felt during those three hours. I highly recommend earthen vessels to anyone looking for a mindful, hands-on experience with clay. Whether you’re a beginner or have experience, this workshop will leave you feeling refreshed and inspired!",
+    rating: 5,
+    date: "2025-07-20T13:00:00Z", // Late July 2025
+    role: "Experienced Potter",
+  },
+  {
+    id: 4,
+    name: "Laura",
+    review: "I can't say enough about the ‘Open Like a Bowl’ workshop at earthen vessels. Using clay as a vehicle for meditation, setting intention and mindfulness was amazing. The energy in the space was so conducive to this goal. Mary and Ginger were wonderful, caring and supportive facilitators. The workshop really opened my creative channels and left me with a feeling of peace and restoration that lingered long after, I walked out the door. Loved it, highly recommend.",
+    rating: 5,
+    date: "2025-07-10T15:45:00Z", // Mid-July 2025
+    role: "Mindfulness Seeker",
+  },
+  {
+    id: 6,
+    name: "Chantal Hospodar",
+    review: "The studio is calming and thoughtfully organized to inspire creativity. The instructors are patient and approachable, making it easy for us beginner hand-building potters to feel at home. The experience didn't just teach me how to work with clay, it gave me a space for self reflection, connection and expression. This naturally showed up in the piece I made. Great time!",
+    rating: 5,
+    date: "2025-05-02T14:30:00Z", // Early May 2025
+    role: "Beginner Potter",
+  },
+];
 
   useStyles$(`
     .multi-column-grid {
@@ -171,7 +178,7 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h2 class="!text-5xl md:text-6xl px-4 font-bold font-serif mb-6">
             <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              Reviews & Testimonials
+              Participant Reviews
             </span>
           </h2>
         </div>

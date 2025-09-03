@@ -161,14 +161,14 @@ export default component$(() => {
       <div class="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
-          <h1 class="!text-4xl md:!text-5xl font-bold font-serif mb-6">
+          <h1 class="!text-5xl md:!text-5xl font-bold xdxd mb-6">
             <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Studio Gallery
             </span>
           </h1>
-          <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
+          {/* <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
             Discover us listening, connecting, and creating
-          </p>
+          </p> */}
         </div>
 
         {/* Image Player */}
@@ -252,7 +252,7 @@ export default component$(() => {
                 class="w-full h-auto max-h-[80vh] object-contain"
               />
               <div class="p-6 text-center">
-                <h3 class="text-xl font-semibold text-secondary-900 dark:text-secondary-100 font-serif">
+                <h3 class="text-xl font-semibold text-secondary-900 dark:text-secondary-100 ">
                   {selectedImage.value.title}
                 </h3>
               </div>
@@ -288,7 +288,7 @@ export default component$(() => {
         {/* Come Join Us CTA */}
         <div class="text-center mt-12">
           <div class="bg-gradient-to-r max-w-xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
-            <h3 class="!text-3xl md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
+            <h3 class="!text-3xl md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100  mb-4">
               Come Join Us
             </h3>
             

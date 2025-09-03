@@ -103,7 +103,6 @@ export default component$(() => {
         { title: "Our Space", href: "/about" },
         { title: "What To Expect", href: "/about" },
         { title: "Benefits Of Clay", href: "/about#clay" },
-        { title: "Newsletter", href: "/newsletter" },
 
         { title: "FAQ", href: "/faq" },
       ],
@@ -115,10 +114,12 @@ export default component$(() => {
 
       ], },
     { title: "Gallery", href: "/gallery/", badge: null },
-    { title: "Connections", href: "/connections/", badge: null },
-    { title: "Testimonials", href: "/testimonials/", badge: null },
-        { title: "Contact", href: "/contact/", badge: null },
+    { title: "Reviews", href: "/reviews/", badge: null },
+            // { title: "Newsletter", href: "/newsletter", badge:t}, 
 
+        { title: "Connections", href: "/connections/", badge: null },
+
+    { title: "Contact", href: "/contact/", hasSubmenu: false },
   ];
 
   return (
