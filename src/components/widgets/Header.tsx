@@ -36,7 +36,7 @@ export default component$(() => {
         ],
       },
       { text: "Gallery", href: "/gallery" },
-      { text: "Reviews", href: "/testimonials" },
+      { text: "Reviews", href: "/reviews" },
       { text: "Connections", href: "/connections" },
     ],
   };

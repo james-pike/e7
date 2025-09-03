@@ -1,4 +1,3 @@
-// src/components/widgets/Team.tsx
 import { component$, useSignal, useVisibleTask$, $ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LuChevronLeft, LuChevronRight, LuPause, LuPlay } from "@qwikest/icons/lucide";
@@ -15,7 +14,6 @@ interface GalleryImage {
 
 // Hardcoded gallery images
 const GALLERY_IMAGES: GalleryImage[] = [
- 
   {
     id: "2",
     title: "Ceramic Bowl",
@@ -63,12 +61,12 @@ const GALLERY_IMAGES: GalleryImage[] = [
 export default component$(() => {
   const currentIndex = useSignal(0);
   const selectedImage = useSignal<GalleryImage | null>(null);
-  const autoPlay = useSignal(true);
+  const autoPlay = useSignal(false); // Default to false, slideshow starts paused
   const isFullscreen = useSignal(false);
   const bookButtonRef = useSignal<HTMLAnchorElement>(); // Signal for the Book a Class button
   const didClickSig = useSignal(false);
 
-  // Auto-play logic with reactive pause/play support
+  // Auto-play logic with reactive pause/play support, only starts when autoPlay is true
   useVisibleTask$(({ cleanup, track }) => {
     track(() => autoPlay.value);
 
@@ -138,7 +136,7 @@ export default component$(() => {
       origin: { x, y },
     });
 
-    // Delay navigation by 3 seconds (increased from 2 seconds)
+    // Delay navigation by 3 seconds
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     // Navigate to external link

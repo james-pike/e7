@@ -15,7 +15,7 @@
 
 
 ## [Gallery](/gallery)
-## [Reviews](/testimonials)
+## [Reviews](/reviews)
 ## [Connections](/connections)
 
 

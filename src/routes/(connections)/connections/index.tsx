@@ -141,9 +141,6 @@ export default component$(() => {
                   role="button"
                   tabIndex={0}
                   aria-expanded={expandedPartner.value === partner.name}
-                  onClick$={() => {
-                    window.location.href = partner.website; // Navigate in same window
-                  }}
                 >
                   {/* Image */}
                   {partner.image && (
