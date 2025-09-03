@@ -197,9 +197,7 @@ export default component$(() => {
                 >
                   <span class="relative z-10 flex items-center gap-2">
                     Book A Class
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
+                   
                   </span>
                   <div class="absolute inset-0 bg-gradient-to-r from-primary-300/40 via-primary-200/30 to-primary-300/40 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
@@ -223,8 +221,8 @@ export default component$(() => {
                 </a>
               </div>
             </div>
-            {/* Updated Banner without Close Button */}
-            <div class="mt-5 px-5 ">
+            {/* Banner with Added Border */}
+            <div class="mt-5 pt-5 px-5 border-t border-primary-200">
               <div
                 class="w-full px-5 py-4 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-2"
               >
@@ -237,7 +235,7 @@ export default component$(() => {
                 </div>
                 <a
                   href="mailto:hello@earthenvessels.ca"
-                  class="inline-flex items-center justify-center  px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary-400 via-tertiary-400 to-primary-400 rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary-400 via-tertiary-400 to-primary-400 rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Get more info about the open house"
                 >
