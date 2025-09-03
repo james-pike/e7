@@ -70,7 +70,7 @@ export default component$(() => {
       }}
     >
       <div class="absolute inset-0" aria-hidden="true"></div>
-      <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+      <div class="relative text-default py-1 pb-1.5 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center pb-1" href="/">
             <div style={{ width: "100px", height: "40px", position: "relative" }}>
@@ -93,7 +93,7 @@ export default component$(() => {
                       src="/images/logo2-cropped.svg"
                       alt="Logo Cropped"
                       class={{
-                        "absolute top-1 left-2 w-[40px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
+                        "absolute top-1 left-1 w-[40px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
                         "opacity-100 translate-x-0": !store.isScrolling,
                         "opacity-0 translate-x-full": store.isScrolling,
                       }}
@@ -103,7 +103,7 @@ export default component$(() => {
                     src="/images/logo22.svg"
                     alt="Logo"
                     class={{
-                      "absolute top-1 left-0 w-[100px] h-[40px] object-contain": true,
+                      "absolute top-1 -left-1 w-[100px] h-[40px] object-contain": true,
                       "transition-all duration-500 ease-in-out": store.isMobile && isHomeRoute,
                       "opacity-0 -translate-x-full": store.isMobile && isHomeRoute && !store.isScrolling,
                       "opacity-100 translate-x-0": !store.isMobile || !isHomeRoute || store.isScrolling,
