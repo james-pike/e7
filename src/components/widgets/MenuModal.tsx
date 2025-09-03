@@ -117,6 +117,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
 
 export default component$(() => {
   const show = useSignal(false);
+  const showBanner = useSignal(true); // Signal for banner visibility
 
   const menuItems = [
     { title: "This Is Us", href: "/team/", hasSubmenu: false },
@@ -144,6 +145,14 @@ export default component$(() => {
     { title: "Reviews", href: "/reviews/", badge: null },
     { title: "Connections", href: "/connections/", badge: null },
   ];
+
+  // Date formatting for October 1st, 2025
+  const openHouseDate = new Date("2025-10-02");
+  const formattedDate = openHouseDate.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }); // Outputs: "Wednesday, October 1, 2025"
 
   return (
     <>
@@ -183,7 +192,7 @@ export default component$(() => {
           </nav>
 
           <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
-            <div class="sm:max-w-md px-6 pt-5 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
+            <div class="sm:max-w-md px-6 pt-6 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex-shrink-0">
                 <a
                   href="https://www.bookeo.com/earthenvessels"
@@ -219,6 +228,37 @@ export default component$(() => {
                 </a>
               </div>
             </div>
+            {/* Updated Banner with Date, Close Button, and More Info Link */}
+            {showBanner.value && (
+              <div class="mt-6 px-6 relative">
+                <div
+                  class="w-full px-4 py-3 text-lg font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-3"
+                >
+                  <button
+                    class="absolute right-2 top-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                    onClick$={() => (showBanner.value = false)}
+                    aria-label="Close banner"
+                  >
+                    <LuX class="h-5 w-5" />
+                  </button>
+                  <div class="text-center">
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">Open House</h3>
+                    <p class="text-base font-medium text-gray-600 dark:text-gray-300">{formattedDate}</p>
+                    <p class="text-lg mt-1">
+                      From team retreats to intimate celebrations - picture your event in this space.
+                    </p>
+                  </div>
+                  <a
+                    href="mailto:hello@earthenvessels.ca"
+                    class="inline-flex items-center justify-center px-4 py-2 text-base font-medium text-white bg-gradient-to-r from-primary-500 via-tertiary-500 to-primary-500 rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                    role="button"
+                    aria-label="Get more info about the open house"
+                  >
+                    More Info
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
 
           <Modal.Close
