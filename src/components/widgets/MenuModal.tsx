@@ -19,80 +19,94 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
 
   const closeModal = $(() => (show.value = false));
 
+  // Normalize paths to handle trailing slashes
+  const normalizePath = (path: string) => path.replace(/\/$/, "");
+
   return (
     <div class="border-t border-primary-200">
-      {items.map((item, index) => (
-        <div
-          key={index}
-          class={cn(
-            index > 0 && "border-t border-primary-200",
-            index === items.length - 1 && "border-b-0"
-          )}
-        >
-          {item.hasSubmenu ? (
-            <>
-              <button
+      {items.map((item, index) => {
+        // Check if the current route matches the item or any subitem
+        const currentPath = normalizePath(location.url.pathname);
+        const isActive = normalizePath(item.href) === currentPath || 
+          (item.hasSubmenu && item.subitems?.some((subitem: any) => 
+            normalizePath(subitem.href.split("#")[0]) === currentPath
+          ));
+        return (
+          <div
+            key={index}
+            class={cn(
+              index > 0 && "border-t border-primary-200",
+              index === items.length - 1 && "border-b-0"
+            )}
+          >
+            {item.hasSubmenu ? (
+              <>
+                <button
+                  class={cn(
+                    "!text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-3 px-5",
+                    isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important",
+                    "hover:bg-primary-100 dark:hover:bg-primary-100/80 transition-all duration-200"
+                  )}
+                  onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
+                >
+                  <span>{item.title}</span>
+                  <LuChevronDown
+                    class={cn(
+                      "h-6 w-6 text-gray-500 transition-transform duration-200",
+                      openIndex.value === index && "rotate-180"
+                    )}
+                  />
+                </button>
+                <div
+                  class={cn(
+                    "text-xl text-muted-foreground transition-all duration-500 ease-in-out max-h-0 overflow-hidden",
+                    openIndex.value === index && "max-h-96"
+                  )}
+                >
+                  <ul class="flex flex-col gap-0 pl-5">
+                    {item.subitems!.map((subitem: any) => {
+                      const subitemBasePath = normalizePath(subitem.href.split("#")[0]);
+                      const isSubitemActive = subitemBasePath === currentPath;
+                      return (
+                        <li key={subitem.title} class="flex items-center">
+                          <span class="text-primary-300 !text-2xs mr-3">✦</span>
+                          <a
+                            href={subitem.href}
+                            class={cn(
+                              "block text-gray-700 dark:text-gray-200 p-3 pl-1 font-medium transition-all duration-200",
+                              isSubitemActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important",
+                              "hover:bg-primary-100 dark:hover:bg-primary-100/80"
+                            )}
+                            onClick$={closeModal}
+                          >
+                            {subitem.title}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </>
+            ) : (
+              <a
+                href={item.href}
                 class={cn(
-                  "!text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-3 px-5 hover:bg-background transition-all duration-200",
-                  location.url.pathname.startsWith(item.href) && "bg-background"
+                  "block !text-xl text-gray-700 dark:text-gray-200 p-3 px-5 font-medium transition-all duration-200",
+                  isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important",
+                  "hover:bg-primary-100 dark:hover:bg-primary-100/80"
                 )}
-                onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
+                onClick$={closeModal}
               >
                 <span>{item.title}</span>
-                <LuChevronDown
-                  class={cn(
-                    "h-6 w-6 text-gray-500 transition-transform duration-200",
-                    openIndex.value === index && "rotate-180"
-                  )}
-                />
-              </button>
-              <div
-                class={cn(
-                  "text-xl text-muted-foreground transition-all duration-500 ease-in-out max-h-0 overflow-hidden",
-                  openIndex.value === index && "max-h-96"
-                )}
-              >
-                <ul class="flex flex-col gap-0 pl-5">
-                  {item.subitems!.map((subitem: any) => (
-                    <li key={subitem.title} class="flex items-center">
-                      <span class="text-primary-300 !text-2xs mr-3">✦</span>
-                      <a
-                        href={subitem.href}
-                        class={cn(
-                          "block text-gray-700 dark:text-gray-200 p-3 pl-1 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
-                          location.url.pathname === subitem.href && "bg-background"
-                        )}
-                        onClick$={closeModal}
-                      >
-                        {subitem.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </>
-          ) : (
-            <a
-              href={item.href}
-              class={cn(
-                "block !text-xl text-gray-700 dark:text-gray-200 p-3 px-5 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
-                location.url.pathname === item.href && "bg-background"
-              )}
-              onClick$={closeModal}
-            >
-              <span>{item.title}</span>
-              {item.badge}
-            </a>
-          )}
-        </div>
-      ))}
+                {item.badge}
+              </a>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 });
-
-
-
-// ... keep CustomAccordion as-is ...
 
 export default component$(() => {
   const show = useSignal(false);
@@ -160,11 +174,11 @@ export default component$(() => {
           </nav>
 
           <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
-            <div class="sm:max-w-md px-4 pt-5 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:max-w-7xl">
-              <div class="flex w-2/3 sm:w-auto">
+            <div class="sm:max-w-md px-5 pt-5 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
+              <div class="flex-shrink-0">
                 <a
                   href="https://www.bookeo.com/earthenvessels"
-                  class="w-full sm:w-auto group relative inline-flex items-center justify-center px-5 py-4 text-xl font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="group relative inline-flex items-center justify-center px-5 py-4 text-xl font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
                 >
@@ -177,26 +191,24 @@ export default component$(() => {
                   <div class="absolute inset-0 bg-gradient-to-r from-primary-300/40 via-primary-200/30 to-primary-300/40 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
-            </div>
-
-            {/* ✅ Social Icons Section */}
-            <div class="mt-6 flex justify-center gap-6">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-              >
-                <LuFacebook class="h-7 w-7" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-              >
-                <LuInstagram class="h-7 w-7" />
-              </a>
+              <div class="flex-shrink-0 flex gap-6">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  <LuFacebook class="h-7 w-7" />
+                </a>
+                <a
+                  href="https://www.instagram.com/earthenvesselsgathering/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  <LuInstagram class="h-7 w-7" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -214,4 +226,3 @@ export default component$(() => {
     </>
   );
 });
-

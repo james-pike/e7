@@ -14,7 +14,7 @@ We acknowledge that earthen vessels is on the traditional unceded territory of t
       title: "Everyone is Welcome at Earthen Vessels",
       text: (
         <>
-          We pride ourselves on welcoming everyone into our studio, regardless of age, race, ethnicity, physical ability or attributes, religion, sexual orientation, gender identity or gender expression. All Are Welcome!
+          We pride ourselves on welcoming everyone into our studio, regardless of age, race, ethnicity, physical ability or attributes, religion, sexual orientation, gender identity or gender expression. All are welcome!
           <img src="/images/flag.webp" alt="Pride Flag" class="w-10 mt-4 mx-auto md:mx-0"/>
         </>
       ),
@@ -24,7 +24,14 @@ We acknowledge that earthen vessels is on the traditional unceded territory of t
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
+      
       <div class="relative max-w-7xl mx-auto px-5 md:px-12">
+         <h1 class="!text-5xl md:!text-5xl text-center xdxd font-bold mb-10">
+            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              All Are Welcome
+            </span>
+          </h1>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {cards.map((card, index) => (
            <div

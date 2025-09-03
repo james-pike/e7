@@ -24,52 +24,52 @@ export default component$<WorkshopsGridProps>(() => {
   const hardcodedWorkshops: Workshop[] = [
     {
       id: 1,
-      title: "Mindful Clay Bowls",
+      title: "Open Like a Bowl - To Be Filled",
       description:
         "Join us for a serene workshop where you'll craft clay bowls while practicing mindfulness techniques. Perfect for all skill levels, this session fosters creativity and inner peace.",
       date: "2025-09-15T14:00:00Z", // Future date: Mid-September 2025
       duration: "2.5 hours",
       price: "$55",
-      image: "/images/workshop1.jpg", // Replace with actual image path
+      image: "/images/bowls.jpeg", // Replace with actual image path
       instructor: "Ginger",
       spots: 15,
       isActive: true,
     },
     {
       id: 2,
-      title: "Lanterns of Hope",
+      title: "Lanterns - Tending To My Fire",
       description:
         "Create stunning clay lanterns in this community-focused workshop. Explore personal reflection and connection as you shape light-filled pieces to take home.",
       date: "2025-10-05T18:30:00Z", // Future date: Early October 2025
       duration: "3 hours",
       price: "$65",
-      image: "/images/workshop2.jpg", // Replace with actual image path
+      image: "/images/lantern.jpeg", // Replace with actual image path
       instructor: "Michelle",
       spots: 12,
       isActive: true,
     },
     {
       id: 3,
-      title: "Turtle Resilience",
+      title: "Like The Turtle",
       description:
         "A meditative workshop where you'll craft turtle-inspired clay art, symbolizing patience and growth. Ideal for those seeking a slow, intentional creative process.",
       date: "2025-10-20T13:00:00Z", // Future date: Late October 2025
       duration: "2 hours",
       price: "$45",
-      image: "/images/workshop3.jpg", // Replace with actual image path
+      image: "/images/turtle.jpeg", // Replace with actual image path
       instructor: "Natalie",
       spots: 10,
       isActive: true,
     },
     {
       id: 4,
-      title: "Friendship Mugs",
+      title: "Hug In A Mug",
       description:
         "Celebrate connection with friends by crafting personalized mugs in this joyful workshop. A perfect blend of creativity and community spirit for all participants.",
       date: "2025-11-10T16:00:00Z", // Future date: Mid-November 2025
       duration: "2.5 hours",
       price: "$50",
-      image: "/images/workshop4.jpg", // Replace with actual image path
+      image: "/images/mug.jpg", // Replace with actual image path
       instructor: "Mary",
       spots: 14,
       isActive: true,
@@ -135,7 +135,7 @@ export default component$<WorkshopsGridProps>(() => {
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {hardcodedWorkshops.map((workshop) => (
             <div
               key={workshop.id}
@@ -172,20 +172,21 @@ export default component$<WorkshopsGridProps>(() => {
 
               {/* Info */}
               <div class="flex flex-col p-4">
-                <div class="flex flex-row items-center gap-4 mb-3">
-                  <h3 class="text-lg font-bold text-secondary-900 dark:text-secondary-100 line-clamp-2">
-                    {workshop.title}
-                  </h3>
-                  {workshop.isActive && (
-                    <button
-                      class="px-3 py-1 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-medium rounded-full hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
-                      role="button"
-                      aria-label={`Book ${workshop.title}`}
-                    >
-                      Book
-                    </button>
-                  )}
-                </div>
+                <div class="flex flex-row items-center justify-center gap-4 mb-3">
+  <h3 class="text-base font-bold text-secondary-900 dark:text-secondary-100 line-clamp-1">
+    {workshop.title}
+  </h3>
+  {workshop.isActive && (
+    <a
+    href="https://bookeo.com/earthenvessels"
+      class="px-3 py-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
+      role="button"
+      aria-label={`Book ${workshop.title}`}
+    >
+      Book
+    </a>
+  )}
+</div>
 
                 {/* Description */}
                 <p
