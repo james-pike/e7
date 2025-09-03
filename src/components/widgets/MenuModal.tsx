@@ -233,14 +233,14 @@ export default component$(() => {
                     From team retreats to intimate celebrations - picture your event in this space.
                   </p>
                 </div>
-                <a
+                {/* <a
                   href="mailto:hello@earthenvessels.ca"
                   class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary-400 via-tertiary-400 to-primary-400 rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Get more info about the open house"
                 >
                   More Info
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
