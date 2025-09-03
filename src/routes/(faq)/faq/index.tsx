@@ -26,11 +26,12 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: SITE.title,
+  title: `${SITE.title} - FAQ`,
   meta: [
     {
       name: "description",
-      content: SITE.description,
+      content:
+        "Frequently Asked Questions.",
     },
   ],
 };

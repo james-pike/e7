@@ -15,11 +15,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: `${SITE.title} - This Is Us`,
+  title: `${SITE.title} - Reviews`,
   meta: [
     {
       name: "description",
-      content: "Meet our expert team of locksmiths and security professionals dedicated to your safety and security.",
+      content: "Reviews and Testimonials",
     },
   ],
 };

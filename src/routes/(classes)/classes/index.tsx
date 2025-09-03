@@ -1,4 +1,6 @@
 import { component$, useSignal } from "@builder.io/qwik";
+import { DocumentHead } from "@builder.io/qwik-city";
+import { SITE } from "~/config.mjs";
 
 interface Workshop {
   id: number;
@@ -20,13 +22,13 @@ interface WorkshopsGridProps {
 export default component$<WorkshopsGridProps>(() => {
   const expandedWorkshop = useSignal<number | null>(null);
 
-  // Hardcoded upcoming workshops (replace details with those from the image)
-  const hardcodedWorkshops: Workshop[] = [
+  // Combined hardcoded and dummy inactive workshops into a single array
+  const allWorkshops: Workshop[] = [
     {
       id: 1,
       title: "Open Like a Bowl - To Be Filled",
       description:
-        "Join us for a serene workshop where you'll craft clay bowls while practicing mindfulness techniques. Perfect for all skill levels, this session fosters creativity and inner peace.",
+        "A bowl gracefully embodies openness and sustenance. A welcoming vessel ready to receive what we pour in it.",
       date: "2025-09-15T14:00:00Z", // Future date: Mid-September 2025
       duration: "2.5 hours",
       price: "$55",
@@ -39,7 +41,7 @@ export default component$<WorkshopsGridProps>(() => {
       id: 2,
       title: "Lanterns - Tending To My Fire",
       description:
-        "Create stunning clay lanterns in this community-focused workshop. Explore personal reflection and connection as you shape light-filled pieces to take home.",
+        "Create a clay lantern in this community-focused workshop and explore how to tend to your own fire and rekindle the joy from within.",
       date: "2025-10-05T18:30:00Z", // Future date: Early October 2025
       duration: "3 hours",
       price: "$65",
@@ -52,7 +54,7 @@ export default component$<WorkshopsGridProps>(() => {
       id: 3,
       title: "Like The Turtle",
       description:
-        "A meditative workshop where you'll craft turtle-inspired clay art, symbolizing patience and growth. Ideal for those seeking a slow, intentional creative process.",
+        "Explore the symbols of the turtle and what this creature can teach us about our inner world and how we show up in our day-to-day lives.",
       date: "2025-10-20T13:00:00Z", // Future date: Late October 2025
       duration: "2 hours",
       price: "$45",
@@ -65,7 +67,7 @@ export default component$<WorkshopsGridProps>(() => {
       id: 4,
       title: "Hug In A Mug",
       description:
-        "Celebrate connection with friends by crafting personalized mugs in this joyful workshop. A perfect blend of creativity and community spirit for all participants.",
+        "Create a mug to hold your favourite drink. Join us for a unique workshop where you will hand-craft your very own mug.",
       date: "2025-11-10T16:00:00Z", // Future date: Mid-November 2025
       duration: "2.5 hours",
       price: "$50",
@@ -74,15 +76,11 @@ export default component$<WorkshopsGridProps>(() => {
       spots: 14,
       isActive: true,
     },
-  ];
-
-  // Retained past workshops (dummyInactiveWorkshops)
-  const dummyInactiveWorkshops: Workshop[] = [
     {
       id: 9991,
       title: "Summer On The Table",
       description:
-        "A reflective workshop exploring openness and receptivity through crafting clay bowls. Participants connected with the tactile process of shaping clay to foster mindfulness and creativity.",
+        "Dive into a reflective journey with this workshop, where crafting clay bowls becomes a meditative exploration of openness and receptivity. Participants immerse themselves in the tactile art of shaping clay, fostering mindfulness, creativity, and a deep sense of connection.",
       date: "2025-03-15",
       duration: "2 hours",
       price: "$45",
@@ -95,7 +93,7 @@ export default component$<WorkshopsGridProps>(() => {
       id: 9992,
       title: "Whimsy Summer Animals",
       description:
-        "In this workshop, participants crafted clay lanterns to symbolize guidance and hope. The session emphasized creativity, community, and personal reflection through hands-on clay work.",
+        "Unleash your creativity in this animal inspired workshop. Through hands-on clay work, participants build community, reflect personally, and create colourful keepsakes filled with meaning.",
       date: "2025-02-10",
       duration: "3 hours",
       price: "$60",
@@ -104,19 +102,19 @@ export default component$<WorkshopsGridProps>(() => {
       spots: 10,
       isActive: false,
     },
-    {
-      id: 9993,
-      title: "Clay Labyrinth",
-      description:
-        "This workshop focused on patience and resilience, guiding participants to create turtle-inspired clay pieces. A meditative experience combining clay work with themes of growth and perseverance.",
-      date: "2024-11-20",
-      duration: "2.5 hours",
-      price: "$50",
-      image: "/images/labyrinth.jpeg",
-      instructor: "Natalie",
-      spots: 8,
-      isActive: false,
-    },
+    // {
+    //   id: 9993,
+    //   title: "Clay Labyrinth",
+    //   description:
+    //     "This workshop focused on patience and resilience, guiding participants to create turtle-inspired clay pieces. A meditative experience combining clay work with themes of growth and perseverance.",
+    //   date: "2024-11-20",
+    //   duration: "2.5 hours",
+    //   price: "$50",
+    //   image: "/images/labyrinth.jpeg",
+    //   instructor: "Natalie",
+    //   spots: 8,
+    //   isActive: false,
+    // },
   ];
 
   return (
@@ -136,7 +134,7 @@ export default component$<WorkshopsGridProps>(() => {
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {hardcodedWorkshops.map((workshop) => (
+          {allWorkshops.map((workshop) => (
             <div
               key={workshop.id}
               class={[
@@ -173,20 +171,28 @@ export default component$<WorkshopsGridProps>(() => {
               {/* Info */}
               <div class="flex flex-col p-4">
                 <div class="flex flex-row items-center justify-center gap-4 mb-3">
-  <h3 class="text-base font-bold text-secondary-900 dark:text-secondary-100 line-clamp-1">
-    {workshop.title}
-  </h3>
-  {workshop.isActive && (
-    <a
-    href="https://bookeo.com/earthenvessels"
-      class="px-3 py-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
-      role="button"
-      aria-label={`Book ${workshop.title}`}
-    >
-      Book
-    </a>
-  )}
-</div>
+                  <h3 class="text-base font-bold text-secondary-900 dark:text-secondary-100 line-clamp-1">
+                    {workshop.title}
+                  </h3>
+                  {workshop.isActive ? (
+                    <a
+                      href="https://bookeo.com/earthenvessels"
+                      class="px-3 py-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
+                      role="button"
+                      aria-label={`Book ${workshop.title}`}
+                    >
+                      Book
+                    </a>
+                  ) : (
+                    <button
+                      class="px-3 py-1 bg-gradient-to-r from-yellow-400 to-yellow-400 text-white text-sm font-medium rounded-xl  transition-all duration-200"
+                      aria-label={`Archived ${workshop.title}`}
+                      disabled
+                    >
+                      Archived
+                    </button>
+                  )}
+                </div>
 
                 {/* Description */}
                 <p
@@ -206,78 +212,18 @@ export default component$<WorkshopsGridProps>(() => {
             </div>
           ))}
         </div>
-
-        {/* Past Workshops (dummyInactiveWorkshops) */}
-        <div class="mt-12">
-          <h2 class="!text-3xl xdxd font-bold mb-8 text-secondary-900 dark:text-primary-100 text-center">
-            <span class="bg-gradient-to-r from-gray-600 via-gray-500 to-gray-600 bg-clip-text text-transparent">
-              Previous Offerings
-            </span>
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dummyInactiveWorkshops.map((workshop) => (
-              <div
-                key={workshop.id}
-                class={[
-                  "break-inside-avoid group backdrop-blur-sm border-2 rounded-2xl transition-all duration-300 ease-in-out hover:shadow-xl hover:border-gray-200 hover:bg-gray-50/45",
-                  expandedWorkshop.value === workshop.id
-                    ? "bg-gray-50/40 border-gray-200"
-                    : "bg-gray-50/35 border-gray-200 dark:border-gray-600",
-                ]}
-                style={{
-                  minHeight: "280px",
-                  transitionProperty:
-                    "transform, opacity, margin, box-shadow, background-color, border-color",
-                  transform: expandedWorkshop.value === workshop.id ? "scale(1.02)" : "scale(1)",
-                }}
-                role="button"
-                tabIndex={0}
-                aria-expanded={expandedWorkshop.value === workshop.id}
-                onClick$={() => {
-                  expandedWorkshop.value =
-                    expandedWorkshop.value === workshop.id ? null : workshop.id;
-                }}
-              >
-                {/* Image */}
-                {workshop.image && (
-                  <div class="h-40 w-full rounded-t-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
-                    <img
-                      src={workshop.image}
-                      alt={workshop.title}
-                      class="h-full w-full object-cover"
-                      style={{
-                        objectPosition: workshop.id === 9991 ? "50% 85%" : "50% 50%",
-                      }}
-                    />
-                  </div>
-                )}
-
-                {/* Info */}
-                <div class="flex flex-col p-4 items-center">
-                  <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 text-center line-clamp-2">
-                    {workshop.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    class={[
-                      "text-gray-700 dark:text-gray-300 text-sm text-center mt-3 transition-all duration-300 ease-in-out",
-                      expandedWorkshop.value !== workshop.id && "line-clamp-4",
-                    ]}
-                    style={{
-                      maxHeight: expandedWorkshop.value === workshop.id ? "1000px" : "6em",
-                      overflow: "hidden",
-                      transitionProperty: "max-height",
-                    }}
-                  >
-                    {workshop.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
 });
+
+export const head: DocumentHead = {
+  title: `${SITE.title} - Classes`,
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover our community partners and learn about their role in fostering connection and creativity.",
+    },
+  ],
+};

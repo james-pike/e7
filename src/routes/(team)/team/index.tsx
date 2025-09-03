@@ -170,7 +170,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: `${SITE.title} - Our Team`,
+  title: `${SITE.title} - This Is Us`,
   meta: [
     {
       name: "description",

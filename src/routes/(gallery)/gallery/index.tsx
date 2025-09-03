@@ -304,7 +304,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: `${SITE.title} - earthen vessels gallery`,
+  title: `${SITE.title} - Gallery`,
   meta: [
     {
       name: "description",
