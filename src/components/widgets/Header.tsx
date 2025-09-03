@@ -74,11 +74,15 @@ export default component$(() => {
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href="/">
             <div style={{ width: "100px", height: "40px", position: "relative" }}>
-              {/* Static logo for immediate SSR rendering */}
+              {/* Static logo for immediate SSR rendering: cropped on home route, full otherwise */}
               <img
-                src="/images/logo22.svg"
-                alt="Logo"
-                class="absolute top-0 left-0 w-[100px] h-[40px] object-contain"
+                src={isHomeRoute ? "/images/logo2-cropped.svg" : "/images/logo22.svg"}
+                alt={isHomeRoute ? "Logo Cropped" : "Logo"}
+                class={{
+                  "absolute top-0 left-0 object-contain": true,
+                  "w-[40px] h-[40px]": isHomeRoute,
+                  "w-[100px] h-[40px]": !isHomeRoute,
+                }}
                 style={{ display: isInitialized.value ? "none" : "block" }}
               />
               {/* Client-side animated logos after initialization */}
