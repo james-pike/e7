@@ -9,7 +9,7 @@ export default component$(() => {
     { id: 4, question: "How long is each session?", answer: "Most classes run between 2–3 hours, depending on the workshop." },
     { id: 5, question: "What is your studio like?", answer: "Our studio is located on a quiet street. To honour privacy and create a safe, focused environment, only participants and the facilitator are present in the studio during classes and workshops." },
     { id: 6, question: "Is there public transportation?", answer: "At earthen vessels our facilitators bring meaningful experience working with clay. They bring a deep commitment to guiding others in discovering how the clay can awaken within them. Each facilitator holds space with care - for creative exploration, reflection, and personal insight - inviting a journey that is grounding and expansive through the process of clay work." },
-    { id: 7, question: "Do you offer private events?", answer: "Yes, we host private workshops and team events. Our next open house is in October" },
+    { id: 7, question: "Do you offer private events?", answer: "Yes, we host private workshops and team events. Our next open house is in October!" },
   ];
 
   // Split FAQ items into two columns
@@ -134,7 +134,7 @@ export default component$(() => {
                     aria-controls={`faq-answer-${item.id}`}
                   >
                     <div class="flex items-center gap-3">
-                      <img src="/images/logo2-cropped.svg" alt="FAQ Icon" class="w-5 h-5 md:w-[25px] md:h-[25px]" />
+                      <img src="/images/logo2-cropped.svg" alt="FAQ Icon" class="w-5 h-5 mr-2 md:w-[25px] md:h-[25px]" />
                       <h3 class="!text-xl md:!text-xl font-semibold text-secondary-900 dark:text-secondary-100">
                         {item.question}
                       </h3>

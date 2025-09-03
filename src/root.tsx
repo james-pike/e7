@@ -17,9 +17,22 @@ export default component$(() => {
         <link rel="manifest" href="/manifest.json" />
         <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Syne:wght@600&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
         <RouterHead />
         <ServiceWorkerRegister />
+
+
+        <link rel="preload" href="/images/logo22.svg" as="image" type="image/svg+xml" />
+                <link rel="preload" href="/images/bowls.jpeg" as="image" type="image/svg+xml" />
+                                <link rel="preload" href="/images/turtle.jpeg" as="image" type="image/svg+xml" />
+
+                <link rel="preload" href="/images/lantern.jpeg" as="image" type="image/svg+xml" />
+                                <link rel="preload" href="/images/mug.jpg" as="image" type="image/svg+xml" />
+
+
+
+
+        <link rel="preload" href="/images/logo2-cropped.svg" as="image" type="image/svg+xml" />
+
       </head>
       <body class="bg-white antialiased -mt-20">
         <Header /> {/* Render header directly in body */}

@@ -15,12 +15,7 @@ interface GalleryImage {
 
 // Hardcoded gallery images
 const GALLERY_IMAGES: GalleryImage[] = [
-  {
-    id: "1",
-    title: "Handcrafted Vase",
-    src: "/images/a1.webp",
-    alt: "Handcrafted secondary vase",
-  },
+ 
   {
     id: "2",
     title: "Ceramic Bowl",

@@ -44,7 +44,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                 <button
                   class={cn(
                     "!text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-3 px-5",
-                    isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important",
+                    isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                     "hover:bg-primary-100 dark:hover:bg-primary-100/80 transition-all duration-200"
                   )}
                   onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
@@ -74,7 +74,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                             href={subitem.href}
                             class={cn(
                               "block text-gray-700 dark:text-gray-200 p-3 pl-1 font-medium transition-all duration-200",
-                              isSubitemActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important",
+                              isSubitemActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                               "hover:bg-primary-100 dark:hover:bg-primary-100/80"
                             )}
                             onClick$={closeModal}
@@ -92,7 +92,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                 href={item.href}
                 class={cn(
                   "block !text-xl text-gray-700 dark:text-gray-200 p-3 px-5 font-medium transition-all duration-200",
-                  isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important",
+                  isActive && "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                   "hover:bg-primary-100 dark:hover:bg-primary-100/80"
                 )}
                 onClick$={closeModal}
@@ -149,7 +149,7 @@ export default component$(() => {
               "bg-white/35 border-primary-300 dark:border-secondary-700 hover:shadow-xl hover:bg-white/45"
             )}
           >
-            <IconHamburger class="w-7 h-7 text-primary-400 dark:text-secondary-200" />
+            <IconHamburger class="w-8 h-8 text-primary-400 dark:text-secondary-200" />
           </Modal.Trigger>
         </div>
 
@@ -174,7 +174,7 @@ export default component$(() => {
           </nav>
 
           <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
-            <div class="sm:max-w-md px-5 pt-5 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
+            <div class="sm:max-w-md px-6 pt-5 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex-shrink-0">
                 <a
                   href="https://www.bookeo.com/earthenvessels"
@@ -193,7 +193,7 @@ export default component$(() => {
               </div>
               <div class="flex-shrink-0 flex gap-6">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/p/earthen-vessels-61562702795370/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
