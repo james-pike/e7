@@ -13,6 +13,18 @@ export default component$(() => {
   const location = useLocation();
   const isHomeRoute = location.url.pathname === "/"; // Check if on home route
 
+  // Detect mobile vs. desktop on client-side for animation and navigation
+  useVisibleTask$(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)"); // Tailwind's md breakpoint
+    store.isMobile = mediaQuery.matches;
+    isInitialized.value = true; // Mark initialization complete
+    const handler = (e: MediaQueryListEvent) => {
+      store.isMobile = e.matches;
+    };
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  });
+
   // Hardcoded menu from menu.md
   const menu = {
     items: [
@@ -41,18 +53,6 @@ export default component$(() => {
     ],
   };
 
-  // Detect mobile vs. desktop on client-side
-  useVisibleTask$(() => {
-    const mediaQuery = window.matchMedia("(max-width: 767px)"); // Tailwind's md breakpoint
-    store.isMobile = mediaQuery.matches;
-    isInitialized.value = true; // Mark initialization complete
-    const handler = (e: MediaQueryListEvent) => {
-      store.isMobile = e.matches;
-    };
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
-  });
-
   return (
     <header
       id="header"
@@ -72,46 +72,40 @@ export default component$(() => {
       <div class="absolute inset-0" aria-hidden="true"></div>
       <div class="relative text-default py-2 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
-          <a
-            class={{
-              "flex items-center": true,
-              "ml-2": store.isMobile && isHomeRoute && !store.isScrolling, // Only apply ml-2 on mobile home route when showing cropped logo
-              "ml-0 md:ml-0": !isHomeRoute || (store.isMobile && store.isScrolling), // No margin on non-home routes or when showing full logo
-            }}
-            href="/"
-          >
-            <div
-              style={{
-                width: store.isMobile && isHomeRoute && !store.isScrolling ? "40px" : "100px",
-                height: "40px",
-                position: "relative",
-                overflow: "hidden",
-                visibility: isInitialized.value ? "visible" : "hidden", // Hide until initialized
-              }}
-            >
-              {store.isMobile && isHomeRoute && isInitialized.value && (
-                <img
-                  src="/images/logo2-cropped.svg"
-                  alt="Logo Cropped"
-                  class={{
-                    "absolute top-0 left-0 w-[40px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
-                    "opacity-100 translate-x-0": !store.isScrolling, // Slide in from right when returning
-                    "opacity-0 translate-x-full": store.isScrolling, // Slide out to right when scrolling
-                  }}
-                />
-              )}
+          <a class="flex items-center" href="/">
+            <div style={{ width: "100px", height: "40px", position: "relative" }}>
+              {/* Static logo for immediate SSR rendering */}
+              <img
+                src="/images/logo22.svg"
+                alt="Logo"
+                class="absolute top-0 left-0 w-[100px] h-[40px] object-contain"
+                style={{ display: isInitialized.value ? "none" : "block" }}
+              />
+              {/* Client-side animated logos after initialization */}
               {isInitialized.value && (
-                <img
-                  src="/images/logo22.svg"
-                  alt="Logo"
-                  class={{
-                    "absolute top-0 left-0 w-[100px] h-[40px] object-contain": true,
-                    // Only apply transition on mobile home route
-                    "transition-all duration-500 ease-in-out": store.isMobile && isHomeRoute,
-                    "opacity-0 -translate-x-full": store.isMobile && isHomeRoute && !store.isScrolling, // Start left when not scrolling on home
-                    "opacity-100 translate-x-0": !store.isMobile || !isHomeRoute || store.isScrolling, // Show on desktop, non-home routes, or scrolled home
-                  }}
-                />
+                <>
+                  {store.isMobile && isHomeRoute && (
+                    <img
+                      src="/images/logo2-cropped.svg"
+                      alt="Logo Cropped"
+                      class={{
+                        "absolute top-0 left-0 w-[40px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
+                        "opacity-100 translate-x-0": !store.isScrolling,
+                        "opacity-0 translate-x-full": store.isScrolling,
+                      }}
+                    />
+                  )}
+                  <img
+                    src="/images/logo22.svg"
+                    alt="Logo"
+                    class={{
+                      "absolute top-0 left-0 w-[100px] h-[40px] object-contain": true,
+                      "transition-all duration-500 ease-in-out": store.isMobile && isHomeRoute,
+                      "opacity-0 -translate-x-full": store.isMobile && isHomeRoute && !store.isScrolling,
+                      "opacity-100 translate-x-0": !store.isMobile || !isHomeRoute || store.isScrolling,
+                    }}
+                  />
+                </>
               )}
             </div>
           </a>
