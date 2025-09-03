@@ -9,6 +9,7 @@ import {
   LuActivity,
 } from "@qwikest/icons/lucide";
 import { useLocation } from "@builder.io/qwik-city";
+import Contact2 from "./Contact2";
 
 export default component$(() => {
   const loc = useLocation();
@@ -185,6 +186,8 @@ export default component$(() => {
             </div>
           </div>
         </section>
+
+        <Contact2/>
       </main>
     </div>
   );

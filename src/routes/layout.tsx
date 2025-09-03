@@ -6,7 +6,6 @@ import Footer from "~/components/widgets/Footer";
 export default component$(() => {
   return (
     <>
-
       <main class="mt-20">
         <Slot />
       </main>

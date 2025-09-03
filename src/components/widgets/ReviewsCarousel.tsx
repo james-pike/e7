@@ -1,6 +1,6 @@
+// src/components/Testimonials.tsx
 import { component$, useSignal, $, useTask$, useStyles$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
-import { useReviewsLoader } from "~/routes/plugin@reviews";
 
 interface Review {
   id: number;
@@ -14,10 +14,62 @@ interface Review {
 export default component$(() => {
   const currentIndex = useSignal(0);
   const isAutoPlaying = useSignal(true);
-  const reviews = useReviewsLoader();
   const carouselRef = useSignal<HTMLElement | undefined>();
   const location = useLocation();
   const isHomePage = location.url.pathname === "/";
+
+  // Hardcoded reviews
+  const hardcodedReviews: Review[] = [
+      {
+      id: 2,
+      name: "anna ferrabee",
+      review: "A Friendship Mugs of Love workshop was organized to bring nine friends together to celebrate one of the women's completion of cancer treatment. It was joyous and meaningful way to recognize this great accomplishment and very happy occasion. The space itself is bring, calming and inspiring. Michelle, who facilitated the workshop, did a skillful job leading the participants, all with varying experience working with clay, to successfully complete a beautiful mug. I would love to do other workshops offered by earthen vessels. I highly recommend!",
+      rating: 5,
+      date: "2025-08-05T10:00:00Z",
+      role: "Craft Enthusiast",
+    },
+    {
+      id: 1,
+      name: "Chantal Hospodar",
+      review: "The studio is calming and thoughtfully organized to inspire creativity. The instructors are patient and approachable, making it easy for us beginner hand-building potters to feel at home. The experience didn't just teach me how to work with clay, it gave me a space for self reflection, connection and expression. This naturally showed up in the piece I made. Great time!",
+      rating: 5,
+      date: "2025-05-02T14:30:00Z",
+      role: "Beginner Potter",
+    },
+  
+    {
+      id: 3,
+      name: "Emily Rodriguez",
+      review: "A fantastic way to spend a weekend! The team’s passion for teaching shines through, though I wish we had more time to practice.",
+      rating: 4,
+      date: "2025-06-10T16:45:00Z",
+      role: "Hobbyist",
+    },
+    {
+      id: 4,
+      name: "David Patel",
+      review: "Absolutely loved the open house event! The ceramics class was both fun and educational, perfect for all skill levels.",
+      rating: 5,
+      date: "2025-05-25T12:15:00Z",
+      role: "Art Student",
+    },
+    {
+      id: 5,
+      name: "Lisa Thompson",
+      review: "The workshop environment was so welcoming. I created something unique and can’t wait to come back for more!",
+      rating: 5,
+      date: "2025-04-18T09:20:00Z",
+      role: "Creative Explorer",
+    },
+    {
+      id: 6,
+      name: "James Carter",
+      review: "Great instructors and a well-organized session. My only critique is the class size could be smaller for more personal attention.",
+      rating: 4,
+      date: "2025-03-30T13:50:00Z",
+      role: "Pottery Novice",
+    },
+  ];
 
   useStyles$(`
     .multi-column-grid {
@@ -49,8 +101,8 @@ export default component$(() => {
   `);
 
   const REVIEWS_PER_SLIDE = 3;
-  const safeReviews = Array.isArray(reviews.value) ? reviews.value : [];
-  const numSlides = Math.max(0, Math.ceil((Number.isFinite(safeReviews.length) ? safeReviews.length : 0) / Math.max(1, REVIEWS_PER_SLIDE)));
+  const safeReviews = hardcodedReviews; // Use hardcoded reviews directly
+  const numSlides = Math.max(0, Math.ceil(safeReviews.length / REVIEWS_PER_SLIDE));
 
   const nextSlide = $(() => {
     if (carouselRef.value) {
@@ -115,16 +167,13 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
-     
-
       <div class="relative max-w-7xl mx-auto px-1 sm:px-6">
         <div class="text-center mb-12">
-          <h2 class="!text-5xl md:text-6xl px-4 xdxd font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              Testimonials
+          <h2 class="!text-5xl md:text-6xl px-4 font-bold font-serif mb-6">
+            <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+              Reviews & Testimonials
             </span>
           </h2>
-        
         </div>
 
         <div class="relative max-w-6xl mx-auto">
@@ -225,9 +274,9 @@ export default component$(() => {
                         <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
                           {review.name}
                         </h4>
-                        {review.role && (
+                        {/* {review.role && (
                           <p class="text-primary-600 dark:text-primary-400 text-xs">{review.role}</p>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <p class="text-primary-500 dark:text-primary-400 text-xs mt-3 pb-6 px-6">
@@ -239,23 +288,7 @@ export default component$(() => {
             </div>
           )}
         </div>
-        <div class="text-center mt-12 mb-0 px-4">
-          <div class="max-w-2xl mx-auto bg-gradient-to-r from-secondary-50/50 via-tertiary-50/50 to-primary-50/50 rounded-3xl p-8 md:p-12 border-2 border-secondary-100 dark:border-secondary-700">
-            <h3 class="text-2xl md:text-3xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
-              Join Us!
-            </h3>
-          
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://bookeo.com/earthenvessels"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
-              >
-                <span class="relative z-10">Book Now</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

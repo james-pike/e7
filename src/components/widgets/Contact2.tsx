@@ -11,8 +11,8 @@ export default component$(() => {
         </svg>
       ),
       title: "Visit Our Studio",
-      details: "123 secondary Street, Artisan District, Portland, OR 97201",
-      link: "https://maps.google.com"
+      details: "36 Rosemount Ave, Ottawa ON, K1Y1P4",
+      link: "https://www.google.com/maps/place/36+Rosemount+Ave,+Ottawa,+ON+K1Y+1P4/@45.4011697,-75.728632,17z/data=!3m1!4b1!4m6!3m5!1s0x4cce043c0a7d3ecd:0xbd2868eaa3c1b713!8m2!3d45.401166!4d-75.7260571!16s%2Fg%2F11c5knylyp?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
     },
  
     {
@@ -22,8 +22,8 @@ export default component$(() => {
         </svg>
       ),
       title: "Email Us",
-      details: "hello@terrapottery.com",
-      link: "mailto:hello@terrapottery.com"
+      details: "hello@earthenvessels.ca",
+      link: "mailto:hello@earthenvessels.ca"
     },
     {
       icon: (

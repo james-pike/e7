@@ -1,5 +1,5 @@
 // src/components/widgets/Team.tsx
-import { component$, useSignal, useVisibleTask$, $, } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$, $ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LuChevronLeft, LuChevronRight, LuPause, LuPlay } from "@qwikest/icons/lucide";
 import { SITE } from "~/config.mjs";
@@ -143,11 +143,11 @@ export default component$(() => {
       origin: { x, y },
     });
 
-    // Delay navigation by 1 second
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Delay navigation by 3 seconds (increased from 2 seconds)
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     // Navigate to external link
-    window.location.href = "https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6"; // Replace with your actual external link
+    window.location.href = "https://www-1562q.bookeo.com/bookeo/b_earthenvessels_start.html?ctlsrc2=EjHpdqQ7gHCdolqaOg29kaDObVPz%2FLbyB4LaSA8fiEI%3D&src=02h&type=41562UHUKUC196793426E6";
   });
 
   return (
@@ -162,7 +162,7 @@ export default component$(() => {
         {/* Section Header */}
         <div class="text-center mb-12">
           <h1 class="!text-4xl md:!text-5xl font-bold font-serif mb-6">
-            <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Studio Gallery
             </span>
           </h1>
@@ -287,8 +287,8 @@ export default component$(() => {
 
         {/* Come Join Us CTA */}
         <div class="text-center mt-12">
-          <div class="bg-gradient-to-r max-w-4xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
-            <h3 class="!text-3xl xdxd md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
+          <div class="bg-gradient-to-r max-w-xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
+            <h3 class="!text-3xl md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100 font-serif mb-4">
               Come Join Us
             </h3>
             
