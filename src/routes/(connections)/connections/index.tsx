@@ -99,7 +99,7 @@ export default component$(() => {
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:!text-5xl font-bold mb-6">
             <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
-              Our Community Connections
+              Community Connections
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
