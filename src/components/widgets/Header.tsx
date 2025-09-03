@@ -79,7 +79,7 @@ export default component$(() => {
                 src={isHomeRoute ? "/images/logo2-cropped.svg" : "/images/logo22.svg"}
                 alt={isHomeRoute ? "Logo Cropped" : "Logo"}
                 class={{
-                  "absolute top-0 left-0 object-contain": true,
+                  "absolute top-1 left-1 object-contain": true,
                   "w-[40px] h-[40px]": isHomeRoute,
                   "w-[100px] h-[40px]": !isHomeRoute,
                 }}
