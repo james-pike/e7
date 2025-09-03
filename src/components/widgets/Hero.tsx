@@ -30,7 +30,7 @@ export default component$(() => {
               </span>
             </h1>
             {/* Slogan */}
-            <h2 class="!text-2.5xl  md:!text-3xl xdxd font-bold -mx-4 text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-9 ">
+            <h2 class="!text-2.5xl  md:!text-3xl xdxd font-bold -mx-4 md:mx-0 text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-9 ">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Listening, Connecting & Creating
               </span>

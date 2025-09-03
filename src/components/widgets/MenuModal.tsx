@@ -222,7 +222,7 @@ export default component$(() => {
               </div>
             </div>
             {/* Banner with Added Border */}
-            <div class="mt-5 pt-4 px-5 border-t border-primary-200">
+            <div class="mt-4 pt-5 px-5 border-t border-primary-200">
               <div
                 class="w-full px-5 py-4 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gradient-to-r from-white/40 via-tertiary-100/40 to-white/40 dark:from-gray-900/40 dark:via-tertiary-900/40 dark:to-gray-900/40 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col gap-2"
               >
