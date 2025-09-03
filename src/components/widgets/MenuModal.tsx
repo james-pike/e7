@@ -228,9 +228,9 @@ export default component$(() => {
               >
                 <div class="text-center">
                   <h3 class="text-base font-bold text-gray-800 dark:text-gray-200">Open House</h3>
-                  <p class="text-sm font-medium text-gray-600 dark:text-gray-300">October 1st</p>
+                  <p class="text-sm font-medium text-gray-600 dark:text-gray-300">October 1st - 2025</p>
                   <p class="text-sm mt-1">
-                    From team retreats to intimate celebrations - picture your event in this space.
+                    From team retreats to intimate celebrations, envision your event in our space.
                   </p>
                 </div>
                 {/* <a
