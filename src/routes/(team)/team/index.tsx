@@ -19,6 +19,8 @@ const TEAM_MEMBERS: TeamMember[] = [
     image: "/images/ginger.webp",
   },
 
+
+
   {
     name: "Michelle",
     role: "Facilitator",

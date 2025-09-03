@@ -1,6 +1,6 @@
 {
 	"version": "1",
-	"manifestHash": "6rnyh0",
+	"manifestHash": "l5cx4k",
 	"options": {
 		"target": "client",
 		"buildMode": "production",
@@ -10,7 +10,7 @@
 	},
 	"core": "q-D42ibeys.js",
 	"preloader": "q-CF2Nn7YE.js",
-	"bundleGraphAsset": "assets/BwlEImN9-bundle-graph.json",
+	"bundleGraphAsset": "assets/B3sQLnib-bundle-graph.json",
 	"injections": [],
 	"mapping": {
 		"s_1G4dN34YaXY": "q-qroLNK6O.js",
@@ -65,10 +65,11 @@
 		"s_GaYECEprEwc": "q-B-Rl_fi2.js",
 		"s_IDcTDDz9gxc": "q-dmj3UXrQ.js",
 		"s_ILSPVFnTltk": "q-dmj3UXrQ.js",
+		"s_ISa0TC0f0js": "q-D4FWUyCm.js",
 		"s_IoHN51aolks": "q-B_dztjwE.js",
-		"s_Ip1q8BSSuoM": "q-DvDLrMd0.js",
 		"s_JVe0Y1b9ywk": "q-CObKyj-7.js",
 		"s_JqPJDLJ1jGY": "q-D9NU90M1.js",
+		"s_JtYZ0DkQwGY": "q-D4FWUyCm.js",
 		"s_KCcv0P7PO8Q": "q-DbPZpjZ7.js",
 		"s_KTEH27W6G6w": "q-DnIlm0gu.js",
 		"s_LMnVT41rn8k": "q-C-VVxu1x.js",
@@ -139,7 +140,6 @@
 		"s_5d22tiGrplw": "q-BWgQ_CMN.js",
 		"s_63s3s3dA3Kc": "q-BBVt9e2O.js",
 		"s_6B4vyeHNPeM": "q-D8VjpKMb.js",
-		"s_6hePc9eXONM": "q-DvDLrMd0.js",
 		"s_6hy4EF63d9w": "q-DsbjLLqq.js",
 		"s_73mPuDtQDv0": "q-Md99CWmY.js",
 		"s_782FWuJoYZA": "q-DUQwmgdH.js",
@@ -346,6 +346,7 @@
 		"s_2LQ4niX972E": "q-DTu8wun9.js",
 		"s_2WZmJ0qbNhU": "q-BVLm2a2b.js",
 		"s_2baJW0NoOqk": "q-CAjh_qLn.js",
+		"s_3XAOiLVo1JY": "q-D4FWUyCm.js",
 		"s_3oqIwgQP7P8": "q-CJjst2Wo.js",
 		"s_3zhTb3tso0o": "q-DF_rb-4Z.js",
 		"s_4VsYT37DjtA": "q-BDI5wMHm.js",
@@ -369,9 +370,8 @@
 		"s_APtr99JExbE": "q-BXLUVMtH.js",
 		"s_B09diCDxO1Y": "q-CAjh_qLn.js",
 		"s_BARr4V7Cvm8": "q-CKXF0x4u.js",
-		"s_ISa0TC0f0js": "q-D4FWUyCm.js",
-		"s_JtYZ0DkQwGY": "q-D4FWUyCm.js",
-		"s_3XAOiLVo1JY": "q-D4FWUyCm.js",
+		"s_Ip1q8BSSuoM": "q-DvDLrMd0.js",
+		"s_6hePc9eXONM": "q-DvDLrMd0.js",
 		"s_BV8CALR7MhQ": "q-Czj03Du7.js",
 		"s_CeMKM8iHCQw": "q-BUyryILZ.js",
 		"s_Cw90lRLHnYM": "q-C2ar8pnR.js",
@@ -4585,7 +4585,7 @@
 		}
 	},
 	"assets": {
-		"assets/BwlEImN9-bundle-graph.json": {
+		"assets/B3sQLnib-bundle-graph.json": {
 			"name": "bundle-graph.json",
 			"size": 2011
 		}
@@ -4671,8 +4671,8 @@
 			"parent": "s_Eun0aodofB0",
 			"origin": "routes/(team)/team/index.tsx",
 			"loc": [
-				8540,
-				8661
+				8542,
+				8663
 			]
 		},
 		"s_AO0A0Ebcgl4": {
@@ -5312,6 +5312,20 @@
 				4597
 			]
 		},
+		"s_ISa0TC0f0js": {
+			"displayName": "scroller.qwik.mjs_CarouselScroller_component_useTask",
+			"hash": "ISa0TC0f0js",
+			"ctxKind": "function",
+			"ctxName": "useTask$",
+			"captures": true,
+			"canonicalFilename": "scroller.qwik.mjs_CarouselScroller_component_useTask_ISa0TC0f0js",
+			"parent": "s_I05Gwfl92hI",
+			"origin": "../node_modules/@qwik-ui/headless/components/carousel/scroller.qwik.mjs",
+			"loc": [
+				3589,
+				4305
+			]
+		},
 		"s_IoHN51aolks": {
 			"displayName": "combobox-popover.qwik.mjs_HComboboxPopover_component_useTask_2",
 			"hash": "IoHN51aolks",
@@ -5324,20 +5338,6 @@
 			"loc": [
 				2305,
 				2350
-			]
-		},
-		"s_Ip1q8BSSuoM": {
-			"displayName": "collapsible.qwik.mjs_HCollapsible_component_useTask",
-			"hash": "Ip1q8BSSuoM",
-			"ctxKind": "function",
-			"ctxName": "useTask$",
-			"captures": true,
-			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_useTask_Ip1q8BSSuoM",
-			"parent": "s_6hePc9eXONM",
-			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
-			"loc": [
-				955,
-				1134
 			]
 		},
 		"s_JVe0Y1b9ywk": {
@@ -5366,6 +5366,20 @@
 			"loc": [
 				878,
 				1129
+			]
+		},
+		"s_JtYZ0DkQwGY": {
+			"displayName": "scroller.qwik.mjs_CarouselScroller_component_useTask_1",
+			"hash": "JtYZ0DkQwGY",
+			"ctxKind": "function",
+			"ctxName": "useTask$",
+			"captures": true,
+			"canonicalFilename": "scroller.qwik.mjs_CarouselScroller_component_useTask_1_JtYZ0DkQwGY",
+			"parent": "s_I05Gwfl92hI",
+			"origin": "../node_modules/@qwik-ui/headless/components/carousel/scroller.qwik.mjs",
+			"loc": [
+				5976,
+				6172
 			]
 		},
 		"s_KCcv0P7PO8Q": {
@@ -6332,19 +6346,6 @@
 				322
 			]
 		},
-		"s_6hePc9eXONM": {
-			"displayName": "collapsible.qwik.mjs_HCollapsible_component",
-			"hash": "6hePc9eXONM",
-			"ctxKind": "function",
-			"ctxName": "component$",
-			"captures": false,
-			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_6hePc9eXONM",
-			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
-			"loc": [
-				373,
-				2371
-			]
-		},
 		"s_6hy4EF63d9w": {
 			"displayName": "select-item-indicator.qwik.mjs_HSelectItemIndicator_component",
 			"hash": "6hy4EF63d9w",
@@ -6601,8 +6602,8 @@
 			"canonicalFilename": "index.tsx_team_component_Eun0aodofB0",
 			"origin": "routes/(team)/team/index.tsx",
 			"loc": [
-				6623,
-				10976
+				6625,
+				10978
 			]
 		},
 		"s_EwnDU04ffrY": {
@@ -9048,6 +9049,20 @@
 				726
 			]
 		},
+		"s_3XAOiLVo1JY": {
+			"displayName": "scroller.qwik.mjs_CarouselScroller_component_handleMouseDown",
+			"hash": "3XAOiLVo1JY",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "scroller.qwik.mjs_CarouselScroller_component_handleMouseDown_3XAOiLVo1JY",
+			"parent": "s_I05Gwfl92hI",
+			"origin": "../node_modules/@qwik-ui/headless/components/carousel/scroller.qwik.mjs",
+			"loc": [
+				3029,
+				3575
+			]
+		},
 		"s_3oqIwgQP7P8": {
 			"displayName": "progress-root.qwik.mjs_ProgressRoot_component_valueLabelSig_useComputed",
 			"hash": "3oqIwgQP7P8",
@@ -9370,46 +9385,31 @@
 				2527
 			]
 		},
-		"s_ISa0TC0f0js": {
-			"displayName": "scroller.qwik.mjs_CarouselScroller_component_useTask",
-			"hash": "ISa0TC0f0js",
+		"s_Ip1q8BSSuoM": {
+			"displayName": "collapsible.qwik.mjs_HCollapsible_component_useTask",
+			"hash": "Ip1q8BSSuoM",
 			"ctxKind": "function",
 			"ctxName": "useTask$",
 			"captures": true,
-			"canonicalFilename": "scroller.qwik.mjs_CarouselScroller_component_useTask_ISa0TC0f0js",
-			"parent": "s_I05Gwfl92hI",
-			"origin": "../node_modules/@qwik-ui/headless/components/carousel/scroller.qwik.mjs",
+			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_useTask_Ip1q8BSSuoM",
+			"parent": "s_6hePc9eXONM",
+			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
 			"loc": [
-				3589,
-				4305
+				955,
+				1134
 			]
 		},
-		"s_JtYZ0DkQwGY": {
-			"displayName": "scroller.qwik.mjs_CarouselScroller_component_useTask_1",
-			"hash": "JtYZ0DkQwGY",
+		"s_6hePc9eXONM": {
+			"displayName": "collapsible.qwik.mjs_HCollapsible_component",
+			"hash": "6hePc9eXONM",
 			"ctxKind": "function",
-			"ctxName": "useTask$",
-			"captures": true,
-			"canonicalFilename": "scroller.qwik.mjs_CarouselScroller_component_useTask_1_JtYZ0DkQwGY",
-			"parent": "s_I05Gwfl92hI",
-			"origin": "../node_modules/@qwik-ui/headless/components/carousel/scroller.qwik.mjs",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "collapsible.qwik.mjs_HCollapsible_component_6hePc9eXONM",
+			"origin": "../node_modules/@qwik-ui/headless/components/collapsible/collapsible.qwik.mjs",
 			"loc": [
-				5976,
-				6172
-			]
-		},
-		"s_3XAOiLVo1JY": {
-			"displayName": "scroller.qwik.mjs_CarouselScroller_component_handleMouseDown",
-			"hash": "3XAOiLVo1JY",
-			"ctxKind": "function",
-			"ctxName": "$",
-			"captures": true,
-			"canonicalFilename": "scroller.qwik.mjs_CarouselScroller_component_handleMouseDown_3XAOiLVo1JY",
-			"parent": "s_I05Gwfl92hI",
-			"origin": "../node_modules/@qwik-ui/headless/components/carousel/scroller.qwik.mjs",
-			"loc": [
-				3029,
-				3575
+				373,
+				2371
 			]
 		},
 		"s_BV8CALR7MhQ": {
