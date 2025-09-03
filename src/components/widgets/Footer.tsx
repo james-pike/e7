@@ -1,5 +1,4 @@
-// src/components/Footer.tsx
-import { $, component$, useSignal, type JSXOutput, type JSXNode } from "@builder.io/qwik";
+import { component$, type JSXOutput, type JSXNode } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import {
   LuMail,
@@ -26,15 +25,11 @@ export default component$(() => {
     {
       title: "About",
       items: [
-                { title: "Our Space", href: "/about" },
-
+        { title: "Our Space", href: "/about" },
         { title: "What To Expect", href: "/about#what-to-expect" },
-                { title: "Benefits Of Clay", href: "/about#clay" },
+        { title: "Benefits Of Clay", href: "/about#clay" },
         { title: "Gallery", href: "/gallery" },
-
-        
-                { title: "FAQs", href: "/faq" },
-
+        { title: "FAQs", href: "/faq" },
       ],
     },
     {
@@ -42,11 +37,9 @@ export default component$(() => {
       items: [
         { title: "Classes", href: "/classes" },
         { title: "Facilitators", href: "/team" },
-                { title: "Connections", href: "/connections" },
-
+        { title: "Connections", href: "/connections" },
         { title: "Reviews", href: "/reviews" },
-                { title: "Contact", href: "/contact" },
-
+        { title: "Contact", href: "/contact" },
       ],
     },
     {
@@ -92,25 +85,6 @@ export default component$(() => {
     },
   ];
 
-  const email = useSignal("");
-  const isSubmitted = useSignal(false); // Track if form has been submitted
-  const message = useSignal(""); // Store the feedback message
-
-  // Handle form submission with validation
-  const handleSubmit = $(async (e: Event) => {
-    e.preventDefault(); // Prevent default form submission
-    const emailValue = email.value.trim();
-    if (!isSubmitted.value) {
-      // Basic email validation: check for @ and .
-      if (!emailValue.includes("@") || !emailValue.includes(".")) {
-        message.value = "Please enter a valid email address.";
-      } else {
-        isSubmitted.value = true; // Mark as submitted to disable further actions
-        message.value = "Error: Newsletter signup coming soon"; // Set feedback message
-      }
-    }
-  });
-
   return (
     <footer class="relative border-t pl-1 border-half border-primary-200 dark:border-secondary-700 overflow-hidden">
       {/* Background with pottery textures */}
@@ -139,30 +113,53 @@ export default component$(() => {
                   Join Our Newsletter
                 </span>
               </div>
-              <form onSubmit$={handleSubmit} class="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  aria-label="Enter email for newsletter"
-                  class="flex-1 px-4 py-2 text-sm border border-primary-200 dark:border-secondary-800 rounded-l-xl bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  bind:value={email}
-                  disabled={isSubmitted.value} // Disable input after submission
-                />
-                <button
-                  type="submit"
-                  class="px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-medium rounded-r-full hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
-                  role="button"
-                  aria-label="Subscribe to newsletter"
-                  disabled={isSubmitted.value} // Disable button after submission
-                >
-                  Subscribe
-                </button>
-              </form>
-              {message.value && (
-                <p class="mt-2 text-sm text-primary-700 dark:text-primary-300">
-                  {message.value}
-                </p>
-              )}
+              <div id="mc_embed_shell">
+                <div id="mc_embed_signup">
+                  <form
+                    action="https://earthenvessels.us11.list-manage.com/subscribe/post?u=42dda59e7d3d6747a12a99b52&amp;id=f9ccff90d2&amp;f_id=00edd6e3f0"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    class="validate flex w-full max-w-md"
+                    target="_self"
+                    noValidate
+                  >
+                    <div id="mc_embed_signup_scroll" class="flex w-full">
+                      <input
+                        type="email"
+                        name="EMAIL"
+                        class="required email flex-1 px-4 py-3 text-base border border-primary-200 dark:border-secondary-800 rounded-l-xl bg-white/50 dark:bg-secondary-800/80 backdrop-blur-sm text-primary-900 dark:text-primary-100 placeholder-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        id="mce-EMAIL"
+                        placeholder="Enter your email"
+                        aria-label="Enter email for newsletter"
+                        required
+                        value=""
+                      />
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        <input
+                          type="text"
+                          name="b_42dda59e7d3d6747a12a99b52_f9ccff90d2"
+                          tabIndex={-1}
+                          value=""
+                        />
+                      </div>
+                      <input
+                        type="submit"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        class="px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-base font-medium rounded-r-full hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
+                        value="Subscribe"
+                        role="button"
+                        aria-label="Subscribe to newsletter"
+                      />
+                    </div>
+                    <div id="mce-responses" class="clear foot mt-2">
+                      <div class="response" id="mce-error-response" style="display: none;"></div>
+                      <div class="response" id="mce-success-response" style="display: none;"></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
           {/* Sitemap Columns */}
@@ -207,7 +204,7 @@ export default component$(() => {
           ))}
         </div>
         <div class="flex flex-col md:flex-row md:items-center md:justify-between -mt-8 md:pt-8 pb-2 md:pb-4 border-t border-half border-secondary-200/50 dark:border-secondary-700/50">
-          <div class="inline-flex items-center text-sm text-primary-700 mt-2 dark:text-primary-300 order-2 md:order-1">
+          <div class="inline-flex pb-2 items-center text-sm text-primary-700 mt-2 dark:text-primary-300 order-2 md:order-1">
             <img
               src="/images/logo22.svg"
               alt="earthen vessels Logo"
