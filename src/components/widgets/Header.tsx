@@ -1,7 +1,6 @@
-// src/components/Header.tsx
 import { component$, useStore, useVisibleTask$, useSignal } from "@builder.io/qwik";
-import { useContent, useLocation } from "@builder.io/qwik-city";
-import IconChevronDown from "..//icons/IconChevronDown";
+import { useLocation } from "@builder.io/qwik-city";
+import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
 
 export default component$(() => {
@@ -14,7 +13,33 @@ export default component$(() => {
   const location = useLocation();
   const isHomeRoute = location.url.pathname === "/"; // Check if on home route
 
-  const { menu } = useContent();
+  // Hardcoded menu from menu.md
+  const menu = {
+    items: [
+      { text: "This Is Us", href: "/team" },
+      {
+        text: "About",
+        href: "/about",
+        items: [
+          { text: "About Us", href: "/about" },
+          { text: "Newsletter", href: "/newsletter" },
+          { text: "Clay", href: "/about#clay" },
+          { text: "FAQ", href: "/faq" },
+        ],
+      },
+      {
+        text: "Classes",
+        href: "/classes",
+        items: [
+          { text: "Our Offerings", href: "/classes" },
+          { text: "Gift Cards", href: "https://bookeo.com/earthenvessels/buyvoucher" },
+        ],
+      },
+      { text: "Gallery", href: "/gallery" },
+      { text: "Reviews", href: "/testimonials" },
+      { text: "Connections", href: "/connections" },
+    ],
+  };
 
   // Detect mobile vs. desktop on client-side
   useVisibleTask$(() => {
@@ -191,6 +216,19 @@ export default component$(() => {
                                     ${!isFirst && !isLast ? "hover:rounded-none" : ""}
                                   `}
                                   href={href2}
+                                  onClick$={(e) => {
+                                    if (text2 === "Clay" && href2 === "/about#clay") {
+                                      e.preventDefault(); // Prevent default navigation
+                                      if (location.url.pathname !== "/about") {
+                                        window.location.href = "/about#clay"; // Navigate and scroll
+                                      } else {
+                                        const claySection = document.getElementById("clay");
+                                        if (claySection) {
+                                          claySection.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                      }
+                                    }
+                                  }}
                                 >
                                   {text2}
                                 </a>

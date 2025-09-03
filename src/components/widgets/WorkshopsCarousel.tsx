@@ -120,7 +120,7 @@ export default component$<WorkshopsGridProps>(({ workshops }) => {
 
                 {/* Info */}
                 <div class="flex flex-col p-4 items-center">
-                  <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 text-center line-clamp-2">
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 text-center line-clamp-4">
                     {workshop.title}
                   </h3>
 

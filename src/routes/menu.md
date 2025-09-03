@@ -3,8 +3,9 @@
 ## [This Is Us](/team)
 
 ## About
-- [About Us](/about)
-- [Newsletter](/newsletter)
+- [Our Space](/about)
+- [What To Expect](/about#what-to-expect)
+- [Benefits Of Clay](/about#clay)
 - [FAQ](/faq)
 
 ## Classes
