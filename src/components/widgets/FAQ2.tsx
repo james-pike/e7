@@ -63,7 +63,7 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
-      <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="relative max-w-5xl mx-auto px-5 sm:px-6">
         {/* Section Header */}
         <div class="text-center mb-12">
           <h2 class="!text-5xl md:text-6xl xdxd font-bold mb-6">
