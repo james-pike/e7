@@ -30,13 +30,13 @@ export default component$(() => {
               </span>
             </h1>
             {/* Slogan */}
-            <h2 class="!text-3xl  md:!text-3xl xdxd font-bold -mx-2 text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-4 ">
+            <h2 class="!text-3xl  md:!text-3xl xdxd font-bold -mx-2 text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-5 ">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Listening, Connecting & Creating
               </span>
             </h2>
             {/* Subtitle */}
-            <p class="text-xl  della md:text-2xl font-light text-primary-800 mb-6 max-w-2xl mx-auto md:mx-0">
+            <p class="text-xl -mx-2 md:text-2xl font-light text-primary-800 mb-6 max-w-2xl md:mx-0">
               Here, we gather around clay, to listen deeply to one another, to ourselves, and to the earth as we shape earthen vessels.
             </p>
           </div>
