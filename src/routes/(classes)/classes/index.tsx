@@ -125,7 +125,7 @@ export default component$<WorkshopsGridProps>(() => {
         {/* Header and Subtitle */}
         <div class="text-center mb-12">
           <h1 class="!text-5xl md:!text-5xl xdxd font-bold mb-6">
-            <span class="bg-gradient-to-r from-secondary-800 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-700 bg-clip-text text-transparent">
               Our Offerings
             </span>
           </h1>

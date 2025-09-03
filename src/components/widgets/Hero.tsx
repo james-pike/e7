@@ -25,13 +25,13 @@ export default component$(() => {
           <div class="text-center md:text-left px-2">
             {/* Headline (Desktop only) */}
             <h1 class=" md:block text-6xl md:text-8xl font-bold tracking-tight md:mb-4 mb-8 md:-mt-0 -mt-12 ">
-              <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-600 to-secondary-800  bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r xdxd from-secondary-800 via-tertiary-500 to-secondary-800  bg-clip-text text-transparent">
                 earthen vessels
               </span>
             </h1>
             {/* Slogan */}
             <h2 class="!text-3xl  md:!text-3xl xdxd font-bold text-secondary-800 md:text-primary-600 mb-4 md:mb-8 mt-4 ">
-              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent line-clamp-1">
+              <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Listening, Connecting & Creating
               </span>
             </h2>
