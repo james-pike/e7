@@ -17,38 +17,50 @@ const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "2",
     title: "Ceramic Bowl",
-    src: "/images/a2.webp",
+    src: "/images/g55.jpeg",
     alt: "Glazed ceramic bowl",
   },
   {
     id: "3",
     title: "Textured Mug",
-    src: "/images/a3.jpg",
+    src: "/images/g7.jpeg",
     alt: "Textured pottery mug",
   },
-  {
-    id: "4",
-    title: "Sculpted Planter",
-    src: "/images/g1.jpeg",
-    alt: "Sculpted pottery planter",
-  },
+
   {
     id: "5",
     title: "Rustic Pitcher",
     src: "/images/g2.jpeg",
     alt: "Rustic secondary pitcher",
   },
-  {
+      {
+    id: "7",
+    title: "Minimalist Cup",
+    src: "/images/g8.jpg",
+    alt: "Minimalist pottery cup",
+  },
+
+    {
     id: "6",
     title: "Decorative Plate",
-    src: "/images/g3.jpeg",
+    src: "/images/maria2.jpg",
     alt: "Hand-painted ceramic plate",
   },
+
+
   {
     id: "7",
     title: "Minimalist Cup",
     src: "/images/g4.jpeg",
     alt: "Minimalist pottery cup",
+  },
+ 
+
+    {
+    id: "6",
+    title: "Decorative Plate",
+    src: "/images/g3.jpeg",
+    alt: "Hand-painted ceramic plate",
   },
   {
     id: "8",
