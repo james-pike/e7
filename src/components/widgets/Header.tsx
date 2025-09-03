@@ -90,24 +90,20 @@ export default component$(() => {
               }}
             >
               {store.isMobile && isHomeRoute && isInitialized.value && (
-                // Inline SVG for cropped logo
-                <svg
+                <img
+                  src="/images/logo2-cropped.svg"
+                  alt="Logo Cropped"
                   class={{
                     "absolute top-0 left-0 w-[40px] h-[40px] object-contain transition-all duration-500 ease-in-out": true,
                     "opacity-100 translate-x-0": !store.isScrolling, // Slide in from right when returning
                     "opacity-0 translate-x-full": store.isScrolling, // Slide out to right when scrolling
                   }}
-                  viewBox="0 0 40 40" // Replace with actual viewBox from logo2-cropped.svg
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Replace with actual SVG content from /images/logo2-cropped.svg */}
-                  <path d="M10 10H30V30H10V10Z" fill="#000000" /> {/* Placeholder path */}
-                </svg>
+                />
               )}
               {isInitialized.value && (
-                // Inline SVG for full logo
-                <svg
+                <img
+                  src="/images/logo22.svg"
+                  alt="Logo"
                   class={{
                     "absolute top-0 left-0 w-[100px] h-[40px] object-contain": true,
                     // Only apply transition on mobile home route
@@ -115,13 +111,7 @@ export default component$(() => {
                     "opacity-0 -translate-x-full": store.isMobile && isHomeRoute && !store.isScrolling, // Start left when not scrolling on home
                     "opacity-100 translate-x-0": !store.isMobile || !isHomeRoute || store.isScrolling, // Show on desktop, non-home routes, or scrolled home
                   }}
-                  viewBox="0 0 100 40" // Replace with actual viewBox from logo22.svg
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Replace with actual SVG content from /images/logo22.svg */}
-                  <path d="M20 20H80V20H20V20Z" fill="#000000" /> {/* Placeholder path */}
-                </svg>
+                />
               )}
             </div>
           </a>
@@ -282,7 +272,7 @@ export default component$(() => {
             </ul>
           ) : null}
         </nav>
-        <div class="flex items-center md:mb-0 md:flex md:justify-end w-full md:w-auto">
+        <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <a
               href="https://bookeo.com/earthenvessels"
@@ -295,9 +285,6 @@ export default component$(() => {
               </span>
               <div class="absolute inset-0 bg-white/5 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
-            <div class="flex items-center max-md:flex gap-1 ml-2">
-              <MenuModal />
-            </div>
           </div>
         </div>
       </div>
