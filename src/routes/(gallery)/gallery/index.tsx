@@ -288,8 +288,8 @@ export default component$(() => {
         {/* Come Join Us CTA */}
         <div class="text-center mt-12">
           <div class="bg-gradient-to-r max-w-xl mx-auto from-secondary-50/40 via-tertiary-50/40 to-primary-50/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border-2 border-primary-200 dark:border-secondary-700 shadow-2xl">
-            <h3 class="!text-3xl md:!text-4xl font-bold text-secondary-900 dark:text-secondary-100  mb-4">
-              Come Join Us
+            <h3 class="!text-3xl md:!text-4xl xdxd font-bold text-secondary-900 dark:text-secondary-100  mb-4">
+              Come Join Us!
             </h3>
             
             <a

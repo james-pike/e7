@@ -15,9 +15,10 @@ We acknowledge that earthen vessels is on the traditional unceded territory of t
       text: (
         <>
           We pride ourselves on welcoming everyone into our studio, regardless of age, race, ethnicity, physical ability or attributes, religion, sexual orientation, gender identity or gender expression. All Are Welcome!
+          <img src="/images/flag.webp" alt="Pride Flag" class="w-10 mt-4 mx-auto md:mx-0"/>
         </>
       ),
-      image: "/images/space.jpeg",
+      image: "/images/welcome.png",
     },
   ];
 

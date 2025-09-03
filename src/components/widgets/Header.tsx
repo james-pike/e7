@@ -21,9 +21,9 @@ export default component$(() => {
         text: "About",
         href: "/about",
         items: [
-          { text: "About Us", href: "/about" },
-          { text: "Newsletter", href: "/newsletter" },
-          { text: "Clay", href: "/about#clay" },
+          { text: "Our Space", href: "/about" },
+          { text: "What To Expect", href: "/about#what-to-expect" },
+          { text: "Benefits Of Clay", href: "/about#clay" },
           { text: "FAQ", href: "/faq" },
         ],
       },

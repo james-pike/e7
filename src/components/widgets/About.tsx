@@ -68,7 +68,7 @@ export default component$(() => {
     <div>
       <main class="isolate max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <section class="relative overflow-hidden py-6 pt-3 md:py-12">
+        <section class="relative overflow-hidden py-6 pt-3 md:py-16">
           <div id="space" class="relative">
             <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-2 lg:order-1 self-start">
@@ -126,7 +126,7 @@ export default component$(() => {
 
         {/* What To Expect Section */}
         <section id="what-to-expect" class="relative overflow-hidden py-6 pt-12 md:py-12">
-          <div class="relative">
+          <div class="relative mt-16">
             <div class="grid lg:grid-cols-2 gap-6 items-start">
               <div class="order-2 lg:order-1 self-start">
                 <div class="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 dark:via-primary-900/30 dark:to-secondary-900/30 backdrop-blur-sm rounded-2xl shadow-xl p-6 border-2 border-secondary-200/50 dark:border-secondary-700/50 max-w-2xl">
@@ -158,9 +158,9 @@ export default component$(() => {
         </section>
 
         {/* Benefits Section */}
-        <section id="clay" class="relative overflow-hidden -mt-12 py-12 pb-20 md:py-16">
-          <div class="relative max-w-7xl  mx-auto">
-            <h2 class="!text-4xl md:!text-5xl mt-14 text-center font-bold font-serif tracking-tight xdxd mb-16">
+        <section id="clay" class="relative overflow-hidden mt-10 py-12 pb-20 md:py-16">
+          <div class="relative max-w-7xl  mx-auto mt-8">
+            <h2 class="!text-4xl md:!text-5xl  text-center font-bold font-serif tracking-tight xdxd mb-16">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 The Benefits of Clay
               </span>

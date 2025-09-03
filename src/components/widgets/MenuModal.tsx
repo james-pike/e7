@@ -1,5 +1,5 @@
 import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
-import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
+import { LuX, LuChevronDown, LuFacebook, LuInstagram } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
@@ -90,6 +90,10 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
   );
 });
 
+
+
+// ... keep CustomAccordion as-is ...
+
 export default component$(() => {
   const show = useSignal(false);
 
@@ -101,31 +105,29 @@ export default component$(() => {
       hasSubmenu: true,
       subitems: [
         { title: "Our Space", href: "/about" },
-        { title: "What To Expect", href: "/about" },
+        { title: "What To Expect", href: "/about#what-to-expect" },
         { title: "Benefits Of Clay", href: "/about#clay" },
-
         { title: "FAQ", href: "/faq" },
       ],
     },
-    { title: "Classes", href: "/classes/", hasSubmenu: true,  subitems: [
-               { title: "Our Offerings", href: "/classes" },
-
+    {
+      title: "Classes",
+      href: "/classes/",
+      hasSubmenu: true,
+      subitems: [
+        { title: "Our Offerings", href: "/classes" },
         { title: "Gift Cards", href: "https://bookeo.com/earthenvessels/buyvoucher" },
-
-      ], },
+      ],
+    },
     { title: "Gallery", href: "/gallery/", badge: null },
     { title: "Reviews", href: "/reviews/", badge: null },
-            // { title: "Newsletter", href: "/newsletter", badge:t}, 
-
-        { title: "Connections", href: "/connections/", badge: null },
-
+    { title: "Connections", href: "/connections/", badge: null },
     { title: "Contact", href: "/contact/", hasSubmenu: false },
   ];
 
   return (
     <>
       <Modal.Root bind:show={show}>
-        {/* ✅ Restyled trigger to match team card background */}
         <div class="absolute top-2 right-2 md:static">
           <Modal.Trigger
             class={cn(
@@ -146,7 +148,7 @@ export default component$(() => {
                 </div>
               </a>
             </Modal.Title>
-            <Modal.Description class="!text-lg xdxd !font-bold px-2.5 py-1 dark:text-gray-200">
+            <Modal.Description class="!text-lg !font-bold px-2.5 py-1 dark:text-gray-200">
               <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
                 Listening, Connecting & Creating
               </span>
@@ -176,6 +178,26 @@ export default component$(() => {
                 </a>
               </div>
             </div>
+
+            {/* ✅ Social Icons Section */}
+            <div class="mt-6 flex justify-center gap-6">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >
+                <LuFacebook class="h-7 w-7" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >
+                <LuInstagram class="h-7 w-7" />
+              </a>
+            </div>
           </div>
 
           <Modal.Close
@@ -192,3 +214,4 @@ export default component$(() => {
     </>
   );
 });
+
