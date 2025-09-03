@@ -5,6 +5,7 @@ import Hero from "~/components/widgets/Hero";
 import Connections from "./(connections)/connections";
 import Classes from "./(classes)/classes";
 import LandingCards from "~/components/LandingCards";
+import FAQ2 from "~/components/widgets/FAQ2";
 
 
 export default component$(() => {
@@ -13,6 +14,7 @@ export default component$(() => {
       <Hero />
       <Classes/>
       <Connections/>
+      <FAQ2/>
       <LandingCards/>
       
     </>

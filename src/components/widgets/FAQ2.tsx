@@ -4,11 +4,14 @@ export default component$(() => {
   // Hardcoded FAQs
   const faqs = [
     { id: 1, question: "Can keep what I make?", answer: "Yes! During your workshop, you will create a unique clay piece. It will stay with us until the process of drying and firing in our kiln is completed. We will contact you to pick up your creation once the process is completed - usually 3-4 weeks." },
+        { id: 5, question: "What is your studio like?", answer: "Our studio is located on a quiet street. To honour privacy and create a safe, focused environment, only participants and the facilitator are present in the studio during classes and workshops." },
+
     { id: 2, question: "Who are your facilitators?", answer: "earthen vessels facilitators are skilled professionals. They possess a unique blend of empathy, communication skills, and emotional intelligence. They have a natural ability to create a safe and supportive environment where participants feel comfortable sharing their thoughts, feelings, and experiences." },
-    { id: 3, question: "Is there parking?", answer: "We provide all the materials you need. Just wear clothes you don’t mind getting messy." },
     { id: 4, question: "How long is each session?", answer: "Most classes run between 2–3 hours, depending on the workshop." },
-    { id: 5, question: "What is your studio like?", answer: "Our studio is located on a quiet street. To honour privacy and create a safe, focused environment, only participants and the facilitator are present in the studio during classes and workshops." },
-    { id: 6, question: "Is there public transportation?", answer: "At earthen vessels our facilitators bring meaningful experience working with clay. They bring a deep commitment to guiding others in discovering how the clay can awaken within them. Each facilitator holds space with care - for creative exploration, reflection, and personal insight - inviting a journey that is grounding and expansive through the process of clay work." },
+   
+    { id: 6, question: "Do facilitators bring a spirit of reflection and presence?", answer: "At earthen vessels our facilitators bring meaningful experience working with clay. They bring a deep commitment to guiding others in discovering how the clay can awaken within them. Each facilitator holds space with care - for creative exploration, reflection, and personal insight - inviting a journey that is grounding and expansive through the process of clay work." },
+      //  { id: 3, question: "Is there parking?", answer: "We provide all the materials you need. Just wear clothes you don’t mind getting messy." },
+
     { id: 7, question: "Do you offer private events?", answer: "Yes, we host private workshops and team events. Our next open house is in October!" },
   ];
 

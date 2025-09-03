@@ -80,7 +80,7 @@ export default component$<WorkshopsGridProps>(() => {
       id: 9991,
       title: "Summer On The Table",
       description:
-        "Dive into a reflective journey with this workshop, where crafting clay bowls becomes a meditative exploration of openness and receptivity. Participants immerse themselves in the tactile art of shaping clay, fostering mindfulness, creativity, and a deep sense of connection.",
+        "Dive into a reflective journey where crafting clay bowls becomes a meditative exploration of openness and receptivity. Fostering mindfulness, creativity, and a deep sense of connection.",
       date: "2025-03-15",
       duration: "2 hours",
       price: "$45",
