@@ -95,10 +95,8 @@
 
 
 .xdxd {
-  font-family: 'Dancing Script', cursive ;
-          font-size: 1.05em; /* Increases base font size by 10%, adjust as needed */
-
-          
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  font-size: 1.05em; /* Increases base font size by 10%, adjust as needed */
 }
 
 .della {
