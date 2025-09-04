@@ -74,20 +74,17 @@ export default component$(() => {
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center pb-1" href="/">
             <div style={{ width: "100px", height: "40px", position: "relative" }}>
-              {/* Static logo for immediate SSR rendering: cropped on home route, full otherwise */}
+              {/* Static logo for SSR: always logo22.svg */}
               <img
-                src={isHomeRoute ? "/images/logo2-cropped.svg" : "/images/logo22.svg"}
-                alt={isHomeRoute ? "Logo Cropped" : "Logo"}
-                class={{
-                  "absolute top-1 left-1 object-contain": true,
-                  "w-[40px] h-[40px]": isHomeRoute,
-                  "w-[100px] h-[40px]": !isHomeRoute,
-                }}
+                src="/images/logo22.svg"
+                alt="Logo"
+                class="absolute top-1 left-1 w-[100px] h-[40px] object-contain"
                 style={{ display: isInitialized.value ? "none" : "block" }}
               />
-              {/* Client-side animated logos after initialization */}
+              {/* Client-side logos after initialization */}
               {isInitialized.value && (
                 <>
+                  {/* Mobile: Cropped logo on home route when not scrolling */}
                   {store.isMobile && isHomeRoute && (
                     <img
                       src="/images/logo2-cropped.svg"
@@ -99,11 +96,12 @@ export default component$(() => {
                       }}
                     />
                   )}
+                  {/* Mobile: Full logo when scrolling or not on home route; Desktop: Always full logo */}
                   <img
                     src="/images/logo22.svg"
                     alt="Logo"
                     class={{
-                      "absolute top-1 -left-1 w-[100px] h-[40px] object-contain": true,
+                      "absolute top-1 left-1 w-[100px] h-[40px] object-contain": true,
                       "transition-all duration-500 ease-in-out": store.isMobile && isHomeRoute,
                       "opacity-0 -translate-x-full": store.isMobile && isHomeRoute && !store.isScrolling,
                       "opacity-100 translate-x-0": !store.isMobile || !isHomeRoute || store.isScrolling,
@@ -215,7 +213,7 @@ export default component$(() => {
                                   `}
                                   href={href2}
                                   onClick$={(e) => {
-                                    if (text2 === "Clay" && href2 === "/about#clay") {
+                                    if (text2 === "Benefits Of Clay" && href2 === "/about#clay") {
                                       e.preventDefault(); // Prevent default navigation
                                       if (location.url.pathname !== "/about") {
                                         window.location.href = "/about#clay"; // Navigate and scroll
