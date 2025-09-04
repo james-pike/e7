@@ -13,40 +13,26 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        {/* Preload Dancing Script font to prioritize loading */}
+        {/* Preload Dancing Script weight 400 only */}
         <link
           rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=block"
           as="style"
         />
-        {/* Load Dancing Script as stylesheet to ensure availability */}
+        {/* Load all Dancing Script weights as stylesheet */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=block"
           rel="stylesheet"
         />
-        {/* Apply font-display: optional for Dancing Script */}
+        {/* Define font-face for weight 400 with font-display: block */}
         <style>
           {`
             @font-face {
               font-family: 'Dancing Script';
               font-style: normal;
-              font-weight: 400;
+              font-weight: 600;
               src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3Sup5.ttf') format('truetype');
-              font-display: optional;
-            }
-            @font-face {
-              font-family: 'Dancing Script';
-              font-style: normal;
-              font-weight: 500;
-              src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSw3Sup5.ttf') format('truetype');
-              font-display: optional;
-            }
-            @font-face {
-              font-family: 'Dancing Script';
-              font-style: normal;
-              font-weight: 700;
-              src: url('https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMTI3Sup5.ttf') format('truetype');
-              font-display: optional;
+              font-display: block;
             }
           `}
         </style>
