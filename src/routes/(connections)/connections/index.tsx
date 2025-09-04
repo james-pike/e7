@@ -161,20 +161,7 @@ export default component$(() => {
                         <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200 transition-colors duration-200 ease-in-out">
                           {partner.name}
                         </h3>
-                        <svg
-                          class="w-5 h-5 text-primary-600 dark:text-primary-400 group-hover/link:text-secondary-800 dark:group-hover/link:text-secondary-800 transition-all duration-200 ease-in-out"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
-                        </svg>
+                       
                       </a>
                       <a
                         href={partner.website}
