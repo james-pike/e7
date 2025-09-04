@@ -24,7 +24,7 @@ const hardcodedReviews: Review[] = [
   {
     id: 1,
     name: "Jennifer Truchon",
-    review: "The Friendship Mugs of Love workshop at Earthen Vessels was such a special experience. Michelle beautifully wove together creativity, reflection, and laughter, turning a pottery class into something truly meaningful. We left with more than just mugs — we left with deeper connections and lasting memories. Can’t wait to go back!",
+    review: "The Friendship Mugs of Love workshop at earthen vessels was such a special experience. Michelle beautifully wove together creativity, reflection, and laughter, turning a pottery class into something truly meaningful. We left with more than just mugs — we left with deeper connections and lasting memories. Can’t wait to go back!",
     rating: 5,
     date: "2025-09-03T19:05:00Z", // 8 hours ago from 11:05 PM EDT
     role: "Community Member",
@@ -32,7 +32,7 @@ const hardcodedReviews: Review[] = [
   {
     id: 2,
     name: "Patricia Fiorino",
-    review: "A Celebration of Life, Friendship, and Love\n\nOur group of friends came to “Friendship Mugs of Love” at Earthen Vessels to celebrate something truly special. What we found was so much more than a pottery class.\n\nMichelle led us through an experience that was meaningful, inspiring, fun, and deeply connecting. She created a sacred space where creativity and emotion flowed freely. Every part of the experience felt infused with love and intention — from the storytelling, to the silence, to the laughter, to the clay.\n\nMaking our mugs became a beautiful symbol of healing, friendship, and resilience. We came to celebrate and left feeling more bonded, more grateful, and deeply touched.\n\nIf you're looking for more than just a workshop. If you want an experience that fills your heart and soul — this is it!",
+    review: "A Celebration of Life, Friendship, and Love\n\nOur group of friends came to “Friendship Mugs of Love” at earthen vessels to celebrate something truly special. What we found was so much more than a pottery class.\n\nMichelle led us through an experience that was meaningful, inspiring, fun, and deeply connecting. She created a sacred space where creativity and emotion flowed freely. Every part of the experience felt infused with love and intention — from the storytelling, to the silence, to the laughter, to the clay.\n\nMaking our mugs became a beautiful symbol of healing, friendship, and resilience. We came to celebrate and left feeling more bonded, more grateful, and deeply touched.\n\nIf you're looking for more than just a workshop. If you want an experience that fills your heart and soul — this is it!",
     rating: 5,
     date: "2025-09-03T18:05:00Z", // 9 hours ago from 11:05 PM EDT
     role: "Community Member",
@@ -73,7 +73,7 @@ const hardcodedReviews: Review[] = [
   {
     id: 5,
     name: "Kimia",
-    review: "I recently attended a workshop at Earthen Vessels, and it was such a meaningful and calming experience. The workshop focused on mindfulness and how we can metaphorically present ourselves through creating a pottery bowl. The atmosphere was incredibly relaxing, and the instructor provided clear and thoughtful guidance, making it easy to focus on the process rather than just the outcome. As someone with prior experience working with clay, I found this workshop especially soothing because it allowed me to step away from perfectionism and truly enjoy the act of creating. Surprisingly, the final bowl turned out beautifully, but what stayed with me most was the sense of calm and presence I felt during those three hours. I highly recommend earthen vessels to anyone looking for a mindful, hands-on experience with clay. Whether you’re a beginner or have experience, this workshop will leave you feeling refreshed and inspired!",
+    review: "I recently attended a workshop at earthen vessels, and it was such a meaningful and calming experience. The workshop focused on mindfulness and how we can metaphorically present ourselves through creating a pottery bowl. The atmosphere was incredibly relaxing, and the instructor provided clear and thoughtful guidance, making it easy to focus on the process rather than just the outcome. As someone with prior experience working with clay, I found this workshop especially soothing because it allowed me to step away from perfectionism and truly enjoy the act of creating. Surprisingly, the final bowl turned out beautifully, but what stayed with me most was the sense of calm and presence I felt during those three hours. I highly recommend earthen vessels to anyone looking for a mindful, hands-on experience with clay. Whether you’re a beginner or have experience, this workshop will leave you feeling refreshed and inspired!",
     rating: 5,
     date: "2025-07-20T13:00:00Z", // Late July 2025
     role: "Experienced Potter",
