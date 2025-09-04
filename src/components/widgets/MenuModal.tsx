@@ -45,7 +45,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
               <>
                 <button
                   class={cn(
-                    "!text-lg font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2.5 px-5",
+                    "!text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2.5 px-5",
                     isActive &&
                       "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                     "hover:bg-primary-100 dark:hover:bg-primary-100/80 transition-all duration-200"
@@ -62,7 +62,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                 </button>
                 <div
                   class={cn(
-                    "text-lg text-muted-foreground transition-all duration-500 ease-in-out max-h-0 overflow-hidden",
+                    "text-xl text-muted-foreground transition-all duration-500 ease-in-out max-h-0 overflow-hidden",
                     openIndex.value === index && "max-h-96"
                   )}
                 >
@@ -78,7 +78,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
                           <a
                             href={subitem.href}
                             class={cn(
-                              "block text-gray-700 dark:text-gray-200 p-3 pl-1 font-medium transition-all duration-200",
+                              "block text-gray-700 dark:text-gray-200 !text-xl p-3 pl-1 font-medium transition-all duration-200",
                               isSubitemActive &&
                                 "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                               "hover:bg-primary-100 dark:hover:bg-primary-100/80"
@@ -97,7 +97,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[]; show: Signa
               <a
                 href={item.href}
                 class={cn(
-                  "block lg text-gray-700 dark:text-gray-200 p-3 px-5 font-medium transition-all duration-200",
+                  "block lg text-gray-700 !text-xl dark:text-gray-200 p-3 px-5 font-medium transition-all duration-200",
                   isActive &&
                     "bg-primary-100 dark:bg-primary-100/80 !important text-secondary-800 dark:text-secondary-800 !important font-bold !important",
                   "hover:bg-primary-100 dark:hover:bg-primary-100/80"
@@ -167,7 +167,7 @@ export default component$(() => {
           position="left"
           class="dark:bg-gray-950 border-r border-primary-200 overflow-y-auto max-h-[100vh]"
         >
-          <div class="rounded-t-none border-primary-200 bg-white/30 dark:bg-gray-900 p-2">
+          <div class="rounded-t-none border-primary-200 bg-white/50 dark:bg-gray-900 p-2">
             <Modal.Title class="pt-3 pb-2 pl-2.5">
               <a href="/" class="focus:outline-none">
                 <div style="width: 100px; height: 40px;">
@@ -182,16 +182,16 @@ export default component$(() => {
             </Modal.Description> */}
           </div>
 
-          <nav class="mt-0 space-y-4 bg-white/40 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 bg-white/50 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
-          <div class="rounded-b-2xl border-t border-primary-200 bg-white/30 dark:bg-gray-900 pb-5">
+          <div class="rounded-b-2xl border-t border-primary-200 bg-white/50 dark:bg-gray-900 pb-5">
             <div class="sm:max-w-md px-5 pt-4 flex flex-row items-center justify-between gap-4 lg:justify-start lg:max-w-7xl">
               <div class="flex-shrink-0">
                 <a
                   href="https://www.bookeo.com/earthenvessels"
-                  class="group relative inline-flex items-center justify-center px-5 py-2.5 text-lg font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="group relative inline-flex items-center justify-center px-5 py-2.5 !text-lg font-medium text-white bg-gradient-to-r from-primary-600 via-primary-700 to-primary-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-300"
                   role="button"
                   aria-label="Book a workshop"
                 >
@@ -248,7 +248,7 @@ export default component$(() => {
           <Modal.Close
             class={cn(
               buttonVariants({ size: "icon", look: "link" }),
-              "absolute right-5 top-5 text-primary-300 hover:text-secondary-800 dark:text-white dark:hover:bg-gray-900"
+              "absolute right-8 top-5 text-primary-300 hover:text-secondary-800 dark:text-white dark:hover:bg-gray-900"
             )}
             type="submit"
           >

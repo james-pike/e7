@@ -20,6 +20,24 @@ export default component$(() => {
 
   // Hardcoded reviews
 const hardcodedReviews: Review[] = [
+
+  {
+    id: 1,
+    name: "Jennifer Truchon",
+    review: "The Friendship Mugs of Love workshop at Earthen Vessels was such a special experience. Michelle beautifully wove together creativity, reflection, and laughter, turning a pottery class into something truly meaningful. We left with more than just mugs — we left with deeper connections and lasting memories. Can’t wait to go back!",
+    rating: 5,
+    date: "2025-09-03T19:05:00Z", // 8 hours ago from 11:05 PM EDT
+    role: "Community Member",
+  },
+  {
+    id: 2,
+    name: "Patricia Fiorino",
+    review: "A Celebration of Life, Friendship, and Love\n\nOur group of friends came to “Friendship Mugs of Love” at Earthen Vessels to celebrate something truly special. What we found was so much more than a pottery class.\n\nMichelle led us through an experience that was meaningful, inspiring, fun, and deeply connecting. She created a sacred space where creativity and emotion flowed freely. Every part of the experience felt infused with love and intention — from the storytelling, to the silence, to the laughter, to the clay.\n\nMaking our mugs became a beautiful symbol of healing, friendship, and resilience. We came to celebrate and left feeling more bonded, more grateful, and deeply touched.\n\nIf you're looking for more than just a workshop. If you want an experience that fills your heart and soul — this is it!",
+    rating: 5,
+    date: "2025-09-03T18:05:00Z", // 9 hours ago from 11:05 PM EDT
+    role: "Community Member",
+  }
+,
   {
     id: 3,
     name: "Wendy",
