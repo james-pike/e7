@@ -46,6 +46,12 @@ const GALLERY_IMAGES: GalleryImage[] = [
     src: "/images/maria2.jpg",
     alt: "Hand-painted ceramic plate",
   },
+      {
+    id: "6",
+    title: "Decorative Plate",
+    src: "/images/image.png",
+    alt: "Hand-painted ceramic plate",
+  },
 
 
   {
