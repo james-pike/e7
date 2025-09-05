@@ -3,7 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
-    <section class="flex items-center p-16 h-[calc(80vh - 72px)]">
+    <section class="flex items-center p-16 h-[calc(90vh - 72px)]">
       <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
         <div class="max-w-md text-center">
           <h2 class="mb-8 font-bold text-9xl text-primary">
