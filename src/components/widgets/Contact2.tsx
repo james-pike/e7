@@ -60,7 +60,7 @@ export default component$(() => {
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
-          {/* Left Side - Studio Image, Features, & Quick Contact CTA */}
+          {/* Left Side - Studio Image, Features, & Quick Contacts CTA */}
           <div class="space-y-8">
             {/* Studio Image */}
          <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-secondary-200/50 flex justify-center">

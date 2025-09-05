@@ -85,7 +85,7 @@ export default component$(() => {
             </span>
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-300 max-w-3xl mx-auto">
-            Our dedicated professionals bringing expertise and passion to every experience.
+            Our dedicated professionals bring expertise and passion to every experience.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export default component$(() => {
                 </span>
                 <p
                   class={[
-                    "text-primary-700 dark:text-primary-300 text-sm sm:text-md leading-relaxed text-center mt-4",
+                    "text-primary-700 dark:text-primary-300 !text-sm sm:!text-md  text-center mt-4",
                     expandedMember.value === member.name
                       ? "transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
                       : "transition-all duration-300 ease-in-out line-clamp-3",
