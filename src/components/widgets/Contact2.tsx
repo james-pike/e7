@@ -63,21 +63,20 @@ export default component$(() => {
           {/* Left Side - Studio Image, Features, & Quick Contact CTA */}
           <div class="space-y-8">
             {/* Studio Image */}
-            <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-secondary-200/50">
-              <Image
-                src="/images/space.jpeg"
-                layout="constrained"
-                width={600}
-                height={400}
-                alt="Terra Pottery Studio"
-                class="w-full h-64 object-cover"
-                breakpoints={[320, 480, 640, 768, 1024]}
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-secondary-900/60 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-6 text-white">
-                <h3 class="text-xl font-bold mb-2">Visit Our Studio</h3>
-              </div>
-            </div>
+         <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-secondary-200/50 flex justify-center">
+  <Image
+    src="/images/space.jpeg"
+    layout="constrained"
+    width={600}
+    height={400}
+    alt="Terra Pottery Studio"
+    class="w-full h-auto max-w-full object-fill"
+    breakpoints={[320, 480, 640, 768, 1024]}
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-secondary-900/60 via-transparent to-transparent"></div>
+  <div class="absolute bottom-6 left-6 text-white">
+  </div>
+</div>
 
         
           </div>
