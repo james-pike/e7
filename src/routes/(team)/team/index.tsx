@@ -102,7 +102,7 @@ export default component$(() => {
                   : "bg-white/35 border-primary-200 dark:border-secondary-700",
               ]}
               style={{
-                minHeight: "300px", // Ensures consistent height for collapsed state
+                minHeight: "300px", // Ensures consistent height for collapsed states
                 transitionProperty: "transform, opacity, margin, box-shadow, background-color, border-color",
                 transform: expandedMember.value === member.name ? "scale(1.02)" : "scale(1)",
               }}
