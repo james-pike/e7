@@ -194,7 +194,7 @@ const hardcodedReviews: Review[] = [
     <section class="relative overflow-hidden py-12 md:py-16">
       <div class="relative max-w-7xl mx-auto px-1 sm:px-6">
         <div class="text-center mb-12">
-          <h2 class="!text-5xl md:text-6xl px-4 font-bold font-serif mb-6">
+          <h2 class="!text-5xl md:text-6xl px-4 font-bold mb-6">
             <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
               Participant Reviews
             </span>
@@ -219,12 +219,12 @@ const hardcodedReviews: Review[] = [
                         <div class="flex justify-center mb-4 pt-6">
                           <div class="flex space-x-1">{renderStars(review.rating)}</div>
                         </div>
-                        <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed px-6">
+                        <blockquote class="text-md text-secondary-900 dark:text-secondary-100 mb-6 px-6">
                           "{review.review}"
                         </blockquote>
                         <div class="flex items-center space-x-3 mb-4 px-6">
                           <div class="text-left">
-                            <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
+                            <h4 class=" font-bold text-secondary-900 dark:text-secondary-100">
                               {review.name}
                             </h4>
                             {review.role && (
@@ -291,12 +291,12 @@ const hardcodedReviews: Review[] = [
                     <div class="flex justify-center mb-4 pt-6">
                       <div class="flex space-x-1">{renderStars(review.rating)}</div>
                     </div>
-                    <blockquote class="text-lg font-serif text-secondary-900 dark:text-secondary-100 mb-6 leading-relaxed px-6">
+                    <blockquote class="!text-lg  text-secondary-900 dark:text-secondary-100 mb-6 px-6">
                       "{review.review}"
                     </blockquote>
                     <div class="flex items-center space-x-3 mb-4 px-6">
                       <div class="text-left">
-                        <h4 class="text-base font-bold text-secondary-900 dark:text-secondary-100 font-serif">
+                        <h4 class=" font-bold text-secondary-900 dark:text-secondary-100">
                           {review.name}
                         </h4>
                         {/* {review.role && (
