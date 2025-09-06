@@ -21,7 +21,7 @@ export const useClassesData = routeLoader$(async () => {
       description: classItem.description?.toString() || '',
       image: classItem.image?.toString() || '',
       url: classItem.url?.toString() || '',
-      // ✅ Normalize number (0/1) into boolean
+      // ✅ Normalize number (0/1) into booleans
       isActive: classItem.isActive === 1,
     }));
   } catch (error) {
