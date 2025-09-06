@@ -1,18 +1,29 @@
 import { component$, useSignal, $, useVisibleTask$ } from "@builder.io/qwik";
 
 export default component$(() => {
-  // Hardcoded FAQs
+  // Hardcoded FAQs with isHtml flag for special formatting
   const faqs = [
-    { id: 1, question: "What is your studio like?", answer: "Our studio is located on a quiet street. To honour privacy and create a safe, focused environment, only participants and the facilitator are present in the studio during classes and workshops." },
-    { id: 2, question: "Who are your facilitators?", answer: "earthen vessels facilitators are skilled professionals. They possess a unique blend of empathy, communication skills, and emotional intelligence. They have a natural ability to create a safe and supportive environment where participants feel comfortable sharing their thoughts, feelings, and experiences." },
-    { id: 3, question: "Do facilitators bring a spirit of reflection and presence?", answer: "At earthen vessels our facilitators bring meaningful experience working with clay. They bring a deep commitment to guiding others in discovering how the clay can awaken within them. Each facilitator holds space with care - for creative exploration, reflection, and personal insight - inviting a journey that is grounding and expansive through the process of clay work." },
-    { id: 4, question: "How long is each session?", answer: "Most classes run between 2–3 hours, depending on the workshop." },
+    { id: 1, question: "What is your studio like?", answer: "Our studio is located on a quiet street. To honour privacy and create a safe, focused environment, only participants and the facilitator are present in the studio during classes and workshops.", isHtml: false },
+  {
+  id: 2,
+  question: "Who are your facilitators?",
+  answer: "earthen vessels facilitators are skilled professionals. They possess a unique blend of empathy, communication skills, and emotional intelligence. They have a natural ability to create a safe and supportive environment where participants feel comfortable sharing their thoughts, feelings, and experiences. <a href=\"/team\" class=\"text-secondary-600 font-semibold underline hover:text-secondary-800\">This Is Us</a>",
+  isHtml: true,
+},
+    {
+      id: 3,
+      question: "Do facilitators bring a spirit of reflection and presence?",
+      answer: "At earthen vessels our facilitators bring meaningful experience working with clay. They bring a deep commitment to guiding others in discovering how the clay can awaken within them. Each facilitator holds space with care - for creative exploration, reflection, and personal insight - inviting a journey that is grounding and expansive through the process of clay work.",
+      isHtml: false,
+    },
+    { id: 4, question: "How long is each session?", answer: "Most classes run between 2–3 hours, depending on the workshop.", isHtml: false },
     {
       id: 5,
       question: "Do you host private events?",
       answer: "Yes, we host private workshops and team events.<ul class=\"list-disc pl-5 mt-2\"><li id=\"open-house\">Our next open house is October 1st from 7-9pm</li><li id=\"private-events\">Contact us for more information and to collaborate on your next event!</li></ul>",
+      isHtml: true,
     },
-    { id: 6, question: "Can I keep what I make?", answer: "Yes! During your workshop, you will create a unique clay piece. It will stay with us until the process of drying and firing in our kiln is completed. We will contact you to pick up your creation once the process is completed - usually 3-4 weeks." },
+    { id: 6, question: "Can I keep what I make?", answer: "Yes! During your workshop, you will create a unique clay piece. It will stay with us until the process of drying and firing in our kiln is completed. We will contact you to pick up your creation once the process is completed - usually 3-4 weeks.", isHtml: false },
   ];
 
   // Split FAQ items into two columns
@@ -117,7 +128,7 @@ export default component$(() => {
                     }`}
                   >
                     <div class="px-6 pb-5">
-                      {item.id === 5 ? (
+                      {item.isHtml ? (
                         <div class="text-primary-700 dark:text-primary-300" dangerouslySetInnerHTML={item.answer} />
                       ) : (
                         <p class="text-primary-700 dark:text-primary-300">{item.answer}</p>
@@ -172,7 +183,7 @@ export default component$(() => {
                     }`}
                   >
                     <div class="px-6 pb-5">
-                      {item.id === 5 ? (
+                      {item.isHtml ? (
                         <div class="text-primary-700 dark:text-primary-300" dangerouslySetInnerHTML={item.answer} />
                       ) : (
                         <p class="text-primary-700 dark:text-primary-300">{item.answer}</p>
