@@ -7,7 +7,7 @@ export default component$(() => {
   {
   id: 2,
   question: "Who are your facilitators?",
-  answer: "earthen vessels facilitators are skilled professionals. They possess a unique blend of empathy, communication skills, and emotional intelligence. They have a natural ability to create a safe and supportive environment where participants feel comfortable sharing their thoughts, feelings, and experiences. <a href=\"/team\" class=\"text-secondary-600 font-semibold underline hover:text-secondary-800\">This Is Us</a>",
+  answer: "earthen vessels facilitators are skilled professionals. They possess a unique blend of empathy, communication skills, and emotional intelligence. They have a natural ability to create a safe and supportive environment where participants feel comfortable sharing their thoughts, feelings, and experiences. <a href=\"/team\" class=\"text-secondary-700 font-semibold underline hover:text-secondary-800\">This Is Us</a>",
   isHtml: true,
 },
     {
