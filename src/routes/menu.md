@@ -6,6 +6,7 @@
 - [Our Space](/about)
 - [What To Expect](/about#what-to-expect)
 - [Benefits Of Clay](/about#clay)
+- [Gallery](/gallery)
 - [FAQ](/faq)
 
 ## Classes
@@ -13,10 +14,10 @@
 - [Gift Cards](https://bookeo.com/earthenvessels/buyvoucher)
 
 
-
-## [Gallery](/gallery)
 ## [Reviews](/reviews)
 ## [Connections](/connections)
+## [Contact](/contact)
+
 
 
 

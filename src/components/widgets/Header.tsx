@@ -36,6 +36,8 @@ export default component$(() => {
           { text: "Our Space", href: "/about" },
           { text: "What To Expect", href: "/about#what-to-expect" },
           { text: "Benefits Of Clay", href: "/about#clay" },
+                { text: "Gallery", href: "/gallery" },
+
           { text: "FAQ", href: "/faq" },
         ],
       },
@@ -47,9 +49,10 @@ export default component$(() => {
           { text: "Gift Cards", href: "https://bookeo.com/earthenvessels/buyvoucher" },
         ],
       },
-      { text: "Gallery", href: "/gallery" },
       { text: "Reviews", href: "/reviews" },
       { text: "Connections", href: "/connections" },
+            { text: "Contact", href: "/contact" },
+
     ],
   };
 
