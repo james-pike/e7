@@ -74,7 +74,7 @@ export default component$(() => {
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center pb-1" href="/">
             <div style={{ width: "100px", height: "40px", position: "relative" }}>
-              {/* Static logo for immediate SSR rendering: cropped on home route, full otherwise */}
+              {/* Static logo for immediate SSR rendering: cropped son home route, full otherwise */}
               <img
                 src={isHomeRoute ? "/images/logo2-cropped.svg" : "/images/logo22.svg"}
                 alt={isHomeRoute ? "Logo Cropped" : "Logo"}
