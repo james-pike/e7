@@ -1,1 +1,0 @@
-import{_hW as r}from"./q-D42ibeys.js";import"./q-CF2Nn7YE.js";const s=o=>{const e=o.cloneNode(!0);Object.assign(e.style,{overflow:"visible",height:"auto",maxHeight:"none",opacity:"0",visibility:"hidden",display:"block"}),o.after(e);const t=e.offsetHeight;return e.remove(),t};export{r as _hW,s as s_JoVsRkNmQcc};
