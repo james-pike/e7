@@ -21,7 +21,8 @@ export const useClassesData = routeLoader$(async () => {
       description: classItem.description?.toString() || '',
       image: classItem.image?.toString() || '',
       url: classItem.url?.toString() || '',
-      isActive: classItem.isActive
+      // ✅ Normalize number (0/1) into boolean
+      isActive: classItem.isActive === 1,
     }));
   } catch (error) {
     console.error('Error fetching classes:', error);
@@ -129,7 +130,7 @@ export default component$(() => {
                     <h3 class="text-base font-bold text-secondary-900 dark:text-secondary-100 line-clamp-1">
                       {workshop.name}
                     </h3>
-                    {(workshop.isActive === true || workshop.isActive === 1 || workshop.isActive === '1' || workshop.isActive === 'true') ? (
+                    {workshop.isActive ? (
                       <a
                         href={workshop.url || "https://bookeo.com/earthenvessels"}
                         class="px-3 py-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all duration-200"
