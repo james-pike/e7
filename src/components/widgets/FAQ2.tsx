@@ -1,60 +1,66 @@
 import { component$, useSignal, $, useVisibleTask$ } from "@builder.io/qwik";
+import { routeLoader$ } from "@builder.io/qwik-city";
+import { tursoClient } from "~/lib/turso";
+
+interface Faq {
+  id?: number;
+  question: string;
+  answer: string;
+  isHtml?: boolean; // Add this to support HTML content in answers
+}
+
+// ---- Loader ----
+export const useFaqsLoader = routeLoader$(async (event) => {
+  try {
+    const client = tursoClient(event);
+    const result = await client.execute("SELECT * FROM faqs ORDER BY id ASC");
+    return result.rows.map((row: any) => ({
+      id: Number(row.id),
+      question: String(row.question),
+      answer: String(row.answer),
+      // You can add an isHtml column to your database or determine this programmatically
+      isHtml: String(row.answer).includes('<') // Simple check for HTML content
+    })) as Faq[];
+  } catch (error) {
+    console.error("Error loading FAQs:", error);
+    return [];
+  }
+});
 
 export default component$(() => {
-  // Hardcoded FAQs with isHtml flag for special formatting
-  const faqs = [
-    { id: 1, question: "What is your studio like?", answer: "Our studio is located on a quiet street. To honour privacy and create a safe, focused environment, only participants and the facilitator are present in the studio during classes and workshops.", isHtml: false },
-  {
-  id: 2,
-  question: "Who are your facilitators?",
-  answer: "earthen vessels facilitators are skilled professionals. They possess a unique blend of empathy, communication skills, and emotional intelligence. They have a natural ability to create a safe and supportive environment where participants feel comfortable sharing their thoughts, feelings, and experiences. <a href=\"/team\" class=\"text-secondary-700 font-semibold underline hover:text-secondary-800\">This Is Us</a>",
-  isHtml: true,
-},
-    {
-      id: 3,
-      question: "Do facilitators bring a spirit of reflection and presence?",
-      answer: "At earthen vessels our facilitators bring meaningful experience working with clay. They bring a deep commitment to guiding others in discovering how the clay can awaken within them. Each facilitator holds space with care - for creative exploration, reflection, and personal insight - inviting a journey that is grounding and expansive through the process of clay work.",
-      isHtml: false,
-    },
-    { id: 4, question: "How long is each session?", answer: "Most classes run between 2–3 hours, depending on the workshop.", isHtml: false },
-    {
-      id: 5,
-      question: "Do you host private events?",
-      answer: "Yes, we host private workshops and team events.<ul class=\"list-disc pl-5 mt-2\"><li id=\"open-house\">Our next open house is October 1st from 7-9pm</li><li id=\"private-events\">Contact us for more information and to collaborate on your next event!</li></ul>",
-      isHtml: true,
-    },
-    { id: 6, question: "Can I keep what I make?", answer: "Yes! During your workshop, you will create a unique clay piece. It will stay with us until the process of drying and firing in our kiln is completed. We will contact you to pick up your creation once the process is completed - usually 3-4 weeks.", isHtml: false },
-  ];
-
-  // Split FAQ items into two columns
-  const leftColumn = faqs.filter((_, i) => i % 2 === 0);
-  const rightColumn = faqs.filter((_, i) => i % 2 === 1);
-
+  const loaderData = useFaqsLoader();
+  const faqs = useSignal<Faq[]>([]);
+  
   // Track which item is open
   const openItems = useSignal<number | null>(null);
-
+  
   // Detect mobile for controlling open item behavior
   const isMobile = useSignal(false);
 
+  // Load data and set up responsive behavior
   useVisibleTask$(() => {
+    faqs.value = loaderData.value;
+    
+    if (faqs.value.length === 0) return; // No FAQs to work with
+    
     const mediaQuery = window.matchMedia("(max-width: 767px)");
     isMobile.value = mediaQuery.matches;
 
     // Set default open item:
     if (isMobile.value) {
-      openItems.value = faqs[0].id; // Always first FAQ on mobile
+      openItems.value = faqs.value[0]?.id || null; // Always first FAQ on mobile
     } else {
-      const randomFaq = faqs[Math.floor(Math.random() * faqs.length)];
-      openItems.value = randomFaq.id; // Random one on desktop
+      const randomFaq = faqs.value[Math.floor(Math.random() * faqs.value.length)];
+      openItems.value = randomFaq?.id || null; // Random one on desktop
     }
 
     const handler = (e: MediaQueryListEvent) => {
       isMobile.value = e.matches;
       if (isMobile.value) {
-        openItems.value = faqs[0].id;
+        openItems.value = faqs.value[0]?.id || null;
       } else {
-        const randomFaq = faqs[Math.floor(Math.random() * faqs.length)];
-        openItems.value = randomFaq.id;
+        const randomFaq = faqs.value[Math.floor(Math.random() * faqs.value.length)];
+        openItems.value = randomFaq?.id || null;
       }
     };
 
@@ -70,6 +76,26 @@ export default component$(() => {
       openItems.value = id;
     }
   });
+
+  // Split FAQ items into two columns
+  const leftColumn = faqs.value.filter((_, i) => i % 2 === 0);
+  const rightColumn = faqs.value.filter((_, i) => i % 2 === 1);
+
+  // Show loading state if no FAQs yet
+  if (faqs.value.length === 0) {
+    return (
+      <section class="relative overflow-hidden py-12 md:py-16">
+        <div class="relative max-w-5xl mx-auto px-5 sm:px-6 text-center">
+          <h2 class="!text-5xl md:text-6xl font-bold mb-6">
+            <span class="bg-gradient-to-r from-primary-600 via-tertiary-600 to-secondary-800 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </span>
+          </h2>
+          <p class="text-primary-700 dark:text-primary-300">Loading FAQs...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
@@ -91,7 +117,7 @@ export default component$(() => {
               <div key={item.id} class="group">
                 <div class="bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 rounded-2xl border shadow-lg hover:shadow-xl transition-all duration-300">
                   <button
-                    onClick$={() => toggleItem(item.id)}
+                    onClick$={() => toggleItem(item.id!)}
                     class="w-full px-6 py-5 flex items-center justify-between text-left transition-all"
                     aria-expanded={openItems.value === item.id}
                     aria-controls={`faq-answer-${item.id}`}
@@ -146,7 +172,7 @@ export default component$(() => {
               <div key={item.id} class="group">
                 <div class="bg-gradient-to-br from-white/50 via-primary-50/30 to-secondary-50/30 dark:from-gray-800/90 rounded-2xl border shadow-lg hover:shadow-xl transition-all duration-300">
                   <button
-                    onClick$={() => toggleItem(item.id)}
+                    onClick$={() => toggleItem(item.id!)}
                     class="w-full px-6 py-5 flex items-center justify-between text-left transition-all"
                     aria-expanded={openItems.value === item.id}
                     aria-controls={`faq-answer-${item.id}`}

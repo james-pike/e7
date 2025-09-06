@@ -1,6 +1,7 @@
-// src/components/Testimonials.tsx
-import { component$, useSignal, $, useTask$, useStyles$ } from "@builder.io/qwik";
+import { component$, useSignal, $, useTask$, useStyles$, useVisibleTask$ } from "@builder.io/qwik";
+import { routeLoader$ } from "@builder.io/qwik-city";
 import { useLocation } from "@builder.io/qwik-city";
+import { tursoClient } from "~/lib/turso";
 
 interface Review {
   id: number;
@@ -11,90 +12,38 @@ interface Review {
   role: string;
 }
 
+// Database loader
+export const useReviewsLoader = routeLoader$(async (event) => {
+  try {
+    const client = tursoClient(event);
+    const result = await client.execute('SELECT * FROM reviews ORDER BY id ASC');
+    return result.rows.map((row: any) => ({
+      id: Number(row.id) || 0,
+      name: String(row.name) || '',
+      review: String(row.review) || '',
+      rating: Number(row.rating) || 0,
+      date: String(row.date) || '',
+      role: String(row.role) || '',
+    })) as Review[];
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
+    return [];
+  }
+});
+
 export default component$(() => {
+  const reviewsData = useReviewsLoader();
+  const reviews = useSignal<Review[]>([]);
   const currentIndex = useSignal(0);
   const isAutoPlaying = useSignal(true);
   const carouselRef = useSignal<HTMLElement | undefined>();
   const location = useLocation();
   const isHomePage = location.url.pathname === "/";
 
-  // Hardcoded reviews
-const hardcodedReviews: Review[] = [
-
-  {
-    id: 1,
-    name: "Jennifer Truchon",
-    review: "The Friendship Mugs of Love workshop at earthen vessels was such a special experience. Michelle beautifully wove together creativity, reflection, and laughter, turning a pottery class into something truly meaningful. We left with more than just mugs — we left with deeper connections and lasting memories. Can’t wait to go back!",
-    rating: 5,
-    date: "2025-09-03T19:05:00Z", // 8 hours ago from 11:05 PM EDT
-    role: "Community Member",
-  },
-  {
-    id: 2,
-    name: "Patricia Fiorino",
-    review: "A Celebration of Life, Friendship, and Love.\n\n Our group of friends came to “Friendship Mugs of Love” at earthen vessels to celebrate something truly special. What we found was so much more than a pottery class.\n\nMichelle led us through an experience that was meaningful, inspiring, fun, and deeply connecting. She created a sacred space where creativity and emotion flowed freely. Every part of the experience felt infused with love and intention — from the storytelling, to the silence, to the laughter, to the clay.\n\nMaking our mugs became a beautiful symbol of healing, friendship, and resilience. We came to celebrate and left feeling more bonded, more grateful, and deeply touched.\n\nIf you're looking for more than just a workshop. If you want an experience that fills your heart and soul — this is it!",
-    rating: 5,
-    date: "2025-09-03T18:05:00Z", // 9 hours ago from 11:05 PM EDT
-    role: "Community Member",
-  }
-,
-  {
-    id: 3,
-    name: "Wendy",
-    review: "Thank you for creating such a warm and inviting atmosphere for us to tap into the power of community, connection and play! It was super fun, calming and inspiring. I look forward to taking part in future offerings and am excited to see my finished product in a few weeks!!",
-    rating: 5,
-    date: "2025-08-25T19:00:00Z", // Late August 2025
-    role: "Community Member",
-  },
-  {
-    id: 2,
-    name: "Patricia",
-    review: "Loved the whole experience! From the warm welcome into the space, to the grounding and connecting to others and self, to immersing myself into the process of exploring and experimenting with the clay to make a beautiful lantern. Thank you for such a grounding workshop and evening.",
-    rating: 5,
-    date: "2025-08-20T18:30:00Z", // Late August 2025
-    role: "Workshop Participant",
-  },
-  {
-    id: 1,
-    name: "Chris",
-    review: "It was a beautiful, calming and restorative experience; my first time playing with clay in nearly 50 years! I loved it all. Looking forward to having my finished lantern at the centre of my altar or dinner table. Many thanks for your finely crafted and mindfully presented workshop!",
-    rating: 5,
-    date: "2025-08-15T14:00:00Z", // Mid-August 2025
-    role: "First-Time Potter",
-  },
-  {
-    id: 7,
-    name: "anna ferrabee",
-    review: "A Friendship Mugs of Love workshop was organized to bring nine friends together to celebrate one of the women's completion of cancer treatment. It was joyous and meaningful way to recognize this great accomplishment and very happy occasion. The space itself is bring, calming and inspiring. Michelle, who facilitated the workshop, did a skillful job leading the participants, all with varying experience working with clay, to successfully complete a beautiful mug. I would love to do other workshops offered by earthen vessels. I highly recommend!",
-    rating: 5,
-    date: "2025-08-05T10:00:00Z", // Early August 2025
-    role: "Craft Enthusiast",
-  },
-  {
-    id: 5,
-    name: "Kimia",
-    review: "I recently attended a workshop at earthen vessels, and it was such a meaningful and calming experience. The workshop focused on mindfulness and how we can metaphorically present ourselves through creating a pottery bowl. The atmosphere was incredibly relaxing, and the instructor provided clear and thoughtful guidance, making it easy to focus on the process rather than just the outcome. As someone with prior experience working with clay, I found this workshop especially soothing because it allowed me to step away from perfectionism and truly enjoy the act of creating. Surprisingly, the final bowl turned out beautifully, but what stayed with me most was the sense of calm and presence I felt during those three hours. I highly recommend earthen vessels to anyone looking for a mindful, hands-on experience with clay. Whether you’re a beginner or have experience, this workshop will leave you feeling refreshed and inspired!",
-    rating: 5,
-    date: "2025-07-20T13:00:00Z", // Late July 2025
-    role: "Experienced Potter",
-  },
-  {
-    id: 4,
-    name: "Laura",
-    review: "I can't say enough about the ‘Open Like a Bowl’ workshop at earthen vessels. Using clay as a vehicle for meditation, setting intention and mindfulness was amazing. The energy in the space was so conducive to this goal. Mary and Ginger were wonderful, caring and supportive facilitators. The workshop really opened my creative channels and left me with a feeling of peace and restoration that lingered long after, I walked out the door. Loved it, highly recommend.",
-    rating: 5,
-    date: "2025-07-10T15:45:00Z", // Mid-July 2025
-    role: "Mindfulness Seeker",
-  },
-  {
-    id: 6,
-    name: "Chantal Hospodar",
-    review: "The studio is calming and thoughtfully organized to inspire creativity. The instructors are patient and approachable, making it easy for us beginner hand-building potters to feel at home. The experience didn't just teach me how to work with clay, it gave me a space for self reflection, connection and expression. This naturally showed up in the piece I made. Great time!",
-    rating: 5,
-    date: "2025-05-02T14:30:00Z", // Early May 2025
-    role: "Beginner Potter",
-  },
-];
+  // Load reviews data
+  useVisibleTask$(() => {
+    reviews.value = reviewsData.value;
+  });
 
   useStyles$(`
     .multi-column-grid {
@@ -126,7 +75,7 @@ const hardcodedReviews: Review[] = [
   `);
 
   const REVIEWS_PER_SLIDE = 3;
-  const safeReviews = hardcodedReviews; // Use hardcoded reviews directly
+  const safeReviews = reviews.value;
   const numSlides = Math.max(0, Math.ceil(safeReviews.length / REVIEWS_PER_SLIDE));
 
   const nextSlide = $(() => {
@@ -189,6 +138,26 @@ const hardcodedReviews: Review[] = [
       </svg>
     ));
   };
+
+  // Loading state
+  if (safeReviews.length === 0) {
+    return (
+      <section class="relative overflow-hidden py-12 md:py-16">
+        <div class="relative max-w-7xl mx-auto px-1 sm:px-6">
+          <div class="text-center mb-12">
+            <h2 class="!text-5xl md:text-6xl px-4 font-bold mb-6">
+              <span class="bg-gradient-to-r xdxd from-primary-600 via-tertiary-600 to-primary-600 bg-clip-text text-transparent">
+                Participant Reviews
+              </span>
+            </h2>
+          </div>
+          <div class="text-center py-12 text-primary-600 text-lg">
+            Loading reviews...
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section class="relative overflow-hidden py-12 md:py-16">
@@ -299,6 +268,7 @@ const hardcodedReviews: Review[] = [
                         <h4 class=" font-bold text-secondary-900 dark:text-secondary-100">
                           {review.name}
                         </h4>
+                        {/* Role commented out as in original - uncomment if needed */}
                         {/* {review.role && (
                           <p class="text-primary-600 dark:text-primary-400 text-xs">{review.role}</p>
                         )} */}
@@ -313,7 +283,6 @@ const hardcodedReviews: Review[] = [
             </div>
           )}
         </div>
-      
       </div>
     </section>
   );

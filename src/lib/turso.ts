@@ -17,7 +17,7 @@ export const turso = createClient({
 export async function getClasses() {
   try {
     console.log('Attempting to query classes table...');
-    const result = await turso.execute('SELECT * FROM classes WHERE isActive = 1 ORDER BY date DESC');
+    const result = await turso.execute('SELECT * FROM classes ORDER BY isActive DESC');
     console.log('Query successful, found', result.rows.length, 'classes');
     return result.rows;
   } catch (error) {
@@ -39,7 +39,6 @@ export async function getClasses() {
     ];
   }
 }
-
 export async function getClassById(classId: number) {
   try {
     const result = await turso.execute({
