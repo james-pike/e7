@@ -1,0 +1,1 @@
+import{_ as o,R as n,f as r,r as s}from"./q-6LYnCcEd.js";import{c as l}from"./q-BJrm9Ix6.js";import"./q-fFn9hMSC.js";const u=()=>{const t=`${o(l).localId}-title`;return n("div",{id:t},null,r(s,null,3,"b1_0"),1,"b1_1")};export{u as s_0Y5YuH7uUak};

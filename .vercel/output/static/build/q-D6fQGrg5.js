@@ -1,0 +1,1 @@
+import{_ as t}from"./q-fFn9hMSC.js";import{m as e,N as i}from"./q-6LYnCcEd.js";import{S as o}from"./q-6NSYtnHv.js";const r=e(i(()=>t(()=>import("./q-DwbiSYsG.js"),[]),"s_kP7Al07sSc8")),n={title:`${o.title} - Reviews`,meta:[{name:"description",content:"Reviews and Testimonials"}]};export{r as default,n as head};

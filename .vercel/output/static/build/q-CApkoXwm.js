@@ -1,0 +1,1 @@
+import{_ as t}from"./q-fFn9hMSC.js";import{m as e,N as o}from"./q-6LYnCcEd.js";import{S as r}from"./q-6NSYtnHv.js";const a=e(o(()=>t(()=>import("./q-DGpbpZwX.js"),[]),"s_qrrlH5yUPF0")),n={title:"Newsletter — Qwind",meta:[{name:"description",content:r.description}]};export{a as default,n as head};

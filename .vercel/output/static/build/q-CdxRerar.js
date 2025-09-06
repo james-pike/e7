@@ -1,0 +1,1 @@
+import{_ as o}from"./q-fFn9hMSC.js";import{m as r,N as t}from"./q-6LYnCcEd.js";const s=r(t(()=>o(()=>import("./q-2PmC307K.js"),[]),"s_PLe07Ve9vVY")),a={title:"Error 404"};export{s as default,a as head};
