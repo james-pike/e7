@@ -26,8 +26,8 @@ export const useClassesData = routeLoader$(async () => {
     }));
   } catch (error) {
     console.error('Error fetching classes:', error);
-    return [];
-  }
+  throw error; // or show fallback with reason
+    }
 });
 
 export default component$(() => {
